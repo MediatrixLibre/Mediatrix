@@ -1,0 +1,48 @@
+name: Deploy to Cloudflare Pages
+# Deploys site/ to the stella-maris Cloudflare Pages project on every push
+# to main. Requires two repository secrets to be configured at
+# https://github.com/MediatrixLibre/Mediatrix/settings/secrets/actions:
+#
+#   - CLOUDFLARE_API_TOKEN: a CF token with the "Cloudflare Pages: Edit"
+#     permission group, plus "Account: Read" and "User Details: Read".
+#     Create it at: https://dash.cloudflare.com/profile/api-tokens
+#     -> "Create Token" -> "Custom token" -> add those three permissions.
+#
+#   - CLOUDFLARE_ACCOUNT_ID: ee05ecc6dc7c4328740548da1502c40c
+#
+# Once those are set, every push to main auto-deploys. Local `wrangler
+# pages deploy` still works for hot-fixing without a commit.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "DEPLOY.md"
+      - "**.md"
+      - ".github/**"
+      - "reviews/**"
+      - "docs/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  deploy:
+    name: wrangler pages deploy site/
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via wrangler
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=stella-maris --branch=main --commit-dirty=true
+
+      - name: Ping IndexNow
+        run: python3 tools/indexnow-ping.py
+        continue-on-error: true

@@ -1,0 +1,35 @@
+name: Lighthouse
+# Runs Lighthouse against the live primary origin on every PR and on every
+# push to main. Also exposes a workflow_dispatch for ad-hoc runs. Uploads
+# the desktop + mobile HTML reports as workflow artifacts and to
+# temporary public storage so reviewers can read them without GitHub auth.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    name: Audit primary origin
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Run Lighthouse (desktop + mobile)
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://stella-maris.pages.dev/
+            https://stella-maris.pages.dev/library.html
+            https://stella-maris.pages.dev/anthology.html
+            https://stella-maris.pages.dev/litany.html
+            https://stella-maris.pages.dev/search.html
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          runs: 1
+          configPath: ./.github/lighthouse/lighthouserc.json
