@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en" data-mode="day" data-page="search">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Search &middot; Mediatrix</title>
+<link rel="stylesheet" href="styles/fonts.css" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=23" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Mediatrix" />
+<script src="scripts/mediatrix.js?v=23"></script>
+<style>
+  .search-box {
+    max-width: 32rem; margin: var(--rhythm-x2) auto;
+    display: flex; align-items: center; gap: 0.6rem;
+    border: 1px solid var(--m-navy); background: var(--cream);
+    padding: 0.85rem 1.1rem;
+  }
+  .search-box input {
+    flex: 1; font: inherit; font-family: var(--font-serif);
+    background: transparent; border: none; outline: none;
+    color: var(--m-navy); font-size: 1.1rem; padding: 0;
+  }
+  .search-box input::placeholder { color: var(--warm-grey-3); font-style: italic; }
+  .search-box .kbd {
+    font-family: var(--font-mono); font-size: 0.74rem;
+    border: 1px solid var(--warm-grey-2); padding: 2px 6px;
+    border-radius: 2px; color: var(--warm-grey-4);
+  }
+  .results { max-width: var(--measure-prose); margin: var(--rhythm-x2) auto; }
+  .result { padding: var(--rhythm) 0; border-bottom: 1px solid var(--warm-grey-2); display: block; text-decoration: none; color: var(--m-navy); }
+  .result:hover { background: var(--cream); padding-left: var(--rhythm-half); margin-left: calc(0px - var(--rhythm-half)); text-decoration: none; }
+  .result__page { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m-gold-text); margin: 0 0 var(--rhythm-half); }
+  .result__title { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; letter-spacing: 0.02em; color: var(--m-navy); margin: 0 0 var(--rhythm-half); }
+  .result__snippet { font-family: var(--font-serif); font-size: 0.98rem; line-height: 1.55; color: var(--warm-grey-4); margin: 0; }
+  .result__snippet mark { background: rgba(201,151,0,0.18); color: var(--m-navy); padding: 0 2px; }
+  .empty { text-align: center; font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); padding: var(--rhythm-x2) 0; }
+  .hints { max-width: var(--measure-prose); margin: var(--rhythm-x2) auto; padding: var(--rhythm) var(--rhythm-x2); background: var(--cream); border-left: 2px solid var(--m-gold); }
+  .hints h4 { margin-top: 0; }
+  .hints p { font-family: var(--font-serif); font-size: 0.96rem; line-height: 1.55; color: var(--m-navy); margin: var(--rhythm-half) 0; }
+  .hints .tag {
+    display: inline-block; font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--m-gold-text); border: 1px solid var(--m-gold); padding: 2px 8px; margin: 2px;
+    cursor: pointer; background: transparent;
+  }
+  .hints .tag:hover { background: var(--m-gold); color: var(--cream); }
+</style>
+</head>
+<body data-vestment="blue" data-screen-label="Search">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="mast">
+  <a class="mast__back" href="index.html">&larr; Mediatrix</a>
+  <a class="mast__word" href="index.html"><span class="vest-dot" aria-hidden="true"></span>Mediatrix<em>A Marian study library</em></a>
+  <div class="mast__tools">
+    <button id="mode-toggle" type="button">Vigil</button>
+    <a href="library.html">Library</a>
+    <a href="anthology.html">Anthology</a>
+  </div>
+</header>
+
+<main id="main" class="wide">
+
+  <p class="kicker" style="text-align:center;"><span class="dot"></span>Quaere et invenies</p>
+  <h1 style="text-align:center; max-width: none;">Search</h1>
+  <p style="text-align:center; font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: 0 auto var(--rhythm-x2); max-width: 38rem;">
+    Search the twelve pages of the library across prose, Latin, Greek, and Hebrew.
+  </p>
+
+  <div class="search-box">
+    <input id="q" type="search" placeholder="Try &lsquo;Mediatrix&rsquo;, &lsquo;Kecharitomene&rsquo;, &lsquo;cooperata est&rsquo;, &lsquo;Cana&rsquo;..." autofocus />
+    <span class="kbd">esc</span>
+  </div>
+
+  <div class="hints" id="hints">
+    <h4>Suggested searches</h4>
+    <p style="margin-bottom: var(--rhythm-half);">Quick jumps:</p>
+    <span class="tag" data-q="Mediatrix">Mediatrix</span>
+    <span class="tag" data-q="Co-Redemptrix">Co-Redemptrix</span>
+    <span class="tag" data-q="Theotokos">Theotokos</span>
+    <span class="tag" data-q="Immaculate">Immaculate Conception</span>
+    <span class="tag" data-q="Assumption">Assumption</span>
+    <span class="tag" data-q="Cana">Cana</span>
+    <span class="tag" data-q="Calvary">Calvary</span>
+    <span class="tag" data-q="Ark">Ark of the Covenant</span>
+    <span class="tag" data-q="Gebirah">Gebirah</span>
+    <span class="tag" data-q="Rosary">Rosary</span>
+    <span class="tag" data-q="Litany">Litany of Loreto</span>
+    <span class="tag" data-q="Fatima">Fatima</span>
+    <span class="tag" data-q="Guadalupe">Guadalupe</span>
+    <span class="tag" data-q="Akathist">Akathist</span>
+    <span class="tag" data-q="kecharitomene">kecharitomene</span>
+    <span class="tag" data-q="cooperata">cooperata est</span>
+    <span class="tag" data-q="Lumen Gentium">Lumen Gentium 62</span>
+    <span class="tag" data-q="Inter Sodalicia">Inter Sodalicia</span>
+    <span class="tag" data-q="Bernard">Bernard of Clairvaux</span>
+    <span class="tag" data-q="Aquinas">Aquinas</span>
+    <span class="tag" data-q="Augustine">Augustine</span>
+    <span class="tag" data-q="Ephrem">Ephrem</span>
+    <span class="tag" data-q="Stella Maris">Stella Maris</span>
+    <span class="tag" data-q="Sub tuum">Sub tuum praesidium</span>
+  </div>
+
+  <div class="results" id="results"></div>
+
+</main>
+
+<footer class="colophon">
+  <span class="small-caps">12 pages indexed</span>
+  <span class="colophon__nav">
+    <a href="index.html">Home</a><span>&middot;</span>
+    <a href="library.html">Library</a><span>&middot;</span>
+    <a href="anthology.html">Anthology</a><span>&middot;</span>
+    <a href="rosary.html">Rosary</a><span>&middot;</span>
+    <a href="litany.html">Litany</a><span>&middot;</span>
+    <a href="apparitions.html">Apparitions</a><span>&middot;</span>
+    <a href="about.html">About</a>
+  </span>
+  <span class="colophon__sub">
+    <strong>Sub tuum praesidium</strong>
+    Beneath thy protection we take refuge, O holy Mother of God.
+  </span>
+</footer>
+
+<script>
+  /* --- search index ---
+     Fetched at runtime from site/data/search-index.json (generated by
+     tools/build-mediatrix.py from the markdown corpus). Each entry:
+       { slug, kind, title, subtitle, body }
+     ~218 entries across saints, OT types, litany titles, mysteries,
+     feasts, apparitions, objections, NT passages, akathist stanzas.
+  */
+  var INDEX = [];
+  var INDEX_READY = false;
+  var input = document.getElementById("q");
+  var resultsEl = document.getElementById("results");
+  var hintsEl = document.getElementById("hints");
+
+  fetch("data/search-index.json")
+    .then(function (r) {
+      if (!r.ok) throw new Error("index not found");
+      return r.json();
+    })
+    .then(function (data) {
+      INDEX = data.entries || [];
+      INDEX_READY = true;
+      // Surface entry count
+      var meta = document.createElement("p");
+      meta.style.cssText = "text-align: center; font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--warm-grey-4); margin: 0 0 var(--rhythm-x2);";
+      meta.innerHTML = INDEX.length + " entries &middot; generated " + (data.generated_at || "").slice(0, 10);
+      document.querySelector(".search-box").insertAdjacentElement("afterend", meta);
+      // re-render in case user typed before index loaded
+      if (input.value) render(input.value);
+    })
+    .catch(function (e) {
+      resultsEl.innerHTML = '<p class="empty">Search index could not be loaded. Run <code>make build-data</code> to generate it.</p>';
+    });
+
+  /* Greek polytonic → ASCII transliteration. Typing 'kecharitomene' finds
+     κεχαριτωμένη; 'theotokos' finds Θεοτόκον; 'mesitis' finds μεσῖτις. */
+  var GREEK_TO_LATIN = {
+    "α":"a","ά":"a","ἀ":"a","ἁ":"a","ἂ":"a","ἃ":"a","ἄ":"a","ἅ":"a","ἆ":"a","ἇ":"a","ᾶ":"a","Α":"a","Ἀ":"a","Ἁ":"a","Ἄ":"a",
+    "β":"b","Β":"b","γ":"g","Γ":"g","δ":"d","Δ":"d",
+    "ε":"e","έ":"e","ἐ":"e","ἑ":"e","ἒ":"e","ἓ":"e","ἔ":"e","ἕ":"e","Ε":"e","Ἐ":"e","Ἑ":"e","Ἔ":"e",
+    "ζ":"z","Ζ":"z",
+    "η":"e","ή":"e","ἠ":"e","ἡ":"e","ἢ":"e","ἣ":"e","ἤ":"e","ἥ":"e","ἦ":"e","ἧ":"e","ῃ":"e","ῇ":"e","Η":"e","Ἠ":"e","Ἡ":"e",
+    "θ":"th","Θ":"th",
+    "ι":"i","ί":"i","ἰ":"i","ἱ":"i","ἲ":"i","ἳ":"i","ἴ":"i","ἵ":"i","ἶ":"i","ἷ":"i","ϊ":"i","ῖ":"i","Ι":"i","Ἰ":"i","Ἱ":"i",
+    "κ":"k","Κ":"k","λ":"l","Λ":"l","μ":"m","Μ":"m","ν":"n","Ν":"n","ξ":"x","Ξ":"x",
+    "ο":"o","ό":"o","ὀ":"o","ὁ":"o","ὂ":"o","ὃ":"o","ὄ":"o","ὅ":"o","Ο":"o","Ὀ":"o","Ὁ":"o",
+    "π":"p","Π":"p","ρ":"r","ῥ":"r","Ρ":"r","Ῥ":"r","σ":"s","ς":"s","Σ":"s","τ":"t","Τ":"t",
+    "υ":"u","ύ":"u","ὐ":"u","ὑ":"u","ὒ":"u","ὓ":"u","ὔ":"u","ὕ":"u","ὖ":"u","ὗ":"u","Υ":"u","Ὑ":"u",
+    "φ":"ph","Φ":"ph","χ":"ch","Χ":"ch","ψ":"ps","Ψ":"ps",
+    "ω":"o","ώ":"o","ὠ":"o","ὡ":"o","ὢ":"o","ὣ":"o","ὤ":"o","ὥ":"o","ὦ":"o","ὧ":"o","ῳ":"o","ῶ":"o","Ω":"o","Ὠ":"o","Ὡ":"o",
+    "·":" "
+  };
+
+  function transliterate(s) {
+    if (!s) return "";
+    var out = "";
+    for (var i = 0; i < s.length; i++) {
+      var c = s[i];
+      out += GREEK_TO_LATIN[c] !== undefined ? GREEK_TO_LATIN[c] : c;
+    }
+    return out;
+  }
+
+  function normalize(text) {
+    // Lower-case, transliterate Greek to ASCII, strip Latin diacritics
+    var t = transliterate(String(text || "")).toLowerCase();
+    return t
+      .replace(/[àáâãäåæ]/g, "a")
+      .replace(/[ç]/g, "c")
+      .replace(/[èéêë]/g, "e")
+      .replace(/[ìíîï]/g, "i")
+      .replace(/[ñ]/g, "n")
+      .replace(/[òóôõöø]/g, "o")
+      .replace(/[ùúûü]/g, "u")
+      .replace(/[ýÿ]/g, "y")
+      .replace(/[œ]/g, "oe");
+  }
+
+  function score(item, q) {
+    var ql = normalize(q);
+    var hay = normalize(item.title + " " + (item.subtitle || "") + " " + (item.body || ""));
+    if (hay.indexOf(ql) === -1) return 0;
+    var s = 0;
+    if (normalize(item.title).indexOf(ql) !== -1) s += 100;
+    if (normalize(item.subtitle || "").indexOf(ql) !== -1) s += 30;
+    var hits = hay.split(ql).length - 1;
+    s += hits;
+    return s;
+  }
+
+  /* Highlight matches against the original text using the normalised
+     query. Builds per-character segments mapping raw → normalised so a
+     query like 'theotokos' lights up 'Θεοτόκον' in the result. */
+  function highlight(text, q) {
+    if (!q || !text) return text || "";
+    text = String(text);
+    var qNorm = normalize(q);
+    if (!qNorm) return text;
+
+    // Per-character segments: each raw char maps to N normalised chars
+    // (Greek θ → th, χ → ch, ψ → ps, φ → ph).
+    var segments = [];
+    var normStr = "";
+    for (var i = 0; i < text.length; i++) {
+      var raw = text[i];
+      var norm = normalize(raw);
+      segments.push({ rawStart: i, rawEnd: i + 1, normStart: normStr.length, normEnd: normStr.length + norm.length });
+      normStr += norm;
+    }
+
+    var matches = [];
+    var idx = 0;
+    while ((idx = normStr.indexOf(qNorm, idx)) !== -1) {
+      matches.push({ start: idx, end: idx + qNorm.length });
+      idx += Math.max(1, qNorm.length);
+    }
+    if (matches.length === 0) return text;
+
+    var out = "";
+    var mi = 0;
+    var inMark = false;
+    for (var s = 0; s < segments.length; s++) {
+      var seg = segments[s];
+      var m = matches[mi];
+      if (!m) {
+        if (inMark) { out += "</mark>"; inMark = false; }
+        out += text.slice(seg.rawStart, seg.rawEnd);
+        continue;
+      }
+      if (seg.normEnd <= m.start) {
+        out += text.slice(seg.rawStart, seg.rawEnd);
+      } else if (seg.normStart >= m.end) {
+        if (inMark) { out += "</mark>"; inMark = false; }
+        mi++;
+        // Re-process this segment against the next match
+        s--;
+        continue;
+      } else {
+        if (!inMark) { out += "<mark>"; inMark = true; }
+        out += text.slice(seg.rawStart, seg.rawEnd);
+        if (seg.normEnd >= m.end) {
+          out += "</mark>";
+          inMark = false;
+          mi++;
+        }
+      }
+    }
+    if (inMark) out += "</mark>";
+    return out;
+  }
+
+  function snippet(item, q) {
+    var raw = (item.subtitle || "") + " " + (item.body || "");
+    var hayNorm = normalize(raw);
+    var qNorm = normalize(q);
+    var idx = hayNorm.indexOf(qNorm);
+    if (idx === -1) return item.subtitle || "";
+    var start = Math.max(0, idx - 60);
+    var end = Math.min(raw.length, idx + qNorm.length + 140);
+    var s = (start > 0 ? "..." : "") + raw.slice(start, end) + (end < raw.length ? "..." : "");
+    return s;
+  }
+
+  function renderNoResults(q) {
+    return '<div class="empty">'
+      + '<p style="margin-bottom: var(--rhythm);">No matches for &ldquo;<strong>' + q + '</strong>&rdquo;.</p>'
+      + '<p style="font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); font-size: 0.94rem; max-width: 36rem; margin: 0 auto;">'
+      + 'Try a Latin term (<em>cooperata</em>, <em>fiat</em>, <em>Mediatrix</em>), a Greek root in transliteration '
+      + '(<em>kecharitomene</em>, <em>theotokos</em>, <em>mesitis</em>), a saint&rsquo;s last name '
+      + '(<em>Bernard</em>, <em>Aquinas</em>, <em>Newman</em>), or one of the suggested tags above.'
+      + '</p>'
+      + '</div>';
+  }
+
+  function render(q) {
+    if (!q || q.trim().length < 2) {
+      resultsEl.innerHTML = "";
+      hintsEl.style.display = "block";
+      return;
+    }
+    hintsEl.style.display = "none";
+    if (!INDEX_READY) {
+      resultsEl.innerHTML = '<p class="empty">Loading index...</p>';
+      return;
+    }
+    var ranked = INDEX
+      .map(function (it) { return { it: it, s: score(it, q) }; })
+      .filter(function (r) { return r.s > 0; })
+      .sort(function (a, b) { return b.s - a.s; })
+      .slice(0, 60);
+    if (ranked.length === 0) {
+      resultsEl.innerHTML = renderNoResults(q);
+      return;
+    }
+    var html = '<p style="font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--warm-grey-4); margin: 0 0 var(--rhythm);">' + ranked.length + ' result' + (ranked.length === 1 ? '' : 's') + ' for &ldquo;' + q + '&rdquo;</p>';
+    for (var i = 0; i < ranked.length; i++) {
+      var it = ranked[i].it;
+      var snip = snippet(it, q);
+      var kindLabel = (it.kind || it.slug.replace(".html", "")).replace(/-/g, " ");
+      html += '<a class="result" href="' + it.slug + '">'
+        + '<p class="result__page">' + kindLabel + '</p>'
+        + '<p class="result__title">' + highlight(it.title, q) + '</p>'
+        + '<p class="result__snippet">' + highlight(snip, q) + '</p>'
+        + '</a>';
+    }
+    resultsEl.innerHTML = html;
+  }
+
+  input.addEventListener("input", function () { render(input.value); });
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { input.value = ""; render(""); }
+  });
+
+  document.querySelectorAll(".tag").forEach(function (tag) {
+    tag.addEventListener("click", function () {
+      input.value = tag.dataset.q;
+      input.focus();
+      render(input.value);
+    });
+  });
+
+  // Mode toggle
+  var btn = document.getElementById("mode-toggle");
+  function syncLabel() { btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil"; }
+  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
+  syncLabel();
+
+  Mediatrix.pushRecent({
+    slug: "search.html",
+    title: "Search",
+    subtitle: "Data-layer search across 200+ entries",
+    vestment: "blue",
+    scrollRatio: 0,
+  });
+</script>
+
+</body>
+</html>

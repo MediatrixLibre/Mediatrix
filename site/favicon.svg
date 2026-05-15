@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!--
+    Stella Maris — 8-pointed Marian star.
+    Four cardinal long points (top, right, bottom, left) overlapping
+    four diagonal short points. Gold on transparent.
+  -->
+  <g fill="#C99700">
+    <!-- long cardinal cross (4 long points) -->
+    <polygon points="16,1 18,16 16,31 14,16" />
+    <polygon points="1,16 16,14 31,16 16,18" />
+    <!-- short diagonal cross (rotated 45deg, 4 short points) -->
+    <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+    <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+    <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+    <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+    <!-- center dot -->
+    <circle cx="16" cy="16" r="1.6" />
+  </g>
+</svg>

@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en" data-mode="day" data-page="index">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mediatrix · A Marian study library</title>
+<link rel="stylesheet" href="styles/fonts.css" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=23" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Mediatrix" />
+<meta name="theme-color" content="#1E3A6E" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0A1628" media="(prefers-color-scheme: dark)" />
+<script src="scripts/mediatrix.js?v=23"></script>
+<style>
+  /* index-only flourishes */
+  body { --wash: transparent; }
+
+  /* Today's-feast banner: a quiet liturgical-calendar bind. Only renders
+     when the JS finds the current date matches one of the 18 Marian
+     feasts; otherwise stays hidden. Editorial register: matches the
+     hero kicker scale but with the gold rule emphasised. */
+  .todays-feast {
+    display: block;
+    max-width: 36rem;
+    margin: 0 auto var(--rhythm-x2);
+    padding: var(--rhythm-half) var(--rhythm);
+    text-align: center;
+    text-decoration: none;
+    color: var(--m-navy);
+    border-top: 1px solid var(--m-gold);
+    border-bottom: 1px solid var(--m-gold);
+    transition: background 0.2s ease;
+  }
+  .todays-feast:hover { background: var(--cream); text-decoration: none; }
+  .todays-feast__kicker {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.66rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--m-gold-text);
+    margin-bottom: 0.2rem;
+  }
+  .todays-feast__name {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.18rem;
+    letter-spacing: 0.04em;
+    color: var(--m-navy);
+  }
+  .todays-feast__rank {
+    display: block;
+    margin-top: 0.2rem;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--warm-grey-4);
+  }
+  .hero__stella { display: block; width: 3.2rem; height: 3.2rem; margin: 0 auto var(--rhythm); color: var(--m-gold); }
+  .hero__stella svg { width: 100%; height: 100%; fill: currentColor; }
+  .hero__compass { margin: var(--rhythm-x2) auto 0; max-width: 38rem; }
+  .colophon-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); gap: var(--rhythm-half) var(--rhythm); padding: var(--rhythm) 0; border-top: 1px solid var(--warm-grey-2); border-bottom: 1px solid var(--warm-grey-2); margin: var(--rhythm-x2) 0; font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warm-grey-4); text-align: center; }
+  .colophon-strip strong { display: block; font-family: var(--font-display); font-style: normal; font-weight: 500; font-size: 1.2rem; letter-spacing: 0.02em; color: var(--m-navy); margin-bottom: 0.15rem; }
+  .pillars { max-width: var(--measure-wide); margin: var(--rhythm-x2) auto var(--rhythm); padding: 0 var(--rhythm); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--rhythm-x2); }
+  @media (max-width: 820px) { .pillars { grid-template-columns: 1fr; } }
+  .pillar { text-align: center; padding: 0 var(--rhythm-half); }
+  .pillar h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.1rem; letter-spacing: 0.04em; color: var(--m-navy); margin: 0 0 var(--rhythm-half); }
+  .pillar p { font-family: var(--font-serif); font-size: 0.98rem; line-height: 1.55; color: var(--warm-grey-4); margin: 0; }
+  .pillar .lat { display: block; font-family: var(--font-serif); font-style: italic; font-size: 0.84rem; color: var(--m-gold-text); margin-top: var(--rhythm-half); letter-spacing: 0.02em; }
+  .recents { max-width: var(--measure-wide); margin: var(--rhythm-x3) auto 0; padding: 0 var(--rhythm); }
+  .recents h2 { font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--m-gold-text); margin: 0 0 var(--rhythm); }
+  .recents__list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--rhythm); }
+  .recents__item { padding: var(--rhythm-half) var(--rhythm); border-left: 2px solid var(--m-blue); background: var(--cream); display: block; text-decoration: none; color: var(--m-navy); }
+  .recents__item:hover { border-left-color: var(--m-gold); text-decoration: none; }
+  .recents__item small { display: block; font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm-grey-4); margin-bottom: 0.25rem; }
+  .recents__item strong { font-family: var(--font-display); font-weight: 400; font-size: 1.02rem; letter-spacing: 0.04em; }
+  .recents__empty {
+    font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4);
+    text-align: center; margin: var(--rhythm) 0 0; padding: var(--rhythm-half) 0;
+    border-top: 1px solid var(--warm-grey-2);
+  }
+
+  /* Featured library — central item above the grid */
+  .feature {
+    max-width: var(--measure-wide);
+    margin: var(--rhythm-x3) auto var(--rhythm-x2);
+    padding: 0 var(--rhythm);
+  }
+  .feature__panel {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--rhythm-x2);
+    align-items: center;
+    padding: var(--rhythm-x2) var(--rhythm-x2);
+    background: var(--cream);
+    border-top: 3px solid var(--m-gold);
+    border-bottom: 3px solid var(--m-gold);
+    text-decoration: none;
+    color: var(--m-navy);
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+  @media (max-width: 720px) { .feature__panel { grid-template-columns: 1fr; gap: var(--rhythm); padding: var(--rhythm-x2) var(--rhythm); } }
+  .feature__panel:hover { transform: translateY(-1px); text-decoration: none; }
+  .feature__panel:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+  .feature__kicker {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--m-gold-text);
+    margin: 0 0 var(--rhythm-half);
+    display: inline-flex; align-items: center; gap: 0.6rem;
+  }
+  .feature__kicker .stella { width: 0.85em; height: 0.85em; }
+  .feature__title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: 0.06em;
+    color: var(--m-navy);
+    margin: 0 0 var(--rhythm);
+    line-height: 1.05;
+  }
+  .feature__body {
+    font-family: var(--font-serif);
+    font-size: 1.08rem;
+    line-height: 1.55;
+    color: var(--m-navy);
+    max-width: 56ch;
+    margin: 0 0 var(--rhythm);
+  }
+  .feature__body em { color: var(--warm-grey-4); }
+  .feature__stats {
+    display: flex; gap: var(--rhythm-x2); flex-wrap: wrap;
+    font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--warm-grey-4);
+  }
+  .feature__stats strong {
+    display: block; font-family: var(--font-display); font-weight: 500;
+    font-size: 1.18rem; letter-spacing: 0.02em; color: var(--m-navy);
+    margin-bottom: 0.1rem;
+  }
+  .feature__cta {
+    text-align: right;
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--m-gold-text);
+    white-space: nowrap;
+  }
+  .feature__cta::after { content: " \2192"; }
+  @media (max-width: 720px) { .feature__cta { text-align: left; } }
+</style>
+</head>
+<body data-vestment="blue" data-screen-label="Mediatrix · Home">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="mast">
+  <span></span>
+  <a class="mast__word" href="index.html">
+    <span class="vest-dot" aria-hidden="true"></span>Mediatrix
+    <em>A Marian study library</em>
+  </a>
+  <div class="mast__tools">
+    <button id="mode-toggle" type="button">Vigil</button>
+    <a href="rosary.html">Rosary</a>
+    <a href="search.html">Search</a>
+  </div>
+</header>
+
+<main id="main" class="wide">
+
+  <section class="hero">
+    <span class="hero__stella" aria-hidden="true">
+      <svg viewBox="0 0 32 32">
+        <polygon points="16,1 18,16 16,31 14,16"/>
+        <polygon points="1,16 16,14 31,16 16,18"/>
+        <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+        <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+        <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+        <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+        <circle cx="16" cy="16" r="1.6"/>
+      </svg>
+    </span>
+    <!-- Liturgical calendar binding: surfaces today's Marian feast if any.
+         Populated by the script at the foot of this page, fed from the 18
+         Marian feasts in the corpus. Falls back to the silent default. -->
+    <a id="todays-feast" class="todays-feast" href="feasts.html" hidden></a>
+
+    <p class="hero__overline"><span class="dot"></span>Stella Maris<span class="dot"></span></p>
+    <h1 class="hero__word">Mediatrix</h1>
+    <p class="hero__epigraph">
+      Through her the Word entered the world; through her grace returns to it.
+    </p>
+    <p class="hero__defn">
+      A study library on the Blessed Virgin Mary as Mediatrix and Co-Redemptrix,
+      drawn from Genesis 3:15 through twenty centuries of patristic, medieval,
+      and magisterial witness.
+    </p>
+
+    <div class="stella-rule">
+      <span class="stella" aria-hidden="true">
+        <svg viewBox="0 0 32 32">
+          <polygon points="16,1 18,16 16,31 14,16"/>
+          <polygon points="1,16 16,14 31,16 16,18"/>
+          <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+          <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+          <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+          <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+          <circle cx="16" cy="16" r="1.6"/>
+        </svg>
+      </span>
+    </div>
+
+    <p class="hero__corpus">
+      <span><strong>50</strong> patristic to magisterial witnesses</span>
+      <span><strong>28</strong> Old-Testament types</span>
+      <span><strong>56</strong> single-quote saints</span>
+      <span><strong>20</strong> mysteries of the rosary</span>
+      <span><strong>54</strong> titles of Loreto</span>
+      <span><strong>7</strong> primary apparitions</span>
+    </p>
+  </section>
+
+  <section class="pillars" aria-label="Three pillars">
+    <div class="pillar">
+      <h3>Foundation</h3>
+      <p>The doctrine rests on the unique mediation of Christ (1 Tim 2:5) and Mary&rsquo;s subordinate cooperation within it: never displacing it, never parallel to it.</p>
+      <span class="lat">in Christo et sub Christo</span>
+    </div>
+    <div class="pillar">
+      <h3>Testimony</h3>
+      <p>From Irenaeus through the Akathist Hymn, Bernard of Clairvaux, Bonaventure, and the modern Magisterium: the same doctrine in Greek, Latin, and the Church&rsquo;s own dogmatic acts.</p>
+      <span class="lat">vox traditionis</span>
+    </div>
+    <div class="pillar">
+      <h3>Devotion</h3>
+      <p>The rosary, the Litany of Loreto, the Office of Readings, the Akathist, the great apparitions: the lived prayer that the doctrine produces.</p>
+      <span class="lat">in via Mariae</span>
+    </div>
+  </section>
+
+  <section class="recents" aria-label="Recently visited">
+    <h2>Recently visited</h2>
+    <div id="recents-list" class="recents__list"></div>
+  </section>
+
+  <section class="feature" aria-label="Featured: the Library">
+    <a class="feature__panel" href="library.html">
+      <div>
+        <p class="feature__kicker">
+          <span class="stella" aria-hidden="true"><svg viewBox="0 0 32 32"><polygon points="16,1 18,16 16,31 14,16"/><polygon points="1,16 16,14 31,16 16,18"/><polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/><polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/><polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/><polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/><circle cx="16" cy="16" r="1.6"/></svg></span>
+          I &middot; The Spine
+        </p>
+        <h2 class="feature__title">The Library</h2>
+        <p class="feature__body">
+          The chronological compendium, from Justin Martyr in the second
+          century through the medieval doctors and into the modern Magisterium.
+          <em>Every voice, every era, every original-language quotation, drawn against critical editions.</em>
+        </p>
+        <div class="feature__stats">
+          <span><strong>56</strong>witnesses</span>
+          <span><strong>9</strong>eras</span>
+          <span><strong>1865</strong>years</span>
+          <span><strong>4</strong>dogmas</span>
+        </div>
+      </div>
+      <span class="feature__cta">Open the chronology</span>
+    </a>
+  </section>
+
+  <section aria-label="Sections">
+    <div class="stella-rule"><span class="stella" aria-hidden="true"><svg viewBox="0 0 32 32"><polygon points="16,1 18,16 16,31 14,16"/><polygon points="1,16 16,14 31,16 16,18"/><polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/><polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/><polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/><polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/><circle cx="16" cy="16" r="1.6"/></svg></span></div>
+
+    <p style="text-align:center; font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--m-gold-text); margin: 0 0 var(--rhythm);">The Other Eleven Sections</p>
+
+    <div class="section-grid">
+
+      <a class="section-card" href="ot-types.html">
+        <span class="section-card__num">II</span>
+        <span class="section-card__title">OT Types</span>
+        <span class="section-card__sub">Twenty-eight Old-Testament figures in which the Church has read the Mother of God: Eve, the Ark, the burning bush, the Gebirah, Judith, Esther.</span>
+      </a>
+
+      <a class="section-card" href="nt-texts.html">
+        <span class="section-card__num">III</span>
+        <span class="section-card__title">NT Texts</span>
+        <span class="section-card__sub">The three load-bearing passages, Cana, Calvary, and Revelation 12, in Nestle-Aland Greek, with multi-point exegesis.</span>
+      </a>
+
+      <a class="section-card" href="anthology.html">
+        <span class="section-card__num">IV</span>
+        <span class="section-card__title">Anthology</span>
+        <span class="section-card__sub">One sentence per saint, fifty-six voices: Irenaeus, Ephrem, Augustine, Bernard, Bonaventure, Aquinas, Newman. Greek and Latin originals beside the English.</span>
+      </a>
+
+      <a class="section-card" href="rosary.html">
+        <span class="section-card__num">V</span>
+        <span class="section-card__title">Rosary</span>
+        <span class="section-card__sub">Twenty mysteries on the Dominican distribution. Each with Scripture, patristic anchor, meditation, fruit, intention.</span>
+      </a>
+
+      <a class="section-card" href="defense.html">
+        <span class="section-card__num">VI</span>
+        <span class="section-card__title">Defense</span>
+        <span class="section-card__sub">Twelve Protestant objections steel-manned, four-layer Catholic response. Luther, Calvin, Zwingli, Wesley in their own words defending perpetual virginity.</span>
+      </a>
+
+      <a class="section-card" href="feasts.html">
+        <span class="section-card__num">VII</span>
+        <span class="section-card__title">Feasts</span>
+        <span class="section-card__sub">Eighteen Marian feasts of the liturgical year: date, rank, readings, Collect in Latin for principals, suggested devotion.</span>
+      </a>
+
+      <a class="section-card" href="apparitions.html">
+        <span class="section-card__num">VIII</span>
+        <span class="section-card__title">Apparitions</span>
+        <span class="section-card__sub">Seven primary canonical apparitions: Guadalupe, Rue du Bac, La Salette, Lourdes, Knock, Fatima, Akita. With the 1978 CDF norms of discernment.</span>
+      </a>
+
+      <a class="section-card" href="litany.html">
+        <span class="section-card__num">IX</span>
+        <span class="section-card__title">Litany of Loreto</span>
+        <span class="section-card__sub">Fifty-four titles in six structural groups. Latin and English, scriptural root per title, history of papal additions from Sixtus V (1587) to Francis (2020).</span>
+      </a>
+
+      <a class="section-card" href="office.html">
+        <span class="section-card__num">X</span>
+        <span class="section-card__title">Office of Readings</span>
+        <span class="section-card__sub">Patristic Office texts for fourteen Marian feasts: Athanasius, Leo, Bede, Augustine&apos;s <span class="latin"><em>cooperata est</em></span>, John Damascene, Andrew of Crete, Bernard.</span>
+      </a>
+
+      <a class="section-card" href="akathist.html">
+        <span class="section-card__num">XI</span>
+        <span class="section-card__title">Akathist</span>
+        <span class="section-card__sub">The complete sixth-century Byzantine Marian hymn, the famous <span class="greek"><em>chairetismoi</em></span> in Greek, with per-stanza annotation.</span>
+      </a>
+
+      <a class="section-card" href="iconography.html">
+        <span class="section-card__num">XII</span>
+        <span class="section-card__title">Iconography</span>
+        <span class="section-card__sub">Byzantine and Western iconographic types, symbolic vocabulary decoded, famous miraculous images by region, the iconography of each Marian dogma.</span>
+      </a>
+
+    </div>
+
+    <p style="text-align:center; font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--warm-grey-4); margin: var(--rhythm) 0 var(--rhythm-x2);">
+      <a href="about.html">About &middot; Methodology</a>
+      &nbsp;&middot;&nbsp;
+      <a href="search.html">Search the library</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="colophon">
+  <span class="small-caps">12 sections &middot; one library</span>
+  <span class="colophon__nav">
+    <a href="library.html">Library</a><span>·</span>
+    <a href="anthology.html">Anthology</a><span>·</span>
+    <a href="rosary.html">Rosary</a><span>·</span>
+    <a href="litany.html">Litany</a><span>·</span>
+    <a href="feasts.html">Feasts</a><span>·</span>
+    <a href="apparitions.html">Apparitions</a><span>·</span>
+    <a href="search.html">Search</a>
+  </span>
+  <span class="colophon__sub">
+    <strong>Sub tuum praesidium</strong>
+    Beneath thy protection we take refuge, O holy Mother of God.
+  </span>
+</footer>
+
+<script>
+  // Vigil toggle
+  var btn = document.getElementById("mode-toggle");
+  function syncLabel() {
+    btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil";
+  }
+  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
+  syncLabel();
+
+  /* --- Liturgical calendar binding ---
+     Today's Marian feast surfaced in the hero, drawn from the 18-feast
+     fixed-date subset of the Marian-Feasts-Liturgical-Calendar corpus.
+     The moveable feasts (Mother of the Church, Immaculate Heart) are
+     omitted because they require Easter date math; the fixed dates carry
+     the principal Solemnities and Memorials. */
+  var MARIAN_FEASTS = [
+    { date: "01-01", name: "Solemnity of Mary, Mother of God",       rank: "Solemnity · Holy Day of Obligation" },
+    { date: "02-02", name: "Presentation of the Lord",               rank: "Feast · Candlemas" },
+    { date: "02-11", name: "Our Lady of Lourdes",                    rank: "Optional Memorial · World Day of the Sick" },
+    { date: "03-25", name: "Annunciation of the Lord",               rank: "Solemnity" },
+    { date: "05-13", name: "Our Lady of Fátima",                rank: "Optional Memorial" },
+    { date: "05-24", name: "Our Lady, Help of Christians",           rank: "Optional Memorial" },
+    { date: "05-31", name: "Visitation of the Blessed Virgin Mary",  rank: "Feast" },
+    { date: "07-16", name: "Our Lady of Mount Carmel",               rank: "Optional Memorial" },
+    { date: "08-05", name: "Dedication of Saint Mary Major",         rank: "Optional Memorial" },
+    { date: "08-15", name: "Assumption of the Blessed Virgin Mary",  rank: "Solemnity · Holy Day · dogma 1950" },
+    { date: "08-22", name: "Queenship of the Blessed Virgin Mary",   rank: "Memorial" },
+    { date: "09-08", name: "Nativity of the Blessed Virgin Mary",    rank: "Feast" },
+    { date: "09-12", name: "Most Holy Name of Mary",                 rank: "Optional Memorial" },
+    { date: "09-15", name: "Our Lady of Sorrows",                    rank: "Memorial" },
+    { date: "10-07", name: "Our Lady of the Rosary",                 rank: "Memorial" },
+    { date: "11-21", name: "Presentation of the Blessed Virgin Mary", rank: "Memorial" },
+    { date: "12-08", name: "Immaculate Conception",                  rank: "Solemnity · Holy Day · dogma 1854" },
+    { date: "12-12", name: "Our Lady of Guadalupe",                  rank: "Feast (Americas) · Patroness of the Americas" }
+  ];
+
+  (function surfaceTodaysFeast() {
+    var el = document.getElementById("todays-feast");
+    if (!el) return;
+    var now = new Date();
+    var key = String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
+    var match = MARIAN_FEASTS.find(function (f) { return f.date === key; });
+    if (!match) return;  // no feast today — banner stays hidden
+    el.innerHTML =
+      '<span class="todays-feast__kicker">Today &middot; ' + key.replace("-", " / ") + '</span>' +
+      '<span class="todays-feast__name">' + match.name + '</span>' +
+      '<span class="todays-feast__rank">' + match.rank + '</span>';
+    el.hidden = false;
+  })();
+
+  // Render recently-visited; surface a quiet empty state on first visit
+  var list = document.getElementById("recents-list");
+  var recents = Mediatrix.getRecents();
+  if (recents.length === 0) {
+    list.outerHTML = '<p class="recents__empty">' +
+      'Open any section below; what you read returns here.</p>';
+  } else {
+    var html = "";
+    for (var i = 0; i < recents.length; i++) {
+      var r = recents[i];
+      html += '<a class="recents__item" href="' + r.slug + '">'
+        + '<small>' + (r.subtitle || "") + '</small>'
+        + '<strong>' + (r.title || r.slug) + '</strong>'
+        + '</a>';
+    }
+    list.innerHTML = html;
+  }
+  // index intentionally does NOT push itself into recents
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "Mediatrix — A Marian study library",
+  "short_name": "Mediatrix",
+  "description": "An editorial Marian study library on Mary as Mediatrix and Co-Redemptrix — 56 patristic-to-magisterial witnesses, 28 OT types, three NT load-bearing texts, the Rosary, the Litany of Loreto, the Akathist, and seven primary apparitions.",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F9F6EF",
+  "theme_color": "#1E3A6E",
+  "lang": "en",
+  "categories": ["education", "books", "lifestyle"],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ],
+  "prefer_related_applications": false
+}

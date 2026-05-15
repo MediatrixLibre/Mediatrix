@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en" data-mode="day" data-page="rosary">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Daily Rosary Companion · Mediatrix</title>
+<link rel="stylesheet" href="styles/fonts.css" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=23" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Mediatrix" />
+<script src="scripts/mediatrix.js?v=23"></script>
+<style>
+  .day-table { margin: var(--rhythm) auto var(--rhythm-x2); max-width: 36rem; }
+  .day-table td:first-child { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m-gold-text); white-space: nowrap; padding-right: var(--rhythm); }
+  .day-table td:last-child { font-family: var(--font-display); font-weight: 500; font-size: 1.04rem; letter-spacing: 0.03em; color: var(--m-navy); }
+  .mystery-set {
+    margin-top: var(--rhythm-x3); padding-top: var(--rhythm);
+    border-top: 2px solid var(--m-gold);
+  }
+  .mystery-set__head { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: var(--rhythm); margin-bottom: var(--rhythm); }
+  .mystery-set__title { font-family: var(--font-display); font-weight: 400; font-size: 2rem; letter-spacing: 0.04em; color: var(--m-navy); margin: 0; }
+  .mystery-set__day { font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--warm-grey-4); }
+  .mystery-set__intro { font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: 0 0 var(--rhythm-x2); }
+
+  /* Luminous mysteries — collapsed by default. The Joyful, Sorrowful, and
+     Glorious sets are the 15 traditional mysteries that the rosary held
+     from the Dominicans through to 2002; the Luminous five were proposed
+     by John Paul II in Rosarium Virginis Mariae and are devotionally
+     optional. Native <details> gives screen-reader-friendly disclosure
+     with no JS overhead; the marker is a small Cinzel "›" that rotates
+     90° on open, matching the rest of the editorial register. */
+  details.mystery-set { padding-top: var(--rhythm); }
+  details.mystery-set > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: var(--rhythm-half) 0;
+    display: block;
+    position: relative;
+  }
+  details.mystery-set > summary::-webkit-details-marker { display: none; }
+  details.mystery-set > summary::after {
+    content: "›";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--m-gold-text);
+    transition: transform 0.22s ease;
+    line-height: 1;
+  }
+  details.mystery-set[open] > summary::after {
+    transform: translateY(-50%) rotate(90deg);
+  }
+  details.mystery-set > summary .mystery-set__head { margin-bottom: var(--rhythm-half); padding-right: var(--rhythm-x2); }
+  details.mystery-set > summary .mystery-set__intro { margin: 0; }
+  details.mystery-set > summary:hover .mystery-set__title { color: var(--m-gold-text); transition: color 0.18s ease; }
+  details.mystery-set > summary:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: 2px; }
+  details.mystery-set[open] > summary { padding-bottom: var(--rhythm); }
+
+  /* .history-chip + .popover-card now in mediatrix.css (shared across
+     devotional surfaces — rosary, litany, etc.) */
+
+  .anchor {
+    margin: var(--rhythm) 0;
+    padding-left: var(--rhythm);
+    border-left: 2px solid var(--m-gold);
+  }
+  .anchor__label { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m-gold-text); margin: 0 0 var(--rhythm-half); }
+  .anchor__source { font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.04em; color: var(--warm-grey-4); font-style: italic; margin: 0 0 var(--rhythm-half); }
+  .anchor__greek { font-family: var(--font-serif); font-style: italic; color: var(--m-navy); margin: 0 0 var(--rhythm-half); }
+  .anchor__quote { font-family: var(--font-serif); font-size: 1.04rem; line-height: 1.55; color: var(--m-navy); margin: 0; }
+  .anchor__quote em { font-style: italic; }
+
+  .closing-prayers { margin: var(--rhythm-x3) auto 0; max-width: 38rem; padding: var(--rhythm-x2) var(--rhythm) var(--rhythm); border-top: 1px solid var(--m-gold); }
+  .closing-prayers h2 { text-align: center; margin-top: var(--rhythm-x2); }
+  .closing-prayers .lat { font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; line-height: 1.65; color: var(--m-navy); text-align: center; margin: 0 0 var(--rhythm); }
+  .closing-prayers .en { font-family: var(--font-serif); font-size: 0.98rem; line-height: 1.55; color: var(--warm-grey-4); text-align: center; margin: 0 0 var(--rhythm-x2); }
+  .versicle { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--warm-grey-4); text-align: center; margin: var(--rhythm) 0; }
+  .versicle strong { color: var(--m-gold-text); margin-right: 0.4em; }
+</style>
+</head>
+<body data-vestment="white" data-screen-label="Rosary Companion · 15 traditional + 5 optional Luminous">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="mast">
+  <a class="mast__back" href="index.html">&larr; Mediatrix</a>
+  <a class="mast__word" href="index.html">
+    <span class="vest-dot" aria-hidden="true"></span>Mediatrix
+    <em>A Marian study library</em>
+  </a>
+  <div class="mast__tools">
+    <button id="mode-toggle" type="button">Vigil</button>
+    <a href="litany.html">Litany</a>
+    <a href="anthology.html">Anthology</a>
+  </div>
+</header>
+
+<main id="main" class="prose">
+
+  <p class="kicker"><span class="dot"></span>V &middot; Rosarium Virginis Mariae</p>
+  <h1>Daily Rosary Companion</h1>
+  <p class="hero__pron" style="text-align:left; margin: 0 0 var(--rhythm-x2);">
+    The fifteen mysteries of the Dominican distribution (Joyful, Sorrowful,
+    Glorious), each with Scripture, a patristic or doctoral anchor, a brief
+    meditation, the classical fruit, and an intention pattern. The five
+    Luminous mysteries (2002) are available below as an optional set.
+  </p>
+
+  <h4>How to pray it</h4>
+  <table class="ref day-table">
+    <tbody>
+      <tr><td>Mon &middot; Sat</td><td>Joyful Mysteries</td></tr>
+      <tr><td>Tue &middot; Fri</td><td>Sorrowful Mysteries</td></tr>
+      <tr><td>Wed &middot; Sun</td><td>Glorious Mysteries</td></tr>
+      <tr><td>Thursday</td><td><a href="#luminous-set" style="color: inherit;">Luminous Mysteries</a> <span class="prov magisterial">optional &middot; 2002</span></td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    Open with the Apostles&rsquo; Creed, the Our Father, three Hail Marys
+    (faith, hope, charity), and a Glory Be. After each decade, pray the
+    Fatima Prayer requested by Our Lady on 13 July 1917. Close with the
+    <span class="latin"><em>Salve Regina</em></span> and any final Marian prayer.
+  </p>
+
+  <blockquote class="pull">
+    <em>Veni, Sancte Spiritus, reple tuorum corda fidelium,<br/>
+    et tui amoris in eis ignem accende.</em>
+    <cite>Come, Holy Spirit</cite>
+  </blockquote>
+
+  <!-- ============================== JOYFUL ============================== -->
+  <section class="mystery-set" aria-labelledby="joyful">
+    <div class="mystery-set__head">
+      <h2 class="mystery-set__title" id="joyful">The Joyful Mysteries</h2>
+      <span class="mystery-set__day">Monday &middot; Saturday</span>
+    </div>
+    <p class="mystery-set__intro">From the <span class="latin"><em>fiat</em></span> at Nazareth to the finding in the Temple: the dawn of the Word made flesh through her consent.</p>
+    <button type="button"
+            class="history-chip"
+            popovertarget="rosary-history"
+            aria-haspopup="dialog">
+      <span class="history-chip__star" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor">
+          <polygon points="16,1 18,16 16,31 14,16"/>
+          <polygon points="1,16 16,14 31,16 16,18"/>
+          <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+          <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+          <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+          <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+        </svg>
+      </span>
+      On the Rosary itself &middot; A history
+    </button>
+
+    <div class="mystery">
+      <p class="mystery__kicker">First Joyful Mystery</p>
+      <h3 class="mystery__title">1. The Annunciation</h3>
+      <p class="anchor__source">Luke 1:26&ndash;38</p>
+      <p class="anchor__greek"><span class="greek">&epsilon;&#7990;&pi;&epsilon;&nu; &delta;&#8050; &Mu;&alpha;&rho;&iota;&#940;&mu;&middot; &#7984;&delta;&omicron;&#8058; &#7969; &delta;&omicron;&#973;&lambda;&eta; &Kappa;&upsilon;&rho;&#943;&omicron;&upsilon;&middot; &gamma;&#941;&nu;&omicron;&iota;&tau;&#972; &mu;&omicron;&iota; &kappa;&alpha;&tau;&#8048; &tau;&#8056; &#8165;&#8134;&mu;&#940; &sigma;&omicron;&upsilon;.</span></p>
+      <p class="anchor__quote">&ldquo;And Mary said: Behold the handmaid of the Lord; be it done to me according to thy word.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Patristic anchor &middot; Irenaeus, <em>Adv. Haer.</em> III.22.4</p>
+        <p class="anchor__quote">
+          Eve, having become disobedient, was made the cause of death; so also did Mary,
+          having yielded obedience, become the <em>cause of salvation</em>, both to herself and the whole human race.
+        </p>
+      </div>
+
+      <dl class="mystery__row">
+        <dt>Meditation</dt><dd>The Father waited for her <span class="latin"><em>fiat</em></span>. The whole human race spoke through her lips.</dd>
+      </dl>
+      <dl class="mystery__row">
+        <dt>Fruit</dt><dd>Humility.</dd>
+      </dl>
+      <dl class="mystery__row">
+        <dt>Intention</dt><dd>For the grace to say yes to God in the small matters of today, that the great yeses may follow.</dd>
+      </dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Second Joyful Mystery</p>
+      <h3 class="mystery__title">2. The Visitation</h3>
+      <p class="anchor__source">Luke 1:39&ndash;56</p>
+      <p class="anchor__quote">&ldquo;Blessed art thou among women, and blessed is the fruit of thy womb. And whence is this to me, that the mother of my Lord should come to me?&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Patristic anchor &middot; Cyril of Jerusalem, <em>Cat.</em> 12.15</p>
+        <p class="anchor__greek"><span class="greek">&Delta;&iota;&#8048; &tau;&#8134;&sigmaf; &#7937;&gamma;&#943;&alpha;&sigmaf; &Pi;&alpha;&rho;&theta;&#941;&nu;&omicron;&upsilon; &Mu;&alpha;&rho;&#943;&alpha;&sigmaf; &pi;&#940;&nu;&tau;&alpha; &tau;&#8048; &#7936;&gamma;&alpha;&theta;&#8048; &#7969;&mu;&#8150;&nu; &pi;&rho;&omicron;&sigma;&#8134;&lambda;&theta;&epsilon;&nu;.</span></p>
+        <p class="anchor__quote">&ldquo;Through the holy Virgin Mary, all good things have come to us.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>OT type</dt><dd>The Ark of the Covenant. Verbal echoes between 2 Samuel 6:9&ndash;15 and Luke 1:39&ndash;56 identify Mary as the new Ark. <a href="ot-types.html">See OT Types &sect;8.</a></dd></dl>
+      <dl class="mystery__row"><dt>Meditation</dt><dd>John leaped in the womb before the new Ark. The Mediatrix carries Christ to others; Christ comes to others through her.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Charity in service to neighbor.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For those who carry heavy burdens, that the Mediatrix may visit them today.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Third Joyful Mystery</p>
+      <h3 class="mystery__title">3. The Nativity of Our Lord</h3>
+      <p class="anchor__source">Luke 2:1&ndash;20</p>
+      <p class="anchor__quote">&ldquo;She brought forth her firstborn son, and wrapped him up in swaddling clothes, and laid him in a manger.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">OT type &middot; Athanasian school, <em>Hom. Pap. Tur.</em></p>
+        <p class="anchor__quote">The Burning Bush bore the fire of God without being consumed; Mary bore the Son of God without losing her virginity. &ldquo;Who is thy equal in greatness, O dwelling place of God the Word?&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>Heaven is in her arms. The Bread of Heaven is laid in the manger at Bethlehem &mdash; <em>house of bread</em>. She is the first to adore the Eucharistic Lord.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Poverty of spirit.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For mothers laboring tonight, that the Bethlehem Mother attend their hour.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Fourth Joyful Mystery</p>
+      <h3 class="mystery__title">4. The Presentation of Our Lord</h3>
+      <p class="anchor__source">Luke 2:22&ndash;35</p>
+      <p class="anchor__quote">&ldquo;Behold this child is set for the fall and resurrection of many in Israel, and for a sign which shall be contradicted; and thy own soul a sword shall pierce.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Magisterial anchor &middot; Benedict XV, <em>Inter Sodalicia</em> (1918, AAS 10:181) <span class="prov magisterial">magisterial</span></p>
+        <p class="anchor__greek"><span class="latin">Cum Filio patiente et moriente passa est et paene commortua... ut merito dici queat eam cum Christo humanum genus redemisse.</span></p>
+        <p class="anchor__quote">&ldquo;She suffered and almost died with her suffering and dying Son... so that we may rightly say she <em>redeemed the human race together with Christ</em>.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>The sword is forged at this moment, sheathed in her heart, awaiting Calvary. Forty days after the birth, the Mother is told the price. She does not turn back.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Obedience and joyful acceptance of God&rsquo;s will.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For parents whose children carry hidden swords today.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Fifth Joyful Mystery</p>
+      <h3 class="mystery__title">5. The Finding in the Temple</h3>
+      <p class="anchor__source">Luke 2:41&ndash;52</p>
+      <p class="anchor__quote">&ldquo;He went down with them, and came to Nazareth, and was subject to them. And his mother kept all these words in her heart.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Patristic anchor &middot; Origen, <em>Hom. in Luc.</em> 20</p>
+        <p class="anchor__greek"><span class="greek">&Delta;&iota;&epsilon;&tau;&#942;&rho;&epsilon;&iota; &pi;&#940;&nu;&tau;&alpha; &tau;&#8048; &#8165;&#8134;&mu;&alpha;&tau;&alpha; &#7952;&nu; &tau;&#8135; &kappa;&alpha;&rho;&delta;&#943;&#8115; &alpha;&#8016;&tau;&#8134;&sigmaf;.</span></p>
+        <p class="anchor__quote">&ldquo;She kept all these things in her heart, so that they would not perish, but become a treasure in the Church.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>The first contemplative is also the first theologian: she pondered the words in her heart until they yielded their meaning. The Rosary is her pedagogy: keep, ponder, treasure.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>The gift of pondering Scripture in the heart.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For those who have lost Christ in the present moment, that they may seek him with Mary&rsquo;s perseverance.</dd></dl>
+    </div>
+  </section>
+
+  <!-- ============================== LUMINOUS ==============================
+       Collapsed by default. The traditional 15 mysteries (Joyful / Sorrowful
+       / Glorious) are the rosary the Church prayed from the Dominicans
+       through 2002; the Luminous five are JPII's 2002 addition and are
+       presented here as an optional expansion rather than co-equal. -->
+  <details class="mystery-set" id="luminous-set">
+    <summary aria-labelledby="luminous">
+      <div class="mystery-set__head">
+        <h2 class="mystery-set__title" id="luminous">The Luminous Mysteries</h2>
+        <span class="mystery-set__day">Thursday &middot; optional</span>
+      </div>
+      <p class="mystery-set__intro">Five mysteries of the public ministry, proposed by Pope St.&nbsp;John Paul II in <span class="latin"><em>Rosarium Virginis Mariae</em></span> (2002). The traditional Dominican distribution remains the fifteen above; the Luminous set is devotionally optional.</p>
+      <button type="button"
+              class="history-chip"
+              popovertarget="luminous-history"
+              aria-haspopup="dialog"
+              onclick="event.stopPropagation()">
+        <span class="history-chip__star" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor">
+            <polygon points="16,1 18,16 16,31 14,16"/>
+            <polygon points="1,16 16,14 31,16 16,18"/>
+            <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+            <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+            <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+            <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+          </svg>
+        </span>
+        On the Luminous Mysteries &middot; A history
+      </button>
+    </summary>
+
+    <div class="mystery">
+      <p class="mystery__kicker">First Luminous Mystery</p>
+      <h3 class="mystery__title">6. The Baptism of Our Lord in the Jordan</h3>
+      <p class="anchor__source">Matthew 3:13&ndash;17</p>
+      <p class="anchor__quote">&ldquo;This is my beloved Son, in whom I am well pleased.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Doctoral anchor &middot; Aquinas, <em>STh</em> III, q.30, a.1</p>
+        <p class="anchor__greek"><span class="latin">Per Annuntiationem expectabatur consensus Virginis loco totius humanae naturae.</span></p>
+        <p class="anchor__quote">&ldquo;The consent of the Virgin in place of the whole human nature was awaited.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>The voice that names the Beloved at the Jordan is the same voice that overshadowed her at Nazareth. The Father&rsquo;s beloved Son is her beloved Son first.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Openness to the gifts of the Holy Spirit.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For the renewal of our baptismal promises through her maternal hand.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Second Luminous Mystery &middot; <strong style="color: var(--m-gold-text); letter-spacing: 0.04em;">the Marian mystery of mediation</strong></p>
+      <h3 class="mystery__title">7. The Wedding at Cana</h3>
+      <p class="anchor__source">John 2:1&ndash;11</p>
+      <p class="anchor__greek"><span class="greek">&lambda;&#941;&gamma;&epsilon;&iota; &#7969; &mu;&#942;&tau;&eta;&rho; &alpha;&#8016;&tau;&omicron;&#8166; &tau;&omicron;&#8150;&sigmaf; &delta;&iota;&alpha;&kappa;&#972;&nu;&omicron;&iota;&sigmaf;&middot; &#8005; &tau;&iota; &#7972;&nu; &lambda;&#941;&gamma;&#8131; &#8017;&mu;&#8150;&nu;, &pi;&omicron;&iota;&#942;&sigma;&alpha;&tau;&epsilon;.</span></p>
+      <p class="anchor__quote">&ldquo;His mother saith to the waiters: <em>whatsoever he shall say to you, do ye.</em>&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Doctoral anchor &middot; Louis de Montfort, <em>True Devotion</em> &sect;23</p>
+        <p class="anchor__quote">&ldquo;God the Father gathered all the waters together and called them the seas (<span class="latin"><em>maria</em></span>); He gathered all His graces together and called them <em>Mary</em> (<span class="latin"><em>Maria</em></span>).&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>OT type</dt><dd>Bathsheba and the Davidic Gebirah (1 Kings 2:19&ndash;20). Cana enacts the Queen-Mother institution: she intercedes; he grants. <a href="ot-types.html">See OT Types &sect;14.</a></dd></dl>
+      <dl class="mystery__row"><dt>Meditation</dt><dd>She notices. She does not pray for herself; she prays for &ldquo;them.&rdquo; Her last word in any Gospel is <em>do whatever he tells you</em>.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>To Jesus through Mary.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For the petition you have not yet dared to bring; speak it to her now, and let her speak it to him.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Third Luminous Mystery</p>
+      <h3 class="mystery__title">8. The Proclamation of the Kingdom</h3>
+      <p class="anchor__source">Mark 1:14&ndash;15</p>
+      <p class="anchor__quote">&ldquo;The time is accomplished, and the kingdom of God is at hand: repent, and believe the gospel.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Doctoral anchor &middot; Bernardine of Siena, <em>Sermo</em> 51</p>
+        <p class="anchor__quote">&ldquo;Every grace communicated to this world has a threefold motion: from God to Christ, from Christ to the Virgin, from the Virgin to us.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>The Kingdom was proclaimed through the public ministry that began at Cana, at her word. Every conversion is in some way a fruit of her Cana intercession and her Calvary maternity.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Trust in the mercy of God, conversion.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For the proclamation of the Gospel in places that have not heard it, by her maternal love.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Fourth Luminous Mystery</p>
+      <h3 class="mystery__title">9. The Transfiguration on Mount Tabor</h3>
+      <p class="anchor__source">Matthew 17:1&ndash;8</p>
+      <p class="anchor__quote">&ldquo;His face did shine as the sun, and his garments became white as snow.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Patristic anchor &middot; John of Damascus, <em>Hom. in Dorm.</em> I</p>
+        <p class="anchor__quote">&ldquo;Thou art the wonder of all wonders, the <em>saving Mediatress</em> of the world.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>The face that shines on Tabor was shaped in her womb. The light is not foreign to her; she carried its source.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Desire for holiness, transfiguration in Christ.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For those who walk in spiritual darkness, that her maternal hand carry them to the Mount.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Fifth Luminous Mystery</p>
+      <h3 class="mystery__title">10. The Institution of the Eucharist</h3>
+      <p class="anchor__source">Luke 22:14&ndash;20 &middot; John 6:51&ndash;58</p>
+      <p class="anchor__greek"><span class="latin">Hoc est corpus meum, quod pro vobis datur.</span></p>
+      <p class="anchor__quote">&ldquo;This is my body, which is given for you.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Doctoral anchor &middot; Augustine, <em>Sermo Denis</em> 25</p>
+        <p class="anchor__quote">&ldquo;He took flesh from the flesh of Mary; that flesh is what we eat.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>The Body broken is the Body she gave him. There is no Eucharist without the Marian <span class="latin"><em>fiat</em></span>; there is no Mass without the Mother who consented to give the Son his body.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Eucharistic devotion, sacramental adoration.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For priests, that her maternal hand sustain them in the sacrifice of the altar.</dd></dl>
+    </div>
+  </details>
+
+  <!-- ============================== SORROWFUL ============================== -->
+  <section class="mystery-set" aria-labelledby="sorrowful">
+    <div class="mystery-set__head">
+      <h2 class="mystery-set__title" id="sorrowful">The Sorrowful Mysteries</h2>
+      <span class="mystery-set__day">Tuesday &middot; Friday</span>
+    </div>
+    <p class="mystery-set__intro">Two <span class="latin"><em>fiats</em></span> meet at Calvary: hers at the beginning, his at the end. The Co-Redemptrix doctrine in five mysteries.</p>
+
+    <div class="mystery">
+      <p class="mystery__kicker">First Sorrowful Mystery</p>
+      <h3 class="mystery__title">11. The Agony in the Garden</h3>
+      <p class="anchor__source">Matthew 26:36&ndash;46 &middot; Luke 22:39&ndash;46</p>
+      <p class="anchor__quote">&ldquo;Father, if thou wilt, remove this chalice from me: but yet not my will, but thine be done.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Mystical anchor &middot; Bridget of Sweden, <em>Revelations</em> I.35</p>
+        <p class="anchor__quote">&ldquo;My Mother and I have saved man as it were <em>with one Heart only</em>: I by suffering in My Heart and flesh, she by the sorrow and love of her heart.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>Two <span class="latin"><em>fiats</em></span>: hers at the Annunciation, his at the Agony. The whole redemption is the meeting of these two yeses.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Sorrow for sin, conformity to God&rsquo;s will.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For those who must say <em>thy will be done</em> tonight in a hard hour.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Second Sorrowful Mystery</p>
+      <h3 class="mystery__title">12. The Scourging at the Pillar</h3>
+      <p class="anchor__source">Matthew 27:26 &middot; John 19:1</p>
+      <p class="anchor__quote">&ldquo;He was wounded for our iniquities, he was bruised for our sins; and by his bruises we are healed.&rdquo; (Isa 53:5)</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Doctoral anchor &middot; Robert Bellarmine, <em>De Septem Verbis</em> I.12</p>
+        <p class="anchor__quote">&ldquo;Mary offered her Son in sacrifice, afflicted with such sufferings together with Him as no other creature ever bore.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>Every blow on his back is felt in her soul. The sword Simeon prophesied is being unsheathed slowly through the Passion.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Mortification, purity, self-control.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For victims of cruelty and abuse, that they find a maternal refuge in her.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Third Sorrowful Mystery</p>
+      <h3 class="mystery__title">13. The Crowning with Thorns</h3>
+      <p class="anchor__source">Matthew 27:27&ndash;31 &middot; John 19:2&ndash;5</p>
+      <p class="anchor__greek"><span class="latin">Ecce homo.</span></p>
+      <p class="anchor__quote">&ldquo;Jesus therefore came forth, bearing the crown of thorns: <em>Behold the man</em>.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Doctoral anchor &middot; Anselm, <em>Oratio</em> 52</p>
+        <p class="anchor__greek"><span class="latin">Nihil Mariae aequale, nihil nisi Deus maius Maria.</span></p>
+        <p class="anchor__quote">&ldquo;Nothing equals Mary; nothing but God is greater than Mary.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd><span class="latin"><em>Ecce homo</em></span>. And then, at the Cross, <span class="latin"><em>Ecce Mater tua</em></span>. The two beholdings are one.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Moral courage, contempt of the world.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For those mocked, slandered, or humiliated; for the grace to bear it in union with the crowned Christ and his Mother.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Fourth Sorrowful Mystery</p>
+      <h3 class="mystery__title">14. The Carrying of the Cross</h3>
+      <p class="anchor__source">Luke 23:26&ndash;31 &middot; John 19:17</p>
+      <p class="anchor__quote">&ldquo;Bearing his own cross, he went forth to that place which is called Calvary, but in Hebrew Golgotha.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Doctoral anchor &middot; Albert the Great, <em>Mariale</em> q.42</p>
+        <p class="anchor__quote">&ldquo;The Blessed Virgin was chosen by God not to be the minister of some particular work, but to be a <em>cooperatrix and helper</em> of His whole plan.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>Their eyes met on the way to Calvary. Whatever passed between them in that look is the whole Co-Redemptrix doctrine in silence.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Patience, perseverance under affliction.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For the dying, that her maternal hand support them on their last walk.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Fifth Sorrowful Mystery &middot; <strong style="color: var(--m-gold-text); letter-spacing: 0.04em;">the load-bearing Co-Redemptrix mystery</strong></p>
+      <h3 class="mystery__title">15. The Crucifixion and Death of Our Lord</h3>
+      <p class="anchor__source">John 19:25&ndash;37</p>
+      <p class="anchor__greek"><span class="greek">&lambda;&#941;&gamma;&epsilon;&iota; &tau;&#8135; &mu;&eta;&tau;&rho;&#943;&middot; &gamma;&#973;&nu;&alpha;&iota;, &#7988;&delta;&epsilon; &#8001; &upsilon;&#7985;&#972;&sigmaf; &sigma;&omicron;&upsilon;. &epsilon;&#7990;&tau;&alpha; &lambda;&#941;&gamma;&epsilon;&iota; &tau;&#8183; &mu;&alpha;&theta;&eta;&tau;&#8135;&middot; &#7988;&delta;&epsilon; &#7969; &mu;&#942;&tau;&eta;&rho; &sigma;&omicron;&upsilon;.</span></p>
+      <p class="anchor__quote">&ldquo;He saith to his mother: <em>Woman, behold thy son.</em> After that, he saith to the disciple: <em>Behold thy mother.</em>&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Magisterial anchor &middot; Benedict XV, <em>Inter Sodalicia</em>, 1918 <span class="prov magisterial">magisterial</span></p>
+        <p class="anchor__quote">&ldquo;She redeemed the human race together with Christ.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>She stood. She did not flee. She offered. Take her into your own (<span class="greek"><em>eis ta idia</em></span>), as the beloved disciple did from that hour. <a href="nt-texts.html">See NT Texts.</a></dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Final perseverance, the gift of dying in Christ.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For those who will die today without a mother; that Mary herself be their mother.</dd></dl>
+    </div>
+  </section>
+
+  <!-- ============================== GLORIOUS ============================== -->
+  <section class="mystery-set" aria-labelledby="glorious">
+    <div class="mystery-set__head">
+      <h2 class="mystery-set__title" id="glorious">The Glorious Mysteries</h2>
+      <span class="mystery-set__day">Wednesday &middot; Sunday</span>
+    </div>
+    <p class="mystery-set__intro">From the Resurrection to the Coronation: the maternal Mediatrix glorified, the eternal form of her motherhood.</p>
+
+    <div class="mystery">
+      <p class="mystery__kicker">First Glorious Mystery</p>
+      <h3 class="mystery__title">16. The Resurrection</h3>
+      <p class="anchor__source">Matthew 28:1&ndash;10 &middot; John 20:1&ndash;18</p>
+      <p class="anchor__quote">&ldquo;Christ rising again from the dead, dieth now no more, death shall no more have dominion over him.&rdquo; (Rom 6:9)</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Doctoral anchor &middot; Bernard of Clairvaux, <em>Sermo de Aquaeductu</em></p>
+        <p class="anchor__greek"><span class="latin">Totum nos habere voluit per Mariam.</span></p>
+        <p class="anchor__quote">&ldquo;He willed that we should have <em>everything through Mary</em>.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Tradition</dt><dd>From Sedulius (5th c.) through Ignatius of Loyola, the tradition holds that the Risen Son appeared first to his Mother. The argument from fittingness is overwhelming: the one who suffered most should receive the consolation first.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Faith, hope of bodily resurrection.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For those mourning a death today, that her maternal consolation be the first they receive.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Second Glorious Mystery</p>
+      <h3 class="mystery__title">17. The Ascension</h3>
+      <p class="anchor__source">Acts 1:6&ndash;11</p>
+      <p class="anchor__quote">&ldquo;While they looked on, he was raised up; and a cloud received him out of their sight.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Doctoral anchor &middot; Bonaventure, <em>Speculum</em> ch. 6</p>
+        <p class="anchor__quote">&ldquo;As the moon, set between the sun and the earth, communicates to the earth what it receives from the sun, so Mary, set between Christ and us, pours out upon us the graces she receives from Christ.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>The cloud that receives him is the same <span class="latin"><em>shekinah</em></span> that overshadowed her at the Annunciation (<span class="greek"><em>epi-skiasei</em></span>, Luke 1:35; same verb as Exodus 40:35). The Ascension closes the bracket the Annunciation opened.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Desire for heaven, hope.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For the perseverance of those who feel the absence of Christ, that Mary be their mediating presence.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Third Glorious Mystery</p>
+      <h3 class="mystery__title">18. Pentecost</h3>
+      <p class="anchor__source">Acts 1:14 &middot; Acts 2:1&ndash;13</p>
+      <p class="anchor__quote">&ldquo;All these were persevering with one mind in prayer with the women, and <em>Mary the mother of Jesus</em>, and with his brethren.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Modern anchor &middot; Maximilian Kolbe, <em>Pisma</em>, 1917</p>
+        <p class="anchor__greek"><em>Niepokalana jest Po&#347;redniczk&#261; wszelkich &#322;ask.</em></p>
+        <p class="anchor__quote">&ldquo;The Immaculata is the <em>Mediatrix of all graces</em>.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>The last canonical mention of Mary is in the Upper Room. The Spirit who overshadowed her at the Annunciation now descends upon the Church around her. The infant Church is born with the same Marian <span class="latin"><em>fiat</em></span> that began the Incarnation.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Love of God, gifts of the Holy Spirit, missionary zeal.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For the renewal of the Church, that Mary obtain another Pentecost.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Fourth Glorious Mystery</p>
+      <h3 class="mystery__title">19. The Assumption</h3>
+      <p class="anchor__source">Revelation 12:1</p>
+      <p class="anchor__quote">&ldquo;A great sign appeared in heaven: a woman clothed with the sun, and the moon under her feet, and on her head a crown of twelve stars.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Magisterial anchor &middot; Pius XII, <em>Munificentissimus Deus</em>, 1950 &sect;44 <span class="prov magisterial">defined dogma</span></p>
+        <p class="anchor__quote">&ldquo;The Immaculate Mother of God, the ever Virgin Mary, having completed the course of her earthly life, was assumed body and soul into heavenly glory.&rdquo;</p>
+      </div>
+
+      <div class="anchor">
+        <p class="anchor__label">Patristic anchor &middot; Germanus of Constantinople, <em>Hom. in Dorm.</em></p>
+        <p class="anchor__quote">&ldquo;It was impossible that the body which had given life to God should see corruption.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>Meditation</dt><dd>The maternal Eve is in heaven before the Last Day, the first fruits of the redeemed. Everything we hope for is already realized in her.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Desire for heaven, devotion to Mary, hope of bodily resurrection.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For those near the end of life, that they may obtain through her Assumption the grace of their own happy passage.</dd></dl>
+    </div>
+
+    <div class="mystery">
+      <p class="mystery__kicker">Fifth Glorious Mystery</p>
+      <h3 class="mystery__title">20. The Coronation of the Blessed Virgin Mary</h3>
+      <p class="anchor__source">Revelation 12:1 &middot; Psalm 44:10</p>
+      <p class="anchor__greek"><span class="latin">Astitit regina a dextris tuis, in vestitu deaurato, circumdata varietate.</span></p>
+      <p class="anchor__quote">&ldquo;The queen stood on thy right hand, in gilded clothing; surrounded with variety.&rdquo;</p>
+
+      <div class="anchor">
+        <p class="anchor__label">Magisterial anchor &middot; Pius XII, <em>Ad Caeli Reginam</em>, 1954 <span class="prov magisterial">magisterial</span></p>
+        <p class="anchor__quote">&ldquo;From this association with Christ the King she obtains such an eminence, such a splendor, that she surpasses everything that has been created.&rdquo;</p>
+      </div>
+
+      <dl class="mystery__row"><dt>OT type</dt><dd>Bathsheba, the Davidic Gebirah at Solomon&rsquo;s right hand (1 Kings 2:19). The Coronation is the consummation of the Gebirah institution.</dd></dl>
+      <dl class="mystery__row"><dt>Meditation</dt><dd>She is crowned not by herself but by her Son. The Mediatrix is Queen because she is Mother. The Queenship is the eternal form of her maternal mediation.</dd></dl>
+      <dl class="mystery__row"><dt>Fruit</dt><dd>Trust in Mary&rsquo;s intercession; perseverance to the end.</dd></dl>
+      <dl class="mystery__row"><dt>Intention</dt><dd>For the conversion of sinners, especially those who have rejected her; that the Queen of Mercy attend their final hour.</dd></dl>
+    </div>
+  </section>
+
+  <!-- ============================== CLOSING ============================== -->
+  <section class="closing-prayers">
+    <h2>Closing Prayers</h2>
+
+    <h4 style="text-align:center;">Salve Regina</h4>
+    <p class="lat">
+      Salve Regina, Mater misericordiae,<br/>
+      vita, dulcedo et spes nostra, salve.<br/>
+      Ad te clamamus, exsules filii Hevae,<br/>
+      ad te suspiramus, gementes et flentes<br/>
+      in hac lacrimarum valle.<br/>
+      Eia ergo, advocata nostra,<br/>
+      illos tuos misericordes oculos ad nos converte.<br/>
+      Et Iesum, benedictum fructum ventris tui,<br/>
+      nobis post hoc exsilium ostende.<br/>
+      O clemens, O pia, O dulcis Virgo Maria.
+    </p>
+    <p class="en">
+      Hail, holy Queen, Mother of mercy, our life, our sweetness, and our hope.
+      To thee do we cry, poor banished children of Eve. To thee do we send up our
+      sighs, mourning and weeping in this valley of tears. Turn then, most gracious
+      <em>advocate</em>, thine eyes of mercy toward us; and after this our exile,
+      show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet
+      Virgin Mary.
+    </p>
+    <p class="versicle"><strong>V.</strong> Pray for us, O holy Mother of God. &nbsp;&nbsp; <strong>R.</strong> That we may be made worthy of the promises of Christ.</p>
+
+    <h4 style="text-align:center; margin-top: var(--rhythm-x2);">Memorare</h4>
+    <p class="en">
+      Remember, O most gracious Virgin Mary, that never was it known that anyone
+      who fled to thy protection, implored thy help, or sought thy intercession,
+      was left unaided. Inspired with this confidence, I fly unto thee, O Virgin
+      of virgins, my Mother; to thee do I come, before thee I stand, sinful and
+      sorrowful. O Mother of the Word Incarnate, despise not my petitions, but
+      in thy mercy hear and answer me. Amen.
+    </p>
+
+    <h4 style="text-align:center; margin-top: var(--rhythm-x2);">Sub Tuum Praesidium <span style="color: var(--warm-grey-4); letter-spacing: 0.16em;">&middot; c. AD 250</span></h4>
+    <p class="lat">
+      Sub tuum praesidium confugimus, sancta Dei Genetrix.<br/>
+      Nostras deprecationes ne despicias in necessitatibus nostris,<br/>
+      sed a periculis cunctis libera nos semper,<br/>
+      Virgo gloriosa et benedicta.
+    </p>
+    <p class="en">
+      Beneath thy protection we take refuge, O holy Mother of God. Despise not
+      our petitions in our necessities, but deliver us always from all dangers,
+      O glorious and blessed Virgin.
+    </p>
+  </section>
+
+  <div class="stella-rule" aria-hidden="true">
+    <span class="stella"><svg viewBox="0 0 32 32"><polygon points="16,1 18,16 16,31 14,16"/><polygon points="1,16 16,14 31,16 16,18"/><polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/><polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/><polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/><polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/><circle cx="16" cy="16" r="1.6"/></svg></span>
+  </div>
+
+  <p style="text-align:center; font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: var(--rhythm-x2) auto;">
+    Maria, Mater Mediatrix, ora pro nobis peccatoribus,<br/>
+    nunc et in hora mortis nostrae. Amen.
+  </p>
+
+</main>
+
+<!-- ============================== POPOVER: Rosary history ============================== -->
+<div id="rosary-history" popover="auto" class="popover-card" aria-labelledby="rosary-history-title">
+  <button type="button" class="popover-card__close" popovertarget="rosary-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span>A history</p>
+    <h3 id="rosary-history-title">The Rosary</h3>
+    <p class="popover-card__lede">The Marian Psalter &mdash; one hundred and fifty Hail Marys for one hundred and fifty Psalms &mdash; from the desert hermits to <span class="latin"><em>Consueverunt Romani Pontifices</em></span>, Lepanto, and <span class="latin"><em>Rosarium Virginis Mariae</em></span>.</p>
+
+    <p>
+      The form is older than the name. From the desert and the early monastic
+      tradition, illiterate brothers prayed a parallel Psalter &mdash; one hundred
+      and fifty <em>Pater nosters</em> on a knotted cord while the choir sang the
+      one hundred and fifty Psalms in the church. By the twelfth century the
+      Cistercians and the Carthusians had begun to substitute the
+      <span class="latin"><em>Ave Maria</em></span> for the
+      <span class="latin"><em>Pater</em></span> on lay cords. The
+      hundred-and-fifty number persisted; the prayer transposed. The result was
+      the <span class="latin"><em>Psalterium Mariae</em></span> &mdash; the
+      Marian Psalter.
+    </p>
+
+    <p>
+      The medieval tradition attributes the rosary in its received form to
+      <strong>St.&nbsp;Dominic</strong> (c. 1170&ndash;1221), who is said to have
+      received it from the Blessed Virgin at Prouille in 1208 to preach against
+      the Albigensian heresy. Modern historical scholarship treats the Dominic
+      narrative as a later devotional tradition rather than a documented event;
+      what is documented is that the rosary&rsquo;s formal propagation belongs
+      to <strong>Bl.&nbsp;Alan de la Roche, O.P.</strong> (1428&ndash;1475), who
+      founded the Confraternity of the Most Holy Rosary at Douai in 1470. The
+      Dominicans have carried the rosary as their proper devotion ever since.
+    </p>
+
+    <p>
+      The decisive papal codification came from a Dominican pope.
+      <strong>St.&nbsp;Pius&nbsp;V</strong> (Antonio Michele Ghislieri,
+      O.P., 1504&ndash;1572) issued the apostolic letter <span class="latin"><em>Consueverunt
+      Romani Pontifices</em></span> on <strong>17 September 1569</strong>. It
+      fixed the form &mdash; one hundred and fifty <span class="latin"><em>Ave
+      Marias</em></span> in fifteen decades, each preceded by a <span class="latin"><em>Pater
+      noster</em></span> and a meditation on one mystery of Christ &mdash; and
+      attached the indulgences that bound the form into the universal devotional
+      life of the Church.
+    </p>
+
+    <p>
+      Two years after <span class="latin"><em>Consueverunt</em></span>, on
+      <strong>7 October 1571</strong>, the Holy League&rsquo;s fleet engaged the
+      Ottoman Turkish fleet at <strong>Lepanto</strong>. In Rome that morning,
+      Pius V had ordered the Rosary Confraternities to process through the
+      streets praying the rosary for the outcome of the battle. The victory
+      &mdash; against vastly greater Ottoman naval force &mdash; was attributed
+      by Pius V directly to Marian intercession. He instituted the
+      <strong>Feast of Our Lady of Victory</strong>, observed annually on
+      7&nbsp;October. Gregory&nbsp;XIII renamed it the <strong>Feast of the Most
+      Holy Rosary</strong> in 1573. It is observed under that name to this day.
+    </p>
+
+    <p>
+      The next sustained papal investment came from <strong>Leo&nbsp;XIII</strong>
+      (1810&ndash;1903), known to the tradition as <em>the Rosary Pope</em>: he
+      issued <strong>eleven encyclicals</strong> on the rosary between 1883 and
+      1900, beginning with <span class="latin"><em>Supremi Apostolatus Officio</em></span>
+      (1 September 1883). The October-as-Marian-month observance descends from
+      these encyclicals. <strong>Paul&nbsp;VI</strong>&rsquo;s <span class="latin"><em>Marialis Cultus</em></span>
+      (2 February 1974) is the post-conciliar pastoral synthesis: it reasserts
+      the rosary as a Christological prayer, fundamentally a meditation on the
+      mysteries of Christ through the eyes of his Mother.
+    </p>
+
+    <p>
+      The two-figure modern continuation is <strong>Bl.&nbsp;Bartolo Longo</strong>
+      (1841&ndash;1926) at Pompei, who built the rosary&rsquo;s pastoral
+      infrastructure for the modern world (Basilica, <span class="latin"><em>Quindici
+      Sabati</em></span>, <em>Supplica</em>); and <strong>John&nbsp;Paul&nbsp;II</strong>,
+      whose <span class="latin"><em>Rosarium Virginis Mariae</em></span> (16
+      October 2002) proposed the optional <a href="#luminous-set">Luminous
+      Mysteries</a>. <em>See the Luminous popover for that history.</em>
+    </p>
+
+    <blockquote>
+      The Rosary, though clearly Marian in character, is at heart a
+      Christocentric prayer. In the sobriety of its elements, it has all the
+      depth of the Gospel message in its entirety, of which it can be said to
+      be a compendium.
+      <cite>John Paul II &middot; <em>Rosarium Virginis Mariae</em> &sect;1</cite>
+    </blockquote>
+
+    <p>
+      The form is fixed; the form is plural. The fifteen-decade rosary of Pius V
+      is the rosary; the chaplet of Our Lady of Sorrows (Servite, seven sorrows)
+      and the Franciscan Crown (seven joys) and the Brigittine Rosary (six
+      decades, sixty-three Ave Marias) all coexist with it. The Eastern
+      tradition prays the Jesus Prayer on the <em>komboskini</em>; the
+      Carthusians retain the Marian Psalter in monastic register. The rosary is
+      not a single fixed prayer; it is the Marian Psalter, in many forms, in one
+      continuous tradition.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">Psalterium Mariae.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      Pius V, <em>Consueverunt Romani Pontifices</em> (17 Sep 1569) &middot;
+      Lepanto, 7 Oct 1571 &middot;
+      Feast of the Most Holy Rosary, instituted 1573 (Gregory XIII) &middot;
+      Leo XIII, <em>Supremi Apostolatus Officio</em> (1 Sep 1883) &middot;
+      Paul VI, <em>Marialis Cultus</em>, AAS 66 (1974) 113&ndash;168 &middot;
+      Bartolo Longo, <em>Quindici Sabati</em> (1879) &middot;
+      John Paul II, <em>Rosarium Virginis Mariae</em>, AAS 95 (2003) 5&ndash;36
+    </p>
+  </div>
+</div>
+
+<!-- ============================== POPOVER: Luminous history ============================== -->
+<div id="luminous-history" popover="auto" class="popover-card" aria-labelledby="luminous-history-title">
+  <button type="button" class="popover-card__close" popovertarget="luminous-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span>A history</p>
+    <h3 id="luminous-history-title">The Luminous Mysteries</h3>
+    <p class="popover-card__lede">How the rosary&rsquo;s fourth set was proposed in 2002 &mdash; and why it stands on the shoulders of a converted Italian lawyer who, before his conversion, had been a Satanist.</p>
+
+    <p>
+      The rosary of fifteen mysteries &mdash; Joyful, Sorrowful, Glorious &mdash;
+      received its decisive papal form from <strong>Pope St.&nbsp;Pius V</strong>
+      in <em>Consueverunt Romani Pontifices</em> (1569), in the wake of the
+      Dominican confraternities that had been propagating it for a century. The
+      structure held for the next four hundred and thirty-three years. Between
+      the fifth Joyful mystery (the Finding of the Child in the Temple) and the
+      first Sorrowful mystery (the Agony in the Garden), the rosary&rsquo;s
+      meditation passed in silence over the entirety of Christ&rsquo;s public
+      ministry &mdash; Cana, the proclamation of the Kingdom, the
+      Transfiguration, the Institution of the Eucharist.
+    </p>
+
+    <p>
+      <strong>Bl. Bartolo Longo</strong> (1841&ndash;1926) is the apostle who
+      makes the modern rosary modern. A law student at the University of Naples,
+      he was caught up in the spiritualist and occult circles of the early 1860s
+      and, by his own later admission, was ordained a priest of a satanic sect.
+      He suffered a collapse of body and mind. In 1865, under the direction of
+      the Dominican <strong>Fr. Alberto Radente, O.P.</strong>, he made a
+      complete confession and returned to the Church. He took the Dominican
+      habit as a tertiary in 1871 and adopted the rosary as the work of his
+      life. <em>&ldquo;He who propagates the Rosary,&rdquo;</em> he wrote,
+      <em>&ldquo;is saved.&rdquo;</em>
+    </p>
+
+    <p>
+      Longo settled at the Valle di Pompei and, beginning in 1875, built what
+      became the <strong>Basilica of Our Lady of the Rosary of Pompeii</strong>
+      around a damaged icon of the Virgin he had been given for free. In 1879
+      he published the <span class="latin"><em>Quindici Sabati del Santissimo
+      Rosario</em></span> &mdash; the <em>Fifteen Saturdays of the Most Holy
+      Rosary</em> &mdash; a complete catechetical meditation on the rosary as
+      it then stood: fifteen mysteries, in fifteen weeks. He composed the
+      <em>Supplication to the Queen of the Holy Rosary</em>, still recited
+      annually at Pompeii on 8&nbsp;May and the first Sunday of October.
+      <strong>John Paul II beatified him on 26 October 1980</strong> and called
+      him &ldquo;a man of the Madonna and an apostle of the rosary in the
+      truest sense.&rdquo;
+    </p>
+
+    <p>
+      On <strong>16 October 2002</strong>, for the twenty-fifth anniversary of
+      his pontificate, John Paul II issued <span class="latin"><em>Rosarium
+      Virginis Mariae</em></span>. The apostolic letter cites Bartolo Longo
+      four times and is explicitly framed as in continuity with his work. JPII
+      <em>proposed</em> &mdash; <span class="latin">proponimus</span>, not
+      <span class="latin">imponimus</span> &mdash; five new mysteries of the
+      public ministry: <strong>the Baptism in the Jordan, the Wedding at Cana,
+      the Proclamation of the Kingdom, the Transfiguration, and the Institution
+      of the Eucharist</strong>. They fill the gap the rosary had carried for
+      four centuries.
+    </p>
+
+    <blockquote>
+      I believe, however, that to bring out fully the Christological depth of
+      the Rosary it would be suitable to make an addition to the traditional
+      pattern which, while left to the freedom of individuals and communities,
+      could broaden it to include the mysteries of Christ&rsquo;s public ministry
+      between his Baptism and his Passion. &hellip; I have decided to add five
+      &mdash; without thereby suggesting any modification of the prayer&rsquo;s
+      traditional structure &mdash; I have called the <em>mysteries of light</em>.
+      <cite>John Paul II &middot; <em>Rosarium Virginis Mariae</em> &sect;19</cite>
+    </blockquote>
+
+    <p>
+      The Luminous mysteries are therefore canonical but not obligatory. The
+      fifteen-decade rosary remains the rosary in its received form; the
+      Luminous five are available, on Thursdays, as a fourth optional set. The
+      Carthusians, many Carmelites, and most contemplative congregations
+      continue to pray the traditional fifteen alone, in continuity with the
+      Dominican distribution. Bartolo Longo&rsquo;s own <em>Fifteen Saturdays</em>
+      remains the standard catechetical work on the rosary in its received
+      form.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">Proposita, non imposita.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      <em>Rosarium Virginis Mariae</em> (16 Oct 2002), AAS 95 (2003) 5&ndash;36, &sect;19&ndash;21 &middot;
+      Pius V, <em>Consueverunt Romani Pontifices</em> (17 Sep 1569) &middot;
+      Bartolo Longo, <em>Quindici Sabati del Santissimo Rosario</em> (Pompeii, 1879) &middot;
+      Beatification homily, John Paul II, 26 October 1980 &middot;
+      <em>Supplica alla Regina del Santissimo Rosario di Pompei</em> (1883)
+    </p>
+  </div>
+</div>
+
+<footer class="colophon">
+  <span class="small-caps">15 traditional &middot; 5 luminous (optional)</span>
+  <span class="colophon__nav">
+    <a href="index.html">Home</a><span>&middot;</span>
+    <a href="library.html">Library</a><span>&middot;</span>
+    <a href="anthology.html">Anthology</a><span>&middot;</span>
+    <a href="litany.html">Litany</a><span>&middot;</span>
+    <a href="feasts.html">Feasts</a><span>&middot;</span>
+    <a href="apparitions.html">Apparitions</a><span>&middot;</span>
+    <a href="search.html">Search</a>
+  </span>
+  <span class="colophon__sub">
+    <strong>Sub tuum praesidium</strong>
+    Beneath thy protection we take refuge, O holy Mother of God.
+  </span>
+</footer>
+
+<script>
+  var btn = document.getElementById("mode-toggle");
+  function syncLabel() {
+    btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil";
+  }
+  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
+  syncLabel();
+
+  /* Auto-open the Luminous accordion when the user lands on
+     rosary.html#luminous (or clicks an in-page anchor that resolves
+     to it). Native <details> does not open on :target, so we wire
+     it ourselves on load + hashchange. */
+  function openIfLuminous() {
+    if (location.hash !== "#luminous" && location.hash !== "#luminous-set") return;
+    var d = document.getElementById("luminous-set");
+    if (d && !d.open) {
+      d.open = true;
+      // Re-scroll because opening shifts layout.
+      setTimeout(function () { d.scrollIntoView({ block: "start" }); }, 0);
+    }
+  }
+  openIfLuminous();
+  window.addEventListener("hashchange", openIfLuminous);
+
+  Mediatrix.pushRecent({
+    slug: "rosary.html",
+    title: "Rosary Companion",
+    subtitle: "Fifteen mysteries · Dominican distribution",
+    vestment: "white",
+    scrollRatio: 0,
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "source_file": "Rosary-Companion.md",
+  "source_mtime": "2026-05-15T04:22:49",
+  "generated_at": "2026-05-15T11:22:35",
+  "title": "Daily Rosary Companion — Marian Citations for Each Mystery",
+  "distribution": {
+    "monday": "joyful",
+    "tuesday": "sorrowful",
+    "wednesday": "glorious",
+    "thursday": "luminous",
+    "friday": "sorrowful",
+    "saturday": "joyful",
+    "sunday": "glorious"
+  },
+  "mysteries": [
+    {
+      "num": 1,
+      "set": "joyful",
+      "title": "The Annunciation",
+      "reference": "Luke 1:26-38",
+      "scripture": "**Scripture** (Luke 1:38, Greek): *εἶπεν δὲ Μαριάμ· ἰδοὺ ἡ δούλη Κυρίου· γένοιτό μοι κατὰ τὸ ῥῆμά σου.* **English**: \"And Mary said: Behold the handmaid of the Lord; be it done to me according to thy word.\"",
+      "fruit": "humility",
+      "intention": "for the grace to say yes to God in the small matters of"
+    },
+    {
+      "num": 2,
+      "set": "joyful",
+      "title": "The Visitation",
+      "reference": "Luke 1:39-56",
+      "scripture": "**Scripture** (Luke 1:42-43): \"And [Elizabeth] cried out with a loud voice, and said: Blessed art thou among women, and blessed is the fruit of thy womb. And whence is this to me, that the mother of my Lord should come to me?\"",
+      "fruit": "charity in service to neighbor",
+      "intention": "for those who carry heavy burdens, that the Mediatrix"
+    },
+    {
+      "num": 3,
+      "set": "joyful",
+      "title": "The Nativity of Our Lord",
+      "reference": "Luke 2:1-20",
+      "scripture": "**Scripture** (Luke 2:7): \"And she brought forth her firstborn son, and wrapped him up in swaddling clothes, and laid him in a manger.\"",
+      "fruit": "poverty of spirit",
+      "intention": "for mothers laboring tonight, that the Bethlehem Mother"
+    },
+    {
+      "num": 4,
+      "set": "joyful",
+      "title": "The Presentation of Our Lord",
+      "reference": "Luke 2:22-35",
+      "scripture": "**Scripture** (Luke 2:34-35): \"And Simeon blessed them, and said to Mary his mother: Behold this child is set for the fall, and for the resurrection of many in Israel, and for a sign which shall be contradicted; and thy own soul a sword shall pierce, that, out of many hearts, thoughts may be revealed.\"",
+      "fruit": "obedience and joyful acceptance of God's will",
+      "intention": "for parents whose children carry hidden swords today"
+    },
+    {
+      "num": 5,
+      "set": "joyful",
+      "title": "The Finding of Our Lord in the Temple",
+      "reference": "Luke 2:41-52",
+      "scripture": "**Scripture** (Luke 2:51): \"And he went down with them, and came to Nazareth, and was subject to them. And his mother kept all these words in her heart.\"",
+      "fruit": "the gift of pondering Scripture in the heart",
+      "intention": "for those who have lost Christ in the present moment,"
+    },
+    {
+      "num": 6,
+      "set": "luminous",
+      "title": "The Baptism of Our Lord in the Jordan",
+      "reference": "Matthew 3:13-17, Mark 1:9-11, Luke 3:21-22",
+      "scripture": "**Scripture** (Matthew 3:17): \"And behold a voice from heaven, saying: This is my beloved Son, in whom I am well pleased.\"",
+      "fruit": "openness to the gifts of the Holy Spirit",
+      "intention": "for the renewal of our baptismal promises through her"
+    },
+    {
+      "num": 7,
+      "set": "luminous",
+      "title": "The Wedding at Cana",
+      "reference": "John 2:1-11) — THE MARIAN MYSTERY OF MEDIATION",
+      "scripture": "**Scripture** (John 2:5, Greek): *λέγει ἡ μήτηρ αὐτοῦ τοῖς διακόνοις· ὅ τι ἂν λέγῃ ὑμῖν, ποιήσατε.* **English**: \"His mother saith to the waiters: **Whatsoever he shall say to you, do ye.**\"",
+      "fruit": "to Jesus through Mary",
+      "intention": "for the petition you have not yet dared to bring; speak"
+    },
+    {
+      "num": 8,
+      "set": "luminous",
+      "title": "The Proclamation of the Kingdom",
+      "reference": "Mark 1:14-15, Matthew 4:17-25",
+      "scripture": "**Scripture** (Mark 1:15): \"And saying: The time is accomplished, and the kingdom of God is at hand: repent, and believe the gospel.\"",
+      "fruit": "trust in the mercy of God, conversion",
+      "intention": "for the proclamation of the Gospel in places that have"
+    },
+    {
+      "num": 9,
+      "set": "luminous",
+      "title": "The Transfiguration on Mount Tabor",
+      "reference": "Matthew 17:1-8",
+      "scripture": "**Scripture** (Matthew 17:2): \"And he was transfigured before them. And his face did shine as the sun: and his garments became white as snow.\"",
+      "fruit": "desire for holiness, transfiguration in Christ",
+      "intention": "for those who walk in spiritual darkness, that her"
+    },
+    {
+      "num": 10,
+      "set": "luminous",
+      "title": "The Institution of the Eucharist",
+      "reference": "Luke 22:14-20, John 6:51-58",
+      "scripture": "**Scripture** (Luke 22:19): \"Hoc est corpus meum, quod pro vobis datur.\" (\"This is my body, which is given for you.\")",
+      "fruit": "Eucharistic devotion, sacramental adoration",
+      "intention": "for priests, that her maternal hand sustain them in the"
+    },
+    {
+      "num": 11,
+      "set": "sorrowful",
+      "title": "The Agony in the Garden",
+      "reference": "Matthew 26:36-46, Luke 22:39-46",
+      "scripture": "**Scripture** (Luke 22:42): \"Father, if thou wilt, remove this chalice from me: but yet not my will, but thine be done.\"",
+      "fruit": "sorrow for sin, conformity to God's will",
+      "intention": "for those who must say thy will be done tonight in a"
+    },
+    {
+      "num": 12,
+      "set": "sorrowful",
+      "title": "The Scourging at the Pillar",
+      "reference": "Matthew 27:26, John 19:1",
+      "scripture": "**Scripture** (Isaiah 53:5): \"But he was wounded for our iniquities, he was bruised for our sins: the chastisement of our peace was upon him, and by his bruises we are healed.\"",
+      "fruit": "mortification, purity, self-control",
+      "intention": "for victims of cruelty and abuse, that they find a"
+    },
+    {
+      "num": 13,
+      "set": "sorrowful",
+      "title": "The Crowning with Thorns",
+      "reference": "Matthew 27:27-31, John 19:2-5",
+      "scripture": "**Scripture** (John 19:5): \"Jesus therefore came forth, bearing the crown of thorns and the purple garment. And he saith to them: Behold the man.\" (*Ecce homo.*)",
+      "fruit": "moral courage, contempt of the world",
+      "intention": "for those mocked, slandered, or humiliated; for the"
+    },
+    {
+      "num": 14,
+      "set": "sorrowful",
+      "title": "The Carrying of the Cross",
+      "reference": "Luke 23:26-31, John 19:17",
+      "scripture": "**Scripture** (John 19:17): \"And bearing his own cross, he went forth to that place which is called Calvary, but in Hebrew Golgotha.\"",
+      "fruit": "patience, perseverance under affliction",
+      "intention": "for the dying, that her maternal hand support them on"
+    },
+    {
+      "num": 15,
+      "set": "sorrowful",
+      "title": "The Crucifixion and Death of Our Lord",
+      "reference": "John 19:25-37",
+      "scripture": "**Scripture** (John 19:25-27, Greek): *Εἱστήκεισαν δὲ παρὰ τῷ σταυρῷ τοῦ Ἰησοῦ ἡ μήτηρ αὐτοῦ... Ἰησοῦς... λέγει τῇ μητρί· γύναι, ἴδε ὁ υἱός σου. εἶτα λέγει τῷ μαθητῇ· ἴδε ἡ μήτηρ σου.* **English**: \"Now there stood by the cross of Jesus, his mother... When Jesus therefore had seen his mother and the disciple standing whom he loved, he saith to his mother: **Woman, behold thy son.** After that, he saith to the disciple: **Behold thy mother.**\"",
+      "fruit": "final perseverance, the gift of dying in Christ",
+      "intention": "for those who will die today without a mother; that"
+    },
+    {
+      "num": 16,
+      "set": "glorious",
+      "title": "The Resurrection of Our Lord",
+      "reference": "Matthew 28:1-10, John 20:1-18",
+      "scripture": "**Scripture** (Romans 6:9): \"Christ rising again from the dead, dieth now no more, death shall no more have dominion over him.\"",
+      "fruit": "faith, hope of bodily resurrection",
+      "intention": "for those mourning a death today, that her maternal"
+    },
+    {
+      "num": 17,
+      "set": "glorious",
+      "title": "The Ascension of Our Lord",
+      "reference": "Acts 1:6-11",
+      "scripture": "**Scripture** (Acts 1:9): \"And when he had said these things, while they looked on, he was raised up: and a cloud received him out of their sight.\"",
+      "fruit": "desire for heaven, hope",
+      "intention": "for the perseverance of those who feel the absence of"
+    },
+    {
+      "num": 18,
+      "set": "glorious",
+      "title": "The Descent of the Holy Spirit at Pentecost",
+      "reference": "Acts 2:1-13",
+      "scripture": "**Scripture** (Acts 1:14): \"All these were persevering with one mind in prayer with the women, and **Mary the mother of Jesus**, and with his brethren.\"",
+      "fruit": "love of God, gifts of the Holy Spirit, missionary zeal",
+      "intention": "for the renewal of the Church, that Mary obtain another"
+    },
+    {
+      "num": 19,
+      "set": "glorious",
+      "title": "The Assumption of the Blessed Virgin Mary",
+      "reference": "Revelation 12:1",
+      "scripture": "**Scripture** (Revelation 12:1): \"And a great sign appeared in heaven: A woman clothed with the sun, and the moon under her feet, and on her head a crown of twelve stars.\"",
+      "fruit": "desire for heaven, devotion to Mary, hope of bodily",
+      "intention": "for those near the end of life, that they may obtain"
+    },
+    {
+      "num": 20,
+      "set": "glorious",
+      "title": "The Coronation of the Blessed Virgin Mary",
+      "reference": "Revelation 12:1, Psalm 44:10",
+      "scripture": "**Scripture** (Psalm 44:10): \"*Astitit regina a dextris tuis, in vestitu deaurato, circumdata varietate.*\" \"The queen stood on thy right hand, in gilded clothing; surrounded with variety.\"",
+      "fruit": "trust in Mary's intercession; perseverance to the end",
+      "intention": "for the conversion of sinners, especially those who"
+    }
+  ],
+  "mystery_count": 20
+}

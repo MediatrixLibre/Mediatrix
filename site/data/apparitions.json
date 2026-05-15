@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "source_file": "Marian-Apparitions-Reference.md",
+  "source_mtime": "2026-05-15T04:58:58",
+  "generated_at": "2026-05-15T11:22:35",
+  "title": "Marian Apparitions Reference, Guadalupe, Rue du Bac, La Salette, Lourdes, Knock, Fatima, Akita",
+  "apparitions": [
+    {
+      "roman": "I",
+      "name": "Our Lady of Guadalupe",
+      "year": "1531",
+      "visionary": ""
+    },
+    {
+      "roman": "II",
+      "name": "Our Lady of the Miraculous Medal at Rue du Bac, Paris",
+      "year": "1830",
+      "visionary": ""
+    },
+    {
+      "roman": "III",
+      "name": "Our Lady of La Salette",
+      "year": "1846",
+      "visionary": ""
+    },
+    {
+      "roman": "IV",
+      "name": "Our Lady of Lourdes",
+      "year": "1858",
+      "visionary": ""
+    },
+    {
+      "roman": "V",
+      "name": "Our Lady of Knock",
+      "year": "1879",
+      "visionary": ""
+    },
+    {
+      "roman": "VI",
+      "name": "Our Lady of Fatima",
+      "year": "1917",
+      "visionary": ""
+    },
+    {
+      "roman": "VII",
+      "name": "Our Lady of Akita",
+      "year": "1973-1981",
+      "visionary": ""
+    },
+    {
+      "roman": "VIII",
+      "name": "Other Major Approved Apparitions",
+      "year": "",
+      "visionary": ""
+    },
+    {
+      "roman": "IX",
+      "name": "Discernment: The Marks of an Authentic Apparition",
+      "year": "",
+      "visionary": ""
+    },
+    {
+      "roman": "X",
+      "name": "A Synthesis: The Sevenfold Marian Mission to the Modern World",
+      "year": "",
+      "visionary": ""
+    }
+  ],
+  "apparition_count": 10
+}

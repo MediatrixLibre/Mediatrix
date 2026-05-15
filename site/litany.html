@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en" data-mode="day" data-page="litany">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Litany of Loreto · Mediatrix</title>
+<link rel="stylesheet" href="styles/fonts.css" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=23" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Mediatrix" />
+<script src="scripts/mediatrix.js?v=23"></script>
+<style>
+  .preamble { max-width: var(--measure-prose); margin: var(--rhythm-x2) auto var(--rhythm-x3); }
+  .preamble p { font-family: var(--font-serif); font-size: 1.0625rem; line-height: 1.62; color: var(--m-navy); }
+  table.papal { margin: var(--rhythm) auto var(--rhythm-x2); max-width: 48rem; }
+  table.papal td:first-child { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--m-gold); }
+  table.papal td:nth-child(2) { font-family: var(--font-display); font-weight: 500; letter-spacing: 0.02em; }
+  .closing {
+    margin: var(--rhythm-x3) auto var(--rhythm);
+    max-width: 36rem;
+    padding: var(--rhythm-x2) var(--rhythm);
+    border-top: 1px solid var(--m-gold);
+    border-bottom: 1px solid var(--m-gold);
+    text-align: center;
+  }
+  .closing .lat { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; line-height: 1.6; color: var(--m-navy); margin: 0 0 var(--rhythm); }
+  .closing .en  { font-family: var(--font-serif); font-size: 0.98rem; line-height: 1.55; color: var(--warm-grey-4); margin: 0; }
+  .papal-cap {
+    font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--m-gold-text); margin: var(--rhythm-x2) 0 var(--rhythm-half);
+  }
+
+  /* Read-aloud chant control. Fixed-position panel in the bottom right.
+     Cream paper, hairline gold rule on top, no rounded corners, no
+     enclosing pill. The state-dot (gold idle, green playing, rose
+     paused) is the only round element and it carries information. */
+  .chant-chip {
+    position: fixed;
+    bottom: 0;
+    right: var(--rhythm);
+    z-index: 50;
+    background: var(--cream);
+    border: none;
+    border-top: 1px solid var(--m-gold);
+    padding: 0.7rem 1.1rem;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--m-navy);
+    cursor: pointer;
+    box-shadow: 0 -2px 12px rgba(12, 35, 64, 0.08);
+    transition: color 0.18s ease;
+    min-height: 44px;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+  }
+  .chant-chip:hover { color: var(--m-gold-text); }
+  .chant-chip:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+  .chant-chip__dot {
+    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--m-gold);
+    transition: background 0.2s ease;
+  }
+  .chant-chip[data-state="playing"] .chant-chip__dot { background: var(--verified); }
+  .chant-chip[data-state="paused"] .chant-chip__dot { background: var(--m-rose); }
+
+  .title-card[data-chant="active"] {
+    background: var(--cream);
+    border-left: 2px solid var(--m-gold);
+    padding-left: var(--rhythm-half);
+    margin-left: calc(0px - var(--rhythm-half));
+    transition: background 0.3s ease;
+  }
+</style>
+</head>
+<body data-vestment="blue" data-screen-label="Litany of Loreto · 54 titles">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="mast">
+  <a class="mast__back" href="index.html">&larr; Mediatrix</a>
+  <a class="mast__word" href="index.html">
+    <span class="vest-dot" aria-hidden="true"></span>Mediatrix
+    <em>A Marian study library</em>
+  </a>
+  <div class="mast__tools">
+    <button id="mode-toggle" type="button">Vigil</button>
+    <a href="akathist.html">Akathist</a>
+    <a href="anthology.html">Anthology</a>
+  </div>
+</header>
+
+<main id="main" class="prose">
+
+  <p class="kicker"><span class="dot"></span>IX &middot; Litaniae Lauretanae</p>
+  <h1>Litany of Loreto</h1>
+  <p class="hero__pron" style="text-align:left; margin: 0 0 var(--rhythm-x2);">
+    <em>Lit.&middot;a.&middot;ny of Lor.&middot;e.&middot;to</em>
+    &nbsp;&middot;&nbsp; from <span class="latin"><em>Litaniae Lauretanae</em></span>, the Marian
+    litany received its definitive form at the Holy House of Loreto in the late 16th century.
+  </p>
+
+  <section class="preamble">
+    <p>
+      The <strong>Litany of Loreto</strong> is the oldest and most widely prayed Marian
+      litany of the Latin Rite. Its name derives from the <strong>Holy House of Loreto</strong>
+      in the Marche region of Italy, where tradition holds that the original house of the
+      Holy Family was translated by angels in 1294. <strong>Sixtus V</strong> approved the
+      litany in 1587; <strong>Clement VIII</strong> fixed its modern shape in 1601. The
+      Marian magisterium continues to expand it: every centuries-mark of Marian doctrine
+      adds a new invocation, and the litany has grown from c. 49 titles in 1587 to 54 today.
+    </p>
+    <p class="papal-cap">Papal additions, 1815&ndash;2020</p>
+    <table class="ref papal">
+      <tbody>
+        <tr><td>1815</td><td>Pius VII</td><td>Help of Christians &nbsp; <span class="latin"><em>Auxilium Christianorum</em></span></td></tr>
+        <tr><td>1854</td><td>Pius IX</td><td>Queen Conceived without Original Sin &nbsp; <span class="prov magisterial">Ineffabilis Deus</span></td></tr>
+        <tr><td>1883</td><td>Leo XIII</td><td>Queen of the Most Holy Rosary</td></tr>
+        <tr><td>1903</td><td>Leo XIII</td><td>Mother of Good Counsel</td></tr>
+        <tr><td>1917</td><td>Benedict XV</td><td>Queen of Peace &nbsp; <em>(amid the Great War)</em></td></tr>
+        <tr><td>1950</td><td>Pius XII</td><td>Queen Assumed into Heaven &nbsp; <span class="prov magisterial">Munificentissimus Deus</span></td></tr>
+        <tr><td>1980</td><td>John Paul II</td><td>Mother of the Church</td></tr>
+        <tr><td>1995</td><td>John Paul II</td><td>Queen of Families</td></tr>
+        <tr><td>2020</td><td>Francis</td><td>Mother of Mercy &middot; Mother of Hope &middot; Comfort of Migrants</td></tr>
+      </tbody>
+    </table>
+    <p style="text-align:center; margin: var(--rhythm) 0 0;">
+      <button type="button"
+              class="history-chip"
+              popovertarget="litany-history"
+              aria-haspopup="dialog">
+        <span class="history-chip__star" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor">
+            <polygon points="16,1 18,16 16,31 14,16"/>
+            <polygon points="1,16 16,14 31,16 16,18"/>
+            <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+            <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+            <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+            <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+          </svg>
+        </span>
+        On the Litany of Loreto &middot; A history
+      </button>
+    </p>
+  </section>
+
+  <div class="stella-rule" aria-hidden="true">
+    <span class="stella"><svg viewBox="0 0 32 32"><polygon points="16,1 18,16 16,31 14,16"/><polygon points="1,16 16,14 31,16 16,18"/><polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/><polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/><polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/><polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/><circle cx="16" cy="16" r="1.6"/></svg></span>
+  </div>
+
+  <!-- ============================== GROUP 1 ============================== -->
+  <section class="litany-group">
+    <p class="litany-group__head">Group 1 &middot; Foundational Titles</p>
+
+    <div class="title-card">
+      <p class="title-card__lat">1. Sancta Maria</p>
+      <p class="title-card__en"><em>Holy Mary</em></p>
+      <p class="title-card__gloss">
+        <em>The most basic Marian title. Holiness is what Mary is by virtue of being the Mother of God;
+        everything else in the litany unfolds from it.</em>
+        Ephrem the Syrian, <span class="latin"><em>Carmina Nisibena</em></span> 27: &ldquo;There is no stain in
+        thee, my Lord, and no spot in thy Mother.&rdquo;
+      </p>
+      <p class="title-card__roots">Root &middot; Luke 1:28 (<span class="greek"><em>kecharit&#333;men&#275;</em></span>)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">2. Sancta Dei Genetrix</p>
+      <p class="title-card__en"><em>Holy Mother of God</em> <span class="prov magisterial">magisterial</span></p>
+      <p class="title-card__gloss">
+        <em>The dogmatic centerpiece. Every later Marian title is logically driven by this one.
+        To deny Mary as Theotokos is to deny the Incarnation.</em>
+        Council of Ephesus (431) defined <span class="greek"><em>Theotokos</em></span>.
+      </p>
+      <span class="witness">
+        <span class="witness__greek">&Epsilon;&#7988; &tau;&iota;&sigmaf; &omicron;&#8016; &Theta;&epsilon;&omicron;&tau;&#972;&kappa;&omicron;&nu; &tau;&#8052;&nu; &#7937;&gamma;&#943;&alpha;&nu; &Mu;&alpha;&rho;&#943;&alpha;&nu; &#8017;&pi;&omicron;&lambda;&alpha;&mu;&beta;&#940;&nu;&epsilon;&iota;, &chi;&omega;&rho;&#943;&sigmaf; &#7952;&sigma;&tau;&iota; &tau;&#8134;&sigmaf; &theta;&epsilon;&#972;&tau;&eta;&tau;&omicron;&sigmaf;.</span>
+        <span class="witness__en">If anyone does not believe that Holy Mary is the Mother of God, he is severed from the Godhead.</span>
+        <span class="witness__cite">Gregory of Nazianzus &middot; <em>Ep.</em> 101 to Cledonius &middot; PG 37, 177c &middot; <a href="anthology.html#s9">see Anthology &sect;9</a></span>
+      </span>
+      <p class="title-card__roots">Root &middot; Luke 1:43 (<span class="greek"><em>h&#275; m&#275;t&#275;r tou Kyriou mou</em></span>) &middot; Galatians 4:4</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">3. Sancta Virgo virginum</p>
+      <p class="title-card__en"><em>Holy Virgin of Virgins</em></p>
+      <p class="title-card__gloss">
+        <em>The perpetual virginity. Mary is &ldquo;Virgin of virgins&rdquo; not only as one virgin among
+        others but as the source and model of all consecrated virginity.</em>
+        Augustine, <span class="latin"><em>De Sancta Virginitate</em></span>: she remained a virgin
+        <span class="latin"><em>ante partum, in partu, post partum</em></span> &mdash; before, during, and after the birth.
+      </p>
+      <p class="title-card__roots">Root &middot; Isaiah 7:14 (LXX <span class="greek"><em>parthenos</em></span>) &middot; Luke 1:34 &middot; Ezekiel 44:1&ndash;3</p>
+    </div>
+  </section>
+
+  <!-- ============================== GROUP 2 ============================== -->
+  <section class="litany-group">
+    <p class="litany-group__head">Group 2 &middot; Maternal Titles</p>
+
+    <div class="title-card">
+      <p class="title-card__lat">4. Mater Christi</p>
+      <p class="title-card__en"><em>Mother of Christ</em></p>
+      <p class="title-card__gloss">
+        <em>Specifies that the Mother of God is the Mother of the Messianic Christ, the anointed
+        Davidic King.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Matthew 1:16</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">5. Mater Ecclesiae</p>
+      <p class="title-card__en"><em>Mother of the Church</em> <span class="prov magisterial">1980 &middot; JPII</span></p>
+      <p class="title-card__gloss">
+        <em>The maternal motherhood of the redeemed, constituted at Calvary and confirmed by
+        Vatican II.</em> Paul VI, <span class="latin"><em>Solemn Profession of Faith</em></span> (1968):
+        &ldquo;Mother of the Church, that is, of the entire body of Christ.&rdquo;
+      </p>
+      <p class="title-card__roots">Root &middot; John 19:26&ndash;27 &middot; Acts 1:14 &middot; Revelation 12:17 &middot; <a href="nt-texts.html">see NT Texts</a></p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">6. Mater Misericordiae</p>
+      <p class="title-card__en"><em>Mother of Mercy</em> <span class="prov liturgical">Salve Regina, c. 1080</span></p>
+      <p class="title-card__gloss">
+        <em>Mary as the maternal channel of God&rsquo;s mercy. Mediatrix in the key of mercy.</em>
+        The <span class="latin"><em>Salve Regina</em></span> (Hermann of Reichenau): <span class="latin"><em>Salve Regina, Mater Misericordiae</em></span>.
+      </p>
+      <p class="title-card__roots">Root &middot; Luke 1:50 (Magnificat) &middot; added to litany 2020 by Francis</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">7. Mater divinae gratiae</p>
+      <p class="title-card__en"><em>Mother of Divine Grace</em></p>
+      <p class="title-card__gloss">
+        <em>The Mediatrix doctrine compressed into a single title. Mother through whom divine
+        grace flows to the world.</em>
+      </p>
+      <span class="witness">
+        <span class="witness__lat">Totum nos habere voluit per Mariam.</span>
+        <span class="witness__en">He willed that we should have everything through Mary.</span>
+        <span class="witness__cite">Bernard of Clairvaux &middot; <em>De Aquaeductu</em> &sect;7 &middot; PL 183, 441 &middot; <a href="anthology.html#s23">see Anthology &sect;23</a></span>
+      </span>
+      <p class="title-card__roots">Root &middot; Luke 1:28 &middot; John 1:14, 16</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">8. Mater Spei</p>
+      <p class="title-card__en"><em>Mother of Hope</em> <span class="prov magisterial">2020 &middot; Francis</span></p>
+      <p class="title-card__gloss">
+        <em>Mary, who already enjoys bodily glorification in the Assumption, is the embodied
+        pledge of our hope.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Romans 4:18 &middot; Romans 8:24 &middot; Sirach 24:24</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">9&ndash;12. Mater purissima &middot; castissima &middot; inviolata &middot; intemerata</p>
+      <p class="title-card__en"><em>Mother most pure, most chaste, inviolate, undefiled</em></p>
+      <p class="title-card__gloss">
+        <em>Four titles unfold the perpetual virginity in successive intensifications: without taint,
+        committed virginity, integrity unbroken, freedom from all corruption.</em>
+        Ambrose, <span class="latin"><em>De Institutione Virginis</em></span>; Jerome, <span class="latin"><em>Adversus Helvidium</em></span>.
+      </p>
+      <p class="title-card__roots">Root &middot; Song of Songs 4:7 (<span class="latin"><em>tota pulchra es, et macula non est in te</em></span>) &middot; Ezekiel 44:1&ndash;3</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">13&ndash;14. Mater amabilis &middot; admirabilis</p>
+      <p class="title-card__en"><em>Mother most amiable and admirable</em></p>
+      <p class="title-card__gloss">
+        <em>Mary as both lovable (drawing the heart&rsquo;s affection) and awe-inspiring (drawing the
+        mind&rsquo;s wonder) &mdash; the two complementary registers of authentic Marian devotion.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Sirach 24:24 &middot; Luke 1:48</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">15. Mater boni consilii</p>
+      <p class="title-card__en"><em>Mother of Good Counsel</em> <span class="prov magisterial">1903 &middot; Leo XIII</span></p>
+      <p class="title-card__gloss">
+        <em>Mary as the source of wisdom and counsel in the spiritual life; patroness of right
+        discernment.</em>
+        Leo XIII added the title after his devotion to Our Lady of Good Counsel of Genazzano.
+      </p>
+      <p class="title-card__roots">Root &middot; Isaiah 9:6 (the <strong>Counsellor</strong>) &middot; Proverbs 8:14</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">16. Mater Creatoris</p>
+      <p class="title-card__en"><em>Mother of our Creator</em></p>
+      <p class="title-card__gloss">
+        <em>The most metaphysically arresting Marian title. The Creator of all things has a created
+        Mother who freely consented to bear him. The vertigo of the Incarnation in five syllables.</em>
+      </p>
+      <span class="witness">
+        <span class="witness__greek">&Sigma;&#8058; &theta;&alpha;&#8166;&mu;&alpha; &tau;&#8182;&nu; &theta;&alpha;&upsilon;&mu;&#940;&tau;&omega;&nu;, &#7969; &sigma;&#974;&zeta;&omicron;&upsilon;&sigma;&alpha; &tau;&#8056;&nu; &kappa;&#972;&sigma;&mu;&omicron;&nu; &mu;&epsilon;&sigma;&#8150;&tau;&iota;&sigmaf;.</span>
+        <span class="witness__en">Thou art the wonder of all wonders, the saving Mediatress of the world.</span>
+        <span class="witness__cite">John of Damascus &middot; <em>Hom. in Dorm.</em> II &middot; PG 96, 740 &middot; <a href="anthology.html#s20">see Anthology &sect;20</a></span>
+      </span>
+      <p class="title-card__roots">Root &middot; John 1:3 &middot; Luke 1:31</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">17. Mater Salvatoris</p>
+      <p class="title-card__en"><em>Mother of our Savior</em></p>
+      <p class="title-card__gloss">
+        <em>The Christological economy in maternal form. Mary named in relation to the
+        soteriological work of her Son.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Matthew 1:21 &middot; Luke 2:11</p>
+    </div>
+  </section>
+
+  <!-- ============================== GROUP 3 ============================== -->
+  <section class="litany-group">
+    <p class="litany-group__head">Group 3 &middot; Virginal Titles</p>
+
+    <div class="title-card">
+      <p class="title-card__lat">18. Virgo prudentissima</p>
+      <p class="title-card__en"><em>Virgin Most Prudent</em></p>
+      <p class="title-card__gloss">
+        <em>Prudence is the queen of the cardinal virtues; Mary&rsquo;s exercise of it in awaiting and
+        recognizing the Annunciation is the foundation of the title.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Matthew 25:1&ndash;13 (the prudent virgins)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">19. Virgo veneranda</p>
+      <p class="title-card__en"><em>Virgin Most Venerable</em></p>
+      <p class="title-card__gloss"><em>All generations shall call her blessed.</em></p>
+      <p class="title-card__roots">Root &middot; Luke 1:48</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">20. Virgo praedicanda</p>
+      <p class="title-card__en"><em>Virgin Most Renowned</em></p>
+      <p class="title-card__gloss"><em>The prophecy that her praise will be spoken throughout history.</em></p>
+      <p class="title-card__roots">Root &middot; Luke 1:48 (continued)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">21. Virgo potens</p>
+      <p class="title-card__en"><em>Virgin Most Powerful</em></p>
+      <p class="title-card__gloss">
+        <em>Mary&rsquo;s power is real and creaturely, derived entirely from her Son.</em>
+      </p>
+      <span class="witness">
+        <span class="witness__lat">Nihil Mariae aequale, nihil nisi Deus maius Maria.</span>
+        <span class="witness__en">Nothing equals Mary; nothing but God is greater than Mary.</span>
+        <span class="witness__cite">Anselm of Canterbury &middot; <em>Oratio</em> 52 &middot; PL 158, 956 &middot; <a href="anthology.html#s22">see Anthology &sect;22</a></span>
+      </span>
+      <p class="title-card__roots">Root &middot; Luke 1:49 (Magnificat)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">22. Virgo clemens</p>
+      <p class="title-card__en"><em>Virgin Most Merciful</em></p>
+      <p class="title-card__gloss">
+        Closing line of the <span class="latin"><em>Salve Regina</em></span>: <span class="latin"><em>O clemens, O pia, O dulcis Virgo Maria</em></span>.
+      </p>
+      <p class="title-card__roots">Root &middot; Luke 1:50</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">23. Virgo fidelis</p>
+      <p class="title-card__en"><em>Virgin Most Faithful</em></p>
+      <p class="title-card__gloss">
+        <em>The single most important Marian title for understanding discipleship. Mary is faithful
+        before she is anything else; she is the type of every Christian who believes before they
+        see.</em> The first believer of the New Covenant, whose faith made the Incarnation possible.
+      </p>
+      <p class="title-card__roots">Root &middot; Luke 1:45 (Elizabeth&rsquo;s blessing)</p>
+    </div>
+  </section>
+
+  <!-- ============================== GROUP 4 ============================== -->
+  <section class="litany-group">
+    <p class="litany-group__head">Group 4 &middot; Symbolic &amp; Typological Titles</p>
+
+    <div class="title-card">
+      <p class="title-card__lat">24. Speculum iustitiae</p>
+      <p class="title-card__en"><em>Mirror of Justice</em></p>
+      <p class="title-card__gloss">
+        <em>Mary mirrors perfectly the holiness of God. Not a source but a reflection: she shows
+        us, creature to creature, what God&rsquo;s holiness looks like reflected.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Wisdom 7:26 (<em>the unspotted mirror of God&rsquo;s majesty</em>)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">25. Sedes Sapientiae</p>
+      <p class="title-card__en"><em>Seat of Wisdom</em></p>
+      <p class="title-card__gloss">
+        <em>The Christ-child enthroned on the lap of his Mother is the iconographic Sedes Sapientiae.
+        A central Marian title in medieval art and theology.</em>
+      </p>
+      <span class="witness">
+        <span class="witness__greek">&Chi;&alpha;&#8150;&rho;&epsilon; &#7936;&pi;&#8056; &#7969;&mu;&#8182;&nu;, &Mu;&alpha;&rho;&#943;&alpha; &Theta;&epsilon;&omicron;&tau;&#972;&kappa;&epsilon;, &sigma;&epsilon;&mu;&nu;&#8056;&nu; &kappa;&epsilon;&iota;&mu;&#942;&lambda;&iota;&omicron;&nu; &#7937;&pi;&#940;&sigma;&eta;&sigmaf; &tau;&#8134;&sigmaf; &omicron;&#7984;&kappa;&omicron;&upsilon;&mu;&#941;&nu;&eta;&sigmaf;.</span>
+        <span class="witness__en">Hail Mary, Mother of God, venerable treasure of the whole universe.</span>
+        <span class="witness__cite">Cyril of Alexandria &middot; <em>Hom. 4</em> at the Council of Ephesus, 431 &middot; PG 77, 992 &middot; <a href="anthology.html#s11">see Anthology &sect;11</a></span>
+      </span>
+      <p class="title-card__roots">Root &middot; Proverbs 8 &middot; Sirach 24 &middot; Wisdom 7&ndash;9 &middot; 1 Corinthians 1:24</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">26. Causa nostrae laetitiae</p>
+      <p class="title-card__en"><em>Cause of our Joy</em></p>
+      <p class="title-card__gloss">
+        <em>Mary is the human cause of the Joy who is Christ. To call her &ldquo;cause of our joy&rdquo; is
+        to say that the joy of Christmas, of redemption, of the Eucharist, all has a maternal cause.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Luke 1:14 &middot; Luke 1:44 (John leaping in the womb)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">27&ndash;29. Vas spirituale &middot; honorabile &middot; insigne devotionis</p>
+      <p class="title-card__en"><em>Spiritual, Honorable, and Singular Vessel of Devotion</em></p>
+      <p class="title-card__gloss">
+        <em>Mary as the vessel par excellence: containing the divine, honored by the One she
+        contains, and exceptional in her devotion. The three together unfold the Ark-of-the-
+        Covenant typology.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; 2 Timothy 2:21 &middot; Exodus 25 &middot; Isaiah 45:9&ndash;10 &middot; <a href="ot-types.html">see OT Types &sect;8</a></p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">30. Rosa mystica</p>
+      <p class="title-card__en"><em>Mystical Rose</em></p>
+      <p class="title-card__gloss">
+        <em>An iconographic and contemplative title. The Rosary takes its name from this image
+        (<span class="latin"><em>rosarium</em></span>, a garden of roses).</em>
+        Dante, <em>Paradiso</em> XXIII: <span class="latin"><em>la rosa in che il Verbo divino carne si fece</em></span> &mdash;
+        &ldquo;the rose in which the Divine Word made himself flesh.&rdquo;
+      </p>
+      <p class="title-card__roots">Root &middot; Sirach 24:18 &middot; Song of Songs 2:1</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">31. Turris Davidica</p>
+      <p class="title-card__en"><em>Tower of David</em></p>
+      <p class="title-card__gloss">
+        <em>The military / defensive Marian title. Mary defends the faithful against the assaults
+        of the enemy.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Song of Songs 4:4 (<span class="latin"><em>Sicut turris David collum tuum</em></span>)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">32. Turris eburnea</p>
+      <p class="title-card__en"><em>Tower of Ivory</em></p>
+      <p class="title-card__gloss">
+        <em>The Marian image of strength combined with purity. Ivory is precious, white, smooth &mdash;
+        the material symbol of incorruption.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Song of Songs 7:4</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">33. Domus aurea</p>
+      <p class="title-card__en"><em>House of Gold</em></p>
+      <p class="title-card__gloss">
+        <em>Mary as the new and greater Temple. Where Solomon built a house overlaid in gold
+        for the Ark, the Father prepared a House of Gold (Mary herself) for the New Ark of the
+        Word made flesh.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; 1 Kings 6:21&ndash;22 &middot; Exodus 25:11</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">34. Foederis arca</p>
+      <p class="title-card__en"><em>Ark of the Covenant</em></p>
+      <p class="title-card__gloss">
+        <em>One of the most theologically dense Marian titles. The Ark contained the manna,
+        the rod, and the tablets; Mary contains the Bread of Heaven, the eternal High Priest, the
+        Incarnate Word. Revelation 11:19&ndash;12:1 makes the identification explicit.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Exodus 25:10&ndash;22 &middot; 2 Samuel 6 &middot; Luke 1:39&ndash;56 &middot; Rev 11:19&ndash;12:1 &middot; <a href="ot-types.html">see OT Types &sect;8</a></p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">35. Ianua caeli</p>
+      <p class="title-card__en"><em>Gate of Heaven</em></p>
+      <p class="title-card__gloss">
+        <em>A pure Mediatrix title. Mary as the way through which heaven is opened to us. The
+        Mediatrix doctrine in cosmic geometry.</em>
+      </p>
+      <span class="witness">
+        <span class="witness__greek">&Chi;&alpha;&#8150;&rho;&epsilon;, &kappa;&lambda;&#943;&mu;&alpha;&xi; &#7952;&pi;&omicron;&upsilon;&rho;&#940;&nu;&iota;&epsilon;, &delta;&iota;&#8125; &#7969;&sigmaf; &kappa;&alpha;&tau;&#941;&beta;&eta; &#8001; &Theta;&epsilon;&#972;&sigmaf;&middot; &chi;&alpha;&#8150;&rho;&epsilon;, &gamma;&#941;&phi;&upsilon;&rho;&alpha; &mu;&epsilon;&tau;&#940;&gamma;&omicron;&upsilon;&sigma;&alpha; &tau;&omicron;&#8058;&sigmaf; &#7952;&kappa; &gamma;&#8134;&sigmaf; &pi;&rho;&#8056;&sigmaf; &omicron;&#8016;&rho;&alpha;&nu;&#972;&nu;.</span>
+        <span class="witness__en">Rejoice, heavenly ladder by which God descended; rejoice, bridge leading those of earth to heaven.</span>
+        <span class="witness__cite">The Akathist Hymn &middot; Oikos 3 &middot; 6th c. Byzantine &middot; <a href="akathist.html">see Akathist</a></span>
+      </span>
+      <p class="title-card__roots">Root &middot; Genesis 28:17 (Bethel) &middot; Ezekiel 44:1&ndash;3 &middot; Genesis 28:12 (Jacob&rsquo;s ladder)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">36. Stella matutina</p>
+      <p class="title-card__en"><em>Morning Star</em></p>
+      <p class="title-card__gloss">
+        <em>Mary as the forerunner of the dawn of Christ. The morning star is the last star to
+        disappear in the light of dawn; Mary disappears into Christ, pointing always to him. Her
+        own light is real but derivative.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Revelation 22:16 &middot; 2 Peter 1:19</p>
+    </div>
+  </section>
+
+  <!-- ============================== GROUP 5 ============================== -->
+  <section class="litany-group">
+    <p class="litany-group__head">Group 5 &middot; The Aid Titles</p>
+
+    <div class="title-card">
+      <p class="title-card__lat">37. Salus infirmorum</p>
+      <p class="title-card__en"><em>Health of the Sick</em> <span class="prov liturgical">Lourdes, 1858</span></p>
+      <p class="title-card__gloss">
+        <em>Mary as the maternal intercessor for the sick. The feast of Our Lady of Lourdes
+        (Feb 11) is the World Day of the Sick.</em>
+        The Lourdes spring and seventy-plus medically certified miraculous cures ground the
+        title in living experience.
+      </p>
+      <p class="title-card__roots">Root &middot; John 2:5 (Cana directive) &middot; Acts 5:15&ndash;16 &middot; <a href="apparitions.html">see Apparitions</a></p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">38. Refugium peccatorum</p>
+      <p class="title-card__en"><em>Refuge of Sinners</em></p>
+      <p class="title-card__gloss">
+        <em>Mary as the maternal hiding-place for those who have sinned. The patristic
+        Sub Tuum preserves this understanding from the earliest age of the Church.</em>
+      </p>
+      <span class="witness">
+        <span class="witness__greek">&#8025;&pi;&#8056; &tau;&#8052;&nu; &sigma;&#8052;&nu; &epsilon;&#8016;&sigma;&pi;&lambda;&alpha;&gamma;&chi;&nu;&#943;&alpha;&nu; &kappa;&alpha;&tau;&alpha;&phi;&epsilon;&#973;&gamma;&omicron;&mu;&epsilon;&nu;, &Theta;&epsilon;&omicron;&tau;&#972;&kappa;&epsilon;. &Tau;&#8048;&sigmaf; &#7969;&mu;&#8182;&nu; &#7985;&kappa;&epsilon;&sigma;&#943;&alpha;&sigmaf; &mu;&#8052; &pi;&alpha;&rho;&#943;&delta;&#8131;&sigmaf; &#7952;&nu; &pi;&epsilon;&rho;&iota;&sigma;&tau;&#940;&sigma;&epsilon;&iota;.</span>
+        <span class="witness__en">Beneath thy compassion we take refuge, O Mother of God: do not despise our petitions in time of trouble.</span>
+        <span class="witness__cite"><em>Sub Tuum Praesidium</em> &middot; P. Rylands III 470 &middot; c. AD 250 &middot; the oldest known Marian prayer &middot; <a href="anthology.html#s4">see Anthology &sect;4</a></span>
+      </span>
+      <p class="title-card__roots">Root &middot; Luke 7:36&ndash;50 &middot; Psalm 90:1&ndash;2</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">39. Solatium migrantium</p>
+      <p class="title-card__en"><em>Comfort of Migrants</em> <span class="prov magisterial">2020 &middot; Francis</span></p>
+      <p class="title-card__gloss">
+        <em>Mary as the Mother of migrants and refugees, drawn from her own historical experience
+        of forced migration with Joseph and the infant Christ. A contemporary application of an
+        ancient maternity.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Matthew 2:13&ndash;15 (Flight into Egypt) &middot; Hosea 11:1</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">40. Consolatrix afflictorum</p>
+      <p class="title-card__en"><em>Comforter of the Afflicted</em></p>
+      <p class="title-card__gloss">
+        <em>She comforts because she has suffered. The Mother of Sorrows is the Comforter of
+        the Afflicted, by the same maternal heart.</em>
+        The <span class="latin"><em>Stabat Mater</em></span> (13th c.) is the medieval refrain of this title.
+      </p>
+      <p class="title-card__roots">Root &middot; Luke 2:35 (Simeon&rsquo;s sword) &middot; John 19:25</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">41. Auxilium Christianorum</p>
+      <p class="title-card__en"><em>Help of Christians</em> <span class="prov magisterial">1815 &middot; Pius VII</span></p>
+      <p class="title-card__gloss">
+        <em>The military / strategic Marian title. Lepanto (1571), Vienna (1683), the return of
+        Pius VII (1814), the defense against Communism &mdash; all bear this title.</em>
+        Patroness of the Salesians, whose May 24 feast is one of the great Marian celebrations.
+      </p>
+      <p class="title-card__roots">Root &middot; Judith 13 (head-crushing) &middot; <a href="ot-types.html">see OT Types &sect;26</a></p>
+    </div>
+  </section>
+
+  <!-- ============================== GROUP 6 ============================== -->
+  <section class="litany-group">
+    <p class="litany-group__head">Group 6 &middot; The Queenly Titles</p>
+
+    <div class="title-card">
+      <p class="title-card__lat">42. Regina angelorum</p>
+      <p class="title-card__en"><em>Queen of Angels</em></p>
+      <p class="title-card__gloss">
+        <em>Mary is the highest of all creatures, exceeding even the highest angels.</em>
+      </p>
+      <span class="witness">
+        <span class="witness__lat">Beata Virgo electa est a Deo non in ministram alicuius particularis, sed in cooperatricem et adiutricem totius eius negotii.</span>
+        <span class="witness__en">The Blessed Virgin was chosen by God not to be the minister of some particular work, but to be the cooperatrix and helper of His whole plan.</span>
+        <span class="witness__cite">Albert the Great &middot; <em>Mariale</em> q. 42 &middot; <a href="anthology.html#s24">see Anthology &sect;24</a></span>
+      </span>
+      <p class="title-card__roots">Root &middot; Luke 1:26 (Gabriel sent to her) &middot; Hebrews 1:14</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">43. Regina patriarcharum</p>
+      <p class="title-card__en"><em>Queen of Patriarchs</em></p>
+      <p class="title-card__gloss">
+        <em>Queen of the patriarchs because she is the one in whom their hope was fulfilled.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Hebrews 11 &middot; Galatians 4:4</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">44. Regina prophetarum</p>
+      <p class="title-card__en"><em>Queen of Prophets</em></p>
+      <p class="title-card__gloss">
+        <em>Queen of Prophets because she is the one prophesied by all, who is herself prophet
+        in the Magnificat.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Isaiah 7:14 &middot; Luke 1:46&ndash;55 &middot; Acts 2:17</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">45. Regina apostolorum</p>
+      <p class="title-card__en"><em>Queen of Apostles</em></p>
+      <p class="title-card__gloss">
+        <em>Mary as the maternal heart of the apostolic Church. Older than the Twelve in faith
+        (she believed at Nazareth before any of them); mother to them after the Cross.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Acts 1:14 (the Cenacle)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">46. Regina martyrum</p>
+      <p class="title-card__en"><em>Queen of Martyrs</em></p>
+      <p class="title-card__gloss">
+        <em>The Co-Redemptrix doctrine in the title of Queenship. She rules the company of
+        martyrs because she suffered more, by maternal compassion, than any of them.</em>
+      </p>
+      <span class="witness">
+        <span class="witness__lat">Ita cum Filio patiente et moriente passa est et paene commortua... ut merito dici queat eam cum Christo humanum genus redemisse.</span>
+        <span class="witness__en">To such an extent did she suffer and almost die with her suffering and dying Son... that we may rightly say she redeemed the human race together with Christ.</span>
+        <span class="witness__cite">Pope Benedict XV &middot; <em>Inter Sodalicia</em> &middot; AAS 10 (1918) 181 &middot; <a href="anthology.html#s45">see Anthology &sect;45</a></span>
+      </span>
+      <p class="title-card__roots">Root &middot; Luke 2:35 (Simeon&rsquo;s sword) &middot; John 19:25 &middot; <a href="nt-texts.html">see NT Texts</a></p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">47. Regina confessorum</p>
+      <p class="title-card__en"><em>Queen of Confessors</em></p>
+      <p class="title-card__gloss">
+        <em>Mary as Queen of those who confess Christ. The word confessor in the liturgy
+        designates a saint who professed Christ during persecution but was not killed.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Luke 1:38 (her <span class="latin"><em>fiat</em></span>) &middot; Luke 1:42</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">48. Regina virginum</p>
+      <p class="title-card__en"><em>Queen of Virgins</em></p>
+      <p class="title-card__gloss">
+        <em>The model of consecrated virginity, Queen of all who have offered their bodies and
+        lives to God in perpetual celibacy.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Revelation 14:4 (the virgins following the Lamb)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">49. Regina sanctorum omnium</p>
+      <p class="title-card__en"><em>Queen of All Saints</em></p>
+      <p class="title-card__gloss">
+        <em>The most encompassing Queenly title. Queen of all the saints, the ones in heaven
+        and the ones being perfected on earth.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Revelation 12:1 (twelve stars) &middot; Revelation 19:6&ndash;9</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">50. Regina sine labe originali concepta</p>
+      <p class="title-card__en"><em>Queen Conceived without Original Sin</em> <span class="prov magisterial">1854 &middot; Pius IX</span></p>
+      <p class="title-card__gloss">
+        <em>The dogmatic Queenly title. The Immaculate Conception is the metaphysical condition
+        of her Queenship: only one without original sin could fittingly be the Mother of the sinless
+        God.</em>
+        Defined by <span class="latin"><em>Ineffabilis Deus</em></span>, 8 December 1854.
+      </p>
+      <p class="title-card__roots">Root &middot; Genesis 3:15 &middot; Luke 1:28 (<span class="greek"><em>kecharit&#333;men&#275;</em></span>) &middot; Song 4:7 &middot; Revelation 12:1</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">51. Regina in caelum assumpta</p>
+      <p class="title-card__en"><em>Queen Assumed into Heaven</em> <span class="prov magisterial">1950 &middot; Pius XII</span></p>
+      <p class="title-card__gloss">
+        <em>The Assumption is the dogmatic ground of the Queenship: she is enthroned in
+        heaven by virtue of her bodily glorification.</em>
+        Defined by <span class="latin"><em>Munificentissimus Deus</em></span>, 1 November 1950.
+      </p>
+      <p class="title-card__roots">Root &middot; Revelation 12:1 &middot; 1 Corinthians 15:23 &middot; Psalm 132:8</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">52. Regina sacratissimi Rosarii</p>
+      <p class="title-card__en"><em>Queen of the Most Holy Rosary</em> <span class="prov magisterial">1883 &middot; Leo XIII</span></p>
+      <p class="title-card__gloss">
+        <em>The Rosary as the principal Marian devotion of the Roman tradition.</em>
+        Our Lady of Fatima (13 October 1917): &ldquo;I am the Lady of the Rosary.&rdquo; The title is
+        sealed by her own self-identification.
+      </p>
+      <p class="title-card__roots">Root &middot; <a href="rosary.html">see Rosary Companion</a> &middot; <a href="apparitions.html">Apparitions &middot; Fatima</a></p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">53. Regina familiarum</p>
+      <p class="title-card__en"><em>Queen of Families</em> <span class="prov magisterial">1995 &middot; JPII</span></p>
+      <p class="title-card__gloss">
+        <em>Mary as the maternal Queen of the domestic church. Every Christian family is under
+        her patronage.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Luke 2:51 (the Holy Family at Nazareth)</p>
+    </div>
+
+    <div class="title-card">
+      <p class="title-card__lat">54. Regina pacis</p>
+      <p class="title-card__en"><em>Queen of Peace</em> <span class="prov magisterial">1917 &middot; Benedict XV</span></p>
+      <p class="title-card__gloss">
+        <em>Added at the height of the Great War and intimately connected with the Fatima
+        request for the consecration of Russia and the conversion of sinners as the path to
+        world peace.</em>
+      </p>
+      <p class="title-card__roots">Root &middot; Isaiah 9:6 (the Prince of Peace) &middot; Luke 1:79 &middot; John 14:27</p>
+    </div>
+  </section>
+
+  <div class="closing">
+    <p class="lat">
+      Salve Regina, Mater Misericordiae,<br/>
+      vita, dulcedo, et spes nostra, salve.<br/>
+      Ad te clamamus, exsules filii Hevae;<br/>
+      ad te suspiramus, gementes et flentes<br/>
+      in hac lacrimarum valle.
+    </p>
+    <p class="en">
+      Hail, Holy Queen, Mother of Mercy, our life, our sweetness, and our hope.
+      To thee do we cry, poor banished children of Eve. To thee do we send up our
+      sighs, mourning and weeping in this valley of tears.
+    </p>
+  </div>
+
+</main>
+
+<!-- ============================== POPOVER: Litany of Loreto history ============================== -->
+<div id="litany-history" popover="auto" class="popover-card" aria-labelledby="litany-history-title">
+  <button type="button" class="popover-card__close" popovertarget="litany-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span>A history</p>
+    <h3 id="litany-history-title">The Litany of Loreto</h3>
+    <p class="popover-card__lede">From the Holy House at Loreto and the competing medieval Marian litanies of the Latin West through <span class="latin"><em>Quoniam multi</em></span> (1601) and four centuries of papal addition.</p>
+
+    <p>
+      Marian litanies &mdash; invocations addressed to the Mother of God under
+      successive titles, each answered <span class="latin"><em>ora pro nobis</em></span>
+      &mdash; circulated in many forms across medieval Europe. Litanies of the
+      Names, the Sorrows, the Joys, and the Virtues are documented from the
+      12th century onward. By the late 16th century, dozens of competing
+      Marian litanies were in liturgical and devotional use across the Latin
+      West. The form that survived bears the name of one shrine.
+    </p>
+
+    <p>
+      The <strong>Holy House of Loreto</strong> (<span class="latin"><em>Santa
+      Casa di Loreto</em></span>), in the Marche region of central Italy, is
+      venerated in tradition as the house of the Holy Family at Nazareth,
+      translated to Italian soil in <strong>1294</strong>. The Black Madonna of
+      Loreto &mdash; a cedarwood statue venerated in the <span class="latin"><em>Santa
+      Casa</em></span> &mdash; became the focal point of the litany prayed at
+      the shrine in the late 16th century. By 1587 the Loreto form had
+      circulated widely enough to attract Roman attention.
+    </p>
+
+    <p>
+      On <strong>11 July 1587</strong>, <strong>Sixtus&nbsp;V</strong> confirmed
+      the form by the bull <span class="latin"><em>Reddituri</em></span>,
+      attaching indulgences to its public recitation. The 1587 form held c.
+      forty-nine titles.
+    </p>
+
+    <p>
+      The decisive consolidation came fourteen years later. <strong>Clement&nbsp;VIII</strong>,
+      in the decree <span class="latin"><em>Quoniam multi</em></span>
+      (<strong>6 September 1601</strong>), suppressed every competing Marian
+      litany then in liturgical use and prescribed the Loreto form alone for
+      public recitation in the Roman Rite. Private litanies remained &mdash;
+      the <span class="latin"><em>Salve Regina</em></span>, the
+      <span class="latin"><em>Memorare</em></span>, the
+      <span class="latin"><em>Sub tuum praesidium</em></span> &mdash; but the
+      <em>public</em> Marian litany of the Latin West was henceforth the
+      Litany of Loreto and nothing else.
+    </p>
+
+    <blockquote>
+      In litaniis quae cantantur, vel recitantur per ecclesias, Litania Lauretana
+      sola sit; reliquae aboleantur.
+      <p style="margin: var(--rhythm-half) 0 0;">&ldquo;Among the litanies that are sung or recited in the churches, let
+      the Litany of Loreto alone stand; let the rest be abolished.&rdquo;</p>
+      <cite>Clement VIII &middot; <em>Quoniam multi</em> &middot; 6 September 1601</cite>
+    </blockquote>
+
+    <p>
+      The titles have grown by papal addition across the four centuries since.
+      <span class="latin"><em>Auxilium Christianorum</em></span> (Help of
+      Christians) was added by Pius&nbsp;VII in <strong>1815</strong>, in
+      thanksgiving for his release from Napoleonic captivity. <span class="latin"><em>Regina
+      sine labe originali concepta</em></span> (Queen Conceived without
+      Original Sin) by Pius&nbsp;IX in <strong>1854</strong>, the year of
+      <span class="latin"><em>Ineffabilis Deus</em></span>. <span class="latin"><em>Regina
+      Sacratissimi Rosarii</em></span> (Queen of the Most Holy Rosary) by
+      Leo&nbsp;XIII in <strong>1883</strong>. <span class="latin"><em>Mater Boni
+      Consilii</em></span> by Leo&nbsp;XIII in <strong>1903</strong>.
+      <span class="latin"><em>Regina Pacis</em></span> (Queen of Peace) by
+      Benedict&nbsp;XV in <strong>1917</strong>, amid the Great War.
+      <span class="latin"><em>Regina in caelum assumpta</em></span> (Queen
+      Assumed into Heaven) by Pius&nbsp;XII in <strong>1950</strong>, the year
+      of <span class="latin"><em>Munificentissimus Deus</em></span>.
+      <span class="latin"><em>Mater Ecclesiae</em></span> (Mother of the
+      Church) by John Paul&nbsp;II in <strong>1980</strong>.
+      <span class="latin"><em>Regina Familiae</em></span> by John Paul&nbsp;II
+      in <strong>1995</strong>. Three new invocations &mdash;
+      <span class="latin"><em>Mater Misericordiae</em></span>,
+      <span class="latin"><em>Mater Spei</em></span>, and
+      <span class="latin"><em>Solacium Migrantium</em></span> &mdash; by
+      Francis in <strong>2020</strong>.
+    </p>
+
+    <p>
+      The 1587 form held c. forty-nine titles. The 2020 form holds fifty-four.
+      The growth is not arbitrary: each addition is tied to a defined dogma,
+      a defined feast, or a defined historical occasion. The Litany has become,
+      in this respect, a four-century devotional record of the Church&rsquo;s
+      Marian acts.
+    </p>
+
+    <p>
+      The Black Madonna icon itself was destroyed in the fire of <strong>23
+      February 1921</strong>; the present cedarwood statue is an exact replica
+      consecrated by Pius&nbsp;XI in 1922 and venerated in the marble
+      <span class="latin"><em>Santa Casa</em></span> at Loreto to this day.
+      <strong>Francis</strong> inscribed the feast of <strong>Our Lady of
+      Loreto</strong> (10 December) on the General Roman Calendar in
+      <strong>2019</strong>, ratifying for the universal Church a Marian
+      observance the Marche had kept locally for six centuries.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">Litaniae Lauretanae.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      Sixtus V, <em>Reddituri</em> (11 Jul 1587) &middot;
+      Clement VIII, <em>Quoniam multi</em> (6 Sep 1601) &middot;
+      Pius VII, addition of <em>Auxilium Christianorum</em> (1815) &middot;
+      Pius IX, <em>Ineffabilis Deus</em>, 8 Dec 1854 &middot;
+      Leo XIII, <em>Salutaris ille</em> (24 Dec 1883) &middot;
+      Benedict XV, addition of <em>Regina Pacis</em> (5 May 1917) &middot;
+      Pius XII, <em>Munificentissimus Deus</em>, 1 Nov 1950 &middot;
+      John Paul II, additions of <em>Mater Ecclesiae</em> (1980) and <em>Regina Familiae</em> (1995) &middot;
+      Francis, additions of <em>Mater Misericordiae</em>, <em>Mater Spei</em>, <em>Solacium Migrantium</em> (20 Jun 2020) &middot;
+      Francis, inscription of the feast of Our Lady of Loreto on the General Roman Calendar (7 Oct 2019)
+    </p>
+  </div>
+</div>
+
+<footer class="colophon">
+  <span class="small-caps">54 titles &middot; 6 groups</span>
+  <span class="colophon__nav">
+    <a href="index.html">Home</a><span>&middot;</span>
+    <a href="library.html">Library</a><span>&middot;</span>
+    <a href="anthology.html">Anthology</a><span>&middot;</span>
+    <a href="rosary.html">Rosary</a><span>&middot;</span>
+    <a href="feasts.html">Feasts</a><span>&middot;</span>
+    <a href="apparitions.html">Apparitions</a><span>&middot;</span>
+    <a href="search.html">Search</a>
+  </span>
+  <span class="colophon__sub">
+    <strong>Sub tuum praesidium</strong>
+    Beneath thy protection we take refuge, O holy Mother of God.
+  </span>
+</footer>
+
+<!-- Read-aloud chant control. The button is rendered only when the browser
+     supports SpeechSynthesis; on iOS/macOS Safari the system picks the best
+     available voice for the lang= attribute (Italian fallback for Latin is
+     the closest most users will get). -->
+<button id="chant-chip" class="chant-chip" type="button" data-state="idle" hidden>
+  <span class="chant-chip__dot" aria-hidden="true"></span>
+  <span class="chant-chip__label">Chant</span>
+</button>
+
+<script>
+  var btn = document.getElementById("mode-toggle");
+  function syncLabel() {
+    btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil";
+  }
+  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
+  syncLabel();
+
+  /* --- Litany chant: read the 54 Latin titles aloud.
+     Voice picker: prefer a true Latin voice if any (very rare on commodity
+     OSes); otherwise Italian (closest phoneme set to Liturgical Latin);
+     otherwise Spanish/Portuguese; reject anything English/German/French.
+     If no acceptable voice is available, the chip stays hidden — better
+     silence than "Sancta Maria" read in Anglophone phonetics. */
+  (function setupChant() {
+    if (!("speechSynthesis" in window)) return;
+    var chip = document.getElementById("chant-chip");
+    var label = chip.querySelector(".chant-chip__label");
+
+    var ACCEPTABLE = ["la", "it", "es", "pt"]; // ranked
+    var titleCards = Array.prototype.slice.call(document.querySelectorAll(".title-card"));
+    var current = 0;
+    var state = "idle"; // idle | playing | paused
+    var chosenVoice = null;
+
+    function pickVoice() {
+      var voices = window.speechSynthesis.getVoices() || [];
+      for (var i = 0; i < ACCEPTABLE.length; i++) {
+        var prefix = ACCEPTABLE[i];
+        var v = voices.find(function (vv) { return (vv.lang || "").toLowerCase().indexOf(prefix) === 0; });
+        if (v) return v;
+      }
+      return null;
+    }
+
+    function refreshVoice() {
+      chosenVoice = pickVoice();
+      if (chosenVoice) {
+        chip.hidden = false;
+        chip.title = "Chant the Litany aloud (" + chosenVoice.name + ", " + chosenVoice.lang + ")";
+      } else {
+        // Stay hidden. No acceptable Latin/Italian/Iberian voice on this device.
+        chip.hidden = true;
+      }
+    }
+    refreshVoice();
+    // Most browsers populate voices asynchronously.
+    if (window.speechSynthesis.onvoiceschanged !== undefined) {
+      window.speechSynthesis.addEventListener("voiceschanged", refreshVoice);
+    }
+
+    function utteranceFor(card) {
+      var lat = card.querySelector(".title-card__lat");
+      if (!lat) return null;
+      var text = lat.textContent.replace(/^\s*\d+(\s*[–—-]\s*\d+)?\.\s*/, "");
+      var u = new SpeechSynthesisUtterance(text + ". Ora pro nobis.");
+      u.voice = chosenVoice;
+      u.lang = chosenVoice.lang;
+      u.rate = 0.85;
+      u.pitch = 0.95;
+      return u;
+    }
+
+    function highlight(idx) {
+      titleCards.forEach(function (c, i) {
+        if (i === idx) {
+          c.dataset.chant = "active";
+          c.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+          delete c.dataset.chant;
+        }
+      });
+    }
+
+    function chantNext() {
+      if (current >= titleCards.length) { stop(); return; }
+      var u = utteranceFor(titleCards[current]);
+      if (!u) { current++; chantNext(); return; }
+      u.onend = function () {
+        current++;
+        if (state === "playing") chantNext();
+      };
+      highlight(current);
+      window.speechSynthesis.speak(u);
+    }
+
+    function play() {
+      if (!chosenVoice) return; // belt + braces; chip should be hidden
+      state = "playing";
+      chip.dataset.state = "playing";
+      label.textContent = "Pause";
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      } else {
+        chantNext();
+      }
+    }
+    function pause() {
+      state = "paused";
+      chip.dataset.state = "paused";
+      label.textContent = "Resume";
+      window.speechSynthesis.pause();
+    }
+    function stop() {
+      state = "idle";
+      chip.dataset.state = "idle";
+      label.textContent = "Chant";
+      window.speechSynthesis.cancel();
+      titleCards.forEach(function (c) { delete c.dataset.chant; });
+      current = 0;
+    }
+
+    chip.addEventListener("click", function () {
+      if (state === "idle") play();
+      else if (state === "playing") pause();
+      else play();
+    });
+    chip.addEventListener("contextmenu", function (e) { e.preventDefault(); stop(); });
+    window.addEventListener("beforeunload", function () { window.speechSynthesis.cancel(); });
+  })();
+
+  Mediatrix.pushRecent({
+    slug: "litany.html",
+    title: "Litany of Loreto",
+    subtitle: "54 titles, six structural groups",
+    vestment: "blue",
+    scrollRatio: 0,
+  });
+</script>
+
+</body>
+</html>

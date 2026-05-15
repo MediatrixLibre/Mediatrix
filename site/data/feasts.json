@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "source_file": "Marian-Feasts-Liturgical-Calendar.md",
+  "source_mtime": "2026-05-15T04:32:22",
+  "generated_at": "2026-05-15T11:22:35",
+  "title": "The Marian Feasts of the Liturgical Year — Calendar, Readings, and Prayers",
+  "feasts": [
+    {
+      "date": "January 1",
+      "name": "Solemnity of Mary, Mother of God",
+      "subtitle": ""
+    },
+    {
+      "date": "February 2",
+      "name": "Presentation of the Lord",
+      "subtitle": "Candlemas"
+    },
+    {
+      "date": "February 11",
+      "name": "Our Lady of Lourdes",
+      "subtitle": ""
+    },
+    {
+      "date": "March 25",
+      "name": "Annunciation of the Lord",
+      "subtitle": ""
+    },
+    {
+      "date": "May 13",
+      "name": "Our Lady of Fatima",
+      "subtitle": ""
+    },
+    {
+      "date": "May 24",
+      "name": "Our Lady, Help of Christians",
+      "subtitle": "Marian Auxilatrix"
+    },
+    {
+      "date": "May 31",
+      "name": "Visitation of the Blessed Virgin Mary",
+      "subtitle": ""
+    },
+    {
+      "date": "Monday after Pentecost",
+      "name": "Mary, Mother of the Church",
+      "subtitle": ""
+    },
+    {
+      "date": "Saturday after the Second Sunday after Pentecost",
+      "name": "Immaculate Heart of Mary {#immaculate-heart-of-mary}",
+      "subtitle": ""
+    },
+    {
+      "date": "July 16",
+      "name": "Our Lady of Mount Carmel",
+      "subtitle": ""
+    },
+    {
+      "date": "August 5",
+      "name": "Dedication of Saint Mary Major",
+      "subtitle": "Our Lady of the Snows"
+    },
+    {
+      "date": "August 15",
+      "name": "Assumption of the Blessed Virgin Mary",
+      "subtitle": ""
+    },
+    {
+      "date": "August 22",
+      "name": "Queenship of the Blessed Virgin Mary",
+      "subtitle": ""
+    },
+    {
+      "date": "September 8",
+      "name": "Nativity of the Blessed Virgin Mary",
+      "subtitle": ""
+    },
+    {
+      "date": "September 12",
+      "name": "Most Holy Name of Mary",
+      "subtitle": ""
+    },
+    {
+      "date": "September 15",
+      "name": "Our Lady of Sorrows",
+      "subtitle": ""
+    },
+    {
+      "date": "October 7",
+      "name": "Our Lady of the Rosary",
+      "subtitle": ""
+    },
+    {
+      "date": "November 21",
+      "name": "Presentation of the Blessed Virgin Mary",
+      "subtitle": ""
+    },
+    {
+      "date": "December 8",
+      "name": "Immaculate Conception",
+      "subtitle": ""
+    },
+    {
+      "date": "December 12",
+      "name": "Our Lady of Guadalupe",
+      "subtitle": ""
+    }
+  ],
+  "feast_count": 20
+}

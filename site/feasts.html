@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en" data-mode="day" data-page="feasts">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Marian Feasts &middot; Mediatrix</title>
+<link rel="stylesheet" href="styles/fonts.css" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=23" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Mediatrix" />
+<script src="scripts/mediatrix.js?v=23"></script>
+<style>
+  .feast { padding: var(--rhythm-x2) 0 var(--rhythm); border-top: 1px solid var(--warm-grey-2); }
+  .feast__head { display: grid; grid-template-columns: 10rem 1fr auto; gap: var(--rhythm); align-items: baseline; margin-bottom: var(--rhythm); }
+  @media (max-width: 700px) { .feast__head { grid-template-columns: 1fr; gap: 0.2rem; } }
+  .feast__date { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 0.86rem; color: var(--m-gold); letter-spacing: 0.04em; }
+  .feast__title { font-family: var(--font-display); font-weight: 500; font-size: 1.4rem; letter-spacing: 0.02em; color: var(--m-navy); margin: 0; }
+  .feast__rank { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m-gold-text); justify-self: end; }
+  .feast dl { display: grid; grid-template-columns: 7rem 1fr; gap: var(--rhythm-half) var(--rhythm); margin: var(--rhythm) 0; }
+  @media (max-width: 600px) { .feast dl { grid-template-columns: 1fr; gap: 0.1rem; } }
+  .feast dt { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m-gold-text); }
+  .feast dd { margin: 0; font-family: var(--font-serif); color: var(--m-navy); }
+  .feast .collect { font-family: var(--font-serif); font-style: italic; color: var(--m-navy); }
+  .feast .collect-en { font-family: var(--font-serif); color: var(--warm-grey-4); font-size: 0.96rem; margin-top: var(--rhythm-half); }
+  .calendar-key { margin: var(--rhythm-x2) auto; padding: var(--rhythm) var(--rhythm-x2); background: var(--cream); border-left: 2px solid var(--m-gold); }
+  .calendar-key p { font-family: var(--font-serif); margin: var(--rhythm-half) 0; }
+  .calendar-key strong { font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--m-gold-text); }
+  .season-strip { font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--m-gold-text); margin: var(--rhythm-x2) 0 var(--rhythm); padding-bottom: var(--rhythm-half); border-bottom: 1px solid var(--m-gold); }
+</style>
+</head>
+<body data-vestment="blue" data-screen-label="Marian Feasts of the Liturgical Year">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="mast">
+  <a class="mast__back" href="index.html">&larr; Mediatrix</a>
+  <a class="mast__word" href="index.html"><span class="vest-dot" aria-hidden="true"></span>Mediatrix<em>A Marian study library</em></a>
+  <div class="mast__tools">
+    <button id="mode-toggle" type="button">Vigil</button>
+    <a href="litany.html">Litany</a>
+    <a href="apparitions.html">Apparitions</a>
+  </div>
+</header>
+
+<main id="main" class="prose">
+
+  <p class="kicker"><span class="dot"></span>VII &middot; Festivitates Marianae</p>
+  <h1>Marian Feasts</h1>
+  <p class="hero__pron" style="text-align:left; margin: 0 0 var(--rhythm-x2);">
+    Eighteen Marian feasts of the Roman liturgical year, each with its date, rank, scriptural
+    readings, Collect (Latin for principals), and suggested devotion.
+  </p>
+
+  <section class="calendar-key">
+    <p><strong>Rank</strong> Solemnity (the highest, ten total in the universal calendar) &middot; Feast &middot; Memorial (Obligatory or Optional).</p>
+    <p><strong>Vestment</strong> Marian feasts are predominantly <em>white</em>; solemnities of the Mother of God use her own <em>blue</em>.</p>
+    <p><strong>Source</strong> the 1969 reformed Roman Missal, with continuity to the 1962 Missal where the feast predates the reform.</p>
+  </section>
+
+  <!-- ===== Winter ===== -->
+  <p class="season-strip">Winter &middot; Christmas Octave through Lent</p>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">January 1</span>
+      <h2 class="feast__title">Solemnity of Mary, Mother of God</h2>
+      <span class="feast__rank">Solemnity &middot; Holy Day</span>
+    </div>
+    <dl>
+      <dt>Readings</dt><dd>Num 6:22&ndash;27 (the Aaronic blessing) &middot; Gal 4:4&ndash;7 (&ldquo;born of a woman, born under the law&rdquo;) &middot; Luke 2:16&ndash;21</dd>
+      <dt>Marian focus</dt><dd>The dogmatic centerpiece (Ephesus 431). The Octave Day of Christmas. The new civil year offered through the Mother of God.</dd>
+      <dt>Collect</dt><dd><span class="collect"><span class="latin">Deus, qui salutis aeternae, beatae Mariae virginitate fecunda, humano generi praemia praestitisti...</span></span><span class="collect-en">&ldquo;O God, who through the fruitful virginity of Blessed Mary bestowed on the human race the grace of eternal salvation...&rdquo;</span></dd>
+      <dt>Devotion</dt><dd>The Litany of Loreto &middot; the Memorare &middot; the World Day of Peace (instituted by Paul VI, 1968)</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">February 2</span>
+      <h2 class="feast__title">Presentation of the Lord &middot; Candlemas</h2>
+      <span class="feast__rank">Feast</span>
+    </div>
+    <dl>
+      <dt>Readings</dt><dd>Mal 3:1&ndash;4 &middot; Heb 2:14&ndash;18 &middot; Luke 2:22&ndash;40</dd>
+      <dt>Marian focus</dt><dd>Simeon&rsquo;s prophecy: &ldquo;thy own soul a sword shall pierce.&rdquo; The forging of the Co-Redemptrix sword in the heart of Mary, sheathed until Calvary.</dd>
+      <dt>Devotion</dt><dd>The Candlemas procession &middot; the Fourth Joyful Mystery</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">February 11</span>
+      <h2 class="feast__title">Our Lady of Lourdes</h2>
+      <span class="feast__rank">Optional Memorial &middot; World Day of the Sick</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>Bernadette and the spring. The Immaculate Conception confirmed by Mary herself. The Lourdes Medical Bureau: 70+ medically certified cures.</dd>
+      <dt>Cross-link</dt><dd><a href="apparitions.html#lourdes">Apparitions &middot; Lourdes</a> &middot; <a href="litany.html">Litany &middot; <em>Salus infirmorum</em></a></dd>
+      <dt>Devotion</dt><dd>The Lourdes Novena &middot; the <em>Immaculate Mary</em> hymn &middot; prayer for the sick</dd>
+    </dl>
+  </section>
+
+  <!-- ===== Lent / Spring ===== -->
+  <p class="season-strip">Lent &middot; Annunciation &middot; Easter Octave</p>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">March 25</span>
+      <h2 class="feast__title">Annunciation of the Lord</h2>
+      <span class="feast__rank">Solemnity</span>
+    </div>
+    <dl>
+      <dt>Readings</dt><dd>Isa 7:10&ndash;14 (the virgin shall conceive) &middot; Heb 10:4&ndash;10 (the body prepared) &middot; Luke 1:26&ndash;38</dd>
+      <dt>Marian focus</dt><dd>The <span class="latin"><em>fiat</em></span>. Nine months before December 25. Aquinas: the consent of the Virgin in the place of the whole human nature was awaited.</dd>
+      <dt>Collect</dt><dd><span class="collect"><span class="latin">Deus, qui Verbum tuum in utero Virginis Mariae veritatem carnis humanae suscipere voluisti...</span></span><span class="collect-en">&ldquo;O God, who willed that thy Word should take on the truth of human flesh in the womb of the Virgin Mary...&rdquo;</span></dd>
+      <dt>Devotion</dt><dd>The Angelus &middot; the First Joyful Mystery &middot; the Memorare</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">May 13</span>
+      <h2 class="feast__title">Our Lady of F&aacute;tima</h2>
+      <span class="feast__rank">Optional Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>&ldquo;I am the Lady of the Rosary.&rdquo; The Immaculate Heart. The 1981 assassination attempt against JPII on this date.</dd>
+      <dt>Cross-link</dt><dd><a href="apparitions.html#fatima">Apparitions &middot; F&aacute;tima</a></dd>
+      <dt>Devotion</dt><dd>The First Saturdays devotion &middot; the daily Rosary &middot; consecration to the Immaculate Heart</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">May 24</span>
+      <h2 class="feast__title">Our Lady, Help of Christians &middot; <span class="latin"><em>Auxilium Christianorum</em></span></h2>
+      <span class="feast__rank">Optional Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>Lepanto 1571 &middot; Vienna 1683 &middot; the return of Pius VII 1814. Patroness of the Salesians (Don Bosco).</dd>
+      <dt>Devotion</dt><dd>The Don Bosco hymn &middot; military and spiritual-combat petition</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">May 31</span>
+      <h2 class="feast__title">Visitation of the Blessed Virgin Mary</h2>
+      <span class="feast__rank">Feast</span>
+    </div>
+    <dl>
+      <dt>Readings</dt><dd>Zeph 3:14&ndash;18a (rejoice, O Daughter of Sion) &middot; Rom 12:9&ndash;16b &middot; Luke 1:39&ndash;56 (the Magnificat)</dd>
+      <dt>Marian focus</dt><dd>The first apostolic journey of the New Testament: the new Ark carries Christ to John in the womb. Mary as the first missionary.</dd>
+      <dt>Devotion</dt><dd>The Magnificat &middot; the Second Joyful Mystery</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">Mon after Pentecost</span>
+      <h2 class="feast__title">Mary, Mother of the Church</h2>
+      <span class="feast__rank">Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>Established universally by Pope Francis in 2018. The maternal motherhood of the redeemed, constituted at Calvary, confirmed at Pentecost.</dd>
+      <dt>Devotion</dt><dd>Reading of John 19:25&ndash;27 and Acts 1:14 together &middot; <a href="nt-texts.html#calvary">see NT Texts</a></dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">Sat after 2nd Sun after Pent</span>
+      <h2 class="feast__title">Immaculate Heart of Mary</h2>
+      <span class="feast__rank">Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>The Marian register of the Sacred Heart. Two Hearts theology (John Eudes, 17th c.; Fatima 1917; Akita 1973). One Heart in two persons.</dd>
+      <dt>Devotion</dt><dd>The Five First Saturdays devotion (Fatima) &middot; consecration to the Immaculate Heart</dd>
+    </dl>
+  </section>
+
+  <!-- ===== Summer ===== -->
+  <p class="season-strip">Summer &middot; Carmel through the Queenship</p>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">July 16</span>
+      <h2 class="feast__title">Our Lady of Mount Carmel</h2>
+      <span class="feast__rank">Optional Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>The Brown Scapular (given to St. Simon Stock, 16 July 1251). The Carmelite tradition. Elias on Carmel as Marian type.</dd>
+      <dt>Devotion</dt><dd>Investiture in the Brown Scapular &middot; the Carmelite Marian tradition (Therese of Lisieux, Elizabeth of the Trinity, Edith Stein)</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">August 5</span>
+      <h2 class="feast__title">Dedication of Saint Mary Major &middot; Our Lady of the Snows</h2>
+      <span class="feast__rank">Optional Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>The dedication of Santa Maria Maggiore in Rome (5th c.). The fall of snow on the Esquiline in August. The mosaics of the Ephesus Marian definition.</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">August 15</span>
+      <h2 class="feast__title">Assumption of the Blessed Virgin Mary</h2>
+      <span class="feast__rank">Solemnity &middot; Holy Day &middot; <span class="prov magisterial">dogma 1950</span></span>
+    </div>
+    <dl>
+      <dt>Readings</dt><dd>Rev 11:19a; 12:1&ndash;6a, 10ab &middot; 1 Cor 15:20&ndash;27 &middot; Luke 1:39&ndash;56</dd>
+      <dt>Marian focus</dt><dd>The first fruits of the redeemed. The bodily glorification of the Mother of God before the Last Day. Defined by Pius XII, <em>Munificentissimus Deus</em>, 1 November 1950.</dd>
+      <dt>Collect</dt><dd><span class="collect"><span class="latin">Omnipotens sempiterne Deus, qui Immaculatam Virginem Mariam, Filii tui genetricem, corpore et anima ad caelestem gloriam assumpsisti...</span></span><span class="collect-en">&ldquo;Almighty ever-living God, who assumed the Immaculate Virgin Mary, the Mother of thy Son, body and soul into heavenly glory...&rdquo;</span></dd>
+      <dt>Devotion</dt><dd>The Fourth Glorious Mystery &middot; the procession of the Assumption (where local custom permits)</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">August 22</span>
+      <h2 class="feast__title">Queenship of the Blessed Virgin Mary</h2>
+      <span class="feast__rank">Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>The octave of the Assumption. The Coronation. Pius XII, <em>Ad Caeli Reginam</em> (1954).</dd>
+      <dt>Devotion</dt><dd>The Fifth Glorious Mystery &middot; Litany titles <em>Regina angelorum</em> through <em>Regina pacis</em></dd>
+    </dl>
+  </section>
+
+  <!-- ===== Autumn ===== -->
+  <p class="season-strip">Autumn &middot; Nativity through Guadalupe</p>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">September 8</span>
+      <h2 class="feast__title">Nativity of the Blessed Virgin Mary</h2>
+      <span class="feast__rank">Feast</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>Nine months after the Immaculate Conception (8 December). Anna and Joachim. The dawn announcing the Day.</dd>
+      <dt>Collect</dt><dd><span class="collect"><span class="latin">Famulis tuis, quaesumus, Domine, caelestis gratiae munus impertire...</span></span><span class="collect-en">&ldquo;Impart to thy servants, we pray, O Lord, the gift of heavenly grace...&rdquo;</span></dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">September 12</span>
+      <h2 class="feast__title">Most Holy Name of Mary</h2>
+      <span class="feast__rank">Optional Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>Instituted by Innocent XI after the deliverance of Vienna (12 September 1683). The Marian Name.</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">September 15</span>
+      <h2 class="feast__title">Our Lady of Sorrows</h2>
+      <span class="feast__rank">Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>The Seven Sorrows. The day after the Exaltation of the Holy Cross. The Mater Dolorosa.</dd>
+      <dt>Sequence</dt><dd>The <span class="latin"><em>Stabat Mater</em></span> (Jacopone da Todi, 13th c.) &mdash; the medieval verbal monument of the Co-Redemptrix doctrine</dd>
+      <dt>Devotion</dt><dd>The Seven Sorrows Rosary &middot; the Sorrowful Mysteries &middot; <em>Stabat Mater</em></dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">October 7</span>
+      <h2 class="feast__title">Our Lady of the Rosary</h2>
+      <span class="feast__rank">Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>Lepanto (7 October 1571). Pius V institutes the feast in 1572. Leo XIII writes eleven encyclicals on the Rosary. Fatima 1917: &ldquo;I am the Lady of the Rosary.&rdquo;</dd>
+      <dt>Devotion</dt><dd>The Rosary &middot; <a href="rosary.html">see Rosary Companion</a></dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">November 21</span>
+      <h2 class="feast__title">Presentation of the Blessed Virgin Mary</h2>
+      <span class="feast__rank">Memorial</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>Drawn from the Protoevangelium of James (2nd c.). Mary&rsquo;s consecration to the Temple as a child. Pro Orantibus Day &mdash; for cloistered religious.</dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">December 8</span>
+      <h2 class="feast__title">Immaculate Conception</h2>
+      <span class="feast__rank">Solemnity &middot; Holy Day &middot; <span class="prov magisterial">dogma 1854</span></span>
+    </div>
+    <dl>
+      <dt>Readings</dt><dd>Gen 3:9&ndash;15, 20 (the Protoevangelium) &middot; Eph 1:3&ndash;6, 11&ndash;12 &middot; Luke 1:26&ndash;38</dd>
+      <dt>Marian focus</dt><dd>Mary preserved from original sin from the first moment of her conception, by the foreseen merits of Christ the Saviour. Defined by Pius IX, <em>Ineffabilis Deus</em>, 8 December 1854.</dd>
+      <dt>Collect</dt><dd><span class="collect"><span class="latin">Deus, qui per Immaculatam Virginis Conceptionem dignum Filio tuo habitaculum praeparasti...</span></span><span class="collect-en">&ldquo;O God, who by the Immaculate Conception of the Virgin prepared a worthy dwelling for thy Son...&rdquo;</span></dd>
+      <dt>Devotion</dt><dd>The Miraculous Medal Novena &middot; <em>Tota pulchra es</em></dd>
+    </dl>
+  </section>
+
+  <section class="feast">
+    <div class="feast__head">
+      <span class="feast__date">December 12</span>
+      <h2 class="feast__title">Our Lady of Guadalupe</h2>
+      <span class="feast__rank">Feast (Americas) &middot; Patroness of the Americas</span>
+    </div>
+    <dl>
+      <dt>Marian focus</dt><dd>The 1531 apparition at Tepeyac. The tilma. 8&ndash;9 million baptisms in ten years.</dd>
+      <dt>Cross-link</dt><dd><a href="apparitions.html#guadalupe">Apparitions &middot; Guadalupe</a></dd>
+      <dt>Devotion</dt><dd>The Guadalupe Novena (3&ndash;11 December)</dd>
+    </dl>
+  </section>
+
+  <!-- ===== Saturdays + 1962 ===== -->
+  <section class="reader-prose" style="margin-top: var(--rhythm-x3);">
+    <h2>Marian Saturdays and Seasonal Devotions</h2>
+    <p>
+      <strong>Saturday</strong> is the traditional Marian day &mdash; the day on which Mary kept the faith alone between Good Friday and Easter morning. The Office of the Blessed Virgin on Saturday is one of the great Marian liturgical resources of the Roman tradition.
+    </p>
+    <p>
+      <strong>May</strong> &middot; the Marian month. Crowning of the Marian statue. Daily Rosary by family or community. <strong>October</strong> &middot; the Rosary month, climaxing on October 7.
+    </p>
+    <h3>From the 1962 Missal (older feasts continued in tradition)</h3>
+    <ul>
+      <li><strong>17 January</strong> &middot; The Espousals of the Blessed Virgin Mary</li>
+      <li><strong>11 May</strong> &middot; Our Lady, Mediatrix of All Graces (where celebrated locally)</li>
+      <li><strong>15 September</strong> &middot; Seven Sorrows (with the older Sequence <em>Stabat Mater</em>)</li>
+      <li><strong>10 October</strong> &middot; Maternity of the Blessed Virgin Mary</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="colophon">
+  <span class="small-caps">18+ feasts &middot; year-round</span>
+  <span class="colophon__nav">
+    <a href="index.html">Home</a><span>&middot;</span>
+    <a href="library.html">Library</a><span>&middot;</span>
+    <a href="litany.html">Litany</a><span>&middot;</span>
+    <a href="rosary.html">Rosary</a><span>&middot;</span>
+    <a href="office.html">Office</a><span>&middot;</span>
+    <a href="apparitions.html">Apparitions</a><span>&middot;</span>
+    <a href="search.html">Search</a>
+  </span>
+  <span class="colophon__sub">
+    <strong>Sub tuum praesidium</strong>
+    Beneath thy protection we take refuge, O holy Mother of God.
+  </span>
+</footer>
+
+<script>
+  var btn = document.getElementById("mode-toggle");
+  function syncLabel() { btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil"; }
+  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
+  syncLabel();
+
+  Mediatrix.pushRecent({
+    slug: "feasts.html",
+    title: "Marian Feasts",
+    subtitle: "18 feasts of the liturgical year",
+    vestment: "blue",
+    scrollRatio: 0,
+  });
+</script>
+
+</body>
+</html>

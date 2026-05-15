@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "source_file": "Marian-Office-of-Readings-Sourcebook.md",
+  "source_mtime": "2026-05-15T05:36:40",
+  "generated_at": "2026-05-15T11:22:35",
+  "title": "Marian Office of Readings Sourcebook, the Patristic Texts of the Marian Hours",
+  "readings": [
+    {
+      "title": "January 1, Solemnity of Mary, Mother of God",
+      "summary": "",
+      "date": "January 1",
+      "feast": "Solemnity of Mary, Mother of God"
+    },
+    {
+      "title": "March 25, Annunciation of the Lord",
+      "summary": "",
+      "date": "March 25",
+      "feast": "Annunciation of the Lord"
+    },
+    {
+      "title": "May 31, Visitation of the Blessed Virgin Mary",
+      "summary": "",
+      "date": "May 31",
+      "feast": "Visitation of the Blessed Virgin Mary"
+    },
+    {
+      "title": "Monday after Pentecost, Mary, Mother of the Church",
+      "summary": "",
+      "date": "Monday after Pentecost",
+      "feast": "Mary, Mother of the Church"
+    },
+    {
+      "title": "Saturday after the Second Sunday after Pentecost, Immaculate Heart of Mary",
+      "summary": "",
+      "date": "Saturday after the Second Sunday after Pentecost",
+      "feast": "Immaculate Heart of Mary"
+    },
+    {
+      "title": "July 16, Our Lady of Mount Carmel",
+      "summary": "",
+      "date": "July 16",
+      "feast": "Our Lady of Mount Carmel"
+    },
+    {
+      "title": "August 5, Dedication of the Basilica of St. Mary Major",
+      "summary": "",
+      "date": "August 5",
+      "feast": "Dedication of the Basilica of St. Mary Major"
+    },
+    {
+      "title": "August 15, Assumption of the Blessed Virgin Mary",
+      "summary": "",
+      "date": "August 15",
+      "feast": "Assumption of the Blessed Virgin Mary"
+    },
+    {
+      "title": "August 22, Queenship of Mary",
+      "summary": "",
+      "date": "August 22",
+      "feast": "Queenship of Mary"
+    },
+    {
+      "title": "September 8, Birth of the Blessed Virgin Mary",
+      "summary": "",
+      "date": "September 8",
+      "feast": "Birth of the Blessed Virgin Mary"
+    },
+    {
+      "title": "September 15, Our Lady of Sorrows",
+      "summary": "",
+      "date": "September 15",
+      "feast": "Our Lady of Sorrows"
+    },
+    {
+      "title": "October 7, Our Lady of the Rosary",
+      "summary": "",
+      "date": "October 7",
+      "feast": "Our Lady of the Rosary"
+    },
+    {
+      "title": "November 21, Presentation of the Blessed Virgin Mary",
+      "summary": "",
+      "date": "November 21",
+      "feast": "Presentation of the Blessed Virgin Mary"
+    },
+    {
+      "title": "December 8, Immaculate Conception",
+      "summary": "",
+      "date": "December 8",
+      "feast": "Immaculate Conception"
+    },
+    {
+      "title": "Saturday Marian Office",
+      "summary": "The Roman tradition (codified by Alcuin of York in the 8th c., though older in liturgical practice) dedicates every Saturday in Ordinary Time that is not impeded by a higher rank to the Memoria Sanctae Mariae in Sabbato (Marian Saturday Memorial).",
+      "date": "Saturday Marian Office",
+      "feast": ""
+    }
+  ],
+  "reading_count": 15,
+  "supplementary": [
+    {
+      "title": "Common of the Blessed Virgin Mary",
+      "summary": "The Common provides readings for Marian feasts that lack their own proper Second Reading, and for the Saturday Marian commemoration in Ordinary Time. The most frequently chosen readings in the modern Office include:"
+    },
+    {
+      "title": "1962 Breviary Texts Retained for the Older Office",
+      "summary": "The pre-Vatican II Roman Breviary (the Breviarium Romanum of 1962, still in use in the Extraordinary Form) preserves additional Marian patristic texts not retained in the post-1969 universal Office."
+    },
+    {
+      "title": "A Note on the Office of Readings as Catechesis",
+      "summary": "The patristic and doctoral readings in the Marian Office of Readings constitute, taken as a whole, a complete patristic Marian catechesis delivered to anyone who prays the Office regularly. The faithful Catholic who prays the Office across a calendar year receives:"
+    }
+  ],
+  "supplementary_count": 3
+}

@@ -1,0 +1,659 @@
+{
+  "schema_version": 1,
+  "source_file": "Litany-of-Loreto-Annotated.md",
+  "source_mtime": "2026-05-15T05:02:59",
+  "generated_at": "2026-05-15T11:22:35",
+  "title": "The Litany of Loreto, Fully Annotated with Scriptural Roots per Title",
+  "titles": [
+    {
+      "numbers": [
+        1
+      ],
+      "first_num": 1,
+      "latin": "Sancta Maria",
+      "english": "Holy Mary",
+      "group": "Group 1: The Foundational Titles",
+      "group_slug": "the-foundational-titles",
+      "scriptural_root": "**Luke 1:28**, *\"Hail, full of grace",
+      "added": ""
+    },
+    {
+      "numbers": [
+        2
+      ],
+      "first_num": 2,
+      "latin": "Sancta Dei Genetrix",
+      "english": "Holy Mother of God",
+      "group": "Group 1: The Foundational Titles",
+      "group_slug": "the-foundational-titles",
+      "scriptural_root": "**Luke 1:43**, *\"And whence is this to me,",
+      "added": ""
+    },
+    {
+      "numbers": [
+        3
+      ],
+      "first_num": 3,
+      "latin": "Sancta Virgo virginum",
+      "english": "Holy Virgin of Virgins",
+      "group": "Group 1: The Foundational Titles",
+      "group_slug": "the-foundational-titles",
+      "scriptural_root": "**Isaiah 7:14** (*\"Behold a virgin shall",
+      "added": ""
+    },
+    {
+      "numbers": [
+        4
+      ],
+      "first_num": 4,
+      "latin": "Mater Christi",
+      "english": "Mother of Christ",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "**Matthew 1:16**, *\"Jacob begot Joseph the",
+      "added": ""
+    },
+    {
+      "numbers": [
+        5
+      ],
+      "first_num": 5,
+      "latin": "Mater Ecclesiae",
+      "english": "Mother of the Church",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "**John 19:26-27**, *\"Behold thy son... Behold",
+      "added": "1980 by Pope **John Paul II** (Paul VI had proclaimed the"
+    },
+    {
+      "numbers": [
+        6
+      ],
+      "first_num": 6,
+      "latin": "Mater Misericordiae",
+      "english": "Mother of Mercy",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "**Luke 1:50**, *\"his mercy is from generation",
+      "added": "2020 by Pope Francis (though the title is"
+    },
+    {
+      "numbers": [
+        7
+      ],
+      "first_num": 7,
+      "latin": "Mater divinae gratiae",
+      "english": "Mother of Divine Grace",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "**Luke 1:28** (*kecharitomene*, \"full of",
+      "added": ""
+    },
+    {
+      "numbers": [
+        8
+      ],
+      "first_num": 8,
+      "latin": "Mater Spei",
+      "english": "Mother of Hope",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "**Romans 4:18** (Abraham hoped against hope;",
+      "added": "2020 by Pope Francis."
+    },
+    {
+      "numbers": [
+        9
+      ],
+      "first_num": 9,
+      "latin": "Mater purissima",
+      "english": "Mother Most Pure",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "",
+      "added": ""
+    },
+    {
+      "numbers": [
+        10
+      ],
+      "first_num": 10,
+      "latin": "Mater castissima",
+      "english": "Mother Most Chaste",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "",
+      "added": ""
+    },
+    {
+      "numbers": [
+        11
+      ],
+      "first_num": 11,
+      "latin": "Mater inviolata",
+      "english": "Mother Inviolate",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "",
+      "added": ""
+    },
+    {
+      "numbers": [
+        12
+      ],
+      "first_num": 12,
+      "latin": "Mater intemerata",
+      "english": "Mother Undefiled",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "**Song of Songs 4:7**, *\"Tota pulchra es,",
+      "added": ""
+    },
+    {
+      "numbers": [
+        13
+      ],
+      "first_num": 13,
+      "latin": "Mater amabilis",
+      "english": "Mother Most Amiable",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "",
+      "added": ""
+    },
+    {
+      "numbers": [
+        14
+      ],
+      "first_num": 14,
+      "latin": "Mater admirabilis",
+      "english": "Mother Most Admirable",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "**Sirach 24:24** (the Wisdom-as-Mother",
+      "added": ""
+    },
+    {
+      "numbers": [
+        15
+      ],
+      "first_num": 15,
+      "latin": "Mater boni consilii",
+      "english": "Mother of Good Counsel",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "**Isaiah 9:6** (\"his name shall be called",
+      "added": "1903 by Pope **Leo XIII**, who had a particular"
+    },
+    {
+      "numbers": [
+        16
+      ],
+      "first_num": 16,
+      "latin": "Mater Creatoris",
+      "english": "Mother of our Creator",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "**John 1:3** (\"All things were made by him\")",
+      "added": ""
+    },
+    {
+      "numbers": [
+        17
+      ],
+      "first_num": 17,
+      "latin": "Mater Salvatoris",
+      "english": "Mother of our Savior",
+      "group": "Group 2: The Maternal Titles",
+      "group_slug": "the-maternal-titles",
+      "scriptural_root": "**Matthew 1:21** (\"thou shalt call his name",
+      "added": ""
+    },
+    {
+      "numbers": [
+        18
+      ],
+      "first_num": 18,
+      "latin": "Virgo prudentissima",
+      "english": "Virgin Most Prudent",
+      "group": "Group 3: The Virginal Titles",
+      "group_slug": "the-virginal-titles",
+      "scriptural_root": "**Matthew 25:1-13** (the parable of the",
+      "added": ""
+    },
+    {
+      "numbers": [
+        19
+      ],
+      "first_num": 19,
+      "latin": "Virgo veneranda",
+      "english": "Virgin Most Venerable",
+      "group": "Group 3: The Virginal Titles",
+      "group_slug": "the-virginal-titles",
+      "scriptural_root": "**Luke 1:48** (\"all generations shall call",
+      "added": ""
+    },
+    {
+      "numbers": [
+        20
+      ],
+      "first_num": 20,
+      "latin": "Virgo praedicanda",
+      "english": "Virgin Most Renowned",
+      "group": "Group 3: The Virginal Titles",
+      "group_slug": "the-virginal-titles",
+      "scriptural_root": "**Luke 1:48** continued; the prophecy that",
+      "added": ""
+    },
+    {
+      "numbers": [
+        21
+      ],
+      "first_num": 21,
+      "latin": "Virgo potens",
+      "english": "Virgin Most Powerful",
+      "group": "Group 3: The Virginal Titles",
+      "group_slug": "the-virginal-titles",
+      "scriptural_root": "**Luke 1:49** (\"for he that is mighty hath",
+      "added": ""
+    },
+    {
+      "numbers": [
+        22
+      ],
+      "first_num": 22,
+      "latin": "Virgo clemens",
+      "english": "Virgin Most Merciful",
+      "group": "Group 3: The Virginal Titles",
+      "group_slug": "the-virginal-titles",
+      "scriptural_root": "**Luke 1:50** (\"his mercy is from generation",
+      "added": ""
+    },
+    {
+      "numbers": [
+        23
+      ],
+      "first_num": 23,
+      "latin": "Virgo fidelis",
+      "english": "Virgin Most Faithful",
+      "group": "Group 3: The Virginal Titles",
+      "group_slug": "the-virginal-titles",
+      "scriptural_root": "**Luke 1:45**, *\"Blessed art thou that hast",
+      "added": ""
+    },
+    {
+      "numbers": [
+        24
+      ],
+      "first_num": 24,
+      "latin": "Speculum iustitiae",
+      "english": "Mirror of Justice",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**Wisdom 7:26** (\"she [Wisdom] is the",
+      "added": ""
+    },
+    {
+      "numbers": [
+        25
+      ],
+      "first_num": 25,
+      "latin": "Sedes Sapientiae",
+      "english": "Seat of Wisdom",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**Proverbs 8** (Wisdom personified) +",
+      "added": ""
+    },
+    {
+      "numbers": [
+        26
+      ],
+      "first_num": 26,
+      "latin": "Causa nostrae laetitiae",
+      "english": "Cause of our Joy",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**Luke 1:14** (\"thou shalt have joy and",
+      "added": ""
+    },
+    {
+      "numbers": [
+        27
+      ],
+      "first_num": 27,
+      "latin": "Vas spirituale",
+      "english": "Spiritual Vessel",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "",
+      "added": ""
+    },
+    {
+      "numbers": [
+        28
+      ],
+      "first_num": 28,
+      "latin": "Vas honorabile",
+      "english": "Vessel of Honor",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "",
+      "added": ""
+    },
+    {
+      "numbers": [
+        29
+      ],
+      "first_num": 29,
+      "latin": "Vas insigne devotionis",
+      "english": "Singular Vessel of Devotion",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**2 Timothy 2:21** (\"if any man cleanse",
+      "added": ""
+    },
+    {
+      "numbers": [
+        30
+      ],
+      "first_num": 30,
+      "latin": "Rosa Mystica",
+      "english": "Mystical Rose",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**Sirach 24:18** (\"I was exalted like a",
+      "added": ""
+    },
+    {
+      "numbers": [
+        31
+      ],
+      "first_num": 31,
+      "latin": "Turris Davidica",
+      "english": "Tower of David",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**Song of Songs 4:4** (*\"Sicut turris David",
+      "added": ""
+    },
+    {
+      "numbers": [
+        32
+      ],
+      "first_num": 32,
+      "latin": "Turris eburnea",
+      "english": "Tower of Ivory",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**Song of Songs 7:4** (\"Thy neck as a tower",
+      "added": ""
+    },
+    {
+      "numbers": [
+        33
+      ],
+      "first_num": 33,
+      "latin": "Domus aurea",
+      "english": "House of Gold",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**1 Kings 6:21-22** (the Temple of Solomon",
+      "added": ""
+    },
+    {
+      "numbers": [
+        34
+      ],
+      "first_num": 34,
+      "latin": "Foederis arca",
+      "english": "Ark of the Covenant",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**Exodus 25:10-22** (the Ark) + **2 Samuel",
+      "added": ""
+    },
+    {
+      "numbers": [
+        35
+      ],
+      "first_num": 35,
+      "latin": "Ianua caeli",
+      "english": "Gate of Heaven",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**Genesis 28:17** (Jacob at Bethel: \"this is",
+      "added": ""
+    },
+    {
+      "numbers": [
+        36
+      ],
+      "first_num": 36,
+      "latin": "Stella matutina",
+      "english": "Morning Star",
+      "group": "Group 4: The Symbolic and Typological Titles",
+      "group_slug": "the-symbolic-and-typological-titles",
+      "scriptural_root": "**Revelation 22:16** (\"I am the root and the",
+      "added": ""
+    },
+    {
+      "numbers": [
+        37
+      ],
+      "first_num": 37,
+      "latin": "Salus infirmorum",
+      "english": "Health of the Sick",
+      "group": "Group 5: The Aid Titles",
+      "group_slug": "the-aid-titles",
+      "scriptural_root": "**John 2:5** (Mary's directive at Cana: \"do",
+      "added": ""
+    },
+    {
+      "numbers": [
+        38
+      ],
+      "first_num": 38,
+      "latin": "Refugium peccatorum",
+      "english": "Refuge of Sinners",
+      "group": "Group 5: The Aid Titles",
+      "group_slug": "the-aid-titles",
+      "scriptural_root": "**Luke 7:36-50** (the sinful woman at the",
+      "added": ""
+    },
+    {
+      "numbers": [
+        39
+      ],
+      "first_num": 39,
+      "latin": "Solatium migrantium",
+      "english": "Comfort of Migrants",
+      "group": "Group 5: The Aid Titles",
+      "group_slug": "the-aid-titles",
+      "scriptural_root": "**Matthew 2:13-15** (the Flight into Egypt;",
+      "added": "2020 by Pope Francis."
+    },
+    {
+      "numbers": [
+        40
+      ],
+      "first_num": 40,
+      "latin": "Consolatrix afflictorum",
+      "english": "Comforter of the Afflicted",
+      "group": "Group 5: The Aid Titles",
+      "group_slug": "the-aid-titles",
+      "scriptural_root": "**Luke 2:35** (Simeon's sword) + **John",
+      "added": ""
+    },
+    {
+      "numbers": [
+        41
+      ],
+      "first_num": 41,
+      "latin": "Auxilium Christianorum",
+      "english": "Help of Christians",
+      "group": "Group 5: The Aid Titles",
+      "group_slug": "the-aid-titles",
+      "scriptural_root": "**Judith 13** (Judith who saved Israel by",
+      "added": "1815 by Pope **Pius VII**, in thanksgiving for his"
+    },
+    {
+      "numbers": [
+        42
+      ],
+      "first_num": 42,
+      "latin": "Regina angelorum",
+      "english": "Queen of Angels",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Luke 1:26** (Gabriel sent to Mary; the",
+      "added": ""
+    },
+    {
+      "numbers": [
+        43
+      ],
+      "first_num": 43,
+      "latin": "Regina patriarcharum",
+      "english": "Queen of Patriarchs",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Hebrews 11** (the patriarchs awaiting the",
+      "added": ""
+    },
+    {
+      "numbers": [
+        44
+      ],
+      "first_num": 44,
+      "latin": "Regina prophetarum",
+      "english": "Queen of Prophets",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Isaiah 7:14** (her conceiving prophesied);",
+      "added": ""
+    },
+    {
+      "numbers": [
+        45
+      ],
+      "first_num": 45,
+      "latin": "Regina apostolorum",
+      "english": "Queen of Apostles",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Acts 1:14** (\"All these were persevering",
+      "added": ""
+    },
+    {
+      "numbers": [
+        46
+      ],
+      "first_num": 46,
+      "latin": "Regina martyrum",
+      "english": "Queen of Martyrs",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Luke 2:35** (Simeon's sword) + **John",
+      "added": ""
+    },
+    {
+      "numbers": [
+        47
+      ],
+      "first_num": 47,
+      "latin": "Regina confessorum",
+      "english": "Queen of Confessors",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Luke 1:38** (her *fiat*, the",
+      "added": ""
+    },
+    {
+      "numbers": [
+        48
+      ],
+      "first_num": 48,
+      "latin": "Regina virginum",
+      "english": "Queen of Virgins",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Revelation 14:4** (the virgins following",
+      "added": ""
+    },
+    {
+      "numbers": [
+        49
+      ],
+      "first_num": 49,
+      "latin": "Regina sanctorum omnium",
+      "english": "Queen of All Saints",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Revelation 12:1** (the Woman crowned with",
+      "added": ""
+    },
+    {
+      "numbers": [
+        50
+      ],
+      "first_num": 50,
+      "latin": "Regina sine labe originali concepta",
+      "english": "Queen Conceived without Original Sin",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Genesis 3:15** (the Woman in total enmity",
+      "added": "1854 by Pope **Pius IX**, after the dogmatic definition"
+    },
+    {
+      "numbers": [
+        51
+      ],
+      "first_num": 51,
+      "latin": "Regina in caelum assumpta",
+      "english": "Queen Assumed into Heaven",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Revelation 12:1** (\"a great sign appeared",
+      "added": "1950 by Pope **Pius XII**, after the dogmatic"
+    },
+    {
+      "numbers": [
+        52
+      ],
+      "first_num": 52,
+      "latin": "Regina sacratissimi Rosarii",
+      "english": "Queen of the Most Holy Rosary",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "derivative — the Rosary is a meditation on",
+      "added": "1883 by Pope **Leo XIII**, who wrote eleven encyclicals"
+    },
+    {
+      "numbers": [
+        53
+      ],
+      "first_num": 53,
+      "latin": "Regina familiarum",
+      "english": "Queen of Families",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Luke 2:51** (\"And he went down with them,",
+      "added": "1995 by Pope **John Paul II**, in the context of his"
+    },
+    {
+      "numbers": [
+        54
+      ],
+      "first_num": 54,
+      "latin": "Regina pacis",
+      "english": "Queen of Peace",
+      "group": "Group 6: The Queenly Titles",
+      "group_slug": "the-queenly-titles",
+      "scriptural_root": "**Isaiah 9:6** (\"his name shall be called...",
+      "added": "1917 by Pope **Benedict XV**, in the midst of the First"
+    }
+  ],
+  "title_count": 54,
+  "group_count": 6
+}

@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "source_file": "Akathist-Hymn-Translated-Annotated.md",
+  "source_mtime": "2026-05-15T05:39:46",
+  "generated_at": "2026-05-15T11:23:41",
+  "title": "The Akathist Hymn, Fully Translated and Annotated",
+  "prooemion": {
+    "title": "The Prooemion",
+    "greek": "**Greek**: *Τῇ ὑπερμάχῳ στρατηγῷ τὰ νικητήρια, ὡς λυτρωθεῖσα τῶν δεινῶν, εὐχαριστήρια ἀναγράφω σοι ἡ πόλις σου, Θεοτόκε· ἀλλ᾽ ὡς ἔχουσα τὸ κράτος ἀπροσμάχητον, ἐκ παντοίων με κινδύνων ἐλευθέρωσον, ἵνα κράζω σοι· Χαῖρε, νύμφη ἀνύμφευτε.*",
+    "english": "**English**: \"To thee, the champion leader, do I, thy city, ascribe the victory and offer this hymn of thanksgiving, for thou hast delivered me from terrors. As thou hast invincible power, set me free from every kind of danger that I may cry to thee: **Rejoice, O Bride Unwedded!**\""
+  },
+  "stanzas": [
+    {
+      "stanza_num": 1,
+      "kind": "kontakion",
+      "cycle_num": 1,
+      "greek_letter": "alpha",
+      "subtitle": "",
+      "english": "\"An angel of highest rank was sent from heaven to say to the Mother of God: Rejoice! And, beholding thee, O Lord, taking bodily form, he was filled with awe and stood crying out to her with his bodiless voice such things as these:\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 2,
+      "kind": "ikos",
+      "cycle_num": 1,
+      "greek_letter": "beta",
+      "subtitle": "The First Set of Salutations",
+      "english": "1. Rejoice, through whom joy shall shine forth. 2. Rejoice, through whom the curse shall vanish. 3. Rejoice, recalling of fallen Adam. 4. Rejoice, redemption of the tears of Eve. 5. Rejoice, height untrod by human thoughts. 6. Rejoice, depth unseen even by angelic eyes. 7. Rejoice, for thou art the throne of the King. 8. Rejoice, for thou holdest him who upholds all. 9. Rejoice, star which heralds the Sun. 10. Rejoice, womb of the divine Incarnation. 11. Rejoice, through whom creation is renewed. 12. Rejoice, through whom the Creator becomes a babe. **Refrain**: *Chaire, Nymphe Anympheute*. (Rejoice, O Bride Unwedded.)",
+      "greek_blocks": [],
+      "greek_inline": [
+        "λύτρωσις τῶν δακρύων τῆς Εὔας"
+      ]
+    },
+    {
+      "stanza_num": 3,
+      "kind": "kontakion",
+      "cycle_num": 2,
+      "greek_letter": "gamma",
+      "subtitle": "",
+      "english": "\"The holy Virgin, seeing herself most pure, said to Gabriel: How shall the marvel of thy strange utterance be possible? For thou sayest that I shall conceive in my womb without seed. Whence then? And he, awe-stricken, cried out: Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 4,
+      "kind": "ikos",
+      "cycle_num": 2,
+      "greek_letter": "delta",
+      "subtitle": "",
+      "english": "1. Rejoice, mystery hidden from the ages. 2. Rejoice, faith of those who pray in silence. 3. Rejoice, preamble of the miracles of Christ. 4. Rejoice, fountain of his commandments. 5. Rejoice, heavenly ladder by which God came down. 6. Rejoice, bridge leading those of earth to heaven. 7. Rejoice, much-marveled wonder of the angels. 8. Rejoice, much-bewailed sorrow of demons. 9. Rejoice, who didst ineffably give birth to the Light. 10. Rejoice, who didst initiate no one into the manner. 11. Rejoice, who dost surpass the wisdom of the wise. 12. Rejoice, who dost enlighten the minds of the faithful.",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 5,
+      "kind": "kontakion",
+      "cycle_num": 3,
+      "greek_letter": "epsilon",
+      "subtitle": "",
+      "english": "\"Then a power of the Most High overshadowed the Virgin, that she might conceive, and her fruitful womb was made a pleasing field for all those who would reap salvation, when they sing: Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": [
+        "ἐπεσκίασεν"
+      ]
+    },
+    {
+      "stanza_num": 6,
+      "kind": "ikos",
+      "cycle_num": 3,
+      "greek_letter": "zeta",
+      "subtitle": "The Visitation",
+      "english": "1. Rejoice, branch of the unfading shoot. 2. Rejoice, dwelling-place of the immortal fruit. 3. Rejoice, who dost cultivate the Cultivator of mankind. 4. Rejoice, who dost give growth to the Sower of our life. 5. Rejoice, field producing the abundant compassion of God. 6. Rejoice, table bearing the abundance of mercy. 7. Rejoice, who dost cause the meadow of delight to flourish. 8. Rejoice, who dost prepare a haven for souls. 9. Rejoice, acceptable incense of intercession. 10. Rejoice, propitiation of the whole world. 11. Rejoice, kindness of God to mortal man. 12. Rejoice, confidence of mortal man before God.",
+      "greek_blocks": [],
+      "greek_inline": [
+        "ἱλασμὸς τοῦ παντὸς κόσμου"
+      ]
+    },
+    {
+      "stanza_num": 7,
+      "kind": "kontakion",
+      "cycle_num": 4,
+      "greek_letter": "eta",
+      "subtitle": "",
+      "english": "\"Bearing within himself a tempest of doubting thoughts, the chaste Joseph was perturbed... He learned of thy seedless conception, O spotless one, and cried out: Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 8,
+      "kind": "ikos",
+      "cycle_num": 4,
+      "greek_letter": "theta",
+      "subtitle": "The Shepherds and Bethlehem",
+      "english": "1. Rejoice, Mother of the Lamb and the Shepherd. 2. Rejoice, sheepfold of rational sheep. 3. Rejoice, defense against unseen enemies. 4. Rejoice, opening of the gates of paradise. 5. Rejoice, for the things of heaven rejoice with earth. 6. Rejoice, for the things of earth dance with heaven. 7. Rejoice, never-silent voice of the apostles. 8. Rejoice, never-defeated courage of the champions. 9. Rejoice, firm support of the faith. 10. Rejoice, shining herald of grace. 11. Rejoice, through whom Hades was stripped bare. 12. Rejoice, through whom we were clothed with glory.",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 9,
+      "kind": "kontakion",
+      "cycle_num": 5,
+      "greek_letter": "iota",
+      "subtitle": "The Magi",
+      "english": "\"Gazing upon the divine star, the Magi followed its brilliance... and beholding Christ, they cried out to him: Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 10,
+      "kind": "ikos",
+      "cycle_num": 5,
+      "greek_letter": "kappa",
+      "subtitle": "The Magi at Bethlehem",
+      "english": "1. Rejoice, Mother of the star which never sets. 2. Rejoice, dawn of the mystical day. 3. Rejoice, who didst quench the furnace of error. 4. Rejoice, who dost illumine the initiates of the Trinity. 5. Rejoice, who didst cast out from authority the inhuman tyrant. 6. Rejoice, who didst show forth Christ the Lord, the Lover of    mankind. 7. Rejoice, deliverer from barbarian worship. 8. Rejoice, who dost rescue from the mire of works. 9. Rejoice, who didst quench the worship of fire. 10. Rejoice, who dost deliver from the flame of passions. 11. Rejoice, guide of the faithful in chastity. 12. Rejoice, joy of all generations.",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 11,
+      "kind": "kontakion",
+      "cycle_num": 6,
+      "greek_letter": "lambda",
+      "subtitle": "",
+      "english": "\"Having become heralds bearing God, the Magi turned back to Babylon... and Babylon they left empty... so we, having beheld Christ, cry out: Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 12,
+      "kind": "ikos",
+      "cycle_num": 6,
+      "greek_letter": "mu",
+      "subtitle": "The Magi as Apostles",
+      "english": "1. Rejoice, raising up of fallen Adam. 2. Rejoice, redemption of the tears of Eve. 3. Rejoice, height too hard to climb for human thoughts. 4. Rejoice, depth too deep to fathom even for angelic eyes. 5. Rejoice, throne of the King. 6. Rejoice, for thou bearest him who bears all things. 7. Rejoice, star which heralds the Sun. 8. Rejoice, womb of the divine Incarnation. 9. Rejoice, through whom creation is renewed. 10. Rejoice, through whom the Creator becomes a babe. 11. Rejoice, mountain of the divine glory. 12. Rejoice, deeply-rooted lily of immortality.",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 13,
+      "kind": "kontakion",
+      "cycle_num": 7,
+      "greek_letter": "nu",
+      "subtitle": "",
+      "english": "\"When Simeon was about to depart this present age, thou wast given to him as a babe... and he sang to him: Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 14,
+      "kind": "ikos",
+      "cycle_num": 7,
+      "greek_letter": "xi",
+      "subtitle": "Simeon and the Presentation",
+      "english": "1. Rejoice, all-immaculate Bride. 2. Rejoice, sacred chariot of him who sits upon the Cherubim. 3. Rejoice, glorious dwelling of him who sits upon the Seraphim. 4. Rejoice, who didst unite opposites. 5. Rejoice, who didst combine virginity and child-bearing. 6. Rejoice, through whom transgression has been undone. 7. Rejoice, through whom paradise has been opened. 8. Rejoice, key of the kingdom of Christ. 9. Rejoice, hope of eternal good things. 10. Rejoice, sweet-smelling fragrance of Christ. 11. Rejoice, life of mystical festivity. 12. Rejoice, who didst undo the laws of nature.",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 15,
+      "kind": "kontakion",
+      "cycle_num": 8,
+      "greek_letter": "omicron",
+      "subtitle": "",
+      "english": "\"A strange birth was beheld... Let us withdraw our minds from earthly things, transporting them to heaven. For for this the highest God appeared on earth as a humble man, in order to draw upward those who cry to him: Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 16,
+      "kind": "ikos",
+      "cycle_num": 8,
+      "greek_letter": "pi",
+      "subtitle": "The Cosmic Christ",
+      "english": "1. Rejoice, who didst contain the uncontainable God. 2. Rejoice, gate of the venerable mystery. 3. Rejoice, doubtful hearing of the unfaithful. 4. Rejoice, certain glory of the faithful. 5. Rejoice, all-holy chariot of him who is above the Cherubim. 6. Rejoice, perfect dwelling of him who is above the Seraphim. 7. Rejoice, who didst bring opposites into harmony. 8. Rejoice, who didst join virginity and motherhood. 9. Rejoice, through whom transgression was annulled. 10. Rejoice, through whom paradise was opened. 11. Rejoice, key of the kingdom of Christ. 12. Rejoice, hope of good things eternal.",
+      "greek_blocks": [],
+      "greek_inline": [
+        "χωρίον τοῦ ἀχωρήτου Θεοῦ"
+      ]
+    },
+    {
+      "stanza_num": 17,
+      "kind": "kontakion",
+      "cycle_num": 9,
+      "greek_letter": "rho",
+      "subtitle": "",
+      "english": "\"All angelic nature marveled at the great work of thy Incarnation, for they saw the inapproachable God approachable to all... O Lover of mankind, Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 18,
+      "kind": "ikos",
+      "cycle_num": 9,
+      "greek_letter": "sigma",
+      "subtitle": "The Mystery of the Word",
+      "english": "1. Rejoice, container of God which has no bounds. 2. Rejoice, gate of the venerable mystery. 3. Rejoice, doubtful report to unbelievers. 4. Rejoice, undoubted boast of the faithful. 5. Rejoice, all-holy chariot of him who is above the Cherubim. 6. Rejoice, glorious dwelling of him who is above the Seraphim. 7. Rejoice, who didst bring opposites to the same end. 8. Rejoice, who didst combine virginity and child-bearing. 9. Rejoice, through whom transgression was loosed. 10. Rejoice, through whom paradise was opened. 11. Rejoice, key of the kingdom of Christ. 12. Rejoice, hope of eternal good things.",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 19,
+      "kind": "kontakion",
+      "cycle_num": 10,
+      "greek_letter": "tau",
+      "subtitle": "",
+      "english": "\"Seeking to save the world, the Creator of all came to it of his own will... and remained what he was... wherefore we sing: Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 20,
+      "kind": "ikos",
+      "cycle_num": 10,
+      "greek_letter": "upsilon",
+      "subtitle": "The Cosmic Mediatrix",
+      "english": "1. Rejoice, refuge of virgins. 2. Rejoice, dwelling of the faithful. 3. Rejoice, who didst exalt the cherubim. 4. Rejoice, who didst shine on the archangels. 5. Rejoice, fall of the demons. 6. Rejoice, light from a single ray. 7. Rejoice, who dost teach the multitude of mortals. 8. Rejoice, who dost confound the dreaming of the disbelievers. 9. Rejoice, all-honored crown of chaste priests. 10. Rejoice, divinely-flowing fountain of grace. 11. Rejoice, who didst destroy the citadel of the enemy. 12. Rejoice, who didst point the way to the kingdom of God.",
+      "greek_blocks": [],
+      "greek_inline": [
+        "πηγὴ θεορρύτου χάριτος"
+      ]
+    },
+    {
+      "stanza_num": 21,
+      "kind": "kontakion",
+      "cycle_num": 11,
+      "greek_letter": "phi",
+      "subtitle": "",
+      "english": "\"Every hymn is overcome which seeks to match the multitude of thy compassions... wherefore even Cherubim cry out to thee: Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 22,
+      "kind": "ikos",
+      "cycle_num": 11,
+      "greek_letter": "chi",
+      "subtitle": "The Akathist Hymn Recognizes Its Own Inadequacy",
+      "english": "1. Rejoice, lamp of the noetic light. 2. Rejoice, beam of the spiritual sun. 3. Rejoice, lightning bolt that illumines souls. 4. Rejoice, fearful thunder against enemies. 5. Rejoice, dawn that gives bright illumination. 6. Rejoice, full-flowing river of well-being. 7. Rejoice, who dost design the form of the baptismal font. 8. Rejoice, who dost take away the stain of sin. 9. Rejoice, washing of the conscience. 10. Rejoice, cup that draws forth joy. 11. Rejoice, fragrance of the sweetness of Christ. 12. Rejoice, life of the mystical banquet.",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 23,
+      "kind": "kontakion",
+      "cycle_num": 12,
+      "greek_letter": "psi",
+      "subtitle": "",
+      "english": "\"Wishing to grant pardon for ancient debts, the One who pardons all mankind came of his own will to those who had fallen from his grace... and tearing up the document of debt, he heard from all: Alleluia!\"",
+      "greek_blocks": [],
+      "greek_inline": []
+    },
+    {
+      "stanza_num": 24,
+      "kind": "ikos",
+      "cycle_num": 12,
+      "greek_letter": "omega",
+      "subtitle": "The Final Salutations and Conclusion",
+      "english": "1. Rejoice, tabernacle of God the Word. 2. Rejoice, holy of holies the greater. 3. Rejoice, ark gilded by the Spirit. 4. Rejoice, inexhaustible treasury of life. 5. Rejoice, honored crown of pious kings. 6. Rejoice, holy pride of devout priests. 7. Rejoice, unshaken tower of the Church. 8. Rejoice, invincible wall of the kingdom. 9. Rejoice, through whom victories are raised up. 10. Rejoice, through whom enemies fall. 11. Rejoice, healing of my body. 12. Rejoice, salvation of my soul.",
+      "greek_blocks": [],
+      "greek_inline": []
+    }
+  ],
+  "stanza_count": 24
+}

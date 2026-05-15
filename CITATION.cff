@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "Mediatrix, An Editorial Marian Study Library"
+message: "If you reference this library in scholarship or homiletic preparation, please cite it as below."
+type: dataset
+authors:
+  - alias: MediatrixLibre
+    email: mediatrixdev@proton.me
+abstract: >-
+  An editorial Marian study library, fifteen hand-designed pages on
+  Mary as Mediatrix and Co-Redemptrix, drawn from a thirteen-file
+  markdown corpus of patristic, medieval, and magisterial witness.
+  Provenance is tagged on every entry (verbatim / traditional / disputed
+  / liturgical / magisterial). The Akathist, the Litany of Loreto, the
+  Office of Readings sourcebook, the rosary companion, and the
+  iconography reference are included.
+keywords:
+  - mariology
+  - mediatrix
+  - co-redemptrix
+  - patristics
+  - akathist
+  - litany-of-loreto
+  - catholic-theology
+  - editorial-typography
+license: CC-BY-NC-SA-4.0
+repository-code: "https://github.com/MediatrixLibre/Mediatrix"
+url: "https://mediatrix-marian-library.pages.dev/"

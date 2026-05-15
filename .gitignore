@@ -1,0 +1,66 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Runtime
+tmp/
+*.log
+
+# Secrets — credentials live in macOS Keychain, never on disk in this repo.
+# .env* is blocked as defense-in-depth in case someone drops one here.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Local dev notes never shipped to GitHub (kept on disk only)
+DEPLOY.md
+reviews/
+
+# Local corpus (source markdown lives elsewhere via $MARIOLOGY_CORPUS)
+corpus/
+
+# Cloudflare / Wrangler build artifacts
+.wrangler/
+.cloudflare/
+.cf/
+dist/
+build/
+
+# Node (in case Wrangler or tooling is added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Keychain / SSH leakage guards
+id_*
+*.private
+*.crt
+*.cert
+
+# Local Playwright / preview artifacts
+test-results/
+playwright-report/
+.playwright/
+*.spec.local.*
+
+# Generated screenshots from local Playwright runs (kept in the user's home, not in repo)
+mediatrix-*.png

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" data-mode="day" data-page="about">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About &middot; Methodology &middot; Mediatrix</title>
+<meta name="description" content="A Marian study library — methodology, provenance, and source for the doctrine of Mary as Mediatrix and Co-Redemptrix, drawn from twenty centuries of patristic, medieval, and magisterial witness." />
+<link rel="stylesheet" href="styles/fonts.css" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=23" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Mediatrix" />
+<script src="scripts/mediatrix.js?v=23"></script>
+<style>
+  .prov-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--rhythm); margin: var(--rhythm-x2) 0; }
+  .prov-card { padding: var(--rhythm) var(--rhythm); border-left: 3px solid; background: var(--cream); }
+  .prov-card h4 { margin: 0 0 var(--rhythm-half); font-family: var(--font-display); font-weight: 500; }
+  .prov-card p { font-family: var(--font-serif); font-size: 0.94rem; line-height: 1.5; color: var(--m-navy); margin: 0; }
+  .prov-card.verbatim { border-color: var(--verified); }
+  .prov-card.verbatim h4 { color: var(--verified); }
+  .prov-card.traditional { border-color: var(--m-gold); }
+  .prov-card.traditional h4 { color: var(--m-gold-text); }
+  .prov-card.disputed { border-color: var(--m-rose); }
+  .prov-card.disputed h4 { color: var(--m-rose-deep); }
+  .prov-card.liturgical { border-color: var(--m-blue); }
+  .prov-card.liturgical h4 { color: var(--m-blue); }
+  .prov-card.magisterial { border-color: var(--m-navy); }
+  .prov-card.magisterial h4 { color: var(--m-navy); }
+
+  /* Ex-voto thanksgiving panel.
+     A votive plaque, set quietly above the closing prayer. The Stella
+     Maris ornament marks the offering; PER GRAZIA RICEVUTA names it in
+     the Italian tradition of Per-Grazia-Ricevuta tablets carried to a
+     Marian shrine; the line beneath gives the thanksgiving in English. */
+  .ex-voto {
+    max-width: 32rem;
+    margin: var(--rhythm-x3) auto var(--rhythm-x2);
+    padding: var(--rhythm-x2) var(--rhythm) var(--rhythm);
+    text-align: center;
+    border-top: 1px solid var(--m-gold);
+  }
+  .ex-voto__stella {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto var(--rhythm);
+    color: var(--m-gold);
+  }
+  .ex-voto__stella svg { width: 100%; height: 100%; fill: currentColor; }
+  .ex-voto__caption {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--m-gold-text);
+    margin: 0 0 var(--rhythm-half);
+  }
+  .ex-voto__line {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--m-navy);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.04rem;
+  }
+</style>
+</head>
+<body data-vestment="blue" data-screen-label="About &middot; Methodology">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="mast">
+  <a class="mast__back" href="index.html">&larr; Mediatrix</a>
+  <a class="mast__word" href="index.html"><span class="vest-dot" aria-hidden="true"></span>Mediatrix<em>A Marian study library</em></a>
+  <div class="mast__tools">
+    <button id="mode-toggle" type="button">Vigil</button>
+    <a href="library.html">Library</a>
+    <a href="search.html">Search</a>
+  </div>
+</header>
+
+<main id="main" class="prose">
+
+  <p class="kicker"><span class="dot"></span>Methodology &middot; Provenance</p>
+  <h1>About</h1>
+  <p class="hero__pron" style="text-align:left; margin: 0 0 var(--rhythm-x2);">
+    A Marian study library on the Blessed Virgin Mary as <em>Mediatrix</em>
+    and <em>Co-Redemptrix</em>, drawn from twenty centuries of patristic,
+    medieval, and magisterial witness, each quotation traced to a critical
+    edition.
+  </p>
+
+  <section class="reader-prose">
+    <h2>What this library is</h2>
+    <p>
+      Mediatrix presents the Catholic doctrine of Mary as <em>Mediatrix</em>
+      (universal distributor of grace) and <em>Co-Redemptrix</em> (subordinate
+      cooperator in the redemption), drawn from a chronologically organised
+      corpus of fifty-seven patristic, medieval, magisterial, and modern
+      sources. Every quotation is cited to a critical edition wherever the
+      text is securely fixed.
+    </p>
+    <p>
+      The library aims at three things together: <strong>fidelity</strong>
+      (every quotation traceable to a critical edition), <strong>economy</strong>
+      (one strongest sentence per source, not an anthology of fragments), and
+      <strong>orthodoxy</strong> (every claim governed by the unique mediation
+      of Christ). Mary&rsquo;s mediation is always subordinate to it, and never
+      additive to it.
+    </p>
+
+    <h2>The five-tier provenance system</h2>
+    <p>
+      Every quotation in the library carries one of five provenance tags. Quote
+      with confidence what is tagged <strong>verbatim</strong>; cite with care
+      what is tagged <strong>disputed</strong>.
+    </p>
+
+    <div class="prov-grid">
+      <div class="prov-card verbatim">
+        <h4>Verbatim</h4>
+        <p>Direct attested quotation from a named patristic, medieval, or magisterial source, traceable to a critical edition (PG, PL, SC, CSEL, CCSL, Leonine, Quaracchi, AAS).</p>
+      </div>
+      <div class="prov-card traditional">
+        <h4>Traditional</h4>
+        <p>Well-attested in the Catholic theological tradition, with the substance secure even where the precise wording or attribution is less than verbatim.</p>
+      </div>
+      <div class="prov-card disputed">
+        <h4>Disputed</h4>
+        <p>Contested attribution or contested precise wording. The substance may be the author&rsquo;s, but the textual provenance is the subject of scholarly dispute. Use with care.</p>
+      </div>
+      <div class="prov-card liturgical">
+        <h4>Liturgical</h4>
+        <p>Drawn from the Church&rsquo;s public worship: antiphons, prayers, sequences, hymnody. The locus is the <em>lex orandi</em>.</p>
+      </div>
+      <div class="prov-card magisterial">
+        <h4>Magisterial</h4>
+        <p>Papal, conciliar, or curial teaching at a defined level (encyclical, apostolic constitution, conciliar document, canon, AAS).</p>
+      </div>
+    </div>
+
+    <h2>The doctrinal grammar</h2>
+    <p>
+      One sentence holds the doctrine in its proper proportion. Christ is the
+      one Mediator, uniquely and ontologically (1 Tim 2:5). Mary&rsquo;s
+      mediation is subordinate and by grace, never displacing, never
+      paralleling, never adding to the dignity and efficacy of Christ. The
+      Fathers held this distinction before it had a name; the Counter-Reformation
+      Doctors gave it a precise wording; the modern Magisterium has ratified
+      it repeatedly, most recently at Vatican&nbsp;II.
+    </p>
+    <blockquote class="pull">
+      <span class="latin"><em>Sicut luna inter solem et terram interposita, quod
+      a sole accipit, terrae communicat; sic Maria inter Christum et nos
+      posita, gratias quas a Christo accipit, nobis effundit.</em></span>
+      &ldquo;As the moon, between the sun and the earth, communicates to the
+      earth what it receives from the sun, so Mary, between Christ and us, pours
+      out upon us the graces she receives from Christ.&rdquo;
+      <cite>Bonaventure &middot; <em>Speculum B.V.M.</em> ch. 6 &middot; 13th c.</cite>
+    </blockquote>
+    <p>
+      The structural distinction the tradition preserves: Christ is
+      <em>Mediator of redemption</em>, uniquely and ontologically; Mary is
+      <em>Mediatrix of intercession</em>, subordinately and by grace.
+      Francis de Sales (<em>Treatise</em> III.8) gives the precise wording.
+      The same structure governs <em>Co-Redemptrix</em>: she cooperates
+      <em>with</em> Christ, never <em>in place of</em> Christ; the
+      <em>con-</em> is the Latin preposition of subordinate accompaniment.
+    </p>
+
+    <h2>The Old-Testament principle</h2>
+    <p>
+      The Fathers did not read the OT as a Marian sourcebook. They read it as
+      a Christological book. But within that Christological reading, Mary
+      appears wherever Christ appears, because she is inseparable from him in
+      the economy of salvation. Four principles govern:
+    </p>
+    <ol>
+      <li><strong>Typology is real, not arbitrary</strong> (Luke 24:27).</li>
+      <li><strong>Mary is included in Christ&rsquo;s mystery</strong> (the New Eve / New Adam parallel).</li>
+      <li><strong>The <span class="latin"><em>lex orandi</em></span> witnesses first.</strong> The Church prayed to Mary as universal refuge (<em>Sub Tuum</em>, c. 250) before the doctrine of Mediatrix was named.</li>
+      <li><strong><span class="latin"><em>Sensus plenior</em></span> is Catholic</strong> (<em>Dei Verbum</em> &sect;12 reaffirms typology and the spiritual sense).</li>
+    </ol>
+
+    <h2>The four Marian dogmas</h2>
+    <ol>
+      <li><strong>Mother of God</strong> &middot; <span class="greek">Theotokos</span> &middot; defined Council of Ephesus, 431.</li>
+      <li><strong>Perpetual Virginity</strong> &middot; <em>virgo ante partum, in partu, post partum</em> &middot; patristic consensus from the 2nd c.; confirmed by the Second Council of Constantinople (553) and Lateran (649).</li>
+      <li><strong>Immaculate Conception</strong> &middot; defined by <em>Ineffabilis Deus</em>, Pius IX, 8 December 1854.</li>
+      <li><strong>Assumption</strong> &middot; defined by <em>Munificentissimus Deus</em>, Pius XII, 1 November 1950.</li>
+    </ol>
+    <p>
+      A possible fifth Marian dogma (<em>Mediatrix of all graces &middot;
+      Co-Redemptrix &middot; Advocate</em>) has been petitioned to the Holy
+      See multiple times since the 1990s. The petition has not been received.
+      The titles are magisterially used, especially since Pius&nbsp;XI (1935),
+      Pius&nbsp;XII (1943), and John Paul&nbsp;II (six formal addresses), but
+      are not currently the subject of a defined dogma.
+    </p>
+
+    <h2>Sources cited &middot; the critical editions</h2>
+    <ul>
+      <li><strong>PG</strong> &middot; Patrologia Graeca (Migne)</li>
+      <li><strong>PL</strong> &middot; Patrologia Latina (Migne)</li>
+      <li><strong>SC</strong> &middot; Sources Chr&eacute;tiennes</li>
+      <li><strong>CSEL</strong> &middot; Corpus Scriptorum Ecclesiasticorum Latinorum</li>
+      <li><strong>CCSL</strong> &middot; Corpus Christianorum, Series Latina</li>
+      <li><strong>Leonine</strong> &middot; the critical edition of Aquinas</li>
+      <li><strong>Quaracchi</strong> &middot; the critical edition of Bernardine of Siena and the Bonaventurian school</li>
+      <li><strong>AAS</strong> &middot; Acta Apostolicae Sedis (the official organ of papal acts)</li>
+      <li><strong>ASS</strong> &middot; Acta Sanctae Sedis (predecessor of AAS, 1865&ndash;1908)</li>
+      <li><strong>Nestle-Aland 28</strong> &middot; the standard critical edition of the Greek New Testament</li>
+      <li><strong>NABRE</strong> &middot; the New American Bible, Revised Edition (USCCB)</li>
+      <li><strong>Douay-Rheims</strong> &middot; the traditional Catholic English translation</li>
+    </ul>
+
+    <h2>The twelve pages</h2>
+    <ol>
+      <li><a href="library.html">The Library</a> &middot; the chronological compendium, fifty-seven witnesses across ten eras</li>
+      <li><a href="ot-types.html">OT Types</a> &middot; twenty-eight Old-Testament figures the Church has read Marianly</li>
+      <li><a href="nt-texts.html">NT Texts</a> &middot; Cana, Calvary, Revelation 12 in the Greek</li>
+      <li><a href="anthology.html">Concise Anthology</a> &middot; one quote per saint, fifty-seven voices</li>
+      <li><a href="rosary.html">Rosary Companion</a> &middot; the fifteen Dominican mysteries with optional Luminous set</li>
+      <li><a href="defense.html">Defense</a> &middot; twelve Protestant objections, four-layer Catholic response</li>
+      <li><a href="feasts.html">Feasts</a> &middot; eighteen Marian feasts on the liturgical calendar</li>
+      <li><a href="apparitions.html">Apparitions</a> &middot; seven approved apparitions of the modern era</li>
+      <li><a href="litany.html">Litany of Loreto</a> &middot; fifty-four titles, six structural groups</li>
+      <li><a href="office.html">Office of Readings</a> &middot; patristic Office texts for fourteen Marian feasts</li>
+      <li><a href="akathist.html">Akathist Hymn</a> &middot; the sixth-century Byzantine Marian hymn, twenty-four oikoi</li>
+      <li><a href="iconography.html">Iconography</a> &middot; Byzantine and Western types, with chronology and inscription reference</li>
+    </ol>
+
+    <h2>Editorial voice</h2>
+    <p>
+      Priestly, quiet, specific. Numbers are specific (54 titles, 28 OT types,
+      57 saints, 7 apparitions, 18 feasts, 20 mysteries, 24 oikoi). Italic
+      Source Serif is reserved for Greek, Hebrew, Latin, and pull-quotes,
+      never for casual emphasis. No exclamations. No emoji. No decorative
+      gradients. No drop-shadow flourish. No AI-generated illustration. The
+      library is set as a Roman Missal page, not an internet form.
+    </p>
+    <p>
+      No analytics. No tracking. No third-party scripts. Twenty-seven
+      self-hosted woff2 fonts; no Google CDN. The library remembers nothing
+      about its reader except the six pages last visited, kept in
+      browser-local storage and never transmitted.
+    </p>
+
+    <aside class="ex-voto" aria-label="Votive thanksgiving">
+      <span class="ex-voto__stella" aria-hidden="true">
+        <svg viewBox="0 0 32 32">
+          <polygon points="16,1 18,16 16,31 14,16"/>
+          <polygon points="1,16 16,14 31,16 16,18"/>
+          <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+          <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+          <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+          <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+          <circle cx="16" cy="16" r="1.6"/>
+        </svg>
+      </span>
+      <p class="ex-voto__caption">Per Grazia Ricevuta</p>
+      <p class="ex-voto__line">In thanksgiving to the Mother of God for prayers answered.</p>
+    </aside>
+
+    <p style="text-align:center; font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: var(--rhythm-x2) auto;">
+      <em>Maria, Mater Mediatrix et Coredemptrix, ora pro nobis peccatoribus, nunc et in hora mortis nostrae. Amen.</em><br/>
+      <em>Soli Deo gloria.</em>
+    </p>
+  </section>
+
+</main>
+
+<footer class="colophon">
+  <span class="small-caps">Methodology &middot; Provenance</span>
+  <span class="colophon__nav">
+    <a href="index.html">Home</a><span>&middot;</span>
+    <a href="library.html">Library</a><span>&middot;</span>
+    <a href="anthology.html">Anthology</a><span>&middot;</span>
+    <a href="rosary.html">Rosary</a><span>&middot;</span>
+    <a href="litany.html">Litany</a><span>&middot;</span>
+    <a href="apparitions.html">Apparitions</a><span>&middot;</span>
+    <a href="search.html">Search</a>
+  </span>
+  <span class="colophon__sub">
+    <strong>Sub tuum praesidium</strong>
+    Beneath thy protection we take refuge, O holy Mother of God.
+  </span>
+</footer>
+
+<script>
+  var btn = document.getElementById("mode-toggle");
+  function syncLabel() { btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil"; }
+  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
+  syncLabel();
+
+  Mediatrix.pushRecent({
+    slug: "about.html",
+    title: "About",
+    subtitle: "Methodology, provenance, source",
+    vestment: "blue",
+    scrollRatio: 0,
+  });
+</script>
+
+</body>
+</html>

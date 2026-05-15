@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en" data-mode="day" data-page="library">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Library &middot; Mediatrix</title>
+<link rel="stylesheet" href="styles/fonts.css" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=23" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Mediatrix" />
+<script src="scripts/mediatrix.js?v=23"></script>
+<style>
+  /* Library is the central page; the hero is the entire site's
+     compendium statement, set wider than the standard prose column. */
+  main.library { max-width: 86ch; margin: 0 auto; padding: 0 var(--rhythm); min-height: 70vh; }
+
+  .lib-hero { text-align: center; padding: var(--rhythm-x2) 0 var(--rhythm); }
+  .lib-hero h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); margin: 0 0 var(--rhythm-half); }
+  .lib-hero__lede {
+    max-width: 56ch; margin: 0 auto var(--rhythm-x2);
+    font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.55;
+    color: var(--m-navy); text-wrap: pretty;
+  }
+  .lib-hero__lede em { color: var(--warm-grey-4); }
+
+  .lib-stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: var(--rhythm-half) var(--rhythm);
+    padding: var(--rhythm) 0;
+    border-top: 1px solid var(--warm-grey-2);
+    border-bottom: 1px solid var(--warm-grey-2);
+    margin: var(--rhythm-x2) auto;
+    max-width: 56rem;
+    text-align: center;
+  }
+  .lib-stats__item { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm-grey-4); }
+  .lib-stats__item strong { display: block; font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; letter-spacing: 0.02em; color: var(--m-navy); margin-bottom: 0.18rem; }
+
+  /* OT prequel callout */
+  .ot-prequel { padding: var(--rhythm-x2) var(--rhythm-x2); background: var(--cream); border-left: 3px solid var(--m-gold); margin: var(--rhythm-x2) 0; }
+  .ot-prequel h2 { margin-top: 0; }
+
+  /* Era panel */
+  .era { margin: var(--rhythm-x3) 0 var(--rhythm); padding-top: var(--rhythm); border-top: 2px solid var(--m-gold); }
+  .era__head {
+    display: grid; grid-template-columns: auto 1fr auto; gap: var(--rhythm);
+    align-items: baseline; margin-bottom: var(--rhythm);
+  }
+  @media (max-width: 600px) { .era__head { grid-template-columns: 1fr; gap: 0.2rem; } }
+  .era__num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 0.84rem; color: var(--m-gold); letter-spacing: 0.05em; }
+  .era__title { font-family: var(--font-display); font-weight: 500; font-size: 1.65rem; letter-spacing: 0.03em; color: var(--m-navy); margin: 0; }
+  .era__years { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--warm-grey-4); }
+  .era__note { font-family: var(--font-serif); font-size: 1rem; line-height: 1.6; color: var(--m-navy); margin: 0 0 var(--rhythm) 0; }
+
+  /* Quote entries — hydrated from anthology.json */
+  .quotes-list {
+    display: flex; flex-direction: column; gap: 0;
+    min-height: 420px;  /* reserve roughly 3 entry heights to avoid CLS on slow loads */
+  }
+  .quote-entry {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    gap: var(--rhythm) var(--rhythm-x2);
+    padding: var(--rhythm-x2) 0 var(--rhythm);
+    border-top: 1px solid var(--warm-grey-2);
+  }
+  @media (max-width: 720px) { .quote-entry { grid-template-columns: 1fr; gap: var(--rhythm-half); } }
+
+  .quote-entry__meta {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    color: var(--warm-grey-4);
+  }
+  .quote-entry__num {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.72rem;
+    color: var(--m-gold);
+    margin-bottom: 0.4rem;
+  }
+  .quote-entry__name {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.12rem;
+    letter-spacing: 0.02em;
+    color: var(--m-navy);
+    margin: 0 0 0.25rem 0;
+    line-height: 1.18;
+  }
+  .quote-entry__dates {
+    display: block;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.94rem;
+    color: var(--warm-grey-4);
+    margin-bottom: 0.4rem;
+  }
+  .quote-entry__lang {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.66rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--m-gold-text);
+    margin-bottom: 0.4rem;
+  }
+  .quote-entry__source {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 0.86rem;
+    color: var(--warm-grey-4);
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  .quote-entry__body { font-family: var(--font-serif); color: var(--m-navy); line-height: 1.6; }
+  .quote-entry__original {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.06rem;
+    line-height: 1.55;
+    color: var(--m-navy);
+    margin: 0 0 var(--rhythm-half);
+    padding-left: var(--rhythm);
+    border-left: 2px solid var(--m-gold);
+  }
+  .quote-entry__english {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--m-navy);
+    margin: 0 0 var(--rhythm-half);
+  }
+  .quote-entry__english::before {
+    content: "\201C";
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.4em;
+    color: var(--m-gold);
+    line-height: 0;
+    vertical-align: -0.15em;
+    margin-right: 0.05em;
+  }
+  .quote-entry__english::after { content: "\201D"; color: var(--m-gold); }
+
+  .quote-entry__tags {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-top: var(--rhythm-half);
+  }
+
+  /* Loading + error states */
+  .loading {
+    font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--warm-grey-3);
+    text-align: center; padding: var(--rhythm) 0;
+  }
+  .lib-error {
+    background: var(--cream); border-left: 3px solid var(--m-rose);
+    padding: var(--rhythm) var(--rhythm-x2);
+    font-family: var(--font-serif); color: var(--m-navy); font-size: 0.95rem;
+    margin: var(--rhythm) 0;
+  }
+
+  /* Synthesis closing */
+  .synthesis {
+    margin: var(--rhythm-x3) 0 var(--rhythm);
+    padding: var(--rhythm-x2);
+    background: var(--cream);
+    border-top: 3px solid var(--m-gold);
+    border-bottom: 3px solid var(--m-gold);
+  }
+  .synthesis blockquote { margin: var(--rhythm-half) 0 0 0; font-style: italic; color: var(--m-navy); }
+</style>
+</head>
+<body data-vestment="blue" data-screen-label="Library &middot; chronological compendium">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="mast">
+  <a class="mast__back" href="index.html">&larr; Mediatrix</a>
+  <a class="mast__word" href="index.html"><span class="vest-dot" aria-hidden="true"></span>Mediatrix<em>A Marian study library</em></a>
+  <div class="mast__tools">
+    <button id="mode-toggle" type="button">Vigil</button>
+    <a href="anthology.html">Anthology</a>
+    <a href="search.html">Search</a>
+  </div>
+</header>
+
+<main id="main" class="library">
+
+  <section class="lib-hero">
+    <p class="kicker"><span class="dot"></span>I &middot; Bibliotheca Coredemptricis</p>
+    <h1>The Library</h1>
+    <p class="lib-hero__lede">
+      The chronological spine of the doctrine of Mary as Mediatrix and Co-Redemptrix,
+      from Justin Martyr in the second century through the medieval doctors and into
+      the modern Magisterium. <em>Every voice, every era, every original-language
+      quotation, drawn against critical editions.</em>
+    </p>
+
+    <div class="stella-rule" aria-hidden="true">
+      <span class="stella"><svg viewBox="0 0 32 32"><polygon points="16,1 18,16 16,31 14,16"/><polygon points="1,16 16,14 31,16 16,18"/><polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/><polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/><polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/><polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/><circle cx="16" cy="16" r="1.6"/></svg></span>
+    </div>
+
+    <div class="lib-stats" aria-label="Library stats">
+      <div class="lib-stats__item"><strong id="lib-stat-saints">49</strong>witnesses</div>
+      <div class="lib-stats__item"><strong id="lib-stat-eras">9</strong>eras</div>
+      <div class="lib-stats__item"><strong>1865</strong>years</div>
+      <div class="lib-stats__item"><strong>5</strong>provenance tiers</div>
+      <div class="lib-stats__item"><strong>4</strong>defined dogmas</div>
+    </div>
+  </section>
+
+  <section class="reader-prose">
+    <p>
+      Mediation is implicit in Marian theology from its earliest moment. The Old Testament
+      prepares it through typology (Eve, the Ark, the Burning Bush, the Gebirah, Judith).
+      The New Testament enacts it at Cana, constitutes it at Calvary, and crowns it at
+      Revelation 12. The patristic tradition names it
+      (<span class="greek"><em>Mesitis</em></span>, <span class="latin"><em>Mediatrix</em></span>);
+      the medieval doctors systematise it; the modern Magisterium defines it with care.
+    </p>
+    <p>
+      Below: every saint, Father, Doctor, or Pope in chronological order, each with his single
+      strongest sentence on the doctrine in the original Greek, Latin, French, Italian, or Polish,
+      followed by the English translation, the source citation, and the provenance flag. Content
+      hydrated at load from <code style="font-family: var(--font-mono); font-size: 0.94em; background: var(--warm-grey-2); padding: 0 0.4em; border-radius: 2px;">site/data/anthology.json</code>
+      &mdash; the canonical record. For the strongest one-line memorization set, the
+      <a href="anthology.html">Concise Anthology</a> presents the same content in card form.
+      For the typological foundation, see <a href="ot-types.html">OT Types</a>.
+    </p>
+  </section>
+
+  <section class="ot-prequel">
+    <p class="kicker" style="margin-top:0;"><span class="dot"></span>0 &middot; Prequel</p>
+    <h2 style="margin-top:0;">Old Testament &mdash; the typological foundation</h2>
+    <p style="font-family: var(--font-serif); line-height: 1.6; margin: 0;">
+      Twenty-eight Old-Testament figures in which the Church has read the Mother of God.
+      Foundational: <strong>Eve</strong> (Gen 3:15, the Protoevangelium); the <strong>Ark of the
+      Covenant</strong> (Ex 25 + 2 Sam 6 with verbal parallels to Luke 1:39&ndash;56 identifying Mary
+      as the new Ark); the <strong>Burning Bush</strong> (Ex 3:2, virgin matter bearing divine fire);
+      the <strong>Gebirah</strong> (1 Kings 2:19&ndash;20, the Davidic Queen Mother institution);
+      <strong>Wisdom</strong> (Prov 8; Sirach 24; Wisdom 7&ndash;9 &mdash; the liturgical Marian texts).
+      Co-Redemptrix prefigurements: <strong>Judith</strong> (head-crushing of the tyrant);
+      <strong>Esther</strong>; <strong>Jael</strong>.
+      <a href="ot-types.html">Full exegesis of all 28 types &rarr;</a>
+    </p>
+  </section>
+
+  <!-- Each era panel has a hydration placeholder. Hand-designed header + auto-rendered quote entries. -->
+
+  <section class="era" id="apostolic">
+    <div class="era__head">
+      <span class="era__num">I</span>
+      <h2 class="era__title">Apostolic and Sub-Apostolic</h2>
+      <span class="era__years">100 &mdash; 250 AD</span>
+    </div>
+    <p class="era__note">
+      Within a generation of the apostles, the Marian doctrine of the <strong>New Eve</strong>
+      appears in three places independently &mdash; Justin in Greek, Irenaeus in Greek
+      (preserved in Old Latin), Tertullian in Latin. The convergence is striking: Eve&rsquo;s
+      disobedience and Mary&rsquo;s obedience as the structural pair of the whole economy of
+      redemption. The patristic seed of Co-Redemptrix is set.
+    </p>
+    <div class="quotes-list" data-era="apostolic"><p class="loading">Loading quotes&hellip;</p></div>
+  </section>
+
+  <section class="era" id="greek-fathers">
+    <div class="era__head">
+      <span class="era__num">II</span>
+      <h2 class="era__title">Greek Fathers</h2>
+      <span class="era__years">3rd &mdash; 5th century</span>
+    </div>
+    <p class="era__note">
+      The Greek tradition develops the Marian doctrine in the context of the Christological
+      controversies. The Council of Ephesus (431) defines <span class="greek"><em>Theotokos</em></span>:
+      Mary is the Mother of God by divine motherhood of the Word. Every subsequent Marian title is
+      logically driven by this one. Cyril&rsquo;s <em>Homily 4</em> at Ephesus, with its chain of
+      <span class="greek"><em>di&rsquo; h&#275;s</em></span> (&ldquo;through whom&rdquo;) doxologies,
+      is the conciliar charter of universal mediation.
+    </p>
+    <div class="quotes-list" data-era="greek-fathers"><p class="loading">Loading quotes&hellip;</p></div>
+  </section>
+
+  <section class="era" id="latin-fathers">
+    <div class="era__head">
+      <span class="era__num">III</span>
+      <h2 class="era__title">Latin Fathers</h2>
+      <span class="era__years">4th &mdash; 5th century</span>
+    </div>
+    <p class="era__note">
+      The Latin tradition fixes two non-negotiables. Ambrose: Mary as <em>temple of God, not the
+      God of the temple</em> &mdash; the theological grammar that protects against Mariolatry.
+      Augustine: she <em>cooperated</em> by love (<span class="latin"><em>cooperata est</em></span>)
+      in the birth of the faithful. The Latin verb <em>cooperata</em> is the patristic seed of
+      the medieval title <em>Cooperatrix</em> &rarr; <em>Coredemptrix</em>. Jerome&rsquo;s aphorism
+      <span class="latin"><em>Mors per Hevam, vita per Mariam</em></span> becomes near-universal
+      in the Western tradition.
+    </p>
+    <div class="quotes-list" data-era="latin-fathers"><p class="loading">Loading quotes&hellip;</p></div>
+  </section>
+
+  <section class="era" id="byzantine">
+    <div class="era__head">
+      <span class="era__num">IV</span>
+      <h2 class="era__title">Byzantine Era</h2>
+      <span class="era__years">6th &mdash; 8th century</span>
+    </div>
+    <p class="era__note">
+      The Byzantine doctors fix the Greek title <span class="greek"><em>Mesitis</em></span> (and
+      its feminine variants <span class="greek"><em>Mesitria</em></span>) as the direct equivalent
+      of Latin <em>Mediatrix</em>. The Akathist Hymn (c. 6th c.) is the apocalyptic-liturgical
+      seal of the patristic Marian synthesis. Germanus, Andrew of Crete, and John of Damascus
+      complete the developed Eastern vocabulary by the mid-8th century.
+    </p>
+    <div class="quotes-list" data-era="byzantine"><p class="loading">Loading quotes&hellip;</p></div>
+  </section>
+
+  <section class="era" id="medieval">
+    <div class="era__head">
+      <span class="era__num">V</span>
+      <h2 class="era__title">Medieval Doctors</h2>
+      <span class="era__years">11th &mdash; 14th century</span>
+    </div>
+    <p class="era__note">
+      The Latin medieval tradition systematises what the patristic age named. Anselm gives the
+      metaphysics of Mary&rsquo;s dignity (&ldquo;nothing but God is greater&rdquo;).
+      <strong>Bernard of Clairvaux</strong> &mdash; the &ldquo;Marian Doctor&rdquo; &mdash; provides
+      the single most quoted Latin Mediatrix sentence:
+      <span class="latin"><em>totum nos habere voluit per Mariam</em></span>. Albert and Aquinas
+      give the scholastic vocabulary (<em>cooperatrix</em>, the human-race consent in Aquinas).
+      Bonaventure&rsquo;s lunar analogy becomes the standard scholastic image. Bridget of Sweden
+      provides the mystical &ldquo;one Heart&rdquo; theology that will become the seed of the Two
+      Hearts devotion.
+    </p>
+    <div class="quotes-list" data-era="medieval"><p class="loading">Loading quotes&hellip;</p></div>
+  </section>
+
+  <section class="era" id="late-medieval">
+    <div class="era__head">
+      <span class="era__num">VI</span>
+      <h2 class="era__title">Late Medieval and Renaissance</h2>
+      <span class="era__years">14th &mdash; 15th century</span>
+    </div>
+    <p class="era__note">
+      The title <em>coredemptrix</em> is first attested in this period. The precise textual
+      origin is the subject of modern scholarly debate; Gerson is one of the standard
+      identifications. Bernardine of Siena&rsquo;s formulation of the threefold motion of grace
+      (God &rarr; Christ &rarr; the Virgin &rarr; us) becomes the canonical scholastic shape of the
+      Mediatrix doctrine and is cited verbatim by Pius X in <em>Ad Diem Illum</em> (1904).
+    </p>
+    <div class="quotes-list" data-era="late-medieval"><p class="loading">Loading quotes&hellip;</p></div>
+  </section>
+
+  <section class="era" id="counter-reformation">
+    <div class="era__head">
+      <span class="era__num">VII</span>
+      <h2 class="era__title">Counter-Reformation and Early Modern</h2>
+      <span class="era__years">16th &mdash; 18th century</span>
+    </div>
+    <p class="era__note">
+      In response to the Reformation, the Counter-Reformation Doctors sharpen the theological
+      grammar. Canisius defends the title <em>cooperatrix</em> as the &ldquo;most true&rdquo; word
+      for Mary&rsquo;s relation to the redemption. Francis de Sales gives the precise structural
+      grammar: Christ alone is the <em>Mediator of redemption</em>, Mary the <em>Mediatrix of
+      intercession</em>. John Eudes founds the Two Hearts devotion. Louis Marie de Montfort
+      and Alphonsus Liguori give the modern Mediatrix doctrine its devotional and
+      theological consolidation.
+    </p>
+    <div class="quotes-list" data-era="counter-reformation"><p class="loading">Loading quotes&hellip;</p></div>
+  </section>
+
+  <section class="era" id="modern-saints">
+    <div class="era__head">
+      <span class="era__num">VIII</span>
+      <h2 class="era__title">Modern Saints &amp; Marian Apparitions</h2>
+      <span class="era__years">19th &mdash; 20th century</span>
+    </div>
+    <p class="era__note">
+      The 19th and 20th centuries see the great apparitions confirm the medieval doctrine in
+      living experience. Rue du Bac (1830) inscribes <em>conceived without sin</em> on the
+      Miraculous Medal twenty-four years before the dogma. Lourdes (1858) seals it. Fatima
+      (1917) gives the Immaculate Heart and the consecration. Kolbe, Pio, Sheen, and Teresa of
+      Calcutta carry the doctrine into the lived devotion of the modern Church.
+      <a href="apparitions.html">See Apparitions &rarr;</a>
+    </p>
+    <div class="quotes-list" data-era="modern-saints"><p class="loading">Loading quotes&hellip;</p></div>
+  </section>
+
+  <section class="era" id="modern-magisterium">
+    <div class="era__head">
+      <span class="era__num">IX</span>
+      <h2 class="era__title">Modern Magisterium</h2>
+      <span class="era__years">1854 &mdash; 1987</span>
+    </div>
+    <p class="era__note">
+      The modern Marian Magisterium defines two dogmas
+      (<strong>Immaculate Conception</strong>, 1854; <strong>Assumption</strong>, 1950) and
+      ratifies the Mediatrix/Co-Redemptrix doctrine through a sustained chain of papal
+      acts &mdash; among them <strong>Pius X&rsquo;s <em>Ad Diem Illum</em> (1904)</strong>,
+      <strong>Benedict XV&rsquo;s <em>Inter Sodalicia</em> (1918)</strong> with its line
+      &ldquo;she redeemed the human race together with Christ,&rdquo; and
+      <strong>Vatican II&rsquo;s <em>Lumen Gentium</em> &sect;62</strong>, which preserves the
+      title while reaffirming the unique mediation of Christ. The modern texts ratify
+      the tradition; they do not supplant it.
+    </p>
+    <div class="quotes-list" data-era="modern-magisterium"><p class="loading">Loading quotes&hellip;</p></div>
+  </section>
+
+  <section class="synthesis" id="synthesis">
+    <p class="kicker" style="margin-top:0;"><span class="dot"></span>X &middot; Synthesis</p>
+    <h2 style="margin-top:0;">The Tradition&rsquo;s Single Shape</h2>
+    <p style="font-family: var(--font-serif); line-height: 1.62; margin: 0 0 var(--rhythm);">
+      One Marian doctrine, one chronological arc. The OT prepares it through twenty-eight
+      types. The NT enacts it at Cana, constitutes it at Calvary, crowns it at Revelation 12.
+      The Greek Fathers name it. The Latin Fathers fix its grammar. The Byzantines give it
+      <span class="greek"><em>Mesitis</em></span>. The Medievals systematise it. The
+      Counter-Reformation defends it. The modern Magisterium ratifies and defines it.
+      One doctrine, in many witnesses.
+    </p>
+    <blockquote class="pull">
+      <span class="latin"><em>Sicut luna inter solem et terram interposita, quod a sole accipit,
+      terrae communicat &mdash; sic Maria inter Christum et nos posita, gratias quas a Christo
+      accipit, nobis effundit.</em></span>
+      &ldquo;As the moon, between the sun and the earth, communicates to the earth what it receives
+      from the sun, so Mary, between Christ and us, pours out upon us the graces she receives from
+      Christ.&rdquo;
+      <cite><a href="anthology.html#s25">Bonaventure</a> &middot; <em>Speculum B.V.M.</em> ch. 6 &middot; 13th c.</cite>
+    </blockquote>
+    <p style="text-align:center; font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: var(--rhythm-x2) auto 0;">
+      <em>Maria, Mater Mediatrix, ora pro nobis.</em>
+    </p>
+  </section>
+
+</main>
+
+<footer class="colophon">
+  <span class="small-caps" id="lib-footer-count">56 witnesses &middot; 10 eras</span>
+  <span class="colophon__nav">
+    <a href="index.html">Home</a><span>&middot;</span>
+    <a href="anthology.html">Anthology</a><span>&middot;</span>
+    <a href="rosary.html">Rosary</a><span>&middot;</span>
+    <a href="litany.html">Litany</a><span>&middot;</span>
+    <a href="nt-texts.html">NT Texts</a><span>&middot;</span>
+    <a href="ot-types.html">OT Types</a><span>&middot;</span>
+    <a href="search.html">Search</a>
+  </span>
+  <span class="colophon__sub">
+    <strong>Sub tuum praesidium</strong>
+    Beneath thy protection we take refuge, O holy Mother of God.
+  </span>
+</footer>
+
+<script>
+  /* --- hydrate the library from anthology.json --- */
+  function escapeHtml(s) {
+    return String(s || "").replace(/[&<>"']/g, function (c) {
+      return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c];
+    });
+  }
+
+  function renderEntry(s) {
+    var langLabel = (s.original_language || "").trim();
+    var langClass = langLabel || "";
+    var orig = s.original || "";
+    var en = s.english || "";
+    var prov = s.provenance ? '<span class="prov ' + escapeHtml(s.provenance) + '">' + escapeHtml(s.provenance) + '</span>' : "";
+    var pole = s.pole ? '<span class="prov traditional" title="Doctrinal pole">' + escapeHtml(s.pole) + '</span>' : "";
+
+    var html = '<article class="quote-entry" id="entry-' + escapeHtml(String(s.num)) + '">';
+    html += '<div class="quote-entry__meta">';
+    html += '<span class="quote-entry__num">' + escapeHtml(String(s.num).padStart(2, "0")) + '</span>';
+    html += '<span class="quote-entry__name">' + escapeHtml(s.name) + '</span>';
+    if (s.dates) {
+      html += '<span class="quote-entry__dates">' + escapeHtml(s.dates) + '</span>';
+    }
+    if (langLabel) {
+      html += '<span class="quote-entry__lang">' + escapeHtml(langLabel) + '</span>';
+    }
+    if (s.source) {
+      html += '<span class="quote-entry__source">' + escapeHtml(s.source) + '</span>';
+    }
+    html += '</div>';
+
+    html += '<div class="quote-entry__body">';
+    if (orig) {
+      var classes = langClass ? "quote-entry__original " + escapeHtml(langClass) : "quote-entry__original";
+      html += '<p class="' + classes + '"><em>' + escapeHtml(orig) + '</em></p>';
+    }
+    if (en) {
+      html += '<p class="quote-entry__english">' + escapeHtml(en) + '</p>';
+    }
+    if (prov || pole) {
+      html += '<div class="quote-entry__tags">' + prov + " " + pole + "</div>";
+    }
+    html += '</div>';
+    html += '</article>';
+    return html;
+  }
+
+  function renderEra(eraSlug, saints) {
+    var container = document.querySelector('.quotes-list[data-era="' + eraSlug + '"]');
+    if (!container) return;
+    if (!saints.length) {
+      container.innerHTML = '<p class="lib-error">No saints found for this era. Run <code>make build-data</code> to regenerate.</p>';
+      return;
+    }
+    container.innerHTML = saints.map(renderEntry).join("");
+  }
+
+  function hydrate(data) {
+    var saints = (data.saints || []).slice().sort(function (a, b) { return a.num - b.num; });
+    var byEra = {};
+    saints.forEach(function (s) {
+      var slug = s.era_slug || "other";
+      (byEra[slug] = byEra[slug] || []).push(s);
+    });
+
+    document.querySelectorAll(".quotes-list[data-era]").forEach(function (el) {
+      var era = el.dataset.era;
+      renderEra(era, byEra[era] || []);
+    });
+
+    // Stat updates
+    var statSaints = document.getElementById("lib-stat-saints");
+    if (statSaints) statSaints.textContent = saints.length;
+    var statEras = document.getElementById("lib-stat-eras");
+    if (statEras) statEras.textContent = Object.keys(byEra).length;
+    var footer = document.getElementById("lib-footer-count");
+    if (footer) {
+      footer.textContent = saints.length + " witnesses · " + Object.keys(byEra).length + " eras";
+    }
+  }
+
+  fetch("data/anthology.json")
+    .then(function (r) {
+      if (!r.ok) throw new Error("anthology data not found");
+      return r.json();
+    })
+    .then(hydrate)
+    .catch(function (e) {
+      document.querySelectorAll(".quotes-list[data-era]").forEach(function (el) {
+        el.innerHTML = '<p class="lib-error">Library data not yet built. Run <code>make build-data</code> to populate this page from the canonical markdown.</p>';
+      });
+    });
+
+  /* Mode toggle */
+  var btn = document.getElementById("mode-toggle");
+  function syncLabel() {
+    btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil";
+  }
+  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
+  syncLabel();
+
+  Mediatrix.pushRecent({
+    slug: "library.html",
+    title: "The Library",
+    subtitle: "56 witnesses · 10 eras · chronological compendium",
+    vestment: "blue",
+    scrollRatio: 0,
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en" data-mode="day" data-page="iconography">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Marian Iconography &middot; Mediatrix</title>
+<link rel="stylesheet" href="styles/fonts.css" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=23" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="manifest" href="manifest.json" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Mediatrix" />
+<script src="scripts/mediatrix.js?v=23"></script>
+<style>
+  .icon-type { padding: var(--rhythm-x2) 0 var(--rhythm); border-top: 1px solid var(--warm-grey-2); }
+  .icon-type__head { display: grid; grid-template-columns: 1fr auto; gap: var(--rhythm); align-items: baseline; margin-bottom: var(--rhythm); }
+  .icon-type__name { font-family: var(--font-display); font-weight: 500; font-size: 1.3rem; letter-spacing: 0.02em; color: var(--m-navy); margin: 0; }
+  .icon-type__name .greek { font-style: italic; }
+  .icon-type__region { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m-gold-text); }
+  .icon-type p { font-family: var(--font-serif); line-height: 1.6; color: var(--m-navy); margin: 0 0 var(--rhythm-half); }
+
+  /* Plate-card metadata strip. The image itself is not printed (no rights-
+     cleared image set ships with the corpus) but the canonical caption
+     information is — inscription, register, prototype, exemplars — at
+     the depth a curator would write for a museum wall. */
+  .plate-meta {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.2rem var(--rhythm);
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    color: var(--warm-grey-4);
+    margin: var(--rhythm-half) 0 var(--rhythm);
+    padding: var(--rhythm-half) 0;
+    border-top: 1px solid var(--warm-grey-2);
+    border-bottom: 1px solid var(--warm-grey-2);
+  }
+  .plate-meta dt {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--m-gold-text);
+  }
+  .plate-meta dd {
+    margin: 0;
+    font-family: var(--font-serif);
+    color: var(--m-navy);
+    line-height: 1.5;
+  }
+  .plate-meta dd .greek,
+  .plate-meta dd .latin { font-style: italic; color: var(--m-navy); }
+  .plate-meta dd em { color: var(--warm-grey-4); }
+
+  /* Chronological timeline table (Part 0). Compact, tabular-numerals,
+     dates in monospace gold so the eye can scan centuries. */
+  table.icon-timeline { margin: var(--rhythm) auto var(--rhythm-x2); width: 100%; }
+  table.icon-timeline td:first-child {
+    font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+    color: var(--m-gold); font-size: 0.84rem; white-space: nowrap;
+    padding-right: var(--rhythm); width: 6rem;
+  }
+  table.icon-timeline td:nth-child(2) {
+    font-family: var(--font-display); font-weight: 500;
+    letter-spacing: 0.02em; color: var(--m-navy);
+    padding-right: var(--rhythm); white-space: nowrap;
+  }
+  table.icon-timeline td:nth-child(3) {
+    font-family: var(--font-serif); color: var(--warm-grey-4);
+    font-style: italic; font-size: 0.94rem;
+  }
+
+  /* Inscription / gesture reference panels — two-column grids. */
+  .ref-panel { padding: var(--rhythm) var(--rhythm-x2); background: var(--cream); border-left: 2px solid var(--m-gold); margin: var(--rhythm-x2) 0; }
+  .ref-panel h3 { margin-top: 0; }
+  .ref-grid { display: grid; grid-template-columns: max-content 1fr; gap: var(--rhythm-half) var(--rhythm); }
+  .ref-grid dt { font-family: var(--font-serif); font-style: italic; color: var(--m-navy); font-size: 1.04rem; line-height: 1.45; }
+  .ref-grid dt .greek { font-style: italic; font-size: 1.08rem; }
+  .ref-grid dt .latin { font-style: italic; }
+  .ref-grid dd { margin: 0; font-family: var(--font-serif); color: var(--m-navy); line-height: 1.5; }
+  .ref-grid dd em { color: var(--warm-grey-4); }
+  @media (max-width: 720px) { .ref-grid { grid-template-columns: 1fr; gap: 0.1rem var(--rhythm); } .ref-grid dt { margin-top: var(--rhythm-half); } }
+
+  .symbols { padding: var(--rhythm-half) 0; }
+  .symbols li { font-family: var(--font-serif); margin: var(--rhythm-half) 0; line-height: 1.55; }
+  .symbols li strong { font-family: var(--font-display); font-weight: 500; letter-spacing: 0.02em; color: var(--m-navy); }
+  .part { margin: var(--rhythm-x3) 0 var(--rhythm); padding-top: var(--rhythm); border-top: 2px solid var(--m-gold); }
+  .part__head { font-family: var(--font-display); font-weight: 400; font-size: 1.7rem; letter-spacing: 0.04em; color: var(--m-navy); margin: 0 0 var(--rhythm-half); }
+  .part__sub { font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: 0 0 var(--rhythm-x2); }
+  .dogma-card { padding: var(--rhythm) var(--rhythm-x2); background: var(--cream); border-left: 2px solid var(--m-gold); margin: var(--rhythm) 0; }
+  .dogma-card h4 { margin: 0 0 var(--rhythm-half); }
+  .miraculous-list li { font-family: var(--font-serif); margin: var(--rhythm-half) 0; line-height: 1.55; }
+  .miraculous-list li strong { font-family: var(--font-display); font-weight: 500; letter-spacing: 0.02em; }
+</style>
+</head>
+<body data-vestment="blue" data-screen-label="Marian Iconography Reference">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="mast">
+  <a class="mast__back" href="index.html">&larr; Mediatrix</a>
+  <a class="mast__word" href="index.html"><span class="vest-dot" aria-hidden="true"></span>Mediatrix<em>A Marian study library</em></a>
+  <div class="mast__tools">
+    <button id="mode-toggle" type="button">Vigil</button>
+    <a href="apparitions.html">Apparitions</a>
+    <a href="litany.html">Litany</a>
+  </div>
+</header>
+
+<main id="main" class="prose">
+
+  <p class="kicker"><span class="dot"></span>XII &middot; Iconographia Mariana</p>
+  <h1>Marian Iconography</h1>
+  <p class="hero__pron" style="text-align:left; margin: 0 0 var(--rhythm-x2);">
+    Byzantine and Western iconographic types &middot; symbolic vocabulary decoded &middot;
+    miraculous images by region &middot; the iconography of each Marian dogma.
+  </p>
+
+  <section class="reader-prose">
+    <p>
+      Iconography is the visual catechesis of the Church. Every detail is theologically loaded:
+      the colour of the mantle, the gesture of the hands, the inscriptions in Greek or Latin,
+      the relation to the Christ-child. The Marian icon is not a portrait but a doctrinal
+      statement: <em>theology written in line and pigment</em>.
+    </p>
+    <p>
+      The Second Council of Nicaea (787) gave the dogmatic warrant: icons receive
+      <span class="latin"><em>veneratio</em></span> (relative honour), not
+      <span class="latin"><em>adoratio</em></span> (worship), and the honour passes to the
+      prototype. Marian icons in particular honour the Mother in honour of the Son.
+    </p>
+  </section>
+
+  <!-- ===== Part 0 — Chronological Timeline ===== -->
+  <section class="part">
+    <h2 class="part__head">A Chronology of Marian Iconography</h2>
+    <p class="part__sub">From the Catacombs of Priscilla to the present day</p>
+    <table class="ref icon-timeline">
+      <tbody>
+        <tr><td>c. 230&ndash;240</td><td>Catacombs of Priscilla</td><td>Rome &middot; the Mother and Child fresco, oldest known Marian image; <em>Orans</em> register</td></tr>
+        <tr><td>250</td><td>Sub Tuum Praesidium</td><td>Egypt &middot; Greek papyrus prayer, P. Ryl. III 470, the oldest known Marian prayer text</td></tr>
+        <tr><td>431</td><td>Council of Ephesus</td><td>Defines <span class="greek">&Theta;&epsilon;&omicron;&tau;&#972;&kappa;&omicron;&sigmaf;</span> &mdash; the doctrinal warrant for every Marian icon that follows</td></tr>
+        <tr><td>5th c.</td><td>Hodegetria prototype</td><td>Constantinople &middot; Hodegon Monastery &middot; the master pattern of Eastern iconography</td></tr>
+        <tr><td>6th c.</td><td>Salus Populi Romani</td><td>Santa Maria Maggiore, Rome &middot; Western Hodegetria variant; processed against plague</td></tr>
+        <tr><td>726&ndash;843</td><td>Iconoclastic Controversies</td><td>Byzantine destruction of icons followed by the Triumph of Orthodoxy (843)</td></tr>
+        <tr><td>787</td><td>Second Council of Nicaea</td><td>Defines <span class="latin"><em>veneratio</em></span> vs <span class="latin"><em>adoratio</em></span> &mdash; icons receive relative honour; the honour passes to the prototype</td></tr>
+        <tr><td>c. 1130</td><td>Virgin of Vladimir</td><td>Constantinople &middot; Eleousa prototype, given to Russia 1131</td></tr>
+        <tr><td>11th&ndash;13th c.</td><td><em>Sedes Sapientiae</em></td><td>Romanesque West &middot; Mary the throne, Christ the King; the wooden Madonnas of the great Romanesque pilgrimages</td></tr>
+        <tr><td>14th c.</td><td>Pieta</td><td>German <em>Vesperbild</em> &middot; the Stabat Mater in three dimensions</td></tr>
+        <tr><td>1430</td><td>Cz&#281;stochowa wounded</td><td>Hussite blade strikes the icon &middot; the cheek-scar preserved as relic</td></tr>
+        <tr><td>1453</td><td>Hodegetria destroyed</td><td>Fall of Constantinople &middot; the master plate of the East lost</td></tr>
+        <tr><td>1499</td><td>Michelangelo Pieta</td><td>Vatican &middot; supreme Western achievement of the form</td></tr>
+        <tr><td>1531</td><td>Our Lady of Guadalupe</td><td>Tepeyac, Mexico &middot; agave-fiber tilma; the largest mass conversion in Christian history</td></tr>
+        <tr><td>17th c.</td><td>Spanish Immaculata</td><td>Murillo, Vel&aacute;zquez, Zurbar&aacute;n &middot; the Immaculate Conception receives its definitive Western form 200 years before its definition</td></tr>
+        <tr><td>1830</td><td>Miraculous Medal</td><td>Rue du Bac, Paris &middot; the Immaculata enters modern sacramental life; inscription <em>O Mary, conceived without sin, pray for us who have recourse to thee</em></td></tr>
+        <tr><td>1854</td><td>Immaculate Conception defined</td><td>Pius IX, <em>Ineffabilis Deus</em> &middot; the iconography precedes the dogma by two centuries</td></tr>
+        <tr><td>1950</td><td>Assumption defined</td><td>Pius XII, <em>Munificentissimus Deus</em> &middot; the iconography (Murillo, Rubens, Titian) precedes the dogma by three centuries</td></tr>
+        <tr><td>1981</td><td>Our Lady of Akita</td><td>Japan &middot; the wooden statue weeps; iconographic continuity into the late 20th c.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== Part I — Byzantine Types ===== -->
+  <section class="part">
+    <h2 class="part__head">I. The Byzantine Iconographic Types</h2>
+    <p class="part__sub">The five canonical types &middot; traditionally attributed to St. Luke</p>
+
+    <article class="icon-type" id="hodegetria">
+      <div class="icon-type__head">
+        <h3 class="icon-type__name">Hodegetria <span class="greek">&middot; &#7969; &Ome;&Delta;&Eta;&Gamma;&Eta;&Tau;&Rho;&Iota;&Alpha;</span></h3>
+        <span class="icon-type__region">Constantinople &middot; 5th c.</span>
+      </div>
+      <dl class="plate-meta">
+        <dt>Greek</dt>          <dd><span class="greek">&#7969; &#7976;&delta;&eta;&gamma;&#942;&tau;&rho;&iota;&alpha;</span> &mdash; &ldquo;she who points the way&rdquo;</dd>
+        <dt>Inscription</dt>    <dd><span class="greek">&Mu;&Rho; &Theta;&Upsilon;</span> upper corners &middot; the Christ-child holds a scroll, raises his right hand in blessing</dd>
+        <dt>Register</dt>       <dd>Theotokos doctrinal portrait &middot; Mediatrix-gesture: she points, he is the answer</dd>
+        <dt>Prototype</dt>      <dd><em>Lost 1453.</em> Hodegon Monastery, Constantinople. Attributed in tradition to St. Luke.</dd>
+        <dt>Exemplars</dt>      <dd>Smolensk &middot; Tikhvin &middot; Iverskaya &middot; Salus Populi Romani (Western variant, Santa Maria Maggiore, Rome)</dd>
+      </dl>
+      <p>The Hodegetria is the iconographic counterpart of Mary&rsquo;s last word in Scripture: <em>do whatever he tells you</em> (John 2:5). She points; he is the answer. Every Byzantine icon-painter learns this composition first; the entire iconography of the East stems from the master plate.</p>
+    </article>
+
+    <article class="icon-type" id="eleousa">
+      <div class="icon-type__head">
+        <h3 class="icon-type__name">Eleousa <span class="greek">&middot; &#7969; &Epsilon;&Lambda;&Epsilon;&Omicron;&Upsilon;&Sigma;&Alpha;</span></h3>
+        <span class="icon-type__region">Byzantium &middot; 11th c.</span>
+      </div>
+      <dl class="plate-meta">
+        <dt>Greek</dt>          <dd><span class="greek">&#7969; &#7952;&lambda;&epsilon;&omicron;&#8166;&sigma;&alpha;</span> &mdash; &ldquo;she who shows tenderness&rdquo;</dd>
+        <dt>Inscription</dt>    <dd><span class="greek">&Mu;&Rho; &Theta;&Upsilon;</span> upper corners &middot; Mother and Child press their cheeks together; the Child grasps her veil with one hand</dd>
+        <dt>Register</dt>       <dd>Co-Redemptrix &middot; the maternal anticipation of Calvary &middot; Stabat Mater in two figures</dd>
+        <dt>Prototype</dt>      <dd>The <strong>Virgin of Vladimir</strong>, c. 1130, Constantinople &mdash; brought to Russia 1131, venerated at Vladimir-Suzdal then Moscow; now Tretyakov Gallery, Moscow</dd>
+        <dt>Exemplars</dt>      <dd>Vladimir &middot; Don &middot; Belozersk &middot; Korsun &middot; Glykofilousa (Western variant)</dd>
+      </dl>
+      <p>The Eleousa is the iconography of the <em>Stabat Mater</em>: the human warmth of the mother-child bond that will give way to Calvary&rsquo;s wound. The Child's grasp on the veil is the prophecy of the maternal cooperation in the Passion. <a href="anthology.html#s49">See Anthology &sect;49</a> for the doctrinal text the type encodes.</p>
+    </article>
+
+    <article class="icon-type" id="platytera">
+      <div class="icon-type__head">
+        <h3 class="icon-type__name">Platytera <span class="greek">&middot; &#7969; &Pi;&Lambda;&Alpha;&Tau;&Upsilon;&Tau;&Epsilon;&Rho;&Alpha;</span></h3>
+        <span class="icon-type__region">Eastern apse &middot; standard placement</span>
+      </div>
+      <dl class="plate-meta">
+        <dt>Greek</dt>          <dd><span class="greek">&#7969; &Pi;&lambda;&alpha;&tau;&upsilon;&tau;&#941;&rho;&alpha; &tau;&#8182;&nu; &Omicron;&#8016;&rho;&alpha;&nu;&#8182;&nu;</span> &mdash; &ldquo;more spacious than the heavens&rdquo;</dd>
+        <dt>Inscription</dt>    <dd><span class="greek">&Mu;&Rho; &Theta;&Upsilon;</span> &middot; Christ within a medallion at her chest, often with <span class="greek">&Iota;&Sigma; &Chi;&Sigma;</span> identifier</dd>
+        <dt>Register</dt>       <dd>Theotokos paradox: the womb of Mary contains the Uncontainable &middot; eucharistic prefigurement</dd>
+        <dt>Placement</dt>      <dd>Central apse of the church, directly above the altar &mdash; the same Christ contained in her womb is contained on the altar below</dd>
+        <dt>Exemplars</dt>      <dd>Hagia Sophia, Constantinople (now museum / mosque) &middot; Basilica of the Annunciation, Nazareth &middot; every Greek/Russian apse in unbroken tradition since the 9th c.</dd>
+      </dl>
+    </article>
+
+    <article class="icon-type" id="orans">
+      <div class="icon-type__head">
+        <h3 class="icon-type__name">Orans <span class="greek">&middot; &#7969; &Pi;&Rho;&Omicron;&Sigma;&Epsilon;&Upsilon;&Chi;&Omicron;&Mu;&Epsilon;&Nu;&Eta;</span></h3>
+        <span class="icon-type__region">early Christian catacombs &middot; 3rd c.</span>
+      </div>
+      <dl class="plate-meta">
+        <dt>Greek</dt>          <dd><span class="greek">&#7969; &Pi;&rho;&omicron;&sigma;&epsilon;&upsilon;&chi;&omicron;&mu;&#941;&nu;&eta;</span> &mdash; &ldquo;the one who prays&rdquo;</dd>
+        <dt>Posture</dt>        <dd>Both hands raised, palms outward &mdash; the ancient gesture of intercessory prayer used in synagogue and early Christian liturgy</dd>
+        <dt>Register</dt>       <dd>Mediatrix of intercession &middot; the universal Marian advocacy</dd>
+        <dt>Earliest exemplar</dt><dd><strong>Catacombs of Priscilla</strong>, Rome &mdash; 3rd century fresco of the Virgin in the orans posture, oldest known Marian image</dd>
+        <dt>Exemplars</dt>      <dd>Madre della Consolazione (Rome) &middot; Madonna del Parto (Piero della Francesca, 1460) &middot; the Miraculous Medal central figure (1830)</dd>
+      </dl>
+    </article>
+
+    <article class="icon-type" id="galaktotrophousa">
+      <div class="icon-type__head">
+        <h3 class="icon-type__name">Galaktotrophousa <span class="greek">&middot; &#7969; &Gamma;&alpha;&lambda;&alpha;&kappa;&tau;&omicron;&tau;&rho;&omicron;&phi;&omicron;&upsilon;&sigma;&alpha;</span></h3>
+        <span class="icon-type__region">Egypt &middot; Coptic origin</span>
+      </div>
+      <dl class="plate-meta">
+        <dt>Greek</dt>          <dd><span class="greek">&#7969; &Gamma;&alpha;&lambda;&alpha;&kappa;&tau;&omicron;&tau;&rho;&omicron;&phi;&omicron;&#8166;&sigma;&alpha;</span> &middot; <span class="latin"><em>Virgo Lactans</em></span> &mdash; &ldquo;the milk-feeder&rdquo;</dd>
+        <dt>Register</dt>       <dd>Theotokos anti-Docetic &middot; the Word truly took human flesh and was truly nourished by his Mother</dd>
+        <dt>Earliest exemplar</dt><dd>Coptic frescoes, 5th c.; <em>Maria Lactans</em> at the Monastery of St. Apollos, Bawit (Egypt), 6th c.</dd>
+        <dt>Exemplars</dt>      <dd>Madonna del Latte (Ambrogio Lorenzetti, 14th c.) &middot; the Virgin Suckling the Christ-child (Jean Fouquet, 1452)</dd>
+      </dl>
+      <p>The Galaktotrophousa carries the most basic Christological wager in maternal flesh: the same milk that nourished Mary&rsquo;s body nourished the body of God. <em>Caro Christi, caro Mariae.</em> Against any spiritualizing reading of the Incarnation, this icon stands.</p>
+    </article>
+  </section>
+
+  <!-- ===== Part II — Western Types ===== -->
+  <section class="part">
+    <h2 class="part__head">II. Western Iconographic Types</h2>
+    <p class="part__sub">Sedes Sapientiae &middot; Pieta &middot; Immaculata &middot; Madonna of Mercy</p>
+
+    <article class="icon-type">
+      <div class="icon-type__head">
+        <h3 class="icon-type__name"><em>Sedes Sapientiae</em> &middot; Seat of Wisdom</h3>
+        <span class="icon-type__region">Romanesque West &middot; 11th&ndash;13th c.</span>
+      </div>
+      <p>Mary seated frontally on a throne, the Christ-child enthroned upon her lap. The architecture: Mary <em>is</em> the throne; Christ <em>is</em> the King. The maternal anatomy itself becomes the divine seat. Iconography of Solomon&rsquo;s Wisdom enthroned (1 Kings 10:18 conjoined with Proverbs 8 and Wisdom 7). <a href="ot-types.html#t16">See OT Types &sect;16.</a></p>
+    </article>
+
+    <article class="icon-type">
+      <div class="icon-type__head">
+        <h3 class="icon-type__name">Pieta</h3>
+        <span class="icon-type__region">Late medieval German &middot; 14th c.</span>
+      </div>
+      <p><em>&ldquo;Piety / compassion.&rdquo;</em> Mary holds the dead body of Christ across her lap. Visual representation of the Stabat Mater in three dimensions. Iconographic complement to the Sedes Sapientiae: the same lap that bore the Christ-child receives the broken Body. The Mother who received the Word at the Annunciation receives the Body at the Descent from the Cross.</p>
+      <p>Michelangelo&rsquo;s Pieta (1499, Vatican) is the supreme Western achievement of the form.</p>
+    </article>
+
+    <article class="icon-type">
+      <div class="icon-type__head">
+        <h3 class="icon-type__name">Immaculata</h3>
+        <span class="icon-type__region">Spain &middot; 17th c. (Murillo, Vel&aacute;zquez, Zurbar&aacute;n)</span>
+      </div>
+      <p>Mary alone, no Christ-child, standing on the moon (Rev 12:1), crowned with twelve stars, the serpent crushed under her foot (Gen 3:15), often accompanied by the Holy Spirit dove and the divine Word above. The iconography is the visual proclamation of the Immaculate Conception. The Spanish school perfected the form in the 17th century; Pius IX&rsquo;s 1854 definition is in this image.</p>
+      <p>The <strong>Miraculous Medal</strong> (1830) takes the Immaculata into modern sacramental life with the inscription <em>O Mary, conceived without sin</em>. <a href="apparitions.html#rue-du-bac">See Apparitions.</a></p>
+    </article>
+
+    <article class="icon-type">
+      <div class="icon-type__head">
+        <h3 class="icon-type__name">Madonna of Mercy &middot; <em>Mater Misericordiae</em></h3>
+        <span class="icon-type__region">Italian Trecento &middot; 14th c.</span>
+      </div>
+      <p>Mary opens her great mantle to shelter humanity beneath it: the doge, the pope, men and women, children, religious in their habits. The iconography of the universal maternal protection. The mantle is the visual rendering of the <em>Sub tuum praesidium</em>.</p>
+    </article>
+
+    <article class="icon-type">
+      <div class="icon-type__head">
+        <h3 class="icon-type__name">Mater Dolorosa &middot; Our Lady of Sorrows</h3>
+        <span class="icon-type__region">Spanish Counter-Reformation &middot; 17th c.</span>
+      </div>
+      <p>Mary alone, breast pierced by one or seven swords (Luke 2:35; the Seven Sorrows). Tears on her cheeks. Often paired iconographically with the Ecce Homo, the male and female faces of the Passion. <em>The Co-Redemptrix in iconography.</em></p>
+    </article>
+  </section>
+
+  <!-- ===== Part III — Symbolic Vocabulary ===== -->
+  <section class="part">
+    <h2 class="part__head">III. The Symbolic Vocabulary</h2>
+    <p class="part__sub">What every detail means</p>
+
+    <ul class="symbols">
+      <li><strong>Marian blue</strong> &middot; the colour of the heavens (Byz. lapis lazuli mantle). Mary clothed with the heaven of the Incarnation. The royal blue of the Davidic queenship.</li>
+      <li><strong>Red tunic under blue mantle</strong> &middot; humanity (red) clothed with divinity (blue). The Christ-child by contrast wears red tunic and gold/blue mantle: divinity clothed in humanity. The colours invert; the theology is one.</li>
+      <li><strong>Crown of stars</strong> &middot; Rev 12:1; twelve tribes / twelve apostles / cosmic regalia.</li>
+      <li><strong>The moon under her feet</strong> &middot; Rev 12:1; conquest of the changeable; the lunar deity of pagan religion subdued.</li>
+      <li><strong>The crushed serpent</strong> &middot; Gen 3:15 visibly enacted.</li>
+      <li><strong>Three stars on mantle / forehead</strong> &middot; the Byzantine sign of the perpetual virginity: before, during, after the birth.</li>
+      <li><strong>Gold halo with cross inside (cruciform halo)</strong> &middot; reserved for Christ alone. Mary&rsquo;s halo is gold but never cruciform.</li>
+      <li><strong>The orans gesture</strong> &middot; universal intercession.</li>
+      <li><strong>The Greek inscription <span class="greek">&Mu;&Rho; &Theta;&Upsilon;</span></strong> (Meter Theou, Mother of God) &middot; standard Byzantine identification. Located in the upper corners of every icon of Mary.</li>
+      <li><strong>The lily</strong> &middot; Western iconography of virginity, especially at the Annunciation (St. Joseph holds a lily that flowered, identifying him as her spouse).</li>
+      <li><strong>The rose</strong> &middot; the Mystical Rose. Litany title <em>Rosa mystica</em>. Medieval Latin Marian hymnody (<em>Rosa Mystica</em>).</li>
+      <li><strong>The eight-pointed star &middot; <em>Stella Maris</em></strong> &middot; Star of the Sea. The favicon of this library. Eight points: four cardinal (long) plus four diagonal (short).</li>
+      <li><strong>Enclosed garden</strong> &middot; Song of Songs 4:12; the perpetual virginity. <em>Hortus conclusus.</em></li>
+      <li><strong>Closed gate</strong> &middot; Ezekiel 44:1&ndash;3; the perpetual virginity in apocalyptic register.</li>
+    </ul>
+  </section>
+
+  <!-- ===== Inscription Reference ===== -->
+  <section class="ref-panel">
+    <h3>Inscription reference</h3>
+    <p style="font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: 0 0 var(--rhythm);">What every standard Marian inscription says &mdash; Greek, Latin, Slavonic.</p>
+    <dl class="ref-grid">
+      <dt><span class="greek">&Mu;&Rho; &Theta;&Upsilon;</span></dt>
+      <dd><span class="greek"><em>M&#275;t&#275;r Theou</em></span> &middot; <em>Mother of God</em>. Standard Byzantine identifier; upper corners of every icon of Mary.</dd>
+
+      <dt><span class="greek">&Iota;&Sigma; &Chi;&Sigma;</span></dt>
+      <dd><span class="greek"><em>I&#275;sous Christos</em></span> &middot; <em>Jesus Christ</em>. Standard Byzantine identifier of the Christ-child, on either side of his halo.</dd>
+
+      <dt><span class="greek">&Iota;&Chi;&Theta;&Upsilon;&Sigma;</span></dt>
+      <dd><span class="greek"><em>Ichthys</em></span>, fish &mdash; acrostic for <em>Jesus Christ, Son of God, Saviour</em>. Catacomb-era; rare in Marian context but present on early Christ-images.</dd>
+
+      <dt><span class="latin"><em>MR Regina</em></span></dt>
+      <dd>Latin Western variant of <span class="greek">&Mu;&Rho;</span>; the abbreviation <em>MR</em> retained in Western Marian iconography.</dd>
+
+      <dt><span class="latin"><em>Sub tuum praesidium</em></span></dt>
+      <dd>Beneath thy protection we take refuge &mdash; the oldest extant Marian prayer (Egypt, c. 250 AD). Inscribed on Marian images of refuge, especially the Madonna of Mercy.</dd>
+
+      <dt><span class="latin"><em>O Maria sine labe concepta, ora pro nobis</em></span></dt>
+      <dd>O Mary conceived without sin, pray for us &mdash; Miraculous Medal (1830). Stamped on the reverse of every legitimate medal.</dd>
+
+      <dt><span class="latin"><em>Regina sine labe originali concepta</em></span></dt>
+      <dd>Queen conceived without original sin &mdash; Litany of Loreto addition by Pius IX, 1854.</dd>
+
+      <dt><span class="latin"><em>Assumpta est Maria</em></span></dt>
+      <dd>Mary is assumed &mdash; standard inscription on Assumption images; sometimes paired with <em>in coelum</em> (into heaven).</dd>
+
+      <dt><span class="latin"><em>Tota pulchra es</em></span></dt>
+      <dd>You are all-beautiful &mdash; Song of Songs 4:7, applied to the Immaculate Conception. The Marian antiphon at First Vespers of the feast.</dd>
+
+      <dt><span class="latin"><em>Stella Maris</em></span></dt>
+      <dd>Star of the Sea &mdash; medieval Marian title; the eight-pointed star ornament, including the favicon of this library.</dd>
+
+      <dt>Slavonic <em>Bogoroditsa</em></dt>
+      <dd>Бог&omacr;родица &middot; the Slavic vernacular of <span class="greek">&Theta;&epsilon;&omicron;&tau;&#972;&kappa;&omicron;&sigmaf;</span> &middot; standard on Russian and Bulgarian icons.</dd>
+    </dl>
+  </section>
+
+  <!-- ===== Gesture Lexicon ===== -->
+  <section class="ref-panel">
+    <h3>Gesture lexicon</h3>
+    <p style="font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: 0 0 var(--rhythm);">What every hand position means in Marian iconography.</p>
+    <dl class="ref-grid">
+      <dt>Right hand toward the Child</dt>
+      <dd><em>Hodegetria.</em> Mary points to Christ as the Way. The structural argument of the East: <em>do whatever he tells you</em>.</dd>
+
+      <dt>Both hands raised, palms outward</dt>
+      <dd><em>Orans.</em> The ancient intercessory gesture. Mary as universal advocate before the Father.</dd>
+
+      <dt>Hands enclosing the Christ-child</dt>
+      <dd><em>Eleousa / Glykofilousa.</em> Maternal tenderness; anticipates the holding of the dead Christ at the Pieta.</dd>
+
+      <dt>Right hand open at the breast</dt>
+      <dd><em>Mater Misericordiae</em> / Heart-of-Mary register. Visible heart sometimes present (post-17th c.); the Immaculate Heart devotion.</dd>
+
+      <dt>Mantle held open over crowd</dt>
+      <dd><em>Madonna of Mercy.</em> Universal maternal protection &mdash; the <em>Sub tuum praesidium</em> in figural form.</dd>
+
+      <dt>Hands crossed at the breast</dt>
+      <dd><em>Immaculata.</em> Spanish Counter-Reformation gesture of humility and acceptance; standard in the Murillo Immaculate Conceptions.</dd>
+
+      <dt>Hand on the throat / chest, sword piercing</dt>
+      <dd><em>Mater Dolorosa.</em> The Co-Redemptrix in iconography; one sword (Lk 2:35) or seven (the Seven Sorrows).</dd>
+
+      <dt>Feet on a serpent / crescent moon</dt>
+      <dd><em>Apocalyptic Mary.</em> Gen 3:15 + Rev 12:1 conflated; standard in the Immaculate Conception type. <a href="ot-types.html#t1">See OT Types &sect;1.</a></dd>
+    </dl>
+  </section>
+
+  <!-- ===== Part IV — Miraculous Images ===== -->
+  <section class="part">
+    <h2 class="part__head">IV. The Great Miraculous Images by Region</h2>
+
+    <h3>Mediterranean</h3>
+    <ul class="miraculous-list">
+      <li><strong>Salus Populi Romani</strong> &middot; Santa Maria Maggiore, Rome &middot; attributed in tradition to St. Luke; central icon of the Roman Marian devotion. Carried in procession during epidemics from antiquity.</li>
+      <li><strong>Our Lady of Mount Carmel</strong> &middot; Mt. Carmel, Israel &middot; the Brown Scapular icon. The Carmelite tradition.</li>
+      <li><strong>Our Lady of Loreto</strong> &middot; the Holy House of Loreto, Italy &middot; the litany takes its name from this shrine.</li>
+    </ul>
+
+    <h3>Byzantium / Slavic East</h3>
+    <ul class="miraculous-list">
+      <li><strong>Virgin of Vladimir</strong> &middot; 12th c., Constantinople; brought to Russia in 1131. Eleousa type. The Russian national icon.</li>
+      <li><strong>Our Lady of Kazan</strong> &middot; 1579, miraculously discovered after a fire in Kazan. National Marian icon of Russia.</li>
+      <li><strong>Iveron / Portaitissa</strong> &middot; Mt. Athos &middot; the Gate-Keeper. The icon that bled when struck by a Byzantine iconoclast soldier.</li>
+      <li><strong>Black Madonna of Cz&#281;stochowa</strong> &middot; Jasna G&oacute;ra, Poland &middot; attributed in tradition to St. Luke. The national icon of Poland. Wounded by a Hussite blade in 1430; the scar is preserved.</li>
+    </ul>
+
+    <h3>Iberian / Latin America</h3>
+    <ul class="miraculous-list">
+      <li><strong>Our Lady of Guadalupe</strong> &middot; Tepeyac, Mexico &middot; the agave-fiber tilma, 1531 &middot; the largest mass conversion in Christian history. <a href="apparitions.html#guadalupe">See Apparitions.</a></li>
+      <li><strong>Our Lady of the Pillar</strong> &middot; Zaragoza, Spain &middot; tradition: appeared to St. James the Apostle on a pillar of jasper, AD 40; the oldest Marian shrine in Christianity.</li>
+      <li><strong>Our Lady of Aparecida</strong> &middot; Aparecida, Brazil &middot; 1717 statue found in fishermen&rsquo;s net; Patroness of Brazil.</li>
+    </ul>
+
+    <h3>Northern Europe / Atlantic</h3>
+    <ul class="miraculous-list">
+      <li><strong>Our Lady of Walsingham</strong> &middot; England (1061) &middot; the &ldquo;Nazareth of England&rdquo;; destroyed at the Reformation, restored in the 20th c.</li>
+      <li><strong>Our Lady of Cz&#281;stochowa</strong> (cf. above).</li>
+      <li><strong>Our Lady of Knock</strong> &middot; Ireland 1879 &middot; <a href="apparitions.html#knock">see Apparitions</a>.</li>
+    </ul>
+
+    <h3>Asia &middot; Africa</h3>
+    <ul class="miraculous-list">
+      <li><strong>Our Lady of Akita</strong> &middot; Japan, 1973&ndash;1981 &middot; the weeping wooden statue. <a href="apparitions.html#akita">See Apparitions.</a></li>
+      <li><strong>Our Lady of La Vang</strong> &middot; Vietnam, 1798 &middot; apparition during persecution; Patroness of Vietnamese Catholics.</li>
+      <li><strong>Our Lady of Africa</strong> &middot; Algiers (basilica 1872) &middot; Patroness of Africa.</li>
+    </ul>
+  </section>
+
+  <!-- ===== Part V — Dogmatic Iconography ===== -->
+  <section class="part">
+    <h2 class="part__head">V. The Iconography of Each Marian Dogma</h2>
+    <p class="part__sub">How each defined doctrine is visually expressed</p>
+
+    <div class="dogma-card">
+      <h4>1. Mother of God &middot; <span class="greek">Theotokos</span> &middot; Ephesus 431</h4>
+      <p>Iconographic forms: Hodegetria, Eleousa, Platytera. The Christ-child always present, always identifiable as God-Man. The Greek inscription <span class="greek">&Mu;&Rho; &Theta;&Upsilon;</span> in the upper corners.</p>
+    </div>
+
+    <div class="dogma-card">
+      <h4>2. Perpetual Virginity</h4>
+      <p>Three stars on mantle and forehead (Byzantine). The enclosed garden (Western). The closed gate (Byzantine apse). The lily (Annunciation panels).</p>
+    </div>
+
+    <div class="dogma-card">
+      <h4>3. Immaculate Conception &middot; defined 1854</h4>
+      <p>The <em>Immaculata</em>: Mary alone, on the moon, crowned with twelve stars, serpent crushed underfoot. Spanish 17th-century perfection (Murillo). The Miraculous Medal carries the dogma into modern sacramental life.</p>
+    </div>
+
+    <div class="dogma-card">
+      <h4>4. Assumption &middot; defined 1950</h4>
+      <p>Mary lifted by angels into glory, hands open, eyes turned upward; sometimes accompanied by the empty tomb below filled with lilies. Murillo, Rubens, Titian (Frari, Venice).</p>
+    </div>
+
+    <div class="dogma-card">
+      <h4>5. Coronation / Queenship</h4>
+      <p>Mary crowned by Christ (or by the Trinity) seated on a throne above. The Twelve Stars (Rev 12:1) above her crown. Fra Angelico, Vel&aacute;zquez. The Fifth Glorious Mystery.</p>
+    </div>
+  </section>
+
+  <section class="reader-prose" style="margin-top: var(--rhythm-x3);">
+    <h2>The Eight-Pointed Star</h2>
+    <p>
+      The Stella Maris &mdash; the eight-pointed Marian star &mdash; is the iconographic signature
+      of this library. Four cardinal points (long), four diagonal (short), gold against blue. It
+      is the favicon, the masthead, and the divider rule throughout this site.
+    </p>
+    <p>
+      The eight points correspond to: the four Marian dogmas (Theotokos, Perpetual Virginity,
+      Immaculate Conception, Assumption); the four moments of her active maternal cooperation
+      (Annunciation, Cana, Calvary, Pentecost). Four definitions; four cooperations. Eight
+      points; one Mother.
+    </p>
+    <p style="text-align:center; font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: var(--rhythm-x2) auto;">
+      <em>Stella Maris, ora pro nobis.</em>
+    </p>
+  </section>
+
+</main>
+
+<footer class="colophon">
+  <span class="small-caps">5 Byzantine &middot; 5 Western &middot; 19 dated entries &middot; 11 inscriptions &middot; 8 gestures</span>
+  <span class="colophon__nav">
+    <a href="index.html">Home</a><span>&middot;</span>
+    <a href="library.html">Library</a><span>&middot;</span>
+    <a href="apparitions.html">Apparitions</a><span>&middot;</span>
+    <a href="litany.html">Litany</a><span>&middot;</span>
+    <a href="rosary.html">Rosary</a><span>&middot;</span>
+    <a href="akathist.html">Akathist</a><span>&middot;</span>
+    <a href="search.html">Search</a>
+  </span>
+  <span class="colophon__sub">
+    <strong>Sub tuum praesidium</strong>
+    Beneath thy protection we take refuge, O holy Mother of God.
+  </span>
+</footer>
+
+<script>
+  var btn = document.getElementById("mode-toggle");
+  function syncLabel() { btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil"; }
+  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
+  syncLabel();
+
+  Mediatrix.pushRecent({
+    slug: "iconography.html",
+    title: "Marian Iconography",
+    subtitle: "Byzantine and Western types",
+    vestment: "blue",
+    scrollRatio: 0,
+  });
+</script>
+
+</body>
+</html>

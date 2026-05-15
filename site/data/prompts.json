@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "source_file": "_Perfect-Prompts-Mariology-Build.md",
+  "source_mtime": "2026-05-15T05:50:50",
+  "generated_at": "2026-05-15T11:22:35",
+  "title": "Perfect Prompts for the Mariology Library Build",
+  "prompts": [
+    {
+      "num": 1,
+      "title": "Main Chronological Library"
+    },
+    {
+      "num": 2,
+      "title": "Old Testament Types, Deeper Exegesis"
+    },
+    {
+      "num": 3,
+      "title": "Marian Concise Anthology"
+    },
+    {
+      "num": 4,
+      "title": "New Testament Load-Bearing Texts"
+    },
+    {
+      "num": 5,
+      "title": "Daily Rosary Companion"
+    },
+    {
+      "num": 6,
+      "title": "Protestant Objections Defense"
+    },
+    {
+      "num": 7,
+      "title": "Marian Feasts Liturgical Calendar"
+    },
+    {
+      "num": 8,
+      "title": "Marian Apparitions Reference"
+    },
+    {
+      "num": 9,
+      "title": "Litany of Loreto Annotated"
+    },
+    {
+      "num": 10,
+      "title": "Marian Iconography Reference"
+    },
+    {
+      "num": 11,
+      "title": "The Akathist Hymn Translated and Annotated"
+    },
+    {
+      "num": 12,
+      "title": "Marian Office of Readings Sourcebook"
+    }
+  ],
+  "prompt_count": 12
+}
