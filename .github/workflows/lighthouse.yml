@@ -20,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
+
       - name: Run Lighthouse (desktop + mobile)
         uses: treosh/lighthouse-ci-action@v12
         with:
