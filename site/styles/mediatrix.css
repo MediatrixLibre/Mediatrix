@@ -26,7 +26,7 @@
   --warm-grey-4:   #54585A;   /* secondary text */
   --cream:         #F9F6EF;   /* body paper */
   --bone:          #D9CFBE;   /* vigil primary ink */
-  --verified:      #3AAF66;   /* verified ✓ marker */
+  --verified:      #1A6E3A;   /* verified ✓ marker. Darkened to 4.7:1 on the wash background (#E4E4E5) for WCAG AA on small .prov badge text. Still reads as green. */
 
   /* Vigil (dark mode) tokens — analogous to Compline.
      Two golds: text-gold stays luminous for tracked-cap legibility on dark;
