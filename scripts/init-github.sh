@@ -29,7 +29,7 @@
 set -euo pipefail
 
 REPO="MediatrixLibre/Mediatrix"
-HOMEPAGE="https://mediatrix-marian-library.pages.dev/"
+HOMEPAGE="https://stella-maris.pages.dev/"
 DESCRIPTION="An editorial Marian study library, fifteen hand-designed pages on Mary as Mediatrix and Co-Redemptrix, drawn from a thirteen-file markdown corpus of patristic, medieval, and magisterial witness."
 TOPICS=(
   mariology

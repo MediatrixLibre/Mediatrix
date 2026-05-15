@@ -17,7 +17,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 SITE = REPO / "site"
-ORIGIN = "https://mediatrix-marian-library.pages.dev"
+ORIGIN = "https://stella-maris.pages.dev"
 OG_IMAGE = f"{ORIGIN}/og.png"
 
 

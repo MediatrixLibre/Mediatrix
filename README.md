@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://mediatrix-marian-library.pages.dev/"><strong>Live site</strong></a>
+  <a href="https://stella-maris.pages.dev/"><strong>Live site</strong></a>
   &nbsp;·&nbsp;
   <a href="site/SPEC.md">Build spec</a>
   &nbsp;·&nbsp;
