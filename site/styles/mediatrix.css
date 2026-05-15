@@ -16,7 +16,7 @@
   --m-navy:        #0C2340;   /* primary ink (heads, rules) */
   --m-blue:        #1E3A6E;   /* Marian blue — promoted to primary accent */
   --m-gold:        #C99700;   /* crown of twelve stars */
-  --m-gold-text:   #8C6B00;   /* darkened gold for foreground text (5.4:1 on cream) */
+  --m-gold-text:   #7C6100;   /* darkened gold for foreground text. 5.5:1 on cream, 4.7:1 on the slightly cooler wash background (#E4E4E5) seen inside .pillars, .recents, .vestment-card. Passes WCAG AA. */
   --m-rose:        #B66D87;   /* mystical rose */
   --m-rose-deep:   #8C4566;   /* mater dolorosa */
 
@@ -175,6 +175,18 @@ em, i { font-family: var(--font-serif); font-style: italic; }
 }
 .skip-link:focus { left: 0.5rem; top: 0.5rem; }
 
+/* Screen-reader-only utility for SR-only headings that satisfy
+   heading-order without disturbing the editorial layout. */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ========================== Type scale ==================== */
 
 h1, h2, h3, h4 { font-family: var(--font-display); color: var(--m-navy); text-wrap: balance; }
@@ -246,7 +258,7 @@ dl.glossed dd {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   font-size: 0.74rem;
-  color: var(--m-gold);
+  color: var(--m-gold-text);
   margin-right: 0.4em;
 }
 
@@ -450,7 +462,7 @@ main.reader { max-width: var(--measure-reader); margin: 0 auto; padding: 0 var(-
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   font-size: 0.74rem;
-  color: var(--m-gold);
+  color: var(--m-gold-text);
   letter-spacing: 0.05em;
 }
 .section-card__title {
@@ -509,7 +521,7 @@ main.reader { max-width: var(--measure-reader); margin: 0 auto; padding: 0 var(-
   font-family: var(--font-mono);
   font-style: normal;
   font-size: 0.85em;
-  color: var(--m-gold);
+  color: var(--m-gold-text);
   padding: 0 0.2em;
 }
 /* Hero epigraph — a quiet italic Marian declarative beneath the wordmark.
@@ -573,7 +585,7 @@ main.reader { max-width: var(--measure-reader); margin: 0 auto; padding: 0 var(-
   float: left;
   line-height: 0.92;
   padding: 0.2rem 0.6rem 0 0;
-  color: var(--m-gold);
+  color: var(--m-gold-text);
 }
 
 /* ========================== Saint card (anthology) ======== */
@@ -588,7 +600,7 @@ main.reader { max-width: var(--measure-reader); margin: 0 auto; padding: 0 var(-
 @media (max-width: 720px) { .saint-card { grid-template-columns: 1fr; gap: var(--rhythm-half); } }
 .saint-meta { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.04em; color: var(--warm-grey-4); }
 .saint-meta strong { display: block; font-family: var(--font-display); font-style: normal; font-weight: 500; font-size: 1.05rem; letter-spacing: 0.02em; color: var(--m-navy); margin-bottom: 0.2em; }
-.saint-meta time { display: block; font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 0.74rem; color: var(--m-gold); margin-top: 0.4em; }
+.saint-meta time { display: block; font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 0.74rem; color: var(--m-gold-text); margin-top: 0.4em; }
 .saint-quote { font-family: var(--font-serif); font-size: 1.06rem; line-height: 1.55; color: var(--m-navy); margin: 0; padding: 0; border: none; }
 .saint-quote .source-language { display: block; font-style: italic; color: var(--warm-grey-4); margin-bottom: var(--rhythm-half); }
 .saint-source { display: block; margin-top: var(--rhythm-half); font-family: var(--font-sans); font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm-grey-4); }
@@ -663,7 +675,7 @@ main.reader { max-width: var(--measure-reader); margin: 0 auto; padding: 0 var(-
 .apparition { padding: var(--rhythm-x2) 0; border-top: 1px solid var(--warm-grey-2); }
 .apparition__head { display: grid; grid-template-columns: 1fr auto; gap: var(--rhythm-half); align-items: baseline; margin-bottom: var(--rhythm); }
 .apparition__title { font-family: var(--font-display); font-weight: 500; font-size: 1.6rem; letter-spacing: 0.03em; color: var(--m-navy); margin: 0; }
-.apparition__year { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 0.95rem; color: var(--m-gold); }
+.apparition__year { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 0.95rem; color: var(--m-gold-text); }
 .apparition__sub { font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: 0 0 var(--rhythm); }
 .apparition dl { display: grid; grid-template-columns: 8rem 1fr; gap: var(--rhythm-half) var(--rhythm); margin: var(--rhythm) 0; }
 @media (max-width: 600px) { .apparition dl { grid-template-columns: 1fr; gap: 0.1rem; } }

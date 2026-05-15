@@ -36,7 +36,7 @@ def git_lastmod(rel_path: str) -> str:
 
 
 def main() -> int:
-    pages = sorted(SITE.glob("*.html"))
+    pages = [p for p in sorted(SITE.glob("*.html")) if p.name != "404.html"]
     # Conventional ordering: index first, then alphabetical
     pages.sort(key=lambda p: (p.name != "index.html", p.name))
 
