@@ -951,6 +951,65 @@ table.ref tr:hover td { background: var(--wash, transparent); }
   color: var(--warm-grey-4);
 }
 
+/* Original-language fold. Long Latin / Greek / Hebrew blocks (3+ lines)
+   collapse into a quiet 1-2 line garnish with an accordion dropdown.
+   Editorial decision: English reads first; the original is one click
+   away, available for the scholar but not blocking the lay reader.
+   Short Latin tags (Ave gratia plena, Stabat Mater), inline .warm-gloss
+   parentheticals, and the mnemonic Latin paragraphs in title-cards stay
+   inline — they ARE the editorial substance, not garnish. */
+.original-fold {
+  margin: var(--rhythm) 0 0;
+  border-top: 1px dashed var(--warm-grey-2);
+  padding-top: var(--rhythm-half);
+}
+.original-fold summary {
+  list-style: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--m-gold-text);
+  padding: 0.2em 0;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.original-fold summary::-webkit-details-marker { display: none; }
+.original-fold summary::before {
+  content: "+";
+  display: inline-block;
+  width: 0.9em; height: 0.9em;
+  line-height: 0.85;
+  text-align: center;
+  border: 1px solid var(--m-gold);
+  border-radius: 50%;
+  color: var(--m-gold);
+  font-family: var(--font-serif); font-style: normal;
+  font-size: 0.78rem;
+  transition: transform 0.15s ease;
+}
+.original-fold[open] summary::before { content: "−"; }
+.original-fold summary:hover { color: var(--m-gold); }
+.original-fold__body {
+  padding: var(--rhythm-half) 0 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--m-navy);
+  line-height: 1.55;
+}
+.original-fold__body .greek,
+.original-fold__body .hebrew,
+.original-fold__body .latin { font-style: italic; }
+/* Print: always show the original (no accordion in print) */
+@media print {
+  .original-fold { border-top: none; padding-top: 0; }
+  .original-fold summary { display: none; }
+  .original-fold__body { display: block !important; }
+}
+
 @media print { .history-chip, .popover-card { display: none !important; } }
 
 /* ========================== Print ========================= */
