@@ -48,14 +48,14 @@
         <!-- /SEO -->
 
 <link rel="stylesheet" href="styles/fonts.css" />
-<link rel="stylesheet" href="styles/mediatrix.css?v=31" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=32" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="favicon.svg" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=31"></script>
+<script src="scripts/mediatrix.js?v=32"></script>
 <style>
   .day-table { margin: var(--rhythm) auto var(--rhythm-x2); max-width: 36rem; }
   .day-table td:first-child { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m-gold-text); white-space: nowrap; padding-right: var(--rhythm); }
@@ -171,6 +171,25 @@
     (faith, hope, charity), and a Glory Be. After each decade, pray the
     Fatima Prayer requested by Our Lady on 13 July 1917. Close with the
     <span class="latin"><em>Salve Regina</em></span> and any final Marian prayer.
+  </p>
+
+  <p style="text-align:center; margin: var(--rhythm-half) 0 0;">
+    <button type="button"
+            class="history-chip"
+            popovertarget="hail-mary-history"
+            aria-haspopup="dialog">
+      <span class="history-chip__star" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor">
+          <polygon points="16,1 18,16 16,31 14,16"/>
+          <polygon points="1,16 16,14 31,16 16,18"/>
+          <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+          <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+          <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+          <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+        </svg>
+      </span>
+      On the Hail Mary &middot; The Gospel restated
+    </button>
   </p>
 
   <blockquote class="pull">
@@ -706,6 +725,40 @@
       Beneath thy protection we take refuge, O holy Mother of God. Despise not
       our petitions in our necessities, but deliver us always from all dangers,
       O glorious and blessed Virgin.
+    </p>
+
+    <h4 style="text-align:center; margin-top: var(--rhythm-x2);">Regina Caeli <span style="color: var(--warm-grey-4); letter-spacing: 0.16em;">&middot; during Eastertide</span></h4>
+    <p style="text-align:center; margin: 0 0 var(--rhythm-half);">
+      <button type="button"
+              class="history-chip"
+              popovertarget="regina-caeli-history"
+              aria-haspopup="dialog">
+        <span class="history-chip__star" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor">
+            <polygon points="16,1 18,16 16,31 14,16"/>
+            <polygon points="1,16 16,14 31,16 16,18"/>
+            <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+            <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+            <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+            <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+          </svg>
+        </span>
+        On the Regina Caeli &middot; The Easter antiphon
+      </button>
+    </p>
+    <p class="lat">
+      Regina caeli, laetare, alleluia,<br/>
+      Quia quem meruisti portare, alleluia,<br/>
+      Resurrexit sicut dixit, alleluia,<br/>
+      Ora pro nobis Deum, alleluia.
+    </p>
+    <p class="en">
+      Queen of Heaven, rejoice, alleluia. For he whom thou didst merit to bear,
+      alleluia, hath risen as he said, alleluia. Pray for us to God, alleluia.
+    </p>
+    <p class="versicle"><strong>V.</strong> Rejoice and be glad, O Virgin Mary, alleluia. &nbsp;&nbsp; <strong>R.</strong> For the Lord is truly risen, alleluia.</p>
+    <p style="text-align:center; font-style: italic; color: var(--warm-grey-4); font-size: 0.94rem;">
+      From Easter Vigil to Pentecost, the Regina Caeli replaces the Salve Regina at Compline and after the Rosary. Stand to recite it. The four-antiphon rotation: Alma Redemptoris Mater (Advent &rarr; Candlemas), Ave Regina Caelorum (Candlemas &rarr; Maundy Thursday), Regina Caeli (Easter &rarr; Pentecost), Salve Regina (Trinity Sunday &rarr; Advent).
     </p>
   </section>
 
@@ -1343,6 +1396,235 @@
       habere voluit per Mariam</em></span> &middot;
       the longer Bernardine prayer <span class="latin"><em>Ad
       sanctitatis tuae pedes</em></span>
+    </p>
+  </div>
+</div>
+
+<!-- ============================== POPOVER: Hail Mary ============================== -->
+<div id="hail-mary-history" popover="auto" class="popover-card" aria-labelledby="hail-mary-history-title">
+  <button type="button" class="popover-card__close" popovertarget="hail-mary-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span>The Gospel restated</p>
+    <h3 id="hail-mary-history-title">The Hail Mary</h3>
+    <p class="popover-card__lede">The most-prayed Marian prayer in the world. Two-thirds Gospel (the angel and Elizabeth), one-third Church (the Tridentine petition). The medieval Ave Maria + the 16th-century final shape.</p>
+
+    <p>
+      The prayer has three layers, laid down across fifteen hundred years:
+    </p>
+
+    <p>
+      <strong>Layer one (1st c.).</strong> Gabriel&rsquo;s salutation at the
+      Annunciation: <span class="latin"><em>Ave gratia plena, Dominus
+      tecum</em></span>
+      <span class="warm-gloss">(Hail, full of grace, the Lord is with thee)</span>
+      &mdash; Luke 1:28, the angelic word that opens the Marian story in
+      the New Testament. The Greek
+      <span class="greek"><em>kecharit&#333;men&#275;</em></span> is the
+      perfect passive participle that grounds the doctrine of the
+      <a href="feasts.html#annunciation-history">Immaculate Conception</a>.
+      The first half of every Hail Mary, prayed billions of times a day,
+      is verbatim Gospel.
+    </p>
+
+    <p>
+      <strong>Layer two (1st c.).</strong> Elizabeth&rsquo;s salutation at
+      the Visitation: <span class="latin"><em>Benedicta tu in mulieribus,
+      et benedictus fructus ventris tui</em></span>
+      <span class="warm-gloss">(Blessed art thou among women, and blessed
+      is the fruit of thy womb)</span> &mdash; Luke 1:42, spoken in the
+      Holy Spirit (Lk 1:41). Elizabeth&rsquo;s recognition of the unborn
+      Christ in Mary's womb is the second half of the prayer's first
+      part, completing the Gospel layer. The two Scripture quotations
+      together form the medieval Ave Maria, prayed in this form from at
+      least the 11th century in the Latin West.
+    </p>
+
+    <p>
+      <strong>Layer three (16th c.).</strong> The petition
+      <span class="latin"><em>Sancta Maria, Mater Dei, ora pro nobis
+      peccatoribus, nunc et in hora mortis nostrae</em></span>
+      <span class="warm-gloss">(Holy Mary, Mother of God, pray for us
+      sinners, now and at the hour of our death)</span> was codified in
+      the <strong>Catechism of the Council of Trent</strong> (1566) and
+      added to the Roman Breviary at the same time. The Tridentine
+      addition is the Church's voice joining the Gospel voices: the
+      Church asks Mary, named as <span class="latin"><em>Mater Dei</em></span>
+      (the Theotokos defined at Ephesus 431), to intercede for sinners
+      at the two universal moments of need &mdash; now and the hour of
+      death. The 16th-century shape is the prayer the Catholic world
+      has prayed for four hundred and sixty years.
+    </p>
+
+    <p>
+      The three-layer structure carries an entire Marian theology in
+      under sixty Latin words. <em>Ave gratia plena</em> is the Immaculate
+      Conception in grammatical seed. <em>Dominus tecum</em> is the
+      Theotokos doctrine implicit. <em>Benedicta tu in mulieribus</em>
+      is the universal Marian veneration foretold ("all generations shall
+      call me blessed", Lk 1:48). <em>Mater Dei</em> is the conciliar
+      definition of Ephesus. <em>Ora pro nobis peccatoribus</em> is the
+      Mediatrix doctrine in operation. <em>Nunc et in hora mortis
+      nostrae</em> is the Marian theology of refuge from the
+      <a href="#sub-tuum-history">Sub Tuum Praesidium</a> distilled into
+      a single vocative.
+    </p>
+
+    <p>
+      The Hail Mary is the structural unit of every <a href="#rosary-history">rosary</a>:
+      150 Hail Marys (1 per bead) for 150 Psalms, the
+      <em>Psalterium Mariae</em>. It is the climax of the
+      <a href="#angelus-history">Angelus</a>, recited three times after
+      each versicle. It is the centerpiece of the Memorare's appeal
+      ("anyone who fled to thy protection"). Every Catholic devotional
+      practice that addresses Mary by name uses the Hail Mary as its
+      operative prayer.
+    </p>
+
+    <blockquote>
+      Ave Maria, gratia plena, Dominus tecum.<br/>
+      Benedicta tu in mulieribus, et benedictus fructus ventris tui, Iesus.<br/>
+      Sancta Maria, Mater Dei,<br/>
+      ora pro nobis peccatoribus,<br/>
+      nunc et in hora mortis nostrae. Amen.
+      <p style="margin: var(--rhythm-half) 0 0; font-style: normal;">
+        &ldquo;Hail Mary, full of grace, the Lord is with thee. Blessed
+        art thou among women, and blessed is the fruit of thy womb,
+        Jesus. Holy Mary, Mother of God, pray for us sinners, now and
+        at the hour of our death. Amen.&rdquo;
+      </p>
+      <cite>The Hail Mary &middot; Latin form &middot; Catechism of the Council of Trent, 1566</cite>
+    </blockquote>
+
+    <p>
+      Pius V's 1568 reformed Roman Breviary fixed the Hail Mary at its
+      opening Hour each day. The 1568 form is the form prayed in every
+      Catholic seminary, every Catholic religious house, every Catholic
+      family. The medieval Ave (two halves only) is still preserved in
+      the Eastern Catholic and Orthodox traditions, which add their own
+      different closing petitions. The 16th-century Tridentine Hail
+      Mary is the Latin Rite's contribution to the universal Marian
+      voice. Sixty Latin words, prayed billions of times a day. The
+      Gospel itself, made oration.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">Ave Maria, gratia plena.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      Luke 1:28 (Gabriel's salutation) &middot;
+      Luke 1:42 (Elizabeth in the Holy Spirit) &middot;
+      Catechism of the Council of Trent, 1566 &middot;
+      Pius V, reformed Roman Breviary, 1568 &middot;
+      Council of Ephesus (431), <em>Theotokos / Mater Dei</em> &middot;
+      Eastern Orthodox variant (medieval form retained) &middot;
+      <em>Marialis Cultus</em>, Paul VI, 1974, on the Marian voice in
+      Catholic prayer
+    </p>
+  </div>
+</div>
+
+<!-- ============================== POPOVER: Regina Caeli ============================== -->
+<div id="regina-caeli-history" popover="auto" class="popover-card" aria-labelledby="regina-caeli-history-title">
+  <button type="button" class="popover-card__close" popovertarget="regina-caeli-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span>The Easter antiphon</p>
+    <h3 id="regina-caeli-history-title">The Regina Caeli</h3>
+    <p class="popover-card__lede">The Marian antiphon of Easter joy. From the Easter Vigil to Pentecost, the Salve Regina is replaced by the Regina Caeli at Compline and after the Rosary. The Catholic Church stands to sing it.</p>
+
+    <p>
+      The Regina Caeli is one of the <strong>four seasonal Marian
+      antiphons</strong> the Roman Rite has prayed at the close of
+      Compline since at least the 13th century. The four rotate
+      through the liturgical year:
+    </p>
+
+    <ul style="margin: 0 0 var(--rhythm); padding-left: 1.4em; font-family: var(--font-serif); line-height: 1.6;">
+      <li><strong><span class="latin"><em>Alma Redemptoris Mater</em></span></strong> &middot; Advent through the Feast of the Presentation (Candlemas, 2 February)</li>
+      <li><strong><span class="latin"><em>Ave Regina Caelorum</em></span></strong> &middot; Candlemas through Maundy Thursday</li>
+      <li><strong><span class="latin"><em>Regina Caeli</em></span></strong> &middot; Easter Vigil through Pentecost</li>
+      <li><strong><a href="#salve-history"><span class="latin"><em>Salve Regina</em></span></a></strong> &middot; Trinity Sunday through the Saturday before Advent</li>
+    </ul>
+
+    <p>
+      The Regina Caeli holds the shortest of the four seasons (~50 days,
+      Easter to Pentecost) and the most distinctive liturgical posture:
+      <strong>standing</strong>. From the Easter Vigil to Pentecost the
+      Catholic Church stands for the Marian antiphon, because the
+      Resurrection has annulled the kneeling posture of penance and
+      mourning. The Easter joy is corporal as well as vocal.
+    </p>
+
+    <blockquote>
+      Regina caeli, laetare, alleluia,<br/>
+      Quia quem meruisti portare, alleluia,<br/>
+      Resurrexit sicut dixit, alleluia,<br/>
+      Ora pro nobis Deum, alleluia.
+      <p style="margin: var(--rhythm-half) 0 0; font-style: normal;">
+        &ldquo;Queen of Heaven, rejoice, alleluia. For he whom thou didst
+        merit to bear, alleluia, hath risen as he said, alleluia. Pray
+        for us to God, alleluia.&rdquo;
+      </p>
+      <cite>Regina Caeli &middot; Latin antiphon &middot; medieval, attested 12th c., Roman Breviary</cite>
+    </blockquote>
+
+    <p>
+      The hymn is medieval, attested from the 12th century in Roman
+      manuscripts; its precise authorship is unknown. The
+      <strong>tradition associates it with Pope Gregory the Great</strong>
+      (c.&nbsp;540&ndash;604): a Roman legend records that during a
+      plague procession on Easter morning 590, Gregory heard angels
+      singing the first three lines, to which he replied with the
+      fourth (<em>Ora pro nobis Deum, alleluia</em>). The vision is
+      commemorated by the statue of St.&nbsp;Michael atop the Castel
+      Sant&rsquo;Angelo: the angel sheathing his sword as the plague
+      lifts. The legend is medieval-devotional; the hymn's actual
+      attested date is later.
+    </p>
+
+    <p>
+      The theology is concentrated. <strong>Four short lines, four
+      <em>alleluia</em>s</strong>. Each line names a moment of the
+      Marian Christological mystery: the Queen rejoices (Marian
+      glorification, Rev 12:1); the Son she merited to bear (the
+      Incarnation, the Theotokos doctrine); he has risen as he said
+      (the Resurrection, fulfilling Christ&rsquo;s own promise); pray
+      for us to God (the Mediatrix doctrine in its post-Resurrection
+      form, the Queen interceding from her bodily glorification with
+      the Risen King).
+    </p>
+
+    <p>
+      <strong>Benedict XIV</strong> (1742) attached a plenary indulgence
+      to the Regina Caeli prayed three times daily during Eastertide,
+      under the same conditions as the Angelus. The Eastertide
+      Regina Caeli <em>replaces</em> the Angelus at noon and at the
+      evening bell: the Catholic Church does not pray the Angelus
+      between Easter and Pentecost; she prays the Regina Caeli instead.
+      The daily liturgical bell rings the Easter joy through fifty days.
+    </p>
+
+    <p>
+      Pray it standing. The kneeling posture of the rest of the year
+      is annulled by the Resurrection; the Marian antiphon of Easter
+      is corporal joy. The first three lines are the Catholic Church's
+      witness to the resurrection; the fourth is Mary&rsquo;s
+      intercession from heaven, where she already is, in her glorified
+      body, awaiting us.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">Regina caeli, laetare.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      Regina Caeli antiphon &middot; medieval Roman, attested 12th c. &middot;
+      Roman Breviary, Compline, Easter Vigil &rarr; Pentecost &middot;
+      Legend of Gregory the Great and the Easter procession of 590 &middot;
+      Benedict XIV, plenary indulgence attached, 1742 &middot;
+      Liturgy of the Hours, post-Vatican II, retains the antiphon in
+      Eastertide &middot;
+      Cross-reference: the four seasonal Marian antiphons rotation
     </p>
   </div>
 </div>

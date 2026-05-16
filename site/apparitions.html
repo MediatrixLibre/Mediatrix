@@ -48,14 +48,14 @@
         <!-- /SEO -->
 
 <link rel="stylesheet" href="styles/fonts.css" />
-<link rel="stylesheet" href="styles/mediatrix.css?v=31" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=32" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="favicon.svg" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=31"></script>
+<script src="scripts/mediatrix.js?v=32"></script>
 <style>
   .norms { margin: var(--rhythm) auto var(--rhythm-x2); max-width: 56rem; padding: var(--rhythm) var(--rhythm-x2); background: var(--cream); border-left: 2px solid var(--m-gold); }
   .norms strong { font-family: var(--font-display); font-weight: 500; }
@@ -127,6 +127,24 @@
       <span class="apparition__year">1830</span>
     </div>
     <p class="apparition__sub">Paris &middot; visionary <strong>St. Catherine Labour&eacute;</strong> (canonized Pius XII, 1947) &middot; incorrupt body at 140 Rue du Bac</p>
+    <p style="text-align:center; margin: 0 0 var(--rhythm);">
+      <button type="button"
+              class="history-chip"
+              popovertarget="medal-history"
+              aria-haspopup="dialog">
+        <span class="history-chip__star" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor">
+            <polygon points="16,1 18,16 16,31 14,16"/>
+            <polygon points="1,16 16,14 31,16 16,18"/>
+            <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+            <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+            <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+            <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+          </svg>
+        </span>
+        On the Miraculous Medal &middot; <em>O Maria sine labe concepta</em>
+      </button>
+    </p>
 
     <p class="quote-block">
       <span class="latin"><em>&Ocirc; Marie, con&ccedil;ue sans p&eacute;ch&eacute;, priez pour nous qui avons recours &agrave; vous.</em></span><br/>
@@ -287,6 +305,133 @@
   </section>
 
 </main>
+
+<!-- ============================== POPOVER: The Miraculous Medal ============================== -->
+<div id="medal-history" popover="auto" class="popover-card" aria-labelledby="medal-history-title">
+  <button type="button" class="popover-card__close" popovertarget="medal-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span><span class="latin">O Maria sine labe concepta</span></p>
+    <h3 id="medal-history-title">The Miraculous Medal</h3>
+    <p class="popover-card__lede">A Marian medal struck from a 1830 apparition, distributing the Immaculate Conception doctrine through the Catholic world twenty-four years before Pius IX defined it. The medal is the dogma, in metal.</p>
+
+    <p>
+      On <strong>27 November 1830</strong>, in the chapel of the
+      Daughters of Charity at <strong>140 Rue du Bac, Paris</strong>,
+      Mary appeared for the third time that year to the novice
+      <strong>Sister Catherine Labour&eacute;</strong> (1806&ndash;1876;
+      canonized by Pius XII in 1947). The first apparition (18 July
+      1830) had been a quiet preparation; the second (27 November
+      1830) was the apparition that gave the medal.
+    </p>
+
+    <p>
+      <strong>The vision.</strong> Mary stood on a globe with the
+      serpent crushed beneath her heel (the iconography of Genesis 3:15
+      + Revelation 12:1 read together), rays streaming from her hands
+      onto the world. Catherine reported: <em>&ldquo;the rays are the
+      symbol of the graces I shed upon those who ask for them.&rdquo;</em>
+      Some rays were dim; Mary explained: <em>&ldquo;these are the
+      graces for which souls forget to ask.&rdquo;</em>
+    </p>
+
+    <p>
+      An oval frame formed around the image with the prayer
+      inscribed in golden letters:
+    </p>
+
+    <blockquote>
+      &Ocirc; Marie, con&ccedil;ue sans p&eacute;ch&eacute;,
+      priez pour nous qui avons recours &agrave; vous.
+      <p style="margin: var(--rhythm-half) 0 0; font-style: normal;">
+        &ldquo;O Mary, conceived without sin, pray for us who have
+        recourse to thee.&rdquo;
+      </p>
+      <cite>The Marian directive &middot; Rue du Bac, 27 November 1830 &middot; 24 years before <em>Ineffabilis Deus</em></cite>
+    </blockquote>
+
+    <p>
+      The prayer is the dogma of the
+      <a href="../about.html#dogmas">Immaculate Conception</a> in
+      colloquial French, given to Catherine in 1830, twenty-four years
+      before <strong>Pius IX</strong> would define the dogma in
+      <span class="latin"><em>Ineffabilis Deus</em></span> (8 December
+      1854). The medal distributes the dogma through the Catholic
+      world as devotional metal: <em>conceived without sin</em>.
+      Pius IX himself, after the 1854 definition, said the Miraculous
+      Medal had &ldquo;prepared the soil&rdquo; for the dogma's
+      reception.
+    </p>
+
+    <p>
+      <strong>The reverse.</strong> The image turned, and Catherine
+      saw on the back: the letter <strong>M</strong> surmounted by a
+      cross; below, two hearts &mdash; the Sacred Heart of Jesus
+      crowned with thorns, the Immaculate Heart of Mary pierced by a
+      sword (Simeon's sword, Lk 2:35; cf.
+      <a href="../nt-texts.html#calvary-history">Calvary popover</a>);
+      around the perimeter, <strong>twelve stars</strong> (Revelation
+      12:1; cf.
+      <a href="../nt-texts.html#revelation12-history">Our Lady of the
+      Apocalypse popover</a>). The reverse is the Marian theology of
+      Co-Redemptrix and Apocalyptic Queen in iconographic form, decades
+      before the magisterial articulation.
+    </p>
+
+    <p>
+      <strong>The instruction.</strong> Mary said to Catherine:
+      <em>&ldquo;Have a medal struck on this model. Those who wear it
+      will receive great graces, especially if they wear it around the
+      neck.&rdquo;</em> The first medals were struck in
+      <strong>June 1832</strong> by the Parisian goldsmith Adrien
+      Vachette. By 1834 (two years after first striking), two million
+      copies had been distributed; by 1839, ten million. The Marian
+      medal had become the most-distributed devotional object in
+      Catholic history within a single decade.
+    </p>
+
+    <p>
+      <strong>The hidden life.</strong> Catherine Labour&eacute;
+      maintained her identity as the visionary in absolute secrecy
+      <strong>for forty-six years</strong>. She continued her duties
+      as a Daughter of Charity at the Reuilly Hospice in Paris &mdash;
+      portress, gardener, caretaker of the elderly &mdash; without any
+      special status, until her death on 31 December 1876. She revealed
+      her identity only to her superior, Sister Dufes, eight months
+      before her death. Her body was found <strong>incorrupt</strong>
+      at the 1933 exhumation for her beatification: eyes blue and
+      clear, limbs flexible. She rests today under glass at the Rue
+      du Bac chapel, where pilgrims pray before the body of the
+      visionary in continual presence with the apparition site.
+    </p>
+
+    <p>
+      The Miraculous Medal is the only Marian apparition whose
+      <em>iconography precedes the dogma</em>. Most Marian apparitions
+      confirm what the Church already teaches; the Miraculous Medal
+      taught the Immaculate Conception in iconographic shorthand in
+      1830, two dozen years before the Magisterium could define it.
+      The <em>sensus fidelium</em> of the lay Catholic world &mdash;
+      who wore the medal, prayed the prayer, expected the definition
+      &mdash; ratified what the Magisterium then confirmed. The medal
+      is the dogma, in metal, twenty-four years early.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">O Maria sine labe concepta.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      Rue du Bac, Paris &middot; 27 November 1830 &middot;
+      St. Catherine Labour&eacute; (1806&ndash;1876), Daughter of Charity, canonized Pius XII 1947 &middot;
+      Approbation: Archbishop de Qu&eacute;len of Paris (1832, the first medals struck) &middot;
+      Bishop de Bruillard, <span class="latin"><em>constat de supernaturalitate</em></span> declaration, 16 November 1851 &middot;
+      Pius IX, <em>Ineffabilis Deus</em>, 8 December 1854 (the medal's prayer formalised as dogma) &middot;
+      Body found incorrupt, 21 March 1933 &middot;
+      Beatification Pius XI 1933 &middot; Canonization Pius XII 1947 &middot;
+      Iconographic source: Revelation 12:1 + Genesis 3:15 conflation
+    </p>
+  </div>
+</div>
 
 <footer class="colophon">
   <span class="small-caps">7 primary &middot; 3 secondary</span>

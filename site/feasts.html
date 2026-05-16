@@ -48,14 +48,14 @@
         <!-- /SEO -->
 
 <link rel="stylesheet" href="styles/fonts.css" />
-<link rel="stylesheet" href="styles/mediatrix.css?v=31" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=32" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="favicon.svg" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=31"></script>
+<script src="scripts/mediatrix.js?v=32"></script>
 <style>
   .feast { padding: var(--rhythm-x2) 0 var(--rhythm); border-top: 1px solid var(--warm-grey-2); }
   .feast__head { display: grid; grid-template-columns: 10rem 1fr auto; gap: var(--rhythm); align-items: baseline; margin-bottom: var(--rhythm); }
@@ -162,7 +162,25 @@
       <dt>Collect</dt><dd><span class="collect"><span class="latin">Deus, qui Verbum tuum in utero Virginis Mariae veritatem carnis humanae suscipere voluisti...</span></span><span class="collect-en">&ldquo;O God, who willed that thy Word should take on the truth of human flesh in the womb of the Virgin Mary...&rdquo;</span></dd>
       <dt>Devotion</dt><dd>The Angelus &middot; the First Joyful Mystery &middot; the Memorare</dd>
     </dl>
-    <p style="text-align:center; margin: var(--rhythm) 0 0;">
+    <p style="text-align:center; margin: var(--rhythm) 0 var(--rhythm-half);">
+      <button type="button"
+              class="history-chip"
+              popovertarget="angelus-history"
+              aria-haspopup="dialog">
+        <span class="history-chip__star" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor">
+            <polygon points="16,1 18,16 16,31 14,16"/>
+            <polygon points="1,16 16,14 31,16 16,18"/>
+            <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+            <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+            <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+            <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+          </svg>
+        </span>
+        On the Angelus &middot; The daily bell
+      </button>
+    </p>
+    <p style="text-align:center; margin: 0 0 var(--rhythm);">
       <button type="button"
               class="history-chip"
               popovertarget="annunciation-history"
@@ -275,6 +293,24 @@
       <dt>Marian focus</dt><dd>The Brown Scapular (given to St. Simon Stock, 16 July 1251). The Carmelite tradition. Elias on Carmel as Marian type.</dd>
       <dt>Devotion</dt><dd>Investiture in the Brown Scapular &middot; the Carmelite Marian tradition (Therese of Lisieux, Elizabeth of the Trinity, Edith Stein)</dd>
     </dl>
+    <p style="text-align:center; margin: var(--rhythm) 0 0;">
+      <button type="button"
+              class="history-chip"
+              popovertarget="scapular-history"
+              aria-haspopup="dialog">
+        <span class="history-chip__star" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor">
+            <polygon points="16,1 18,16 16,31 14,16"/>
+            <polygon points="1,16 16,14 31,16 16,18"/>
+            <polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/>
+            <polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/>
+            <polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/>
+            <polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/>
+          </svg>
+        </span>
+        On the Brown Scapular &middot; Vestimentum Mariae
+      </button>
+    </p>
   </section>
 
   <section class="feast">
@@ -698,6 +734,244 @@
       Roman Breviary, Vespers canticle (fixed in the 6th c., universal in the Roman Rite) &middot;
       Council of Ephesus (431), definition of <em>Theotokos</em> &middot;
       Liturgy of the Hours, post-Vatican II, retains the Magnificat at Evening Prayer
+    </p>
+  </div>
+</div>
+
+<!-- ============================== POPOVER: Angelus ============================== -->
+<div id="angelus-history" popover="auto" class="popover-card" aria-labelledby="angelus-history-title">
+  <button type="button" class="popover-card__close" popovertarget="angelus-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span>The daily bell</p>
+    <h3 id="angelus-history-title">The Angelus</h3>
+    <p class="popover-card__lede">The Catholic Church's daily lay enactment of the Annunciation. Three times a day &mdash; six in the morning, noon, six in the evening &mdash; for seven hundred years.</p>
+
+    <p>
+      The Angelus is a three-versicle Marian prayer cycle that recites
+      the Annunciation, intersperses three Hail Marys, and closes with
+      <span class="latin"><em>Verbum caro factum est, et habitavit in
+      nobis</em></span>
+      <span class="warm-gloss">(John 1:14, "the Word was made flesh and
+      dwelt among us")</span>. The prayer is medieval; the discipline of
+      praying it three times daily at the sound of a church bell is
+      late-medieval and was indulgenced by successive popes from the
+      14th century forward.
+    </p>
+
+    <p>
+      The structural development:
+    </p>
+
+    <ul style="margin: 0 0 var(--rhythm); padding-left: 1.4em; font-family: var(--font-serif); line-height: 1.6;">
+      <li><strong>13th c.</strong> &mdash; Franciscan custom of three Hail Marys at the evening bell, in commemoration of the Annunciation</li>
+      <li><strong>14th c.</strong> &mdash; the morning bell added (Annunciation as the dawn of redemption); the noon bell added c. 1456 by Pope Callixtus III, also linked with prayer against the Ottoman advance</li>
+      <li><strong>16th c.</strong> &mdash; the three versicles + responses + Hail Marys + collect formalized; the Roman Breviary fixes the form</li>
+      <li><strong>1742</strong> &mdash; <strong>Benedict XIV</strong> attaches a plenary indulgence to the daily Angelus, fixing the form and the conditions universally across the Latin Rite</li>
+    </ul>
+
+    <p>
+      The three versicles narrate the Annunciation in three movements:
+    </p>
+
+    <p>
+      <strong>I.</strong>
+      <span class="latin"><em>Angelus Domini nuntiavit Mariae</em></span>
+      <span class="warm-gloss">(The angel of the Lord declared unto
+      Mary)</span> &mdash; the Gabriel sequence, Lk 1:26&ndash;33.
+    </p>
+
+    <p>
+      <strong>II.</strong>
+      <span class="latin"><em>Ecce ancilla Domini</em></span>
+      <span class="warm-gloss">(Behold the handmaid of the Lord)</span>
+      &mdash; Mary's <em>fiat</em>, Lk 1:38, the consent that is the
+      hinge of the Marian arc.
+    </p>
+
+    <p>
+      <strong>III.</strong>
+      <span class="latin"><em>Et Verbum caro factum est</em></span>
+      <span class="warm-gloss">(And the Word was made flesh)</span>
+      &mdash; John 1:14, the Incarnation declared, recited with a
+      profound bow or genuflection. The Catholic Church bows at the
+      noon Angelus the way the Eastern Church bows at the
+      <em>Trisagion</em>: the lay devotional posture of the Word
+      become flesh.
+    </p>
+
+    <blockquote>
+      Et Verbum caro factum est, et habitavit in nobis.
+      <p style="margin: var(--rhythm-half) 0 0; font-style: normal;">
+        &ldquo;And the Word was made flesh, and dwelt among us.&rdquo;
+      </p>
+      <cite>John 1:14 &middot; the climax of the Angelus &middot; recited bowing</cite>
+    </blockquote>
+
+    <p>
+      <strong>The bell.</strong> The Angelus bell is the Catholic
+      Church's most enduring acoustic public witness. A village or a
+      monastery rings the Angelus three times a day; the entire
+      community pauses, removes hats, makes the sign of the Cross,
+      prays the three versicles and Hail Marys, and returns to work.
+      Millet's <em>L'Ang&eacute;lus</em> (1857&ndash;1859) is the
+      paradigmatic painting of the lay devotion: two peasants, heads
+      bowed, the church bell tower in the distance at sunset. The
+      Angelus is the form Catholic time has taken in Europe for seven
+      hundred years.
+    </p>
+
+    <p>
+      <strong>Eastertide.</strong> Between Easter and Pentecost, the
+      Angelus is suspended; the
+      <a href="rosary.html#regina-caeli-history">Regina Caeli</a> is
+      prayed instead, three times a day, standing (the Resurrection
+      annuls the bowing posture of the Angelus, just as it annuls the
+      kneeling of penance). The fifty-day Easter window is the only
+      time of the year the Angelus does not ring in the Catholic
+      Church.
+    </p>
+
+    <p>
+      <strong>St. John Paul II's Sunday tradition.</strong> The Sunday
+      noon Angelus from the window of the Apostolic Palace, addressed
+      to pilgrims in St Peter's Square, became under JPII a weekly
+      papal Marian address. The custom continues: a brief Marian
+      reflection, the three versicles, the apostolic blessing. Every
+      Sunday at noon Rome time, the Catholic world prays the Angelus
+      with the Pope.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">Verbum caro factum est.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      The Angelus &middot; Latin form, 13th&ndash;16th c. &middot;
+      Franciscan tradition (13th c.) &middot;
+      Callixtus III (1456), noon bell against the Ottoman advance &middot;
+      Benedict XIV (1742), plenary indulgence universal &middot;
+      Pope John Paul II, Sunday papal Angelus tradition (1978&ndash;2005) &middot;
+      <a href="../rosary.html#regina-caeli-history">Regina Caeli</a>
+      (Eastertide replacement)
+    </p>
+  </div>
+</div>
+
+<!-- ============================== POPOVER: Brown Scapular ============================== -->
+<div id="scapular-history" popover="auto" class="popover-card" aria-labelledby="scapular-history-title">
+  <button type="button" class="popover-card__close" popovertarget="scapular-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span><span class="latin">Vestimentum Mariae</span></p>
+    <h3 id="scapular-history-title">The Brown Scapular</h3>
+    <p class="popover-card__lede">A two-cloth Marian habit, given by the Mother of God to St. Simon Stock on 16 July 1251 at Aylesford. The lay Carmelite tradition. The daily renewal of Marian consecration in fabric.</p>
+
+    <p>
+      The Brown Scapular is, in physical form, two small squares of
+      brown wool joined by two cords, worn over the shoulders so that
+      one square hangs on the chest and one on the back. It is the
+      <strong>full Carmelite habit, miniaturized for lay wear</strong>:
+      the same brown wool, the same shape, the same blessing. To wear
+      the Scapular is to take part in the Carmelite consecration to
+      Mary, in lay form.
+    </p>
+
+    <p>
+      <strong>The Marian vision.</strong> On the night of
+      <strong>16 July 1251</strong>, in the Carmelite priory of Aylesford
+      in Kent, England, the Virgin Mary appeared to
+      <strong>St. Simon Stock</strong> (c. 1165&ndash;1265), Prior
+      General of the Carmelite Order. The Order, recently transplanted
+      from the slopes of Mount Carmel to the Latin West, was facing
+      severe difficulties &mdash; persecution from secular clergy,
+      papal hesitation, the wars of the times. Mary held out the
+      Carmelite scapular and said:
+    </p>
+
+    <blockquote>
+      Hoc erit tibi et cunctis Carmelitis privilegium, in hoc moriens
+      aeternum non patietur incendium.
+      <p style="margin: var(--rhythm-half) 0 0; font-style: normal;">
+        &ldquo;This shall be the privilege for thee and for all
+        Carmelites: whosoever dies in this shall not suffer eternal
+        fire.&rdquo;
+      </p>
+      <cite>Words to St. Simon Stock &middot; Aylesford, 16 July 1251 &middot; medieval Carmelite tradition</cite>
+    </blockquote>
+
+    <p>
+      The promise &mdash; that the wearer of the Scapular, dying in the
+      state of grace, would be preserved from hell &mdash; is the
+      <strong>great Carmelite privilege</strong>. The Catholic
+      Magisterium has consistently interpreted the promise as
+      conditional on the state of grace at death and on the faithful
+      use of the Scapular during life; it is not a magical guarantee
+      but a Marian assurance to the soul who takes Mary's habit and
+      lives accordingly.
+    </p>
+
+    <p>
+      <strong>The Sabbatine privilege.</strong> A century later, on
+      <strong>3 March 1322</strong>, Pope <strong>John XXII</strong>
+      reported in the apostolic letter <span class="latin"><em>Sacratissimo
+      uti culmine</em></span> a Marian apparition to himself, in which
+      Mary promised that wearers of the Scapular who fulfilled their
+      Carmelite obligations would be released from purgatory on the
+      first Saturday after their death &mdash; the <em>Sabbatine
+      privilege</em>. The privilege was confirmed by successive popes
+      across the 14th-17th centuries (Clement VII 1530, St. Pius V 1566,
+      Gregory XIII 1577, Paul V 1613). Modern scholarship questions the
+      authenticity of John XXII's bull, but the Sabbatine privilege has
+      been preserved as a Marian devotional tradition under whatever
+      historical mode of foundation actually held.
+    </p>
+
+    <p>
+      <strong>The conditions of the Scapular.</strong> The wearer:
+      (1) must be enrolled in the Scapular by a priest using the
+      official ritual; (2) must wear it day and night (a Scapular
+      medal is permitted in place of cloth in modern practice);
+      (3) must observe chastity according to one's state of life;
+      (4) must pray the Rosary daily, or fulfill the Marian office
+      proper to one's state, or other Marian devotion as the priest
+      may permit. The Scapular is not a charm; it is the cloth sign
+      of an interior consecration.
+    </p>
+
+    <p>
+      <strong>Carmelite Marian saints in the Scapular.</strong> St.
+      Teresa of &Aacute;vila wore it. St. John of the Cross wore it.
+      St. Th&eacute;r&egrave;se of Lisieux wore it. St. Elizabeth of
+      the Trinity wore it. St. Edith Stein (Teresa Benedicta of the
+      Cross) wore it to Auschwitz; she was vested in the Carmelite
+      habit and the Scapular at her death. JPII received the Brown
+      Scapular at his First Communion in 1929 and wore it all his life,
+      including when shot in St Peter's Square on 13 May 1981 &mdash;
+      the feast of Our Lady of F&aacute;tima. The surgeons had to cut
+      around it.
+    </p>
+
+    <p>
+      The Scapular is the cheapest Marian object in the Catholic world
+      (two pieces of brown wool, four cents of material). It is one of
+      the most theologically dense (the lay sign of full Marian
+      consecration). It is one of the most personally enacted (worn
+      day and night, against the skin, for the duration of a life).
+      It is the Marian devotional object whose physical form most
+      perfectly fits its theological content: <em>vestimentum
+      Mariae</em>, the garment of Mary, worn.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">Vestimentum Mariae.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      St. Simon Stock, Aylesford, 16 July 1251 &middot; Carmelite tradition &middot;
+      John XXII, <em>Sacratissimo uti culmine</em>, 3 March 1322 (Sabbatine privilege) &middot;
+      Confirmations: Clement VII (1530), Pius V (1566), Gregory XIII (1577), Paul V (1613) &middot;
+      Pius XI, <em>Pretiosus iste thesaurus</em>, 1922 &middot;
+      Pius XII, <em>Neminem profecto</em>, 1950 &middot;
+      Carmelite Marian saints: Teresa of &Aacute;vila, John of the Cross, Th&eacute;r&egrave;se of Lisieux, Elizabeth of the Trinity, Edith Stein, John Paul II
     </p>
   </div>
 </div>

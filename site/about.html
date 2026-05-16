@@ -49,14 +49,14 @@
 
 <meta name="description" content="A Marian study library — methodology, provenance, and source for the doctrine of Mary as Mediatrix and Co-Redemptrix, drawn from twenty centuries of patristic, medieval, and magisterial witness." />
 <link rel="stylesheet" href="styles/fonts.css" />
-<link rel="stylesheet" href="styles/mediatrix.css?v=31" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=32" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="favicon.svg" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=31"></script>
+<script src="scripts/mediatrix.js?v=32"></script>
 <style>
   .prov-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--rhythm); margin: var(--rhythm-x2) 0; }
   .prov-card { padding: var(--rhythm) var(--rhythm); border-left: 3px solid; background: var(--cream); }
@@ -229,12 +229,28 @@
     </ol>
 
     <h2>The four Marian dogmas</h2>
-    <ol>
-      <li><strong>Mother of God</strong> &middot; <span class="greek">Theotokos</span> &middot; defined Council of Ephesus, 431.</li>
-      <li><strong>Perpetual Virginity</strong> &middot; <em>virgo ante partum, in partu, post partum</em> &middot; patristic consensus from the 2nd c.; confirmed by the Second Council of Constantinople (553) and Lateran (649).</li>
-      <li><strong>Immaculate Conception</strong> &middot; defined by <em>Ineffabilis Deus</em>, Pius IX, 8 December 1854.</li>
-      <li><strong>Assumption</strong> &middot; defined by <em>Munificentissimus Deus</em>, Pius XII, 1 November 1950.</li>
+    <ol class="dogma-list">
+      <li>
+        <strong>Mother of God</strong> &middot; <span class="greek">Theotokos</span> &middot; defined Council of Ephesus, 431.
+        <button type="button" class="history-chip dogma-chip" popovertarget="theotokos-history" aria-haspopup="dialog"><span class="history-chip__star" aria-hidden="true"><svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor"><polygon points="16,1 18,16 16,31 14,16"/><polygon points="1,16 16,14 31,16 16,18"/><polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/><polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/><polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/><polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/></svg></span>On Theotokos &middot; A history</button>
+      </li>
+      <li>
+        <strong>Perpetual Virginity</strong> &middot; <em>virgo ante partum, in partu, post partum</em> &middot; patristic consensus from the 2nd c.; confirmed by the Second Council of Constantinople (553) and Lateran (649).
+        <button type="button" class="history-chip dogma-chip" popovertarget="virginity-history" aria-haspopup="dialog"><span class="history-chip__star" aria-hidden="true"><svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor"><polygon points="16,1 18,16 16,31 14,16"/><polygon points="1,16 16,14 31,16 16,18"/><polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/><polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/><polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/><polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/></svg></span>On Perpetual Virginity &middot; A history</button>
+      </li>
+      <li>
+        <strong>Immaculate Conception</strong> &middot; defined by <em>Ineffabilis Deus</em>, Pius IX, 8 December 1854.
+        <button type="button" class="history-chip dogma-chip" popovertarget="immaculate-history" aria-haspopup="dialog"><span class="history-chip__star" aria-hidden="true"><svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor"><polygon points="16,1 18,16 16,31 14,16"/><polygon points="1,16 16,14 31,16 16,18"/><polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/><polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/><polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/><polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/></svg></span>On the Immaculate Conception &middot; A history</button>
+      </li>
+      <li>
+        <strong>Assumption</strong> &middot; defined by <em>Munificentissimus Deus</em>, Pius XII, 1 November 1950.
+        <button type="button" class="history-chip dogma-chip" popovertarget="assumption-history" aria-haspopup="dialog"><span class="history-chip__star" aria-hidden="true"><svg viewBox="0 0 32 32" width="100%" height="100%" fill="currentColor"><polygon points="16,1 18,16 16,31 14,16"/><polygon points="1,16 16,14 31,16 16,18"/><polygon points="5,5 16,14 27,5 18,16" opacity="0.85"/><polygon points="27,27 18,16 27,5 16,14" opacity="0.85"/><polygon points="5,27 14,16 5,5 16,18" opacity="0.85"/><polygon points="27,27 16,18 5,27 14,16" opacity="0.85"/></svg></span>On the Assumption &middot; A history</button>
+      </li>
     </ol>
+    <style>
+      .dogma-list li { margin-bottom: var(--rhythm); }
+      .dogma-chip { display: inline-flex; margin-top: var(--rhythm-half); margin-left: 0; }
+    </style>
     <p>
       A possible fifth Marian dogma (<em>Mediatrix of all graces &middot;
       Co-Redemptrix &middot; Advocate</em>) has been petitioned to the Holy
@@ -299,6 +315,504 @@
   </section>
 
 </main>
+
+<!-- ============================== POPOVER: Theotokos (Ephesus 431) ============================== -->
+<div id="theotokos-history" popover="auto" class="popover-card" aria-labelledby="theotokos-history-title">
+  <button type="button" class="popover-card__close" popovertarget="theotokos-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span>A history</p>
+    <h3 id="theotokos-history-title">Theotokos &middot; Mother of God</h3>
+    <p class="popover-card__lede">The first Marian dogma. Defined at Ephesus in 431 against Nestorius. <span class="greek"><em>Theotokos</em></span> &mdash; the God-bearer &mdash; is, in the conciliar logic, a <em>Christological</em> definition: it names not Mary's identity in isolation but the Person of the Son she bore.</p>
+
+    <p>
+      <strong>The dispute.</strong> Nestorius, Patriarch of
+      Constantinople (428&ndash;431), held that the Person born of
+      Mary was the man Jesus Christ, who was joined to the Word of
+      God in a kind of moral or relational union. On this reading,
+      Mary was the mother of the man Christ but not the Mother of
+      God; the proper title was
+      <span class="greek"><em>Christotokos</em></span>
+      <span class="warm-gloss">(Christ-bearer)</span>, not
+      <span class="greek"><em>Theotokos</em></span>
+      <span class="warm-gloss">(God-bearer)</span>. Nestorius preached
+      against the Theotokos title in Constantinople in 428; the
+      controversy reached Rome and Alexandria within months.
+    </p>
+
+    <p>
+      <strong>Cyril of Alexandria's response.</strong> Cyril
+      (c. 376&ndash;444), the principal theological architect of the
+      Ephesian definition, argued that the title <em>Theotokos</em>
+      is required by the Catholic understanding of the Incarnation:
+      Mary bore not a man whom God later joined, but the eternal
+      Word of God who took flesh in her womb. The Person born of
+      Mary is one Person, the Son of God; <em>therefore</em>
+      Mary, having borne Him, is the Mother of God. To deny
+      <em>Theotokos</em> is to deny the unity of the Person of
+      Christ &mdash; to make Him into two persons, one divine and
+      one human, only loosely associated. Cyril codified the
+      argument in his <strong>twelve anathemas</strong> against
+      Nestorius (the <em>Anathematismi</em>), which became the
+      conciliar test of orthodoxy.
+    </p>
+
+    <p>
+      <strong>The Council.</strong> The Council of Ephesus opened
+      <strong>22 June 431</strong>, presided over by Cyril of
+      Alexandria (acting as the legate of Pope Celestine I).
+      Nestorius and his supporters had not yet arrived. Cyril read
+      out his <em>Second Letter to Nestorius</em>; the Council Fathers
+      acclaimed it as the orthodox faith; the Council declared
+      Nestorius deposed and his teaching anathema. The Marian title
+      <em>Theotokos</em> was conciliarly defined.
+    </p>
+
+    <blockquote>
+      &Epsilon;&#7988; &tau;&iota;&sigmaf; &omicron;&#8016;&chi; &#8001;&mu;&omicron;&lambda;&omicron;&gamma;&epsilon;&#8150; &Theta;&epsilon;&omicron;&tau;&#972;&kappa;&omicron;&nu; &epsilon;&#7990;&nu;&alpha;&iota; &tau;&#8052;&nu; &#7937;&gamma;&#943;&alpha;&nu; &Pi;&alpha;&rho;&theta;&#941;&nu;&omicron;&nu;&middot; &#7936;&nu;&#940;&theta;&epsilon;&mu;&alpha; &#7956;&sigma;&tau;&omega;.
+      <p style="margin: var(--rhythm-half) 0 0; font-style: normal;">
+        &ldquo;If anyone does not confess that the holy Virgin is
+        Mother of God: let him be anathema.&rdquo;
+      </p>
+      <cite>Cyril of Alexandria &middot; First Anathema &middot; Ephesus, 431</cite>
+    </blockquote>
+
+    <p>
+      The Ephesian definition is the first conciliar Marian dogma and
+      the foundation of all subsequent Marian theology. Every later
+      Marian title and dogma &mdash;
+      <a href="#virginity-history">Perpetual Virginity</a>,
+      <a href="#immaculate-history">Immaculate Conception</a>,
+      <a href="#assumption-history">Assumption</a>, the
+      <a href="../litany.html">titles of the Litany of Loreto</a>
+      &mdash; presupposes that Mary is <em>Theotokos</em>. Take away
+      Ephesus and the rest of the Marian doctrine collapses; preserve
+      Ephesus and the rest unfolds.
+    </p>
+
+    <p>
+      <strong>The popular reception.</strong> Tradition records that
+      when the Council's decision was announced in the evening of
+      22 June 431, the people of Ephesus &mdash; the city of the
+      Artemision, where the great pagan temple of Artemis-Diana had
+      stood &mdash; processed through the streets with torches,
+      chanting <em>Mater Dei! Mater Dei!</em> The Christian
+      definition of the Theotokos at the heart of the Artemision was
+      not an appropriation of the goddess tradition but its overthrow.
+      The Mother of God replaced the Great Goddess in the city where
+      the cult had been strongest. By the early fifth century the
+      basilica of the Theotokos in Ephesus &mdash; on the site of
+      Mary's reported residence with St. John &mdash; was already a
+      major Marian shrine.
+    </p>
+
+    <p>
+      The Marian title <em>Theotokos</em> precedes the Ephesian
+      definition by at least two centuries. The
+      <a href="../rosary.html#sub-tuum-history">Sub Tuum Praesidium</a>
+      (c. AD 250) addresses Mary as
+      <span class="greek"><em>Theotoke</em></span> in the vocative
+      &mdash; 180 years before Ephesus. The Council did not invent
+      <em>Theotokos</em>; it ratified what the Christian people had
+      already been praying. The <em>lex orandi</em> preceded the
+      <em>lex credendi</em> by nearly two centuries; the Council put
+      conciliar form to the Marian title the catacombs had given.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="greek">&Theta;&epsilon;&omicron;&tau;&#972;&kappa;&omicron;&sigmaf;.</span>
+      <span class="latin">Mater Dei.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      Council of Ephesus, 22 June 431 &middot;
+      Cyril of Alexandria, <em>Twelve Anathemas</em>, PG 77, 105&ndash;121 &middot;
+      Cyril of Alexandria, <em>Second Letter to Nestorius</em>, PG 77, 44&ndash;49 &middot;
+      Nestorius (428&ndash;431), Patriarch of Constantinople &middot;
+      Pope Celestine I, papal legation &middot;
+      <a href="../rosary.html#sub-tuum-history">Sub Tuum Praesidium</a> (c. AD 250, <em>Theotoke</em> in the vocative, 180 years before Ephesus) &middot;
+      <a href="../litany.html">Sancta Dei Genetrix</a>, Litany of Loreto title #2
+    </p>
+  </div>
+</div>
+
+<!-- ============================== POPOVER: Perpetual Virginity ============================== -->
+<div id="virginity-history" popover="auto" class="popover-card" aria-labelledby="virginity-history-title">
+  <button type="button" class="popover-card__close" popovertarget="virginity-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span>A history</p>
+    <h3 id="virginity-history-title">Perpetual Virginity</h3>
+    <p class="popover-card__lede">The second Marian dogma. <span class="latin"><em>Virgo ante partum, in partu, post partum</em></span> &mdash; Virgin before, during, and after the birth. Patristic consensus from the 2nd century; defined conciliarly at Constantinople II (553) and Lateran (649).</p>
+
+    <p>
+      The dogma asserts that Mary remained a virgin throughout her
+      entire life: before the birth of Christ (against the Adoptionist
+      and Ebionite denials of the virgin conception); during the birth
+      (the patristic <em>in partu</em> tradition); and after the birth
+      (against the Helvidian and modern Protestant readings that take
+      the Gospel <em>adelphoi</em> as Mary's other children). The
+      three-fold formula <em>ante partum, in partu, post partum</em>
+      is patristic, attested from at least the 4th century.
+    </p>
+
+    <p>
+      <strong>The patristic witnesses.</strong>
+      <strong>Athanasius</strong> (c. 296&ndash;373) writes in the
+      <em>Letter to Epictetus</em> that Mary remained
+      <em>Aeiparthenos</em>
+      <span class="warm-gloss">(<span class="greek"><em>&#7944;&epsilon;&iota;&pi;&#940;&rho;&theta;&epsilon;&nu;&omicron;&sigmaf;</em></span>, Ever-Virgin)</span>
+      &mdash; the Greek title that becomes the standard Eastern
+      formula. <strong>Ambrose</strong> defends <em>in partu</em>
+      virginity in <em>De Institutione Virginis</em>: Mary's
+      childbirth, like Christ's birth itself, was free from the
+      ordinary natural conditions, because the One born was the Word
+      who would later pass through closed doors (John 20:19, 20:26)
+      and the closed gate of Ezekiel 44:1&ndash;3.
+      <strong>Jerome's <em>Adversus Helvidium</em></strong> (c. 383)
+      is the foundational Western defense of <em>post partum</em>
+      virginity against the Helvidian reading of the Gospel
+      <em>adelphoi</em>.
+    </p>
+
+    <p>
+      <strong>The <em>adelphoi</em> question.</strong> The Gospels
+      mention Jesus's "brothers" and "sisters" (Mt 12:46-47, Mt 13:55-56,
+      Mk 3:31-35, Mk 6:3, Lk 8:19-20, Jn 7:5, Acts 1:14, Gal 1:19,
+      1 Cor 9:5). The Greek
+      <span class="greek"><em>&#7936;&delta;&epsilon;&lambda;&phi;&omicron;&#943;</em></span>
+      <span class="warm-gloss">(<em>adelphoi</em>, "brothers")</span>
+      translates the Hebrew <span class="latin"><em>ach</em></span>, which
+      in Semitic usage covers all male blood relatives (cousins, half-
+      brothers, kinsmen), as the LXX uses
+      <span class="greek"><em>adelphos</em></span> uniformly for all
+      degrees of kinship (e.g. Gen 13:8, 14:14, 29:15). James and Joses,
+      named as "brothers" of Jesus in Mt 13:55, are identified in
+      Mt 27:56 and Mk 15:40 as sons of <em>another</em> Mary
+      &mdash; <em>not</em> the Mother of Jesus. The Catholic exegetical
+      tradition has held the <em>adelphoi</em> as cousins or
+      step-brothers (the latter in the Protoevangelium of James
+      tradition: children of Joseph by a previous marriage) but never
+      as Mary's natural children.
+    </p>
+
+    <p>
+      <strong>The conciliar definitions.</strong> Second Council of
+      Constantinople (553) in its anathemas anathematizes "those who
+      do not confess that &hellip; she remained
+      <em>Aeiparthenos</em>." The Lateran Council of 649 under
+      Pope Martin I goes further, defining Mary as <em>ever-virgin,
+      immaculate, the holy Mother of God</em>, condemning those who
+      do not confess the threefold virginity. The conciliar Marian
+      title <em>Aeiparthenos</em> / <em>Semper Virgo</em> dates from
+      these two councils.
+    </p>
+
+    <blockquote>
+      Si quis &hellip; non confitetur sanctam semper Virginem et
+      Immaculatam Mariam &hellip; et incorruptibiliter eam genuisse
+      &hellip; condemnatus sit.
+      <p style="margin: var(--rhythm-half) 0 0; font-style: normal;">
+        &ldquo;If anyone does not confess that the holy, ever-virgin,
+        immaculate Mary &hellip; truly Mother of God &hellip; gave
+        birth without corruption &hellip; let him be condemned.&rdquo;
+      </p>
+      <cite>Lateran Council &middot; Canon 3 &middot; 649 &middot; Pope Martin I</cite>
+    </blockquote>
+
+    <p>
+      <strong>The Reformers preserved it.</strong> Despite
+      twenty-first-century Protestant resistance to perpetual
+      virginity, the magisterial Reformers held it as Catholic
+      tradition. Martin Luther: <em>&ldquo;Christ &hellip; was the
+      only Son of Mary, and the Virgin Mary bore no children besides
+      Him&rdquo;</em> (<em>Werke</em> 11:319, 1539). John Calvin:
+      <em>&ldquo;Helvidius displayed excessive ignorance in
+      concluding that Mary must have had many sons, because Christ's
+      &lsquo;brothers&rsquo; are sometimes mentioned&rdquo;</em>
+      (<em>Comm. on Matthew</em> 13:55, 1555). Ulrich Zwingli:
+      <em>&ldquo;I esteem immensely the Mother of God, the
+      ever-chaste, immaculate Virgin Mary&rdquo;</em>
+      (<em>Eini Predigt von der ewig reinen Magd Maria</em>, 1522).
+      The perpetual virginity is a doctrine the Reformation preserved;
+      its modern Protestant rejection is a later development.
+    </p>
+
+    <p>
+      <strong>The theological grammar.</strong> The Catholic tradition
+      reads the perpetual virginity not as a biological accident but
+      as theologically fitting. <em>Ezekiel 44:1-3</em> &mdash; the
+      eastern gate of the Temple, through which the Lord enters,
+      remains shut afterward &mdash; is the patristic type. Mary's
+      womb, having borne the Incarnate Word, is consecrated to that
+      birth alone; no subsequent natural birth would be
+      <em>theologically fitting</em>. The dogma is a confession of
+      the unique consecration of the Mother of God, in the same
+      register as the dedicated Temple, the consecrated Ark, the
+      sanctified Holy Place.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">Virgo ante partum, in partu, post partum.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      Athanasius, <em>Letter to Epictetus</em>, PG 26, 1049&ndash;1070 &middot;
+      Ambrose, <em>De Institutione Virginis</em>, PL 16 &middot;
+      Jerome, <em>Adversus Helvidium</em>, PL 23 &middot;
+      Second Council of Constantinople (553), anathemas &middot;
+      Lateran Council under Martin I (649), Canon 3 &middot;
+      Luther, <em>Werke</em> 11:319 (1539) &middot;
+      Calvin, <em>Comm. on Matt.</em> 13:55 (1555) &middot;
+      Zwingli, <em>Eini Predigt</em> (1522) &middot;
+      Ezekiel 44:1&ndash;3 (the closed eastern gate)
+    </p>
+  </div>
+</div>
+
+<!-- ============================== POPOVER: Immaculate Conception ============================== -->
+<div id="immaculate-history" popover="auto" class="popover-card" aria-labelledby="immaculate-history-title">
+  <button type="button" class="popover-card__close" popovertarget="immaculate-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span>A history</p>
+    <h3 id="immaculate-history-title">The Immaculate Conception</h3>
+    <p class="popover-card__lede">The third Marian dogma. Defined by Pius IX in <span class="latin"><em>Ineffabilis Deus</em></span> on 8 December 1854. Mary preserved from original sin by the prevenient application of Christ's merits, from the first instant of her conception. The Eastern feast is older than the Western dogma by a thousand years.</p>
+
+    <p>
+      The dogma teaches that Mary, from the first instant of her
+      conception in the womb of St. Anne, was preserved free from all
+      stain of original sin, by a singular grace and privilege of
+      Almighty God, in virtue of the merits of Christ Jesus the
+      Saviour of mankind. The doctrine names two Marian truths
+      together: (a) Mary was preserved from original sin; (b) the
+      preservation was effected by the prevenient application of
+      Christ's redemption. Mary is the <strong>first and most perfect
+      fruit</strong> of Christ's redemption, not its exception.
+    </p>
+
+    <p>
+      <strong>The Eastern feast precedes the Western dogma by a
+      millennium.</strong> The feast of the Conception of Mary (8 / 9
+      December) is celebrated in the Christian East from at least the
+      7th century, in the Latin West from the 11th century onward
+      (Anselm of Lucca, Eadmer of Canterbury). The medieval Western
+      feast preceded the medieval Western controversy about whether
+      what was being celebrated was, strictly, the moment of
+      conception or the sanctification in the womb.
+    </p>
+
+    <p>
+      <strong>The Aquinas tension and the Scotus solution.</strong>
+      <strong>St. Thomas Aquinas</strong> (1225&ndash;1274) hesitated.
+      His difficulty: if Mary was preserved from original sin from
+      conception, then she did not need Christ's redemption; but
+      Mary calls God her Saviour (Lk 1:47, the Magnificat). Aquinas
+      therefore taught a sanctification <em>after</em> conception
+      (<em>STh</em> III, q.27). The difficulty was real and required
+      a properly theological solution.
+    </p>
+
+    <p>
+      <strong>Bl. Duns Scotus</strong> (c. 1266&ndash;1308) provided
+      it. Scotus distinguished between <em>liberative</em> redemption
+      (the soul falls into sin and is then freed) and
+      <em>preservative</em> redemption (the soul is preserved from
+      sin in the first place by the application of Christ's merits).
+      Both are <em>redemption</em>; both are by the merits of Christ;
+      the preservative form is the higher and more excellent. Mary,
+      Scotus argued, was redeemed by the most excellent mode of
+      redemption: she was <strong><span class="latin"><em>praeredempta</em></span></strong>
+      <span class="warm-gloss">(pre-redeemed)</span>, preserved from
+      original sin in advance by the same merits of Christ that would
+      free other souls from sin already incurred. The Scotist solution
+      let the Aquinian objection stand (Mary was redeemed; Christ is
+      her Saviour) while preserving the Marian privilege (she was
+      preserved from sin from her first instant). Scotus's argument
+      held the Latin West to the Marian feast for the next five
+      centuries until the dogmatic definition.
+    </p>
+
+    <blockquote>
+      Declaramus, pronuntiamus et definimus doctrinam quae tenet
+      beatissimam Virginem Mariam in primo instanti suae conceptionis
+      &hellip; singulari Omnipotentis Dei gratia et privilegio,
+      intuitu meritorum Christi Iesu Salvatoris humani generis,
+      ab omni originalis culpae labe praeservatam immunem &hellip;
+      esse a Deo revelatam.
+      <p style="margin: var(--rhythm-half) 0 0; font-style: normal;">
+        &ldquo;We declare, pronounce, and define that the doctrine
+        which holds that the most blessed Virgin Mary, in the first
+        instant of her conception, by a singular grace and privilege
+        of Almighty God, in view of the merits of Christ Jesus, the
+        Saviour of the human race, was preserved immune from all
+        stain of original sin, is revealed by God.&rdquo;
+      </p>
+      <cite>Pius IX &middot; <em>Ineffabilis Deus</em> &middot; 8 December 1854</cite>
+    </blockquote>
+
+    <p>
+      <strong>The Scriptural anchors.</strong>
+      <a href="../ot-types.html#t1">Genesis 3:15</a>: the "enmity" God
+      sets between the serpent and the Woman precludes any sharing of
+      the serpent's bond with her. Lk 1:28's
+      <a href="../feasts.html#annunciation-history"><span class="greek"><em>kecharit&#333;men&#275;</em></span></a>:
+      the Greek perfect passive participle of <em>charito&#333;</em>,
+      naming Mary as <em>having-been-and-still-being-graced</em>
+      <strong>before</strong> Gabriel's first word. The Catholic
+      tradition reads these two anchors together, with
+      Rev 12:1 (the Woman crowned and protected by God) as the
+      apocalyptic ratification.
+    </p>
+
+    <p>
+      <strong>The Lourdes confirmation.</strong> On 25 March 1858 &mdash;
+      four years after the dogma &mdash; the lady appearing to
+      St. Bernadette Soubirous at Lourdes named herself:
+      <em>&ldquo;Que soy era Immaculada Councepciou&rdquo;</em>
+      (Gascon: &ldquo;I am the Immaculate Conception&rdquo;).
+      Bernadette did not know the title and could not pronounce it;
+      she walked back to the parish priest repeating the words she did
+      not understand. The apparition's self-identification with the
+      dogma's own form &mdash; the noun, not the adjective &mdash;
+      was Mary's confirmation of the 1854 definition. The Marian
+      visionary tradition ratified what the Magisterium had defined.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">Tota pulchra es, Maria, et macula originalis non est in te.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      Pius IX, <em>Ineffabilis Deus</em>, 8 December 1854 &middot;
+      Eastern feast of the Conception (7th c.+), Western feast (11th c.+) &middot;
+      Anselm of Lucca + Eadmer of Canterbury (medieval Western advocates) &middot;
+      St. Bernard, Bonaventure (medieval doubt) &middot;
+      Aquinas, <em>Summa Theologiae</em> III, q.27 (the difficulty) &middot;
+      Bl. Duns Scotus (the <em>praeredempta</em> solution) &middot;
+      Genesis 3:15 + Lk 1:28 + Rev 12:1 (scriptural anchors) &middot;
+      Lourdes, 25 March 1858 (St. Bernadette + the Marian self-identification) &middot;
+      <a href="../apparitions.html#rue-du-bac">Rue du Bac 1830</a> + the Miraculous Medal (24 years before <em>Ineffabilis Deus</em>)
+    </p>
+  </div>
+</div>
+
+<!-- ============================== POPOVER: Assumption ============================== -->
+<div id="assumption-history" popover="auto" class="popover-card" aria-labelledby="assumption-history-title">
+  <button type="button" class="popover-card__close" popovertarget="assumption-history" popovertargetaction="hide" aria-label="Close history">&times;</button>
+  <div class="popover-card__body">
+    <p class="popover-card__kicker"><span class="dot"></span>A history</p>
+    <h3 id="assumption-history-title">The Assumption</h3>
+    <p class="popover-card__lede">The fourth Marian dogma, and the most recent. Defined by Pius XII <em>ex cathedra</em> on 1 November 1950, <span class="latin"><em>Munificentissimus Deus</em></span>. The Eastern Dormition tradition is older than Chalcedon; the dogma is older than its definition by sixteen hundred years.</p>
+
+    <p>
+      The dogma teaches that the Immaculate Mother of God, the
+      ever-virgin Mary, having completed the course of her earthly
+      life, was assumed body and soul into heavenly glory. The
+      definition does <em>not</em> decide whether Mary died first or
+      was assumed without death (a question debated in the medieval
+      West; the Eastern Dormition tradition treats it as a death-like
+      sleep). What is defined is that her body did not undergo the
+      corruption of the grave; she is bodily glorified in heaven.
+    </p>
+
+    <p>
+      <strong>The Eastern Dormition tradition.</strong> The feast of
+      the Dormition (15 August) is celebrated in the Christian East
+      from at least the 5th century, attested in the patristic
+      sermon tradition by John of Damascus (c. 675&ndash;749) and
+      Germanus of Constantinople (c. 634&ndash;c. 740). The Byzantine
+      iconographic tradition shows Mary at her deathbed, the apostles
+      gathered, Christ standing above her receiving her soul (as a
+      newborn child) into his arms. The patristic Dormition tradition
+      teaches the same Marian glorification the Western Assumption
+      dogma later defines: Mary's body did not see corruption.
+    </p>
+
+    <p>
+      <strong>The fittingness arguments.</strong>
+      <strong>Aquinas</strong> in <em>STh</em> III, q.83 a.5 argued
+      that it is <em>fitting</em> that Mary's body be preserved from
+      corruption, because the body that bore the Incarnate Word should
+      not undergo decay. <strong>Bonaventure</strong> in his Marian
+      sermons argued the same: the body united in flesh to the
+      Incarnate Word should not be left to the worm. The medieval
+      Western consensus was that Mary's bodily assumption was
+      <em>theologically fitting</em>; the modern dogma names what the
+      tradition had argued.
+    </p>
+
+    <p>
+      <strong>The scriptural anchors.</strong> Three texts ground the
+      dogma. <strong>Rev 12:1</strong> &mdash; the
+      <a href="../nt-texts.html#revelation12-history">Woman of the
+      Apocalypse</a> clothed with the sun, in heaven, bodily &mdash;
+      is read as Mary glorified in body. <strong>Ps 131:8</strong>
+      (Vulgate <em>Surge, Domine, in requiem tuam, tu et arca
+      sanctificationis tuae</em>; "Arise, O Lord, into thy resting
+      place, thou and the ark which thou hast sanctified") read with
+      Mary as the Ark of the New Covenant
+      (<a href="../ot-types.html">Old Testament Types &sect;8</a>):
+      the Ark enters the resting place with the Lord, body and soul.
+      <strong>1 Cor 15:54-55</strong> &mdash; "death is swallowed up
+      in victory" &mdash; read of Mary as the first to receive the
+      bodily glorification Christ has won for all the saved.
+    </p>
+
+    <blockquote>
+      Pronuntiamus, declaramus et definimus divinitus revelatum
+      dogma esse: Immaculatam Deiparam semper Virginem Mariam, expleto
+      terrestris vitae cursu, fuisse corpore et anima ad caelestem
+      gloriam assumptam.
+      <p style="margin: var(--rhythm-half) 0 0; font-style: normal;">
+        &ldquo;We pronounce, declare, and define it to be a divinely
+        revealed dogma that the Immaculate Mother of God, the
+        ever-virgin Mary, having completed the course of her earthly
+        life, was assumed body and soul into heavenly glory.&rdquo;
+      </p>
+      <cite>Pius XII &middot; <em>Munificentissimus Deus</em> &middot; 1 November 1950 &middot; AAS 42:753-773, &sect;44 &middot; <em>ex cathedra</em></cite>
+    </blockquote>
+
+    <p>
+      <strong>The <em>ex cathedra</em> definition.</strong>
+      <em>Munificentissimus Deus</em> is the <strong>only</strong>
+      definition that has been promulgated under the conditions of
+      papal infallibility (Vatican I, <em>Pastor Aeternus</em>, 1870)
+      since the doctrine of infallibility was itself defined. The
+      First Vatican Council's definition is therefore conciliarly
+      grounded but had no infallible exercise on its books until
+      Pius XII's 1950 Marian definition. The Assumption is, in this
+      sense, the dogmatic test case for the Catholic teaching on
+      papal infallibility itself.
+    </p>
+
+    <p>
+      <strong>The Marian arc closes here.</strong>
+      <a href="../ot-types.html#t1">Gen 3:15</a> opens the Marian
+      promise: the Woman crushes the serpent's head. The Assumption
+      consummates it: the Woman is bodily glorified, the serpent's
+      power finally annulled. The Marian arc of Scripture closes in
+      the Assumption: the Mother who said <em>fiat</em> at Nazareth,
+      who stood at the foot of the Cross, who waited with the
+      apostles for the Spirit, is bodily glorified with her Son,
+      cosmically crowned (<a href="../nt-texts.html#revelation12-history">Rev 12:1</a>),
+      and reigns as <a href="../litany.html">Queen of Heaven</a>.
+    </p>
+
+    <p class="popover-card__tag">
+      <span class="latin">Assumpta est Maria in caelum.</span>
+    </p>
+
+    <p class="popover-card__refs">
+      Pius XII, <em>Munificentissimus Deus</em>, 1 November 1950, AAS 42 (1950) 753&ndash;773, &sect;44 (<em>ex cathedra</em>) &middot;
+      John of Damascus, <em>Hom. in Dorm.</em> I-III, PG 96 &middot;
+      Germanus of Constantinople, <em>Hom. in Dorm.</em>, PG 98 &middot;
+      Aquinas, <em>STh</em> III, q.83 a.5 (fittingness) &middot;
+      Bonaventure, <em>Sermones de Assumptione</em> &middot;
+      Rev 12:1 + Ps 131:8 + 1 Cor 15:54-55 (scriptural anchors) &middot;
+      Eastern feast of the Dormition (15 August), from the 5th c.+ &middot;
+      Pius XII, <em>Ad Caeli Reginam</em>, 1954 (Queenship as the consequence of the Assumption) &middot;
+      Vatican I, <em>Pastor Aeternus</em>, 1870 (papal infallibility, of which <em>Munificentissimus Deus</em> is the test case)
+    </p>
+  </div>
+</div>
 
 <footer class="colophon">
   <span class="small-caps">Methodology &middot; Provenance</span>
