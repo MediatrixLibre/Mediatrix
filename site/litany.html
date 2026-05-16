@@ -48,14 +48,14 @@
         <!-- /SEO -->
 
 <link rel="stylesheet" href="styles/fonts.css" />
-<link rel="stylesheet" href="styles/mediatrix.css?v=32" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=33" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="favicon.svg" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=32"></script>
+<script src="scripts/mediatrix.js?v=33"></script>
 <style>
   .preamble { max-width: var(--measure-prose); margin: var(--rhythm-x2) auto var(--rhythm-x3); }
   .preamble p { font-family: var(--font-serif); font-size: 1.0625rem; line-height: 1.62; color: var(--m-navy); }
@@ -77,47 +77,12 @@
     color: var(--m-gold-text); margin: var(--rhythm-x2) 0 var(--rhythm-half);
   }
 
-  /* Read-aloud chant control. Fixed-position panel in the bottom right.
-     Cream paper, hairline gold rule on top, no rounded corners, no
-     enclosing pill. The state-dot (gold idle, green playing, rose
-     paused) is the only round element and it carries information. */
-  .chant-chip {
-    position: fixed;
-    bottom: 0;
-    right: var(--rhythm);
-    z-index: 50;
-    background: var(--cream);
-    border: none;
-    border-top: 1px solid var(--m-gold);
-    padding: 0.7rem 1.1rem;
-    font-family: var(--font-sans);
-    font-size: 0.7rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--m-navy);
-    cursor: pointer;
-    box-shadow: 0 -2px 12px rgba(12, 35, 64, 0.08);
-    transition: color 0.18s ease;
-    min-height: 44px;
-    display: inline-flex; align-items: center; gap: 0.6rem;
-  }
-  .chant-chip:hover { color: var(--m-gold-text); }
-  .chant-chip:focus-visible { outline: none; box-shadow: var(--focus-ring); }
-  .chant-chip__dot {
-    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
-    background: var(--m-gold);
-    transition: background 0.2s ease;
-  }
-  .chant-chip[data-state="playing"] .chant-chip__dot { background: var(--verified); }
-  .chant-chip[data-state="paused"] .chant-chip__dot { background: var(--m-rose); }
-
-  .title-card[data-chant="active"] {
-    background: var(--cream);
-    border-left: 2px solid var(--m-gold);
-    padding-left: var(--rhythm-half);
-    margin-left: calc(0px - var(--rhythm-half));
-    transition: background 0.3s ease;
-  }
+  /* Read-aloud chant control: REMOVED in Pass 7.6 deprecation.
+     Browser speechSynthesis quality on Latin (forced through Italian or
+     Iberian phoneme sets) was not editorial-grade. The litany is to be
+     read silently or sung aloud by the reader; a synthetic voice is
+     a category error in the Marian register. The Latin titles remain
+     on the page in full, in their proper liturgical form. */
 </style>
 </head>
 <body data-vestment="blue" data-screen-label="Litany of Loreto · 54 titles">
@@ -925,14 +890,11 @@
   </span>
 </footer>
 
-<!-- Read-aloud chant control. The button is rendered only when the browser
-     supports SpeechSynthesis; on iOS/macOS Safari the system picks the best
-     available voice for the lang= attribute (Italian fallback for Latin is
-     the closest most users will get). -->
-<button id="chant-chip" class="chant-chip" type="button" data-state="idle" hidden>
-  <span class="chant-chip__dot" aria-hidden="true"></span>
-  <span class="chant-chip__label">Chant</span>
-</button>
+<!-- Read-aloud chant control removed in Pass 7.6 deprecation.
+     The browser SpeechSynthesis API forced Latin through Italian or Iberian
+     phoneme sets when no Latin voice was available, which is not editorial-
+     grade for the Marian register. The litany is to be read silently or
+     sung aloud by the reader; a synthetic voice is the wrong instrument. -->
 
 <script>
   var btn = document.getElementById("mode-toggle");
@@ -941,144 +903,6 @@
   }
   btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
   syncLabel();
-
-  /* --- Litany chant: read the 54 Latin titles aloud.
-     Voice picker: prefer a true Latin voice if any (very rare on commodity
-     OSes); otherwise Italian (closest phoneme set to Liturgical Latin);
-     otherwise Spanish/Portuguese; reject anything English/German/French.
-     If no acceptable voice is available, the chip stays hidden — better
-     silence than "Sancta Maria" read in Anglophone phonetics. */
-  (function setupChant() {
-    if (!("speechSynthesis" in window)) return;
-    var chip = document.getElementById("chant-chip");
-    var label = chip.querySelector(".chant-chip__label");
-
-    var ACCEPTABLE = ["la", "it", "es", "pt"]; // ranked
-    var LANG_NAMES = {
-      la: "Latin",
-      it: "Italian",
-      es: "Spanish",
-      pt: "Portuguese"
-    };
-    var titleCards = Array.prototype.slice.call(document.querySelectorAll(".title-card"));
-    var current = 0;
-    var state = "idle"; // idle | playing | paused
-    var chosenVoice = null;
-    var chosenLangPrefix = null;
-
-    function pickVoice() {
-      var voices = window.speechSynthesis.getVoices() || [];
-      for (var i = 0; i < ACCEPTABLE.length; i++) {
-        var prefix = ACCEPTABLE[i];
-        var v = voices.find(function (vv) { return (vv.lang || "").toLowerCase().indexOf(prefix) === 0; });
-        if (v) {
-          chosenLangPrefix = prefix;
-          return v;
-        }
-      }
-      chosenLangPrefix = null;
-      return null;
-    }
-
-    /* Compose the substitution chain shown in the chip tooltip. The litany
-       is in Liturgical Latin; if no Latin voice is present we walk down to
-       Italian, then Iberian. A reader hovering the chip can see exactly
-       which approximation is being used and why. */
-    function describeVoice(voice, prefix) {
-      var spoken = LANG_NAMES[prefix] || (voice.lang || "");
-      if (prefix === "la") {
-        return "Chanting the Litany in Liturgical Latin (" + voice.name + ").";
-      }
-      return "Chanting the Litany. Latin → " + spoken +
-             " voice (" + voice.name +
-             "); the closest phoneme approximation available on this device.";
-    }
-
-    function refreshVoice() {
-      chosenVoice = pickVoice();
-      if (chosenVoice) {
-        chip.hidden = false;
-        chip.title = describeVoice(chosenVoice, chosenLangPrefix);
-      } else {
-        // Stay hidden. No acceptable Latin/Italian/Iberian voice on this device.
-        chip.hidden = true;
-      }
-    }
-    refreshVoice();
-    // Most browsers populate voices asynchronously.
-    if (window.speechSynthesis.onvoiceschanged !== undefined) {
-      window.speechSynthesis.addEventListener("voiceschanged", refreshVoice);
-    }
-
-    function utteranceFor(card) {
-      var lat = card.querySelector(".title-card__lat");
-      if (!lat) return null;
-      var text = lat.textContent.replace(/^\s*\d+(\s*[–—-]\s*\d+)?\.\s*/, "");
-      var u = new SpeechSynthesisUtterance(text + ". Ora pro nobis.");
-      u.voice = chosenVoice;
-      u.lang = chosenVoice.lang;
-      u.rate = 0.85;
-      u.pitch = 0.95;
-      return u;
-    }
-
-    function highlight(idx) {
-      titleCards.forEach(function (c, i) {
-        if (i === idx) {
-          c.dataset.chant = "active";
-          c.scrollIntoView({ behavior: "smooth", block: "center" });
-        } else {
-          delete c.dataset.chant;
-        }
-      });
-    }
-
-    function chantNext() {
-      if (current >= titleCards.length) { stop(); return; }
-      var u = utteranceFor(titleCards[current]);
-      if (!u) { current++; chantNext(); return; }
-      u.onend = function () {
-        current++;
-        if (state === "playing") chantNext();
-      };
-      highlight(current);
-      window.speechSynthesis.speak(u);
-    }
-
-    function play() {
-      if (!chosenVoice) return; // belt + braces; chip should be hidden
-      state = "playing";
-      chip.dataset.state = "playing";
-      label.textContent = "Pause";
-      if (window.speechSynthesis.paused) {
-        window.speechSynthesis.resume();
-      } else {
-        chantNext();
-      }
-    }
-    function pause() {
-      state = "paused";
-      chip.dataset.state = "paused";
-      label.textContent = "Resume";
-      window.speechSynthesis.pause();
-    }
-    function stop() {
-      state = "idle";
-      chip.dataset.state = "idle";
-      label.textContent = "Chant";
-      window.speechSynthesis.cancel();
-      titleCards.forEach(function (c) { delete c.dataset.chant; });
-      current = 0;
-    }
-
-    chip.addEventListener("click", function () {
-      if (state === "idle") play();
-      else if (state === "playing") pause();
-      else play();
-    });
-    chip.addEventListener("contextmenu", function (e) { e.preventDefault(); stop(); });
-    window.addEventListener("beforeunload", function () { window.speechSynthesis.cancel(); });
-  })();
 
   Mediatrix.pushRecent({
     slug: "litany.html",

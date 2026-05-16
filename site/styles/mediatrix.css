@@ -1038,7 +1038,7 @@ table.ref tr:hover td { background: var(--wash, transparent); }
 
   /* Strip screen chrome that doesn't belong on paper. */
   .mast, .mast__tools, #mode-toggle, .colophon__nav,
-  .chant-chip, .recents, .feature, .section-grid, .skip-link,
+  .recents, .feature, .section-grid, .skip-link,
   #mode-toggle, .todays-feast { display: none !important; }
 
   /* Override screen measures — paper has its own column. */
