@@ -50,7 +50,7 @@ sources change.
 | `library.html` | blue | Twelve eras of Marian witness, era by era |
 | `ot-types.html` | blue | Twenty-eight Old Testament types of Our Lady |
 | `nt-texts.html` | blue | Three load-bearing New Testament passages |
-| `anthology.html` | blue | Forty-nine saints, in their own words |
+| `anthology.html` | blue | Fifty-seven saints, in their own words |
 | `rosary.html` | white | Twenty mysteries, with scriptural and patristic glosses |
 | `litany.html` | blue | The Litany of Loreto, fifty-four titles annotated |
 | `office.html` | blue | Office of Readings: fifteen second-readings sourcebook |
@@ -90,6 +90,16 @@ The only symbolic glyph is the **Stella Maris**, an eight-pointed
 gold star, appearing in the favicon, the index ornament, and the
 colophon rule. No decorative imagery. No emoji. No gradients used for
 decoration. No drop-shadow flourish.
+
+Deep-history asides — the Marian Psalter's history, the Luminous
+mysteries' Bartolo Longo backstory, the Litany of Loreto's papal
+succession, the Sub Tuum's third-century papyrus, the Salve Regina's
+Hermann of Reichenau, the Memorare's seventeenth-century Paris
+parish, the Genesis 3:15 / Revelation 12 Marian bookends of Scripture —
+live in **seven popover-cards across four surfaces**, each opened by
+a small editorial chip near the relevant heading. The popover pattern
+uses the native HTML `popover` API; no JS modal library; the cards
+hide on paper.
 
 ## Eight commands
 
@@ -138,8 +148,9 @@ Mediatrix/
 4. No `href="#"`. No emoji. No gradients for decoration. No drop-shadow.
 5. No build step inside `site/`. Static HTML, full stop.
 6. Vestment via `[data-vestment]` on `<body>`, never via class.
-7. Numbers are specific (54 titles, 28 OT types, 49 saints, 7 apparitions,
-   18 feasts, 20 mysteries). Vagueness is a defect.
+7. Numbers are specific (54 titles, 28 Old Testament types, 57 saints,
+   7 apparitions, 18 feasts, 20 mysteries, 7 popover-cards across four
+   surfaces). Vagueness is a defect.
 8. Stella Maris is the only ornament admitted.
 
 ## Local development

@@ -208,7 +208,7 @@ Non-negotiable:
 - **No emoji.** Ever.
 - **No "AI-slop" filler** — no invented stats, no padding iconography, no decorative gradients, no drop-shadow flourishes.
 - **Italic Source Serif** for Greek / Hebrew / Latin only, not for casual emphasis.
-- **Numbers are specific.** 54 titles, 28 OT types, 49 saints, 7 apparitions, 18 feasts, 20 mysteries. Never "many" or "several".
+- **Numbers are specific.** 54 titles, 28 Old Testament types, 57 saints, 7 apparitions, 18 feasts, 20 mysteries, 7 popover-cards across four surfaces. Never "many" or "several".
 - **Stella Maris is the only ornament.** The 8-pointed gold star at the masthead, the favicon, and the `.stella-rule` divider. No further iconography.
 
 When a section feels thin, solve with composition, not more content. *Mille volte no per ogni sì.*
