@@ -122,29 +122,33 @@
     font-style: italic; font-size: 0.94rem;
   }
 
-  /* Narrow-width: the chronology table is the one overflow offender on
-     iconography. The date column is nowrap by design; the icon-name column
-     was also nowrap, which forced the entire table to 606 px on a 320 px
-     viewport. At narrow widths, drop the icon-name nowrap and let the
-     gloss-cell wrap freely. Keep the date column nowrap so centuries do
-     not split. */
-  @media (max-width: 480px) {
-    /* Let the browser size columns to content rather than fixing them; the
-       date column wants ~5.5rem for "11th-13th c." and the icon-name column
-       wants room for single words like "Iconoclastic". Both columns drop
-       their nowrap to allow break-word on long single words. */
+  /* Below desktop, the icon-name column's nowrap forces the table wider
+     than viewport (606 px on a 320-600 px viewport). Drop the nowrap and
+     allow break-word so the table fluidly fits any width below ~768 px.
+     Keep the date column's nowrap-ish behavior — centuries should not
+     split — but allow it to wrap if absolutely necessary. */
+  @media (max-width: 768px) {
     table.icon-timeline td:first-child {
-      width: 5.5rem; padding-right: 0.4rem; font-size: 0.74rem;
+      padding-right: 0.5rem;
       white-space: normal; overflow-wrap: anywhere;
     }
     table.icon-timeline td:nth-child(2) {
       white-space: normal; overflow-wrap: anywhere;
-      padding-right: 0.4rem; font-size: 0.92rem;
+      padding-right: 0.6rem;
     }
     table.icon-timeline td:nth-child(3) {
-      font-size: 0.84rem; overflow-wrap: anywhere;
+      overflow-wrap: anywhere;
     }
-    table.icon-timeline td { vertical-align: top; padding: 0.5em 0.3em; }
+    table.icon-timeline td { vertical-align: top; }
+  }
+
+  /* Phone-tight: aggressive size + padding reduction so the table reads
+     comfortably at 320 px. */
+  @media (max-width: 480px) {
+    table.icon-timeline td:first-child { width: 5.5rem; padding-right: 0.4rem; font-size: 0.74rem; }
+    table.icon-timeline td:nth-child(2) { padding-right: 0.4rem; font-size: 0.92rem; }
+    table.icon-timeline td:nth-child(3) { font-size: 0.84rem; }
+    table.icon-timeline td { padding: 0.5em 0.3em; }
   }
 
   /* Inscription / gesture reference panels — two-column grids. */
