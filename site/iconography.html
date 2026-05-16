@@ -48,20 +48,27 @@
         <!-- /SEO -->
 
 <link rel="stylesheet" href="styles/fonts.css" />
-<link rel="stylesheet" href="styles/mediatrix.css?v=30" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=31" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="favicon.svg" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=30"></script>
+<script src="scripts/mediatrix.js?v=31"></script>
 <style>
   .icon-type { padding: var(--rhythm-x2) 0 var(--rhythm); border-top: 1px solid var(--warm-grey-2); }
   .icon-type__head { display: grid; grid-template-columns: 1fr auto; gap: var(--rhythm); align-items: baseline; margin-bottom: var(--rhythm); }
   .icon-type__name { font-family: var(--font-display); font-weight: 500; font-size: 1.3rem; letter-spacing: 0.02em; color: var(--m-navy); margin: 0; }
   .icon-type__name .greek { font-style: italic; }
   .icon-type__region { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m-gold-text); }
+  /* Narrow viewports: stack the icon-type head so the long region label
+     (e.g. "Constantinople · 5th c.") drops below the icon name rather than
+     forcing a 16-pixel overflow at 320 px. */
+  @media (max-width: 480px) {
+    .icon-type__head { grid-template-columns: 1fr; gap: var(--rhythm-half); }
+    .icon-type__region { letter-spacing: 0.18em; }
+  }
   .icon-type p { font-family: var(--font-serif); line-height: 1.6; color: var(--m-navy); margin: 0 0 var(--rhythm-half); }
 
   /* Plate-card metadata strip. The image itself is not printed (no rights-
@@ -113,6 +120,31 @@
   table.icon-timeline td:nth-child(3) {
     font-family: var(--font-serif); color: var(--warm-grey-4);
     font-style: italic; font-size: 0.94rem;
+  }
+
+  /* Narrow-width: the chronology table is the one overflow offender on
+     iconography. The date column is nowrap by design; the icon-name column
+     was also nowrap, which forced the entire table to 606 px on a 320 px
+     viewport. At narrow widths, drop the icon-name nowrap and let the
+     gloss-cell wrap freely. Keep the date column nowrap so centuries do
+     not split. */
+  @media (max-width: 480px) {
+    /* Let the browser size columns to content rather than fixing them; the
+       date column wants ~5.5rem for "11th-13th c." and the icon-name column
+       wants room for single words like "Iconoclastic". Both columns drop
+       their nowrap to allow break-word on long single words. */
+    table.icon-timeline td:first-child {
+      width: 5.5rem; padding-right: 0.4rem; font-size: 0.74rem;
+      white-space: normal; overflow-wrap: anywhere;
+    }
+    table.icon-timeline td:nth-child(2) {
+      white-space: normal; overflow-wrap: anywhere;
+      padding-right: 0.4rem; font-size: 0.92rem;
+    }
+    table.icon-timeline td:nth-child(3) {
+      font-size: 0.84rem; overflow-wrap: anywhere;
+    }
+    table.icon-timeline td { vertical-align: top; padding: 0.5em 0.3em; }
   }
 
   /* Inscription / gesture reference panels — two-column grids. */
@@ -293,7 +325,7 @@
         <h3 class="icon-type__name"><em>Sedes Sapientiae</em> &middot; Seat of Wisdom</h3>
         <span class="icon-type__region">Romanesque West &middot; 11th&ndash;13th c.</span>
       </div>
-      <p>Mary seated frontally on a throne, the Christ-child enthroned upon her lap. The architecture: Mary <em>is</em> the throne; Christ <em>is</em> the King. The maternal anatomy itself becomes the divine seat. Iconography of Solomon&rsquo;s Wisdom enthroned (1 Kings 10:18 conjoined with Proverbs 8 and Wisdom 7). <a href="ot-types.html#t16">See OT Types &sect;16.</a></p>
+      <p>Mary seated frontally on a throne, the Christ-child enthroned upon her lap. The architecture: Mary <em>is</em> the throne; Christ <em>is</em> the King. The maternal anatomy itself becomes the divine seat. Iconography of Solomon&rsquo;s Wisdom enthroned (1 Kings 10:18 conjoined with Proverbs 8 and Wisdom 7). <a href="ot-types.html#t16">See Old Testament Types &sect;16.</a></p>
     </article>
 
     <article class="icon-type">
@@ -421,7 +453,7 @@
       <dd><em>Mater Dolorosa.</em> The Co-Redemptrix in iconography; one sword (Lk 2:35) or seven (the Seven Sorrows).</dd>
 
       <dt>Feet on a serpent / crescent moon</dt>
-      <dd><em>Apocalyptic Mary.</em> Gen 3:15 + Rev 12:1 conflated; standard in the Immaculate Conception type. <a href="ot-types.html#t1">See OT Types &sect;1.</a></dd>
+      <dd><em>Apocalyptic Mary.</em> Gen 3:15 + Rev 12:1 conflated; standard in the Immaculate Conception type. <a href="ot-types.html#t1">See Old Testament Types &sect;1.</a></dd>
     </dl>
   </section>
 

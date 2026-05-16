@@ -48,14 +48,14 @@
         <!-- /SEO -->
 
 <link rel="stylesheet" href="styles/fonts.css" />
-<link rel="stylesheet" href="styles/mediatrix.css?v=30" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=31" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="favicon.svg" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=30"></script>
+<script src="scripts/mediatrix.js?v=31"></script>
 <style>
   .preamble { max-width: var(--measure-prose); margin: var(--rhythm-x2) auto var(--rhythm-x3); }
   .preamble p { font-family: var(--font-serif); font-size: 1.0625rem; line-height: 1.62; color: var(--m-navy); }
@@ -262,7 +262,7 @@
         Vatican II.</em> Paul VI, <span class="latin"><em>Solemn Profession of Faith</em></span> (1968):
         &ldquo;Mother of the Church, that is, of the entire body of Christ.&rdquo;
       </p>
-      <p class="title-card__roots">Root &middot; John 19:26&ndash;27 &middot; Acts 1:14 &middot; Revelation 12:17 &middot; <a href="nt-texts.html">see NT Texts</a></p>
+      <p class="title-card__roots">Root &middot; John 19:26&ndash;27 &middot; Acts 1:14 &middot; Revelation 12:17 &middot; <a href="nt-texts.html">see New Testament Texts</a></p>
     </div>
 
     <div class="title-card">
@@ -468,7 +468,7 @@
         contains, and exceptional in her devotion. The three together unfold the Ark-of-the-
         Covenant typology.</em>
       </p>
-      <p class="title-card__roots">Root &middot; 2 Timothy 2:21 &middot; Exodus 25 &middot; Isaiah 45:9&ndash;10 &middot; <a href="ot-types.html">see OT Types &sect;8</a></p>
+      <p class="title-card__roots">Root &middot; 2 Timothy 2:21 &middot; Exodus 25 &middot; Isaiah 45:9&ndash;10 &middot; <a href="ot-types.html">see Old Testament Types &sect;8</a></p>
     </div>
 
     <div class="title-card">
@@ -522,7 +522,7 @@
         the rod, and the tablets; Mary contains the Bread of Heaven, the eternal High Priest, the
         Incarnate Word. Revelation 11:19&ndash;12:1 makes the identification explicit.</em>
       </p>
-      <p class="title-card__roots">Root &middot; Exodus 25:10&ndash;22 &middot; 2 Samuel 6 &middot; Luke 1:39&ndash;56 &middot; Rev 11:19&ndash;12:1 &middot; <a href="ot-types.html">see OT Types &sect;8</a></p>
+      <p class="title-card__roots">Root &middot; Exodus 25:10&ndash;22 &middot; 2 Samuel 6 &middot; Luke 1:39&ndash;56 &middot; Rev 11:19&ndash;12:1 &middot; <a href="ot-types.html">see Old Testament Types &sect;8</a></p>
     </div>
 
     <div class="title-card">
@@ -613,7 +613,7 @@
         Pius VII (1814), the defense against Communism, all bear this title.</em>
         Patroness of the Salesians, whose May 24 feast is one of the great Marian celebrations.
       </p>
-      <p class="title-card__roots">Root &middot; Judith 13 (head-crushing) &middot; <a href="ot-types.html">see OT Types &sect;26</a></p>
+      <p class="title-card__roots">Root &middot; Judith 13 (head-crushing) &middot; <a href="ot-types.html">see Old Testament Types &sect;26</a></p>
     </div>
   </section>
 
@@ -676,7 +676,7 @@
         <span class="witness__en">To such an extent did she suffer and almost die with her suffering and dying Son... that we may rightly say she redeemed the human race together with Christ.</span>
         <span class="witness__cite">Pope Benedict XV &middot; <em>Inter Sodalicia</em> &middot; AAS 10 (1918) 181 &middot; <a href="anthology.html#s45">see Anthology &sect;45</a></span>
       </span>
-      <p class="title-card__roots">Root &middot; Luke 2:35 (Simeon&rsquo;s sword) &middot; John 19:25 &middot; <a href="nt-texts.html">see NT Texts</a></p>
+      <p class="title-card__roots">Root &middot; Luke 2:35 (Simeon&rsquo;s sword) &middot; John 19:25 &middot; <a href="nt-texts.html">see New Testament Texts</a></p>
     </div>
 
     <div class="title-card">
@@ -949,26 +949,51 @@
     var label = chip.querySelector(".chant-chip__label");
 
     var ACCEPTABLE = ["la", "it", "es", "pt"]; // ranked
+    var LANG_NAMES = {
+      la: "Latin",
+      it: "Italian",
+      es: "Spanish",
+      pt: "Portuguese"
+    };
     var titleCards = Array.prototype.slice.call(document.querySelectorAll(".title-card"));
     var current = 0;
     var state = "idle"; // idle | playing | paused
     var chosenVoice = null;
+    var chosenLangPrefix = null;
 
     function pickVoice() {
       var voices = window.speechSynthesis.getVoices() || [];
       for (var i = 0; i < ACCEPTABLE.length; i++) {
         var prefix = ACCEPTABLE[i];
         var v = voices.find(function (vv) { return (vv.lang || "").toLowerCase().indexOf(prefix) === 0; });
-        if (v) return v;
+        if (v) {
+          chosenLangPrefix = prefix;
+          return v;
+        }
       }
+      chosenLangPrefix = null;
       return null;
+    }
+
+    /* Compose the substitution chain shown in the chip tooltip. The litany
+       is in Liturgical Latin; if no Latin voice is present we walk down to
+       Italian, then Iberian. A reader hovering the chip can see exactly
+       which approximation is being used and why. */
+    function describeVoice(voice, prefix) {
+      var spoken = LANG_NAMES[prefix] || (voice.lang || "");
+      if (prefix === "la") {
+        return "Chanting the Litany in Liturgical Latin (" + voice.name + ").";
+      }
+      return "Chanting the Litany. Latin → " + spoken +
+             " voice (" + voice.name +
+             "); the closest phoneme approximation available on this device.";
     }
 
     function refreshVoice() {
       chosenVoice = pickVoice();
       if (chosenVoice) {
         chip.hidden = false;
-        chip.title = "Chant the Litany aloud (" + chosenVoice.name + ", " + chosenVoice.lang + ")";
+        chip.title = describeVoice(chosenVoice, chosenLangPrefix);
       } else {
         // Stay hidden. No acceptable Latin/Italian/Iberian voice on this device.
         chip.hidden = true;

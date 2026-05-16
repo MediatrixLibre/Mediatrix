@@ -89,8 +89,13 @@ html[data-mode="vigil"] {
   --m-gold:        var(--gold-night-rule);  /* decorative rule-gold dimmed */
   --m-gold-text:   var(--gold-night);       /* tracked-cap text-gold luminous */
   --m-navy:        var(--cream-night);
-  --m-blue:        #7BA7E8;
+  --m-blue:        #5C8FD4;  /* night-mode link blue, one stop down from day for amber-rule register */
   --rule-hairline: 1px solid rgba(166, 128, 61, 0.32);
+  /* Re-key the focus ring to the dimmer rule-gold so the candlelight register
+     holds. In day mode the ring sits in luminous text-gold (--m-gold-text);
+     in vigil that same token is the bright tracked-cap gold and reads
+     fluorescent. Anchor the night ring to the decorative rule-gold instead. */
+  --focus-ring:    0 0 0 2px var(--gold-night-rule), 0 0 0 4px rgba(166, 128, 61, 0.22);
   /* Zero out the day-mode 5%-blue wash; the page bg already carries the
      liturgical cast and the wash would add a sheen that breaks the
      candlelight register. */
@@ -846,6 +851,14 @@ table.ref tr:hover td { background: var(--wash, transparent); }
 .history-chip:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: 2px; }
 .history-chip__star { width: 0.85em; height: 0.85em; color: var(--m-gold); }
 .history-chip:hover .history-chip__star { color: var(--m-navy); }
+/* Spacing parity. The Luminous-set chip sits inside <summary> and inherits a
+   slightly tighter baseline from the <details> layout context. The Joyful-set
+   chip sits in flow as a direct sibling of .mystery-set__intro and would
+   otherwise pick up the full var(--rhythm) top margin, throwing the two
+   chips out of alignment when read side by side. Tighten the in-flow chip to
+   match the in-summary chip's effective gap. */
+.mystery-set > .history-chip,
+.mystery-set__intro + .history-chip { margin-top: var(--rhythm-half); }
 
 .popover-card {
   margin: auto;
@@ -924,6 +937,20 @@ table.ref tr:hover td { background: var(--wash, transparent); }
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--warm-grey-4); line-height: 1.6;
 }
+
+/* Inline translation gloss. Appears immediately after Greek or Latin where
+   the translation is not obvious to a non-specialist reader. Set in the
+   warm-grey ink (one step down from body text) at 0.94em so it reads as a
+   parenthetical aside, not a body-text claim. No italic — the glossed
+   phrase already carries italic; the gloss is the plain register that
+   surrounds it. */
+.warm-gloss {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: 0.94em;
+  color: var(--warm-grey-4);
+}
+
 @media print { .history-chip, .popover-card { display: none !important; } }
 
 /* ========================== Print ========================= */
@@ -1051,8 +1078,12 @@ table.ref tr:hover td { background: var(--wash, transparent); }
   a[href^="http"]::after,
   a[href*=".html"]::after { content: " (" attr(href) ")"; font-size: 0.74em; color: #555; }
 
-  /* Suppress the URL print for in-page anchors (#s17 etc.) and
-     short fragments — they're not useful on paper. */
+  /* Suppress the URL print for in-page anchors (#s17 etc.), bare
+     in-site page links (rosary.html), and in-site links with a
+     fragment (rosary.html#luminous-set). All three are navigational
+     artifacts that add noise on paper without aiding citation, since
+     the printed page already shows the linked text in context. */
   a[href^="#"]::after,
-  a[href$=".html"]::after { content: ""; }
+  a[href$=".html"]::after,
+  a[href*=".html#"]::after { content: ""; }
 }
