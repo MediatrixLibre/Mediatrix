@@ -28,8 +28,8 @@
         <meta name="twitter:description" content="Client-side fuzzy search across the entire Marian corpus." />
         <meta name="twitter:image" content="https://stella-maris.pages.dev/og.png" />
 
-        <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/cinzel-v26-060f4e56.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/sourceserif4-v14-0bbe31e2.woff2" />
+        <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/cinzel-v26-30d2fd52.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/sourceserif4-v14-673d4d89.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/sourcesans3-v19-e0c1680e.woff2" />
 
         <script type="application/ld+json">
@@ -84,7 +84,7 @@
   .result__snippet mark { background: rgba(201,151,0,0.18); color: var(--m-navy); padding: 0 2px; }
   .empty { text-align: center; font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); padding: var(--rhythm-x2) 0; }
   .hints { max-width: var(--measure-prose); margin: var(--rhythm-x2) auto; padding: var(--rhythm) var(--rhythm-x2); background: var(--cream); border-left: 2px solid var(--m-gold); }
-  .hints h4 { margin-top: 0; }
+  .hints h2 { margin-top: 0; }
   .hints p { font-family: var(--font-serif); font-size: 0.96rem; line-height: 1.55; color: var(--m-navy); margin: var(--rhythm-half) 0; }
   .hints .tag {
     display: inline-block; font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
@@ -117,12 +117,12 @@
   </p>
 
   <div class="search-box">
-    <input id="q" type="search" placeholder="Try &lsquo;Mediatrix&rsquo;, &lsquo;Kecharitomene&rsquo;, &lsquo;cooperata est&rsquo;, &lsquo;Cana&rsquo;..." autofocus />
+    <input id="q" type="search" aria-label="Search the library" placeholder="Try &lsquo;Mediatrix&rsquo;, &lsquo;Kecharitomene&rsquo;, &lsquo;cooperata est&rsquo;, &lsquo;Cana&rsquo;..." autofocus />
     <span class="kbd">esc</span>
   </div>
 
   <div class="hints" id="hints">
-    <h4>Suggested searches</h4>
+    <h2>Suggested searches</h2>
     <p style="margin-bottom: var(--rhythm-half);">Quick jumps:</p>
     <span class="tag" data-q="Mediatrix">Mediatrix</span>
     <span class="tag" data-q="Co-Redemptrix">Co-Redemptrix</span>
@@ -334,9 +334,11 @@
     return s;
   }
 
+  function esc(s) { var d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+
   function renderNoResults(q) {
     return '<div class="empty">'
-      + '<p style="margin-bottom: var(--rhythm);">No matches for &ldquo;<strong>' + q + '</strong>&rdquo;.</p>'
+      + '<p style="margin-bottom: var(--rhythm);">No matches for &ldquo;<strong>' + esc(q) + '</strong>&rdquo;.</p>'
       + '<p style="font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); font-size: 0.94rem; max-width: 36rem; margin: 0 auto;">'
       + 'Try a Latin term (<em>cooperata</em>, <em>fiat</em>, <em>Mediatrix</em>), a Greek root in transliteration '
       + '(<em>kecharitomene</em>, <em>theotokos</em>, <em>mesitis</em>), a saint&rsquo;s last name '
@@ -365,7 +367,7 @@
       resultsEl.innerHTML = renderNoResults(q);
       return;
     }
-    var html = '<p style="font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--warm-grey-4); margin: 0 0 var(--rhythm);">' + ranked.length + ' result' + (ranked.length === 1 ? '' : 's') + ' for &ldquo;' + q + '&rdquo;</p>';
+    var html = '<p style="font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--warm-grey-4); margin: 0 0 var(--rhythm);">' + ranked.length + ' result' + (ranked.length === 1 ? '' : 's') + ' for &ldquo;' + esc(q) + '&rdquo;</p>';
     for (var i = 0; i < ranked.length; i++) {
       var it = ranked[i].it;
       var snip = snippet(it, q);
