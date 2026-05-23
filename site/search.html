@@ -30,6 +30,7 @@
 
         <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/cinzel-v26-060f4e56.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/sourceserif4-v14-0bbe31e2.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/sourcesans3-v19-e0c1680e.woff2" />
 
         <script type="application/ld+json">
 {
@@ -112,7 +113,7 @@
   <p class="kicker" style="text-align:center;"><span class="dot"></span>Quaere et invenies</p>
   <h1 style="text-align:center; max-width: none;">Search</h1>
   <p style="text-align:center; font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); margin: 0 auto var(--rhythm-x2); max-width: 38rem;">
-    Search the twelve pages of the library across prose, Latin, Greek, and Hebrew.
+    Search the sixteen pages of the library across prose, Latin, Greek, and Hebrew.
   </p>
 
   <div class="search-box">
@@ -154,7 +155,7 @@
 </main>
 
 <footer class="colophon">
-  <span class="small-caps">12 pages indexed</span>
+  <span class="small-caps">16 pages indexed</span>
   <span class="colophon__nav">
     <a href="index.html">Home</a><span>&middot;</span>
     <a href="library.html">Library</a><span>&middot;</span>
@@ -378,7 +379,11 @@
     resultsEl.innerHTML = html;
   }
 
-  input.addEventListener("input", function () { render(input.value); });
+  var _debounce;
+  input.addEventListener("input", function () {
+    clearTimeout(_debounce);
+    _debounce = setTimeout(function () { render(input.value); }, 120);
+  });
   input.addEventListener("keydown", function (e) {
     if (e.key === "Escape") { input.value = ""; render(""); }
   });

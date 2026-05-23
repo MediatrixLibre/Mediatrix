@@ -36,6 +36,7 @@ _An editorial Marian study library. Fifteen pages derived from a thirteen-file m
 | `iconography.html` | `Marian-Iconography-Reference.md` | blue | ⛔ pending |
 | `search.html` | (client-side) | blue | ⛔ pending |
 | `about.html` | (methodology) | blue | ⛔ pending |
+| `devotions.html` | (devotional practices) | blue | ⛔ pending |
 
 ---
 
@@ -83,7 +84,7 @@ The pipeline is pure: same markdown in → same JSON out. Python stdlib only, no
 - No build step inside `site/`. Hand-set HTML, full stop.
 - No framework, no transpiler, no bundler.
 - No external fetches; fonts and data are local.
-- No login, no analytics, no share buttons.
+- No login, no share buttons. Analytics permitted only if cookie-free, banner-free, and beacon-only (Cloudflare Web Analytics auto-injected by CF Pages is fine; cookie-bearing trackers and consent prompts are not).
 - No audio, no decorative imagery, no AI-generated illustration.
 - No saint detail pages; the anthology is the index, no further drill-down.
 - No per-mystery detail page; the rosary is one scroll.
