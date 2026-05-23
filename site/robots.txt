@@ -1,3 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /.env
+
 Sitemap: https://stella-maris.pages.dev/sitemap.xml

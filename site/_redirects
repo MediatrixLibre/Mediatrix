@@ -1,0 +1,23 @@
+# Block common vulnerability scanner paths.
+# CF Pages _redirects run before the static file lookup, so these
+# short-circuit the request before it ever hits the 404 page.
+# Returns 404 directly for paths that no legitimate visitor requests.
+
+/wp-admin/*        /404.html 404
+/wp-login*         /404.html 404
+/wp-content/*      /404.html 404
+/wp-includes/*     /404.html 404
+/xmlrpc.php        /404.html 404
+/wp-cron.php       /404.html 404
+/.env              /404.html 404
+/.git/*            /404.html 404
+/.well-known/security.txt  /404.html 404
+/admin/*           /404.html 404
+/administrator/*   /404.html 404
+/phpmyadmin/*      /404.html 404
+/config.php        /404.html 404
+/backup/*          /404.html 404
+/.htaccess         /404.html 404
+/.htpasswd         /404.html 404
+/cgi-bin/*         /404.html 404
+/api/*             /404.html 404
