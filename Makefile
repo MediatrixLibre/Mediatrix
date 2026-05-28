@@ -29,8 +29,8 @@ check: ## quick health (page count, dead anchors, raw hex outside :root)
 	@grep -l 'href="#"' $(ROOT)/*.html 2>/dev/null || echo "  none"
 	@echo "--- bare document.* outside <script> (should be empty) ---"
 	@grep -n '^document\.' $(ROOT)/*.html 2>/dev/null || echo "  none"
-	@echo "--- raw hex outside :root (should be empty) ---"
-	@grep -EHn '#[0-9A-Fa-f]{6}' $(ROOT)/*.html 2>/dev/null | grep -v 'favicon\|svg' || echo "  none"
+	@echo "--- raw hex outside :root (should be empty; theme-color is exempt) ---"
+	@grep -EHn '#[0-9A-Fa-f]{6}' $(ROOT)/*.html 2>/dev/null | grep -v 'favicon\|svg\|theme-color' || echo "  none"
 	@echo "--- font count (expected 27) ---"
 	@ls $(ROOT)/fonts/*.woff2 2>/dev/null | wc -l | awk '{print "  woff2: " $$1}'
 
