@@ -9,10 +9,15 @@ export
 
 .DEFAULT_GOAL := help
 
-.PHONY: help serve stop check clean build-data verify-data clean-data validate-refs
+.PHONY: help serve stop check seo clean build-data verify-data clean-data validate-refs
 
 help: ## list available targets
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+
+seo: ## regenerate SEO blocks, sitemap, and RSS feed (run after editing pages)
+	@python3 tools/inject-seo.py
+	@python3 tools/regen-sitemap.py
+	@python3 tools/gen-feed.py
 
 serve: ## start local site at http://localhost:$(PORT)
 	@lsof -ti tcp:$(PORT) >/dev/null 2>&1 && echo "Already serving on :$(PORT)" || \

@@ -51,6 +51,11 @@
   Cache-Control: public, max-age=86400
   CDN-Cache-Control: public, max-age=86400
 
+/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+  Cache-Control: public, max-age=3600, must-revalidate
+  CDN-Cache-Control: public, max-age=86400
+
 /robots.txt
   Cache-Control: public, max-age=86400
   CDN-Cache-Control: public, max-age=86400

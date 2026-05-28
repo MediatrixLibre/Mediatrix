@@ -37,7 +37,7 @@ DATE_PUBLISHED = "2026-05-15"
 PAGES = {
     "index.html": {
         "title": "Mediatrix: a Marian study library",
-        "description": "Fifteen hand-designed pages on Mary as Mediatrix and Co-Redemptrix, drawn from patristic, medieval, and magisterial witness.",
+        "description": "Sixteen hand-designed pages on Mary as Mediatrix and Co-Redemptrix, drawn from patristic, medieval, and magisterial witness.",
         "type": "website",
     },
     "library.html": {
@@ -110,6 +110,32 @@ PAGES = {
         "description": "How quotations are tagged, sourced, and translated in the Mediatrix study library.",
         "type": "website",
     },
+    "devotions.html": {
+        "title": "Marian devotional practices, in liturgical order",
+        "description": "Consecration, scapular, medal, First Saturdays, Rosary, Angelus: eight Marian devotions with origin, form, and conditions.",
+        "type": "article",
+    },
+}
+
+# Short, navigable names for the BreadcrumbList trail (the full SEO titles
+# are too long to render well as a breadcrumb). index.html is the root and
+# carries no breadcrumb of its own.
+BREADCRUMB_NAMES = {
+    "library.html": "The Library",
+    "anthology.html": "Anthology",
+    "rosary.html": "Rosary Companion",
+    "litany.html": "Litany of Loreto",
+    "office.html": "Office of Readings",
+    "akathist.html": "Akathist Hymn",
+    "defense.html": "Protestant Objections",
+    "ot-types.html": "Old Testament Types",
+    "nt-texts.html": "New Testament Texts",
+    "feasts.html": "Marian Feasts",
+    "apparitions.html": "Apparitions",
+    "iconography.html": "Iconography",
+    "search.html": "Search",
+    "about.html": "About",
+    "devotions.html": "Devotions",
 }
 
 # Critical fonts to preload. Picked the two faces that render first-fold
@@ -177,6 +203,25 @@ def build_block(page: str, meta: dict) -> str:
 
     json_ld = json_ld_index if page == "index.html" else json_ld_article
 
+    # BreadcrumbList: Mediatrix (root) -> this page. The site is flat, so the
+    # trail is two levels. index.html is the root and gets no breadcrumb.
+    breadcrumb_json = ""
+    crumb = BREADCRUMB_NAMES.get(page)
+    if crumb:
+        breadcrumb_json = dedent(f"""
+            <script type="application/ld+json">
+            {{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {{ "@type": "ListItem", "position": 1, "name": "{SITE_NAME}", "item": "{ORIGIN}/" }},
+                {{ "@type": "ListItem", "position": 2, "name": "{crumb}", "item": "{canonical}" }}
+              ]
+            }}
+            </script>
+        """).strip()
+        json_ld = json_ld + "\n" + breadcrumb_json
+
     apple_icons = dedent("""
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
@@ -186,6 +231,7 @@ def build_block(page: str, meta: dict) -> str:
     return dedent(f"""
         {MARK_START}
         <link rel="canonical" href="{canonical}" />
+        <link rel="alternate" type="application/rss+xml" title="Mediatrix — recent revisions" href="{ORIGIN}/feed.xml" />
         <meta name="description" content="{desc}" />
 
         {apple_icons}
