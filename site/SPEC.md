@@ -21,22 +21,22 @@ _An editorial Marian study library. Fifteen pages derived from a thirteen-file m
 
 | Page | Source | Vestment | State |
 |---|---|---|---|
-| `index.html` | (none — hero) | blue | ⛔ pending |
-| `library.html` | `Mediatrix-Coredemptrix-Library.md` | blue | ⛔ pending |
-| `ot-types.html` | `OT-Types-of-Our-Lady-Exegesis.md` | blue | ⛔ pending |
-| `nt-texts.html` | `NT-Load-Bearing-Texts.md` | blue | ⛔ pending |
-| `anthology.html` | `Marian-Concise-Anthology.md` | blue | ⛔ pending |
-| `rosary.html` | `Rosary-Companion.md` | white | ⛔ pending |
-| `defense.html` | `Protestant-Objections-Defense.md` | red | ⛔ pending |
-| `feasts.html` | `Marian-Feasts-Liturgical-Calendar.md` | blue | ⛔ pending |
-| `apparitions.html` | `Marian-Apparitions-Reference.md` | blue | ⛔ pending |
-| `litany.html` | `Litany-of-Loreto-Annotated.md` | blue | ⛔ pending |
-| `office.html` | `Marian-Office-of-Readings-Sourcebook.md` | blue | ⛔ pending |
-| `akathist.html` | `Akathist-Hymn-Translated-Annotated.md` | blue | ⛔ pending |
-| `iconography.html` | `Marian-Iconography-Reference.md` | blue | ⛔ pending |
-| `search.html` | (client-side) | blue | ⛔ pending |
-| `about.html` | (methodology) | blue | ⛔ pending |
-| `devotions.html` | (devotional practices) | blue | ⛔ pending |
+| `index.html` | (none — hero) | blue | ✅ shipped |
+| `library.html` | `Mediatrix-Coredemptrix-Library.md` | blue | ✅ shipped |
+| `ot-types.html` | `OT-Types-of-Our-Lady-Exegesis.md` | blue | ✅ shipped |
+| `nt-texts.html` | `NT-Load-Bearing-Texts.md` | blue | ✅ shipped |
+| `anthology.html` | `Marian-Concise-Anthology.md` | blue | ✅ shipped |
+| `rosary.html` | `Rosary-Companion.md` | white | ✅ shipped |
+| `defense.html` | `Protestant-Objections-Defense.md` | red | ✅ shipped |
+| `feasts.html` | `Marian-Feasts-Liturgical-Calendar.md` | blue | ✅ shipped |
+| `apparitions.html` | `Marian-Apparitions-Reference.md` | blue | ✅ shipped |
+| `litany.html` | `Litany-of-Loreto-Annotated.md` | blue | ✅ shipped |
+| `office.html` | `Marian-Office-of-Readings-Sourcebook.md` | blue | ✅ shipped |
+| `akathist.html` | `Akathist-Hymn-Translated-Annotated.md` | blue | ✅ shipped |
+| `iconography.html` | `Marian-Iconography-Reference.md` | blue | ✅ shipped |
+| `search.html` | (client-side) | blue | ✅ shipped |
+| `about.html` | (methodology) | blue | ✅ shipped |
+| `devotions.html` | (devotional practices) | blue | ✅ shipped |
 
 ---
 
