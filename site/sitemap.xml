@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemaps-image/1.1">
   <url>
     <loc>https://stella-maris.pages.dev/</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/about.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/akathist.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/anthology.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -35,7 +35,23 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/apparitions.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
+    <image:image>
+      <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
+      <image:title>Mediatrix: a Marian study library</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://stella-maris.pages.dev/catena.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <image:image>
+      <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
+      <image:title>Mediatrix: a Marian study library</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://stella-maris.pages.dev/concordance.html</loc>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -43,7 +59,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/defense.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -51,7 +67,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/devotions.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -59,7 +75,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/feasts.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -75,7 +91,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/iconography.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -83,7 +99,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/library.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -91,7 +107,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/litany.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -99,7 +115,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/nt-texts.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -107,7 +123,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/office.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -115,7 +131,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/ot-types.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -123,7 +139,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/rosary.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -131,7 +147,7 @@
   </url>
   <url>
     <loc>https://stella-maris.pages.dev/search.html</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>

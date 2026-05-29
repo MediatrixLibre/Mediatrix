@@ -117,6 +117,16 @@ PAGES = {
         "description": "Consecration, scapular, medal, First Saturdays, Rosary, Angelus: eight Marian devotions with origin, form, and conditions.",
         "type": "article",
     },
+    "catena.html": {
+        "title": "The Threads of Witness",
+        "description": "The fifty-six anthology witnesses re-gathered by doctrinal pole — Foundational, Co-Redemptrix, Mediatrix — and followed chronologically down the centuries.",
+        "type": "article",
+    },
+    "concordance.html": {
+        "title": "Concordance of Witnesses",
+        "description": "A chronological concordance of the anthology's fifty-six Marian witnesses, with doctrinal pole, evidential provenance, and Wikidata/VIAF authority links.",
+        "type": "article",
+    },
 }
 
 # Short, navigable names for the BreadcrumbList trail (the full SEO titles
@@ -138,6 +148,8 @@ BREADCRUMB_NAMES = {
     "search.html": "Search",
     "about.html": "About",
     "devotions.html": "Devotions",
+    "catena.html": "Threads of Witness",
+    "concordance.html": "Concordance",
 }
 
 # Critical fonts to preload. Picked the two faces that render first-fold

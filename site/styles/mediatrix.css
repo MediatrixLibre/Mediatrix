@@ -1003,6 +1003,26 @@ table.ref tr:hover td { background: var(--wash, transparent); }
 .original-fold__body .greek,
 .original-fold__body .hebrew,
 .original-fold__body .latin { font-style: italic; }
+/* ===== Apparatus pages: catena (threads of witness) + concordance =====
+   Index pages derived from the anthology. Token-only so they inherit the
+   vestment washes + vigil mode automatically; no raw colour. */
+.page-head { margin-bottom: var(--rhythm-x3); }
+.lede { font-size: 1.1rem; max-width: var(--measure-prose); }
+.thread { margin: var(--rhythm-x3) 0; }
+.thread h2 { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+.thread-count { font-family: var(--font-sans); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm-grey-3); }
+.thread-gloss { font-style: italic; color: var(--warm-grey-4); max-width: var(--measure-prose); margin: 0 0 var(--rhythm); }
+.thread-list { list-style: none; padding: 0; margin: 0; }
+.thread-list li { display: flex; justify-content: space-between; align-items: baseline; gap: var(--rhythm); flex-wrap: wrap; padding: 0.35rem 0; border-bottom: var(--rule-hairline); }
+.thread-meta, .entry-dates { font-family: var(--font-sans); font-size: 0.78rem; color: var(--warm-grey-3); }
+.concordance-summary { font-family: var(--font-sans); font-size: 0.8rem; color: var(--warm-grey-3); margin-top: var(--rhythm-half); }
+.concordance { margin: var(--rhythm-x2) 0; }
+.concordance .era { font-family: var(--font-display); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--m-gold-text); margin: var(--rhythm-x2) 0 var(--rhythm-half); padding-bottom: 0.2rem; border-bottom: var(--rule-hairline); }
+.concordance .entry { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; margin: 0; padding: 0.3rem 0; }
+.entry-name { font-weight: 600; }
+.authority { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.04em; }
+.apparatus-nav { margin-top: var(--rhythm-x3); padding-top: var(--rhythm); border-top: var(--rule-hairline); font-family: var(--font-sans); font-size: 0.88rem; }
+
 /* Honour a reader's reduced-motion preference: neutralise the few hover
    transitions (links, cards, chips) and any incidental animation/scroll. */
 @media (prefers-reduced-motion: reduce) {
