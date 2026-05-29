@@ -225,12 +225,22 @@ _PROVENANCE_TIERS = {
 
 
 def parse_provenance(line: str) -> str | None:
-    """Detect provenance tier in the canonical markdown style."""
+    """Detect provenance tier in the canonical markdown style.
+
+    A line may name more than one tier, e.g. "VERBATIM (Hymns) / TRADITIONAL
+    (Oratio)". Return the tier appearing EARLIEST in the line — the corpus
+    convention is to write the primary attribution first. Selecting by
+    position (rather than by iterating the _PROVENANCE_TIERS set, whose order
+    is hash-seed-randomised across processes) makes the build reproducible.
+    """
     up = line.upper()
+    best_pos: int | None = None
+    best_tier: str | None = None
     for tier in _PROVENANCE_TIERS:
-        if tier in up:
-            return tier.lower()
-    return None
+        pos = up.find(tier)
+        if pos != -1 and (best_pos is None or pos < best_pos):
+            best_pos, best_tier = pos, tier
+    return best_tier.lower() if best_tier else None
 
 
 _POLE_TOKENS = {"M", "CR", "B", "F"}

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source_file": "Marian-Concise-Anthology.md",
   "source_mtime": "2026-05-15T12:50:43",
-  "generated_at": "2026-05-15T12:50:52",
+  "generated_at": "2026-05-29T04:01:14",
   "title": "The Marian Concise Anthology, One Quote per Saint, with Greek and Latin",
   "saints": [
     {
@@ -86,7 +86,7 @@
       "original": "",
       "english": "(Hymns on the Nativity 16.10, Syriac original in CSCO 186): \"Just as bodies were formed from Adam without the agency of a woman, so the body of the Second Adam was formed from a virgin without the agency of a man... O only woman whose praise is great in heaven and on earth! Through thee the world has been raised; through thee the angels rejoice.\" English (Oratio ad Sanctissimam Dei Matrem, traditionally attributed): \"After the Mediator, thou art the Mediatress of the whole world.",
       "source": "Hymns on the Nativity 16 (verbatim); Oratio (traditional",
-      "provenance": "traditional",
+      "provenance": "verbatim",
       "pole": "B"
     },
     {
@@ -558,7 +558,7 @@
       "language": "English",
       "era_title": "Part VIII — Modern Saints (19th-20th c.)",
       "era_slug": "modern-saints",
-      "original_language": "",
+      "original_language": "english",
       "original": "When a woman gives birth, she does so with much pain; Mary in giving birth at Bethlehem had no pain; she had her pain at Calvary, when the Mystical Body of her Son was born.",
       "english": "",
       "source": "The World's First Love, ch. 12.",
@@ -572,7 +572,7 @@
       "language": "English",
       "era_title": "Part VIII — Modern Saints (19th-20th c.)",
       "era_slug": "modern-saints",
-      "original_language": "",
+      "original_language": "english",
       "original": "Mary, Mother of Jesus, please be a mother to me now.",
       "english": "",
       "source": "Mother Teresa: In My Own Words and conferences.",
@@ -782,7 +782,7 @@
       "language": "English, Cardinal, \"Doctor of Marian Theology\" (informal)",
       "era_title": "Part XI — Supplementary Voices (added 2026-05-15)",
       "era_slug": null,
-      "original_language": "",
+      "original_language": "english",
       "original": "",
       "english": "(Letter to Pusey on Occasion of His Eirenicon, 1866; the famous Marian passage): \"Mary is the daughter of Sion exalted, the lady to whom all the prophets minister, who is, after the Eternal Word, the most exalted of beings.",
       "source": "Letter to Dr. Pusey on Occasion of His Eirenicon",
