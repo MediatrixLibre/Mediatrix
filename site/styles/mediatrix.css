@@ -1003,6 +1003,19 @@ table.ref tr:hover td { background: var(--wash, transparent); }
 .original-fold__body .greek,
 .original-fold__body .hebrew,
 .original-fold__body .latin { font-style: italic; }
+/* Honour a reader's reduced-motion preference: neutralise the few hover
+   transitions (links, cards, chips) and any incidental animation/scroll. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Print: always show the original (no accordion in print) */
 @media print {
   .original-fold { border-top: none; padding-top: 0; }
