@@ -9,7 +9,7 @@ export
 
 .DEFAULT_GOAL := help
 
-.PHONY: help serve stop check seo clean build-data verify-data clean-data validate-refs validate-quotes
+.PHONY: help serve stop check seo clean build-data verify-data clean-data validate-refs validate-quotes verify-data-sync
 
 help: ## list available targets
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -59,3 +59,6 @@ validate-refs: ## cross-page validator: orphan saint references vs anthology
 
 validate-quotes: ## quote integrity gate: source + provenance + renderability (strict)
 	@python3 tools/validate-quotes.py --strict
+
+verify-data-sync: ## reproducible-build + committed-data-in-sync gate (needs MARIOLOGY_CORPUS)
+	@python3 tools/verify-data-sync.py

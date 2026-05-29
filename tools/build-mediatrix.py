@@ -60,7 +60,9 @@ SOURCE_DIR = Path(
     os.environ.get("MARIOLOGY_CORPUS")
     or (REPO / "corpus" / "mariology")
 ).expanduser()
-DATA_DIR = REPO / "site" / "data"
+# Output dir. Overridable via MEDIATRIX_DATA_OUT so the reproducibility /
+# data-in-sync gate can build into a temp dir without touching site/data/.
+DATA_DIR = Path(os.environ.get("MEDIATRIX_DATA_OUT") or (REPO / "site" / "data")).expanduser()
 SCHEMA_VERSION = 1
 
 
@@ -1032,6 +1034,14 @@ def write_json(name: str, data: dict) -> Path:
     return out
 
 
+def _disp(p: Path) -> str:
+    """Display path relative to REPO when possible (output may be a temp dir)."""
+    try:
+        return str(p.relative_to(REPO))
+    except ValueError:
+        return str(p)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("targets", nargs="*", help="Extractor names; omit to build all.")
@@ -1079,7 +1089,7 @@ def main() -> int:
             out = write_json(name, data)
             counts = {k: v for k, v in data.items() if k.endswith("_count")}
             count_str = " · ".join(f"{k}={v}" for k, v in counts.items())
-            print(f"OK   {count_str}   →  {out.relative_to(REPO)}")
+            print(f"OK   {count_str}   →  {_disp(out)}")
         except Exception as e:  # noqa: BLE001
             print(f"FAIL: {e}")
             raise
@@ -1089,7 +1099,7 @@ def main() -> int:
         print("  building search-index.json ...", end=" ", flush=True)
         idx = build_search_index(extractions)
         out = write_json("search-index", idx)
-        print(f"OK   entries={idx['entry_count']}   →  {out.relative_to(REPO)}")
+        print(f"OK   entries={idx['entry_count']}   →  {_disp(out)}")
     else:
         # if partial build, reload existing extractions so the index is consistent
         all_data: dict[str, dict] = {}
@@ -1100,10 +1110,10 @@ def main() -> int:
         print("  rebuilding search-index.json ...", end=" ", flush=True)
         idx = build_search_index(all_data)
         out = write_json("search-index", idx)
-        print(f"OK   entries={idx['entry_count']}   →  {out.relative_to(REPO)}")
+        print(f"OK   entries={idx['entry_count']}   →  {_disp(out)}")
 
     print()
-    print(f"  data layer: {DATA_DIR.relative_to(REPO)}/  ({len(targets)} extractors)")
+    print(f"  data layer: {_disp(DATA_DIR)}/  ({len(targets)} extractors)")
     return 0
 
 
