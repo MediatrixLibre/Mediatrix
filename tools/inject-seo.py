@@ -145,6 +145,25 @@ CRITICAL_FONTS = [
     "fonts/sourceserif4-v14-0bbe31e2.woff2",
 ]
 
+# Speculation Rules: prefetch same-origin links on hover/pointerdown so
+# in-session navigation is near-instant. prefetch (not prerender) keeps the
+# CF Web Analytics beacon from firing for pages the reader never actually
+# visits, and runs no page scripts speculatively. Chromium honours it;
+# Safari/Firefox ignore the unknown script type with no ill effect. Allowed
+# under the existing CSP script-src 'unsafe-inline'.
+SPECULATION_RULES = dedent("""
+    <script type="speculationrules">
+    {
+      "prefetch": [
+        {
+          "where": { "href_matches": "/*" },
+          "eagerness": "moderate"
+        }
+      ]
+    }
+    </script>
+""").strip()
+
 MARK_START = "<!-- SEO -->"
 MARK_END = "<!-- /SEO -->"
 
@@ -255,6 +274,8 @@ def build_block(page: str, meta: dict) -> str:
         {preload_links}
 
         {json_ld}
+
+        {SPECULATION_RULES}
         {MARK_END}
     """).strip()
 
