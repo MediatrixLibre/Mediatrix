@@ -1,0 +1,2564 @@
+{
+  "generated_by": "tools/build-authority-map.py",
+  "source": "wikidata + viaf(P214)",
+  "record_count": 56,
+  "confidence_summary": {
+    "high": 50,
+    "medium": 6,
+    "low": 0,
+    "none": 0
+  },
+  "verified": true,
+  "authorities": [
+    {
+      "num": 1,
+      "name": "St. Justin Martyr",
+      "query": "Justin Martyr",
+      "qid": "Q185117",
+      "viaf": "88878069",
+      "wd_label": "Justin Martyr",
+      "wd_description": "2nd century CE Christian apologist and martyr",
+      "wd_birth": 100,
+      "wd_death": 165,
+      "anthology_dates": "c. 100 - c. 165",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 120,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q129183850",
+          "label": "Justin Martyr and the Authorship of the Earliest Anti-Heretical Treatise",
+          "description": "scholarly article",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q107587635",
+          "label": "Justin Martyr and Kwame Bediako: reflections on the cultural context of Christianity",
+          "description": "scholarly article",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q57601978",
+          "label": "Justin Martyr and the Restoration of Philosophy",
+          "description": "",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "name": "St. Irenaeus of Lyons",
+      "query": "Irenaeus of Lyons",
+      "qid": "Q182123",
+      "viaf": "70051641",
+      "wd_label": "Irenaeus",
+      "wd_description": "2nd-century Greek bishop and Doctor of the Church",
+      "wd_birth": 130,
+      "wd_death": 202,
+      "anthology_dates": "c. 130 - c. 202",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 64,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q3154702",
+          "label": "Irenaeus of Tyre",
+          "description": "comes (5th century)",
+          "birth": null,
+          "death": null,
+          "score": 38
+        },
+        {
+          "qid": "Q106712400",
+          "label": "Irenaeus",
+          "description": "late 2rd century imperial slave",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q743268",
+          "label": "Irenaeus",
+          "description": "Serbian Orthodox bishop",
+          "birth": 1947,
+          "death": null,
+          "score": 22
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "name": "Tertullian of Carthage",
+      "query": "Tertullian of Carthage",
+      "qid": "Q174929",
+      "viaf": "100226395",
+      "wd_label": "Tertullian",
+      "wd_description": "Roman Christian theologian and writer (c. 155 – c. 220)",
+      "wd_birth": 150,
+      "wd_death": 220,
+      "anthology_dates": "c. 155 - c. 220",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 120,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q3984838",
+          "label": "Tertulliano",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q110404183",
+          "label": "Tertullianus 4 (Pauly-Wissowa)",
+          "description": "encyclopedic article in Paulys Realencyclopädie der classischen Altertumswissenschaft (RE)",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q110404184",
+          "label": "Tertullianus 3 (Pauly-Wissowa)",
+          "description": "encyclopedic article in Paulys Realencyclopädie der classischen Altertumswissenschaft (RE)",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "name": "Sub Tuum Praesidium — Greek, late 3rd century",
+      "query": "Sub Tuum Praesidium",
+      "qid": "Q1777215",
+      "viaf": null,
+      "wd_label": "Sub tuum praesidium",
+      "wd_description": "Christian hymn and prayer",
+      "wd_birth": null,
+      "wd_death": null,
+      "anthology_dates": "",
+      "is_human": false,
+      "is_work": true,
+      "score": 45,
+      "margin": 45,
+      "confidence": "medium",
+      "reasons": [
+        "is a work (type/description)"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q111988431",
+          "label": "Sub tuum praesidium",
+          "description": "composition by Pedro I of Brazil",
+          "birth": null,
+          "death": null,
+          "score": 0
+        },
+        {
+          "qid": "Q115246387",
+          "label": "Sub tuum praesidium",
+          "description": "composition by José Maurício Nunes Garcia",
+          "birth": null,
+          "death": null,
+          "score": 0
+        },
+        {
+          "qid": "Q105062786",
+          "label": "Sub Tuum Praesidium: the Theotokos in Christian life and worship before Ephesus",
+          "description": "scholarly article",
+          "birth": null,
+          "death": null,
+          "score": 0
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "name": "Origen of Alexandria",
+      "query": "Origen of Alexandria",
+      "qid": "Q170472",
+      "viaf": "95155322",
+      "wd_label": "Origen",
+      "wd_description": "Christian scholar, ascetic, and theologian (c. 185 – c. 253)",
+      "wd_birth": 185,
+      "wd_death": 254,
+      "anthology_dates": "c. 185 - c. 254",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 18,
+      "confidence": "medium",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q928551",
+          "label": "Origen the Pagan",
+          "description": "3rd century Alexandrian Platonist philosopher",
+          "birth": 200,
+          "death": 300,
+          "score": 84
+        },
+        {
+          "qid": "Q88542364",
+          "label": "Origen",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q134891421",
+          "label": "Origen",
+          "description": "",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "name": "St. Ephrem the Syrian",
+      "query": "Ephrem the Syrian",
+      "qid": "Q200608",
+      "viaf": "100177778",
+      "wd_label": "Ephrem the Syrian",
+      "wd_description": "Syriac saint, theologian and writer (c. 306 – 373)",
+      "wd_birth": 306,
+      "wd_death": 373,
+      "anthology_dates": "c. 306 - 373",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 102,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q4177452",
+          "label": "Ephrem",
+          "description": "",
+          "birth": 1966,
+          "death": null,
+          "score": 0
+        },
+        {
+          "qid": "Q4177448",
+          "label": "Ephrem",
+          "description": "",
+          "birth": 1941,
+          "death": null,
+          "score": 0
+        },
+        {
+          "qid": "Q107075965",
+          "label": "Ephrem",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "name": "St. Athanasius",
+      "query": "Athanasius",
+      "qid": "Q44024",
+      "viaf": "105155222",
+      "wd_label": "Athanasius of Alexandria",
+      "wd_description": "Pope of Alexandria from 328 to 373 (296–373)",
+      "wd_birth": 296,
+      "wd_death": 373,
+      "anthology_dates": "c. 296 - 373",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 67,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q3627862",
+          "label": "Athanasius",
+          "description": "Byzantine diplomat",
+          "birth": 401,
+          "death": 600,
+          "score": 35
+        },
+        {
+          "qid": "Q76738",
+          "label": "Athanasius Kircher",
+          "description": "German Jesuit scholar (1601 or 1602-1680)",
+          "birth": 1602,
+          "death": 1680,
+          "score": 8
+        },
+        {
+          "qid": "Q112524526",
+          "label": "Athanasius",
+          "description": "",
+          "birth": 1635,
+          "death": 1714,
+          "score": 8
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "name": "St. Cyril of Jerusalem",
+      "query": "Cyril of Jerusalem",
+      "qid": "Q298654",
+      "viaf": "2437490",
+      "wd_label": "Cyril of Jerusalem",
+      "wd_description": "Christian theologian, bishop, and saint (c. 313 – 386)",
+      "wd_birth": 313,
+      "wd_death": 386,
+      "anthology_dates": "c. 313 - 386",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 72,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q114108324",
+          "label": "Cyril Topfel",
+          "description": "particle physicist",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q34997882",
+          "label": "Cyril",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q8209",
+          "label": "Cyrillic script",
+          "description": "writing system developed in Bulgaria and used for various oriental Eurasian languages",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 9,
+      "name": "St. Gregory of Nazianzus",
+      "query": "Gregory of Nazianzus",
+      "qid": "Q44011",
+      "viaf": "108675755",
+      "wd_label": "Gregory of Nazianzus",
+      "wd_description": "Christian saint and theologian (c. 329 – 390)",
+      "wd_birth": 329,
+      "wd_death": 389,
+      "anthology_dates": "c. 329 - 390",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 26,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q935447",
+          "label": "Gregory of Nazianzus the Elder",
+          "description": "Bishop of Nazianzus",
+          "birth": 276,
+          "death": 374,
+          "score": 76
+        },
+        {
+          "qid": "Q108480893",
+          "label": "Gregory",
+          "description": "Roman Catholic bishop",
+          "birth": null,
+          "death": null,
+          "score": 44
+        },
+        {
+          "qid": "Q42827",
+          "label": "Gregory I",
+          "description": "64th Bishop of Rome, Head of the Roman Catholic Church from 590 to 604",
+          "birth": 540,
+          "death": 604,
+          "score": 22
+        }
+      ]
+    },
+    {
+      "num": 10,
+      "name": "St. John Chrysostom",
+      "query": "John Chrysostom",
+      "qid": "Q43706",
+      "viaf": "305214868",
+      "wd_label": "John Chrysostom",
+      "wd_description": "Church Father, Archbishop of Constantinople and Christian saint (c. 347–407)",
+      "wd_birth": 349,
+      "wd_death": 407,
+      "anthology_dates": "c. 347 - 407",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 120,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q2630714",
+          "label": "Ioann Zlatoust",
+          "description": "1906 Evstafi-class battleship",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q4202463",
+          "label": "John Chrysostom",
+          "description": "ship 1749",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q110942988",
+          "label": "John Chrysostom",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "name": "St. Cyril of Alexandria",
+      "query": "Cyril of Alexandria",
+      "qid": "Q44079",
+      "viaf": "51687951",
+      "wd_label": "Cyril of Alexandria",
+      "wd_description": "Patriarchate of Alexandria from 412 to 444",
+      "wd_birth": 376,
+      "wd_death": 444,
+      "anthology_dates": "c. 376 - 444",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 72,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q114108324",
+          "label": "Cyril Topfel",
+          "description": "particle physicist",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q107296702",
+          "label": "Cyril of Alexandria and the Nestorian controversy: the making of a saint and of a heretic",
+          "description": "book published in 2004",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q62052360",
+          "label": "Cyril of Alexandria, Lexicon. Theological and grammatical treatises. Etc.",
+          "description": "Bodleian Library MS. Barocci 95",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 12,
+      "name": "St. Peter Chrysologus",
+      "query": "Peter Chrysologus",
+      "qid": "Q328742",
+      "viaf": "88069141",
+      "wd_label": "Peter Chrysologus",
+      "wd_description": "Bishop of Ravenna",
+      "wd_birth": 380,
+      "wd_death": 450,
+      "anthology_dates": "c. 380 - c. 450",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 102,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 13,
+      "name": "St. Ambrose of Milan",
+      "query": "Ambrose of Milan",
+      "qid": "Q43689",
+      "viaf": "100227669",
+      "wd_label": "Ambrose",
+      "wd_description": "Roman theologian and Bishop of Milan (c. 340–397)",
+      "wd_birth": 339,
+      "wd_death": 397,
+      "anthology_dates": "c. 339 - 397",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 94,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q1846089",
+          "label": "Ambrose McEvoy",
+          "description": "English painter (1878-1927)",
+          "birth": 1878,
+          "death": 1927,
+          "score": 8
+        },
+        {
+          "qid": "Q459187",
+          "label": "Ambrose Dery",
+          "description": "Ghanaian politician",
+          "birth": 1956,
+          "death": null,
+          "score": 0
+        },
+        {
+          "qid": "Q136105514",
+          "label": "Ambrose of Milan: Church and Court in a Christian Capital",
+          "description": "1994 book",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "name": "St. Jerome",
+      "query": "Jerome",
+      "qid": "Q44248",
+      "viaf": "95147024",
+      "wd_label": "Jerome",
+      "wd_description": "4th and 5th-century Catholic and Eastern Orthodox saint and Doctor of the Church",
+      "wd_birth": 345,
+      "wd_death": 420,
+      "anthology_dates": "c. 347 - 420",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 72,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q113585206",
+          "label": "Jerome Schwindling",
+          "description": "particle physicist in France",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q1687736",
+          "label": "Jerome Flynn",
+          "description": "English actor and singer",
+          "birth": 1963,
+          "death": null,
+          "score": 8
+        },
+        {
+          "qid": "Q218698",
+          "label": "Jerome K. Jerome",
+          "description": "English humorist (1859-1927)",
+          "birth": 1859,
+          "death": 1927,
+          "score": 8
+        }
+      ]
+    },
+    {
+      "num": 15,
+      "name": "St. Augustine of Hippo",
+      "query": "Augustine of Hippo",
+      "qid": "Q8018",
+      "viaf": "66806872",
+      "wd_label": "Augustine of Hippo",
+      "wd_description": "Christian theologian, philosopher, and saint (354–430)",
+      "wd_birth": 354,
+      "wd_death": 430,
+      "anthology_dates": "354 - 430",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 94,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q333216",
+          "label": "Augustine Birrell",
+          "description": "British politician (1850-1933)",
+          "birth": 1850,
+          "death": 1933,
+          "score": 8
+        },
+        {
+          "qid": "Q110735140",
+          "label": "Augustine",
+          "description": "Swedish singer",
+          "birth": 1996,
+          "death": null,
+          "score": 0
+        },
+        {
+          "qid": "Q1300961",
+          "label": "Augustine",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 16,
+      "name": "The Akathist Hymn",
+      "query": "The Akathist Hymn",
+      "qid": "Q1130291",
+      "viaf": "177383601",
+      "wd_label": "Akathist",
+      "wd_description": "liturgical hymn of the Orthodox Church",
+      "wd_birth": null,
+      "wd_death": null,
+      "anthology_dates": "c. 6th c.",
+      "is_human": false,
+      "is_work": true,
+      "score": 0,
+      "margin": 0,
+      "confidence": "high",
+      "reasons": [
+        "manually verified: liturgical hymn (resolver picked a scholarly article)"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 17,
+      "name": "St. Sophronius of Jerusalem",
+      "query": "Sophronius of Jerusalem",
+      "qid": "Q317773",
+      "viaf": "20473427",
+      "wd_label": "Sophronius of Jerusalem",
+      "wd_description": "Patriarch of Jerusalem from 634 to 638",
+      "wd_birth": 560,
+      "wd_death": 638,
+      "anthology_dates": "c. 560 - 638",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 80,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q2303048",
+          "label": "Sophronius II of Constantinople",
+          "description": "Ecumenical Patriarch in 1774–1780",
+          "birth": 1750,
+          "death": 1780,
+          "score": 22
+        },
+        {
+          "qid": "Q44248",
+          "label": "Jerome",
+          "description": "4th and 5th-century Catholic and Eastern Orthodox saint and Doctor of the Church",
+          "birth": 345,
+          "death": 420,
+          "score": 22
+        },
+        {
+          "qid": "Q4430076",
+          "label": "Sophronius",
+          "description": "bishop of Irkutsk",
+          "birth": 1703,
+          "death": 1771,
+          "score": 22
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "name": "St. Germanus of Constantinople",
+      "query": "Germanus of Constantinople",
+      "qid": "Q441464",
+      "viaf": "79050339",
+      "wd_label": "Germanus I of Constantinople",
+      "wd_description": "Patriarch of Constantinople",
+      "wd_birth": 634,
+      "wd_death": 733,
+      "anthology_dates": "c. 634 - 733",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 64,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q40331680",
+          "label": "Germanus",
+          "description": "",
+          "birth": null,
+          "death": null,
+          "score": 38
+        },
+        {
+          "qid": "Q201690",
+          "label": "Germanus",
+          "description": "Caesar of the Byzantine Empire",
+          "birth": 551,
+          "death": 605,
+          "score": 35
+        },
+        {
+          "qid": "Q442516",
+          "label": "Germanus of Auxerre",
+          "description": "5th century Bishop of Auxerre and saint",
+          "birth": 378,
+          "death": 448,
+          "score": 22
+        }
+      ]
+    },
+    {
+      "num": 19,
+      "name": "St. Andrew of Crete",
+      "query": "Andrew of Crete",
+      "qid": "Q372688",
+      "viaf": "10044124",
+      "wd_label": "Andrew of Crete",
+      "wd_description": "Christian bishop and saint",
+      "wd_birth": 660,
+      "wd_death": 740,
+      "anthology_dates": "c. 650 - 740",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 26,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q501451",
+          "label": "Andrew of Crete",
+          "description": "Byzantine iconophile martyr",
+          "birth": 700,
+          "death": 760,
+          "score": 76
+        },
+        {
+          "qid": "Q141147",
+          "label": "Andrew Schally",
+          "description": "Polish-American endocrinologist (1926–2024)",
+          "birth": 1926,
+          "death": 2024,
+          "score": 8
+        },
+        {
+          "qid": "Q18042461",
+          "label": "Andrew",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 20,
+      "name": "St. John of Damascus",
+      "query": "John of Damascus",
+      "qid": "Q51884",
+      "viaf": "44435485",
+      "wd_label": "John of Damascus",
+      "wd_description": "Christian monk, priest, hymnographer and apologist (675/6-749)",
+      "wd_birth": 675,
+      "wd_death": 749,
+      "anthology_dates": "c. 675 - 749",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 94,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q730330",
+          "label": "John Gilbert Baker",
+          "description": "British botanist (1834-1920)",
+          "birth": 1834,
+          "death": 1920,
+          "score": 8
+        },
+        {
+          "qid": "Q378629",
+          "label": "John Lindley",
+          "description": "English botanist, gardener, orchidologist, editor, scientific illustrator (1799–1865)",
+          "birth": 1799,
+          "death": 1865,
+          "score": 8
+        },
+        {
+          "qid": "Q3463882",
+          "label": "Saint Jean Damascène",
+          "description": "composition by Sergei Taneyev",
+          "birth": null,
+          "death": null,
+          "score": -10
+        }
+      ]
+    },
+    {
+      "num": 21,
+      "name": "St. Peter Damian",
+      "query": "Peter Damian",
+      "qid": "Q258369",
+      "viaf": "50018008",
+      "wd_label": "Peter Damian",
+      "wd_description": "eleventh-century Benedictine monk",
+      "wd_birth": 1007,
+      "wd_death": 1072,
+      "anthology_dates": "1007 - 1072",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 72,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q60964288",
+          "label": "Peter Hibbert",
+          "description": "researcher ORCID ID = 0000-0001-7865-343X",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q125581724",
+          "label": "Peter Damian Ashton",
+          "description": "successful doctoral candidate at the University of York",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q92189997",
+          "label": "Peter Damiano",
+          "description": "researcher (ORCID 0000-0001-8654-3919)",
+          "birth": null,
+          "death": null,
+          "score": 30
+        }
+      ]
+    },
+    {
+      "num": 22,
+      "name": "St. Anselm of Canterbury",
+      "query": "Anselm of Canterbury",
+      "qid": "Q43939",
+      "viaf": "100187025",
+      "wd_label": "Anselm of Canterbury",
+      "wd_description": "11th‑century Benedictine monk, Archbishop of Canterbury, philosopher and theologian",
+      "wd_birth": 1033,
+      "wd_death": 1109,
+      "anthology_dates": "1033 - 1109",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 94,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q170344",
+          "label": "Anselm Kiefer",
+          "description": "German painter and sculptor (born 1945)",
+          "birth": 1945,
+          "death": null,
+          "score": 8
+        },
+        {
+          "qid": "Q33528",
+          "label": "Anselme Gaëtan Desmarest",
+          "description": "French zoologist (1784–1838)",
+          "birth": 1784,
+          "death": 1838,
+          "score": 8
+        },
+        {
+          "qid": "Q136119967",
+          "label": "",
+          "description": "book 2012",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 23,
+      "name": "St. Bernard of Clairvaux",
+      "query": "Bernard of Clairvaux",
+      "qid": "Q188411",
+      "viaf": "59875293",
+      "wd_label": "Bernard of Clairvaux",
+      "wd_description": "Burgundian saint, abbot and theologian (1090-1153)",
+      "wd_birth": 1090,
+      "wd_death": 1153,
+      "anthology_dates": "1090 - 1153",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 58,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q108589518",
+          "label": "Bernard",
+          "description": "French bishop of Tarbes and Aire",
+          "birth": null,
+          "death": null,
+          "score": 44
+        },
+        {
+          "qid": "Q137242",
+          "label": "Bernard",
+          "description": "Brazilian association football player",
+          "birth": 1992,
+          "death": null,
+          "score": 0
+        },
+        {
+          "qid": "Q14649171",
+          "label": "Bernard",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 24,
+      "name": "St. Albert the Great",
+      "query": "Albert the Great",
+      "qid": "Q60059",
+      "viaf": "88125532",
+      "wd_label": "Albertus Magnus",
+      "wd_description": "German-Dominican friar and saint (c. 1200–1280)",
+      "wd_birth": 1193,
+      "wd_death": 1280,
+      "anthology_dates": "c. 1206 - 1280",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 112,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q1951",
+          "label": "Alberta",
+          "description": "province of Canada",
+          "birth": null,
+          "death": null,
+          "score": -10
+        },
+        {
+          "qid": "Q153987",
+          "label": "University of Freiburg",
+          "description": "university in Freiburg im Breisgau, Germany",
+          "birth": null,
+          "death": null,
+          "score": -10
+        },
+        {
+          "qid": "Q577011",
+          "label": "Albert",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 25,
+      "name": "St. Bonaventure",
+      "query": "Bonaventure",
+      "qid": "Q43746",
+      "viaf": "89657091",
+      "wd_label": "Bonaventure",
+      "wd_description": "Franciscan, bishop, cardinal, Doctor of the Church, Catholic saint",
+      "wd_birth": 1221,
+      "wd_death": 1274,
+      "anthology_dates": "1221 - 1274",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 112,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q141627",
+          "label": "Bonaventure",
+          "description": "town in Quebec, Canada",
+          "birth": null,
+          "death": null,
+          "score": -10
+        },
+        {
+          "qid": "Q892146",
+          "label": "Bonaventure",
+          "description": "regional county municipality in Quebec, Canada",
+          "birth": null,
+          "death": null,
+          "score": -10
+        },
+        {
+          "qid": "Q18340893",
+          "label": "Bonaventure",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 26,
+      "name": "St. Thomas Aquinas",
+      "query": "Thomas Aquinas",
+      "qid": "Q9438",
+      "viaf": "100910150",
+      "wd_label": "Thomas Aquinas",
+      "wd_description": "Italian Dominican friar, philosopher, Catholic priest, and Doctor of the Church (1225–1274)",
+      "wd_birth": 1225,
+      "wd_death": 1274,
+      "anthology_dates": "1225 - 1274",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 72,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q123982982",
+          "label": "Thomas Aquinas Syahreza Jenie",
+          "description": "",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q2711385",
+          "label": "73687 Thomas Aquinas",
+          "description": "asteroid",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q136212787",
+          "label": "",
+          "description": "book 2012",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 27,
+      "name": "St. Bridget of Sweden",
+      "query": "Bridget of Sweden",
+      "qid": "Q204996",
+      "viaf": "51685861",
+      "wd_label": "Bridget of Sweden",
+      "wd_description": "Swedish nun, mystic, and saint (c.1303–1373)",
+      "wd_birth": 1303,
+      "wd_death": 1373,
+      "anthology_dates": "1303 - 1373",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 72,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q105806318",
+          "label": "Bridget",
+          "description": "",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q105873267",
+          "label": "Bridget",
+          "description": "(1546-1573)",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q105826420",
+          "label": "Bridget",
+          "description": "",
+          "birth": null,
+          "death": null,
+          "score": 30
+        }
+      ]
+    },
+    {
+      "num": 28,
+      "name": "Jean Gerson",
+      "query": "Jean Gerson",
+      "qid": "Q281179",
+      "viaf": "100160310",
+      "wd_label": "Jean Gerson",
+      "wd_description": "French academic (1363/1369–1429)",
+      "wd_birth": 1363,
+      "wd_death": 1429,
+      "anthology_dates": "1363 - 1429",
+      "is_human": true,
+      "is_work": false,
+      "score": 88,
+      "margin": 36,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q135976695",
+          "label": "Jean Gerson, Celestine",
+          "description": "brother of the famous theologian Jean Gerson",
+          "birth": null,
+          "death": null,
+          "score": 52
+        },
+        {
+          "qid": "Q81667602",
+          "label": "Jean Gerson’s Legacy in Tübingen and Strasbourg",
+          "description": "scholarly article",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q81667187",
+          "label": "Jean Gerson’s Assessment of the Issue of Religious Zeal in the Context of the Tyrannicide Controversy",
+          "description": "scientific article published in April 2013",
+          "birth": null,
+          "death": null,
+          "score": -58
+        }
+      ]
+    },
+    {
+      "num": 29,
+      "name": "St. Bernardine of Siena",
+      "query": "Bernardine of Siena",
+      "qid": "Q316295",
+      "viaf": "12349035",
+      "wd_label": "Bernardino of Siena",
+      "wd_description": "Italian Franciscan and saint (1380–1444)",
+      "wd_birth": 1380,
+      "wd_death": 1444,
+      "anthology_dates": "1380 - 1444",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 94,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q4893827",
+          "label": "Bernardine Evaristo",
+          "description": "British author and academic (1959-)",
+          "birth": 1959,
+          "death": null,
+          "score": 8
+        },
+        {
+          "qid": "Q30127823",
+          "label": "Bernardine Melchior-Bonnet",
+          "description": "French historian",
+          "birth": 1906,
+          "death": 1995,
+          "score": 8
+        },
+        {
+          "qid": "Q20220087",
+          "label": "Bernardine",
+          "description": "female given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 30,
+      "name": "St. Peter Canisius",
+      "query": "Peter Canisius",
+      "qid": "Q44624",
+      "viaf": "59109589",
+      "wd_label": "Peter Canisius",
+      "wd_description": "Dutch, Jesuit priest, Doctor of the Church, Roman Catholic saint",
+      "wd_birth": 1521,
+      "wd_death": 1597,
+      "anthology_dates": "1521 - 1597",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 94,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q137158039",
+          "label": "",
+          "description": "",
+          "birth": 1951,
+          "death": null,
+          "score": 8
+        },
+        {
+          "qid": "Q55675385",
+          "label": "Peter C. von Seidlein",
+          "description": "",
+          "birth": 1925,
+          "death": 2014,
+          "score": 8
+        },
+        {
+          "qid": "Q19747883",
+          "label": "Peter Canisius Minor Seminary Mertoyudan",
+          "description": "jesuit, catholic school in Magelang Rd., Mertoyudan, Yogyakarta, Indonesia",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 31,
+      "name": "St. Robert Bellarmine",
+      "query": "Robert Bellarmine",
+      "qid": "Q298664",
+      "viaf": "121884477",
+      "wd_label": "Robert Bellarmine",
+      "wd_description": "Catholic cardinal, saint, and Doctor of the Church",
+      "wd_birth": 1542,
+      "wd_death": 1621,
+      "anthology_dates": "1542 - 1621",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 94,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q4932983",
+          "label": "Bob Katter",
+          "description": "Australian politician (born 1945)",
+          "birth": 1945,
+          "death": null,
+          "score": 8
+        },
+        {
+          "qid": "Q7342561",
+          "label": "Robert Byrne",
+          "description": "American songwriter (1954-2005)",
+          "birth": 1954,
+          "death": 2005,
+          "score": 8
+        }
+      ]
+    },
+    {
+      "num": 32,
+      "name": "St. Francis de Sales",
+      "query": "Francis de Sales",
+      "qid": "Q231256",
+      "viaf": "88908024",
+      "wd_label": "Francis de Sales",
+      "wd_description": "French bishop, saint, writer and Doctor of the Church (1567-1622)",
+      "wd_birth": 1567,
+      "wd_death": 1622,
+      "anthology_dates": "1567 - 1622",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 80,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q5482918",
+          "label": "Francis de Sales Brunner",
+          "description": "Roman Catholic missionary priest from Switzerland (1795-1859)",
+          "birth": 1795,
+          "death": 1859,
+          "score": 22
+        },
+        {
+          "qid": "Q5482926",
+          "label": "Francis de Sales Lewental",
+          "description": "Polish publisher",
+          "birth": 1839,
+          "death": 1902,
+          "score": 8
+        },
+        {
+          "qid": "Q97063505",
+          "label": "Barbara Misner",
+          "description": "",
+          "birth": 1931,
+          "death": 2013,
+          "score": 8
+        }
+      ]
+    },
+    {
+      "num": 33,
+      "name": "St. John Eudes",
+      "query": "John Eudes",
+      "qid": "Q441714",
+      "viaf": "49196870",
+      "wd_label": "Jean Eudes",
+      "wd_description": "French Catholic priest (1601–1680)",
+      "wd_birth": 1601,
+      "wd_death": 1680,
+      "anthology_dates": "1601 - 1680",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 72,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q110397058",
+          "label": "John Eudes Keitirima",
+          "description": "Ugandan lawyer",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q106786570",
+          "label": "John Eudes Bamberger",
+          "description": "American Cistercian monk (1926-2020)",
+          "birth": 1926,
+          "death": 2020,
+          "score": 22
+        }
+      ]
+    },
+    {
+      "num": 34,
+      "name": "St. Louis Marie de Montfort",
+      "query": "Louis Marie de Montfort",
+      "qid": "Q88927",
+      "viaf": "8179202",
+      "confidence": "high",
+      "reasons": [
+        "manually verified: dates 1673-1716 match exactly (resolver query missed his WD label)"
+      ],
+      "anthology_dates": "1673 - 1716",
+      "alternatives": [],
+      "wd_label": "Louis de Montfort",
+      "wd_description": "French Catholic saint, priest, and confessor",
+      "wd_birth": 1673,
+      "wd_death": 1716,
+      "is_human": true,
+      "is_work": false
+    },
+    {
+      "num": 35,
+      "name": "St. Alphonsus Liguori",
+      "query": "Alphonsus Liguori",
+      "qid": "Q273334",
+      "viaf": "22311625",
+      "wd_label": "Alphonsus Maria de Liguori",
+      "wd_description": "Italian Catholic bishop and saint (1696-1787)",
+      "wd_birth": 1696,
+      "wd_death": 1787,
+      "anthology_dates": "1696 - 1787",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 80,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q974242",
+          "label": "Alphonsus Liguori Penney",
+          "description": "Catholic archbishop (1924-2017)",
+          "birth": 1924,
+          "death": 2017,
+          "score": 22
+        },
+        {
+          "qid": "Q75425040",
+          "label": "Alphonsus D'Abreu",
+          "description": "British surgeon",
+          "birth": 1906,
+          "death": 1976,
+          "score": 8
+        },
+        {
+          "qid": "Q66704217",
+          "label": "Alphonsus Liguori d'Abreu",
+          "description": "scientific article published on 01 May 1976",
+          "birth": null,
+          "death": null,
+          "score": -58
+        }
+      ]
+    },
+    {
+      "num": 36,
+      "name": "St. Catherine Labouré",
+      "query": "Catherine Labouré",
+      "qid": "Q242044",
+      "viaf": "32788621",
+      "wd_label": "Catherine Labouré",
+      "wd_description": "French Daughter of Charity and saint (1806–1876)",
+      "wd_birth": 1806,
+      "wd_death": 1876,
+      "anthology_dates": "1806 - 1876",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 120,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q6467575",
+          "label": "Labouré College",
+          "description": "Private college in Milton, Massachusetts, U.S.",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q3162304",
+          "label": "jardin Catherine-Labouré",
+          "description": "urban park in Paris, France",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q73445207",
+          "label": "Catherine Labouré School of Nursing",
+          "description": "scientific article published on 01 March 1954",
+          "birth": null,
+          "death": null,
+          "score": -58
+        }
+      ]
+    },
+    {
+      "num": 37,
+      "name": "St. Bernadette Soubirous",
+      "query": "Bernadette Soubirous",
+      "qid": "Q55398",
+      "viaf": "9843075",
+      "wd_label": "Bernadette Soubirous",
+      "wd_description": "French saint (1844–1879)",
+      "wd_birth": 1844,
+      "wd_death": 1879,
+      "anthology_dates": "1844 - 1879",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 160,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q123517226",
+          "label": "Bernadette Soubirous",
+          "description": "Television film",
+          "birth": null,
+          "death": null,
+          "score": -58
+        },
+        {
+          "qid": "Q52348034",
+          "label": "Bernadette Soubirous (1844-1879) and the miracle healings at Lourdes",
+          "description": "scientific article published on December 14, 2010",
+          "birth": null,
+          "death": null,
+          "score": -58
+        }
+      ]
+    },
+    {
+      "num": 38,
+      "name": "St. Maximilian Maria Kolbe",
+      "query": "Maximilian Maria Kolbe",
+      "qid": "Q153850",
+      "viaf": "44302147",
+      "wd_label": "Maximilian Kolbe",
+      "wd_description": "Polish Conventual Franciscan friar, martyr and saint of the Roman Catholic Church (1894–1941)",
+      "wd_birth": 1894,
+      "wd_death": 1941,
+      "anthology_dates": "1894 - 1941",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 102,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 39,
+      "name": "St. (Padre) Pio of Pietrelcina",
+      "query": "Padre Pio of Pietrelcina",
+      "qid": "Q193754",
+      "viaf": "9879349",
+      "wd_label": "Padre Pio",
+      "wd_description": "Italian saint, priest, stigmatist and mystic",
+      "wd_birth": 1887,
+      "wd_death": 1968,
+      "anthology_dates": "1887 - 1968",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 120,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q52801601",
+          "label": "Padre Pio",
+          "description": "kindergarten in Bari, Bari, Apulia, Italy",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q52798425",
+          "label": "Padre Pio",
+          "description": "primary school in San Sossio Baronia, Avellino, Campania, Italy",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q52816852",
+          "label": "Padre Pio",
+          "description": "kindergarten in Andria, Barletta-Andria-Trani, Apulia, Italy",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 40,
+      "name": "Bl. Fulton J. Sheen",
+      "query": "Fulton J. Sheen",
+      "qid": "Q954398",
+      "viaf": "44289057",
+      "wd_label": "Fulton J. Sheen",
+      "wd_description": "American catholic bishop and television presenter (1895–1979)",
+      "wd_birth": 1895,
+      "wd_death": 1979,
+      "anthology_dates": "1895 - 1979",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 67,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q111175845",
+          "label": "Fulton J. Sheen",
+          "description": "American politician",
+          "birth": 1957,
+          "death": null,
+          "score": 35
+        }
+      ]
+    },
+    {
+      "num": 41,
+      "name": "St. Teresa of Calcutta",
+      "query": "Teresa of Calcutta",
+      "qid": "Q30547",
+      "viaf": "95161232",
+      "wd_label": "Mother Teresa",
+      "wd_description": "Albanian-Indian Catholic nun and missionary (1910–1997)",
+      "wd_birth": 1910,
+      "wd_death": 1997,
+      "anthology_dates": "1910 - 1997",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 14,
+      "confidence": "medium",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q463945",
+          "label": "Teresa Teng",
+          "description": "Taiwanese ROC singer (1953-1995)",
+          "birth": 1953,
+          "death": 1995,
+          "score": 88
+        },
+        {
+          "qid": "Q114095023",
+          "label": "Teresa Fonseca Martin",
+          "description": "particle physicist",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q174880",
+          "label": "Teresa of Ávila",
+          "description": "Roman Catholic saint (1515-1582)",
+          "birth": 1515,
+          "death": 1582,
+          "score": 22
+        }
+      ]
+    },
+    {
+      "num": 42,
+      "name": "Bl. Pope Pius IX",
+      "query": "Pope Pius IX",
+      "qid": "Q43720",
+      "viaf": "103211092",
+      "wd_label": "Pius IX",
+      "wd_description": "Pope of the Catholic Church from 1846 to 1878",
+      "wd_birth": 1792,
+      "wd_death": 1878,
+      "anthology_dates": "1792 - 1878",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 106,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q7229225",
+          "label": "Pope Pius IX and Italy",
+          "description": "overview of the relationship between Pope Pius IX and Italy",
+          "birth": null,
+          "death": null,
+          "score": -4
+        },
+        {
+          "qid": "Q114401921",
+          "label": "Pope Pius IX",
+          "description": "photograph by Adolphe Braun",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q55008782",
+          "label": "Pope Pius IX",
+          "description": "portrait by Gosselin",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 43,
+      "name": "Pope Leo XIII",
+      "query": "Leo XIII",
+      "qid": "Q43922",
+      "viaf": "49228150",
+      "wd_label": "Leo XIII",
+      "wd_description": "Pope of the Catholic Church from 1878 to 1903 (1810–1903)",
+      "wd_birth": 1810,
+      "wd_death": 1903,
+      "anthology_dates": "1810 - 1903",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 120,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q64955973",
+          "label": "Leo XIII",
+          "description": "print in the National Gallery of Art (NGA 7325)",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q3803626",
+          "label": "Istituto comprensivo Leone Tolstoj",
+          "description": "grouping of schools in Milano (Italy)",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q85065458",
+          "label": "Rue Léon XIII - Leo XIII-straat",
+          "description": "street in Brussels, Belgium",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 44,
+      "name": "Pope St. Pius X",
+      "query": "Pius X",
+      "qid": "Q43739",
+      "viaf": "95295599",
+      "wd_label": "Pius X",
+      "wd_description": "Pope of the Catholic Church from 1903 to 1914, saint",
+      "wd_birth": 1835,
+      "wd_death": 1914,
+      "anthology_dates": "1835 - 1914",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 45,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q2604",
+          "label": "Pius XII",
+          "description": "pope of the Catholic Church from 1939 to 1958",
+          "birth": 1876,
+          "death": 1958,
+          "score": 57
+        },
+        {
+          "qid": "Q42323",
+          "label": "Pius XI",
+          "description": "pope of the Catholic Church from 1922 to 1939",
+          "birth": 1857,
+          "death": 1939,
+          "score": 57
+        },
+        {
+          "qid": "Q1410332",
+          "label": "National University of Lesotho",
+          "description": "university in Roma, Lesotho",
+          "birth": null,
+          "death": null,
+          "score": -10
+        }
+      ]
+    },
+    {
+      "num": 45,
+      "name": "Pope Benedict XV",
+      "query": "Benedict XV",
+      "qid": "Q4448",
+      "viaf": "78769797",
+      "wd_label": "Benedict XV",
+      "wd_description": "Pope of the Catholic Church from 1914 to 1922",
+      "wd_birth": 1854,
+      "wd_death": 1922,
+      "anthology_dates": "1854 - 1922",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 18,
+      "confidence": "medium",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q2494",
+          "label": "Benedict XVI",
+          "description": "265 th pope of the Catholic Church (2005–2013)",
+          "birth": 1927,
+          "death": 2022,
+          "score": 84
+        },
+        {
+          "qid": "Q2088264",
+          "label": "Philosophisch-Theologische Hochschule Heiligenkreuz",
+          "description": "private Catholic pontifical university in Heiligenkreuz, Austria",
+          "birth": null,
+          "death": null,
+          "score": -10
+        },
+        {
+          "qid": "Q11710851",
+          "label": "Benedict XVI's Apostolic Journey to Spain (2006)",
+          "description": "pastoral visit to Spain in 2006",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 46,
+      "name": "Pope Pius XI",
+      "query": "Pius XI",
+      "qid": "Q42323",
+      "viaf": "88598915",
+      "wd_label": "Pius XI",
+      "wd_description": "pope of the Catholic Church from 1922 to 1939",
+      "wd_birth": 1857,
+      "wd_death": 1939,
+      "anthology_dates": "1857 - 1939",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 18,
+      "confidence": "medium",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q2604",
+          "label": "Pius XII",
+          "description": "pope of the Catholic Church from 1939 to 1958",
+          "birth": 1876,
+          "death": 1958,
+          "score": 84
+        },
+        {
+          "qid": "Q1410332",
+          "label": "National University of Lesotho",
+          "description": "university in Roma, Lesotho",
+          "birth": null,
+          "death": null,
+          "score": -10
+        },
+        {
+          "qid": "Q7199606",
+          "label": "Pius XI High School",
+          "description": "high school in Wisconsin, United States",
+          "birth": null,
+          "death": null,
+          "score": -10
+        }
+      ]
+    },
+    {
+      "num": 47,
+      "name": "Ven. Pope Pius XII",
+      "query": "Pope Pius XII",
+      "qid": "Q2604",
+      "viaf": "63987052",
+      "wd_label": "Pius XII",
+      "wd_description": "pope of the Catholic Church from 1939 to 1958",
+      "wd_birth": 1876,
+      "wd_death": 1958,
+      "anthology_dates": "1876 - 1958",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 106,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q7229233",
+          "label": "Pope Pius XII",
+          "description": "biography of Pope Pius XII",
+          "birth": null,
+          "death": null,
+          "score": -4
+        },
+        {
+          "qid": "Q5247513",
+          "label": "death of Pius XII",
+          "description": "death of the pope of the Catholic Church",
+          "birth": null,
+          "death": null,
+          "score": -4
+        },
+        {
+          "qid": "Q11722580",
+          "label": "list of saints canonized by Pope Pius XII",
+          "description": "Wikimedia list article",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 48,
+      "name": "Second Vatican Council, Lumen Gentium §62",
+      "query": "Lumen Gentium",
+      "qid": "Q750388",
+      "viaf": "302826104",
+      "wd_label": "Lumen gentium",
+      "wd_description": "Catholic ecclesiologial text of the Second Vatican Council",
+      "wd_birth": null,
+      "wd_death": null,
+      "anthology_dates": "21 November 1964",
+      "is_human": false,
+      "is_work": true,
+      "score": 53,
+      "margin": 53,
+      "confidence": "medium",
+      "reasons": [
+        "is a work (type/description)",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q128699313",
+          "label": "Lumen Gentium and Catholic Bioethics",
+          "description": "scholarly article",
+          "birth": null,
+          "death": null,
+          "score": 0
+        }
+      ]
+    },
+    {
+      "num": 49,
+      "name": "Pope St. John Paul II",
+      "query": "John Paul II",
+      "qid": "Q989",
+      "viaf": "35605",
+      "wd_label": "John Paul II",
+      "wd_description": "264th pope of the Catholic Church (1978–2005)",
+      "wd_birth": 1920,
+      "wd_death": 2005,
+      "anthology_dates": "1920 - 2005",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 112,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q175529",
+          "label": "John Paul II Catholic University of Lublin",
+          "description": "Catholic university in Lublin, Poland",
+          "birth": null,
+          "death": null,
+          "score": -10
+        },
+        {
+          "qid": "Q136500709",
+          "label": "John Paul II",
+          "description": "square in Bulgaria",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q47512937",
+          "label": "The Pope In Asia",
+          "description": "painting by Richard Sparks",
+          "birth": null,
+          "death": null,
+          "score": -58
+        }
+      ]
+    },
+    {
+      "num": 50,
+      "name": "St. Epiphanius of Salamis",
+      "query": "Epiphanius of Salamis",
+      "qid": "Q313922",
+      "viaf": "13651211",
+      "wd_label": "Epiphanius of Salamis",
+      "wd_description": "4th century Christian bishop and saint",
+      "wd_birth": 315,
+      "wd_death": 403,
+      "anthology_dates": "c. 310 – 403",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 80,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q5383121",
+          "label": "Epiphanius the Monk",
+          "description": "Eastern Orthodox monk (9th century)",
+          "birth": 790,
+          "death": 840,
+          "score": 22
+        },
+        {
+          "qid": "Q4176052",
+          "label": "Epiphanius",
+          "description": "Eastern orthodox bishop",
+          "birth": null,
+          "death": 1731,
+          "score": 14
+        },
+        {
+          "qid": "Q11696998",
+          "label": "Epiphanius I",
+          "description": "21st-century Metropolitan of the Orthodox Church of Ukraine",
+          "birth": 1979,
+          "death": null,
+          "score": 8
+        }
+      ]
+    },
+    {
+      "num": 51,
+      "name": "St. Bede the Venerable",
+      "query": "Bede the Venerable",
+      "qid": "Q154938",
+      "viaf": "61539765",
+      "wd_label": "Bede",
+      "wd_description": "Anglo-Saxon monk, writer and saint (672/3–735)",
+      "wd_birth": 672,
+      "wd_death": 735,
+      "anthology_dates": "672 – 735",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 94,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q24207148",
+          "label": "Bede Liu",
+          "description": "Taiwanese-American engineer and computer scientist (born 1934)",
+          "birth": 1934,
+          "death": null,
+          "score": 8
+        },
+        {
+          "qid": "Q39365079",
+          "label": "Bede",
+          "description": "given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q37443287",
+          "label": "Bede",
+          "description": "family name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 52,
+      "name": "Bl. Amadeus of Lausanne",
+      "query": "Amadeus of Lausanne",
+      "qid": "Q452014",
+      "viaf": "34565386",
+      "wd_label": "Amadeus of Lausanne",
+      "wd_description": "Swiss abbot and bishop of Lausanne",
+      "wd_birth": 1110,
+      "wd_death": 1159,
+      "anthology_dates": "1110 – 1159",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 64,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q112477517",
+          "label": "Amadeus",
+          "description": "",
+          "birth": null,
+          "death": null,
+          "score": 38
+        },
+        {
+          "qid": "Q685963",
+          "label": "Amadeus",
+          "description": "male given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q696061",
+          "label": "Amadeus IT Group",
+          "description": "European transaction processor and IT provider for the global travel and tourism industry",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 53,
+      "name": "Bl. John Duns Scotus",
+      "query": "John Duns Scotus",
+      "qid": "Q190089",
+      "viaf": "120697851",
+      "wd_label": "Duns Scotus",
+      "wd_description": "Scottish Franciscan friar and philosopher (c. 1265/66–1308)",
+      "wd_birth": 1265,
+      "wd_death": 1308,
+      "anthology_dates": "c. 1266 – 1308",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 120,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q136298565",
+          "label": "John Duns Scotus bust, Duns",
+          "description": "",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q58354706",
+          "label": "John Duns Scotus on Time and Existence: The Questions on Aristotle's ‘De Interpretatione’",
+          "description": "",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q137925708",
+          "label": "John Duns Scotus",
+          "description": "Painting by Justus van Gent",
+          "birth": null,
+          "death": null,
+          "score": -58
+        }
+      ]
+    },
+    {
+      "num": 54,
+      "name": "St. Lawrence Justinian",
+      "query": "Lawrence Justinian",
+      "qid": "Q203814",
+      "viaf": "9880834",
+      "wd_label": "Lawrence Giustiniani",
+      "wd_description": "first Patriarch of Venice",
+      "wd_birth": 1381,
+      "wd_death": 1456,
+      "anthology_dates": "1381 – 1456",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 102,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 55,
+      "name": "St. Teresa of Ávila",
+      "query": "Teresa of Ávila",
+      "qid": "Q174880",
+      "viaf": "95217173",
+      "wd_label": "Teresa of Ávila",
+      "wd_description": "Roman Catholic saint (1515-1582)",
+      "wd_birth": 1515,
+      "wd_death": 1582,
+      "anthology_dates": "1515 – 1582",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 72,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q114095023",
+          "label": "Teresa Fonseca Martin",
+          "description": "particle physicist",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q463945",
+          "label": "Teresa Teng",
+          "description": "Taiwanese ROC singer (1953-1995)",
+          "birth": 1953,
+          "death": 1995,
+          "score": 8
+        },
+        {
+          "qid": "Q2793617",
+          "label": "Teresa",
+          "description": "female given name",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    },
+    {
+      "num": 56,
+      "name": "Bl. John Henry Newman",
+      "query": "John Henry Newman",
+      "qid": "Q44490",
+      "viaf": "17227308",
+      "wd_label": "John Henry Newman",
+      "wd_description": "English cleric and cardinal (1801–1890)",
+      "wd_birth": 1801,
+      "wd_death": 1890,
+      "anthology_dates": "1801 – 1890",
+      "is_human": true,
+      "is_work": false,
+      "score": 102,
+      "margin": 72,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "description matches a religious figure",
+        "dates match within 0y",
+        "has VIAF id"
+      ],
+      "alternatives": [
+        {
+          "qid": "Q76160430",
+          "label": "John Henry Newman",
+          "description": "married 1966; son of John Leonard Newman, husband of Jane Lesley Samuel",
+          "birth": null,
+          "death": null,
+          "score": 30
+        },
+        {
+          "qid": "Q5038592",
+          "label": "St. John Henry Newman Catholic Secondary School",
+          "description": "catholic secondary school in Hamilton, Ontario, Canada",
+          "birth": null,
+          "death": null,
+          "score": -18
+        },
+        {
+          "qid": "Q19654962",
+          "label": "John Henry Newman Catholic College",
+          "description": "school in Solihull, UK",
+          "birth": null,
+          "death": null,
+          "score": -18
+        }
+      ]
+    }
+  ],
+  "verification_note": "All 56 reviewed against anthology dates 2026-05-29; #16 and #34 manually corrected."
+}

@@ -18,6 +18,7 @@ No external dependencies. Python 3.9+.
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -25,6 +26,7 @@ from textwrap import dedent
 
 REPO = Path(__file__).resolve().parent.parent
 SITE = REPO / "site"
+AUTHORITY_MAP_PATH = REPO / "tools" / "authority-map.json"
 
 ORIGIN = "https://stella-maris.pages.dev"
 OG_IMAGE = f"{ORIGIN}/og.png"
@@ -168,6 +170,43 @@ MARK_START = "<!-- SEO -->"
 MARK_END = "<!-- /SEO -->"
 
 
+def build_authority_graph() -> str:
+    """Emit a schema.org @graph of the anthology's authors with their Wikidata +
+    VIAF `sameAs` links, from the curated tools/authority-map.json.
+
+    Gated on `verified: true` — an unverified (machine-proposed) map is never
+    emitted, so auto-matched authority links cannot leak into the live site.
+    """
+    if not AUTHORITY_MAP_PATH.exists():
+        return ""
+    data = json.loads(AUTHORITY_MAP_PATH.read_text(encoding="utf-8"))
+    if not data.get("verified"):
+        return ""
+    nodes = []
+    for r in data.get("authorities", []):
+        qid = r.get("qid")
+        if not qid:
+            continue
+        same_as = [f"https://www.wikidata.org/wiki/{qid}"]
+        if r.get("viaf"):
+            same_as.append(f"https://viaf.org/viaf/{r['viaf']}/")
+        nodes.append(
+            {
+                "@type": "CreativeWork" if r.get("is_work") else "Person",
+                "name": r["name"],
+                "sameAs": same_as,
+            }
+        )
+    if not nodes:
+        return ""
+    graph = {"@context": "https://schema.org", "@graph": nodes}
+    return (
+        '<script type="application/ld+json">\n'
+        + json.dumps(graph, ensure_ascii=False, indent=2)
+        + "\n</script>"
+    )
+
+
 def build_block(page: str, meta: dict) -> str:
     title = meta["title"].replace('"', "&quot;")
     desc = meta["description"].replace('"', "&quot;")
@@ -240,6 +279,12 @@ def build_block(page: str, meta: dict) -> str:
             </script>
         """).strip()
         json_ld = json_ld + "\n" + breadcrumb_json
+
+    # Authority @graph: only on the anthology, where the 56 authors live.
+    if page == "anthology.html":
+        authority_graph = build_authority_graph()
+        if authority_graph:
+            json_ld = json_ld + "\n" + authority_graph
 
     apple_icons = dedent("""
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png" />
