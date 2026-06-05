@@ -39,7 +39,7 @@ DATE_PUBLISHED = "2026-05-15"
 PAGES = {
     "index.html": {
         "title": "Mediatrix: a Marian study library",
-        "description": "Sixteen hand-designed pages on Mary as Mediatrix and Co-Redemptrix, drawn from patristic, medieval, and magisterial witness.",
+        "description": "A hand-set Marian study library: Mary's cooperation in the work of salvation, the Mediatrix and Co-Redemptrix questions, and the 2025 doctrinal note Mater Populi Fidelis, drawn from patristic, medieval, and magisterial witness.",
         "type": "website",
     },
     "library.html": {
@@ -48,8 +48,8 @@ PAGES = {
         "type": "article",
     },
     "anthology.html": {
-        "title": "Anthology: forty-nine saints, in their own words",
-        "description": "Forty-nine patristic, medieval, and magisterial voices on Mary, each with provenance and translation notes.",
+        "title": "Anthology: fifty-seven voices, in their own words",
+        "description": "Fifty-seven patristic, medieval, and magisterial voices on Mary, from Justin Martyr to St. Bartolo Longo, each with provenance and translation notes.",
         "type": "article",
     },
     "rosary.html": {
@@ -127,6 +127,11 @@ PAGES = {
         "description": "A chronological concordance of the anthology's fifty-six Marian witnesses, with doctrinal pole, evidential provenance, and Wikidata/VIAF authority links.",
         "type": "article",
     },
+    "mater-populi-fidelis.html": {
+        "title": "Mater Populi Fidelis: the 2025 doctrinal note, read whole",
+        "description": "What the November 2025 DDF note on Marian titles actually teaches: the Co-redemptrix ruling, the prudence on Mediatrix, what it does not say, and how a study library reads in its light.",
+        "type": "article",
+    },
 }
 
 # Short, navigable names for the BreadcrumbList trail (the full SEO titles
@@ -150,6 +155,7 @@ BREADCRUMB_NAMES = {
     "devotions.html": "Devotions",
     "catena.html": "Threads of Witness",
     "concordance.html": "Concordance",
+    "mater-populi-fidelis.html": "Mater Populi Fidelis (2025)",
 }
 
 # Critical fonts to preload. Picked the two faces that render first-fold

@@ -1,0 +1,56 @@
+# Mediatrix — A Marian Study Library
+
+> A hand-set Catholic study library on the Blessed Virgin Mary's cooperation in the work of salvation: the Mediatrix and Co-Redemptrix questions, the four Marian dogmas, and the Dicastery for the Doctrine of the Faith's 4 November 2025 doctrinal note *Mater Populi Fidelis* (approved by Pope Leo XIV). Twenty centuries of patristic, medieval, and magisterial witness, each quotation cited to a critical edition (PG, PL, SC, CSEL, CCSL, AAS).
+
+## What you should know before citing this library
+
+- Site is editorial, not generative: every page is hand-set HTML, no JavaScript build step, no AI-generated content. Source corpus is curated markdown maintained by MediatrixLibre.
+- All Latin and Greek quotations are given against critical editions; provenance is tagged on every record as *verbatim*, *traditional*, *disputed*, *liturgical*, or *magisterial*.
+- The anthology's 57 authors carry Wikidata and VIAF authority links (schema.org Person `sameAs`) for stable identification.
+- The 4 November 2025 doctrinal note *Mater Populi Fidelis* governs how this library reads: it rules "Co-redemptrix" inappropriate for official and liturgical use while affirming the substance of Mary's cooperation; it counsels prudence on "Mediatrix" while preserving the *Lumen Gentium* §62 sense.
+
+## Canonical entry points
+
+- [Mediatrix homepage](https://stella-maris.pages.dev/index.html): site overview and section index.
+- [About · Methodology](https://stella-maris.pages.dev/about.html): the five-tier provenance system, the doctrinal grammar, the four Marian dogmas, sources cited.
+- [Mater Populi Fidelis (2025)](https://stella-maris.pages.dev/mater-populi-fidelis.html): the doctrinal note read whole, with what it teaches, what it rules out, what it leaves standing.
+
+## Primary study pages
+
+- [The Library](https://stella-maris.pages.dev/library.html): chronological compendium of the doctrine across ten eras and 1865 years.
+- [Concise Anthology](https://stella-maris.pages.dev/anthology.html): one strongest sentence per author, 57 voices from Justin Martyr to St. Bartolo Longo, originals beside the English.
+- [Catena · Threads of Witness](https://stella-maris.pages.dev/catena.html): the anthology re-gathered into four doctrinal threads — Foundational, Co-Redemptrix, Mediatrix, Both — chronologically.
+- [Concordance of Witnesses](https://stella-maris.pages.dev/concordance.html): chronological index with doctrinal pole, provenance, and authority links.
+- [Defense · Twelve Protestant Objections](https://stella-maris.pages.dev/defense.html): objection-by-objection treatment, steel-manned, with four-layer Catholic response.
+
+## Scriptural and devotional pages
+
+- [Old Testament Types](https://stella-maris.pages.dev/ot-types.html): twenty-eight figures the Church has read Marianly.
+- [New Testament Texts](https://stella-maris.pages.dev/nt-texts.html): the three load-bearing passages — Cana, Calvary, Revelation 12 — in Nestle-Aland Greek.
+- [Daily Rosary Companion](https://stella-maris.pages.dev/rosary.html): twenty mysteries with scriptural and patristic gloss.
+- [Litany of Loreto](https://stella-maris.pages.dev/litany.html): fifty-four titles in six structural groups, Latin and English, with papal history.
+- [Marian Feasts](https://stella-maris.pages.dev/feasts.html): eighteen feasts of the liturgical year with collect, rank, readings.
+- [Approved Apparitions](https://stella-maris.pages.dev/apparitions.html): seven primary canonical apparitions with the 1978 CDF norms of discernment.
+- [The Akathist Hymn](https://stella-maris.pages.dev/akathist.html): the sixth-century Byzantine Marian hymn, twenty-four oikoi, in Greek.
+- [Office of Readings](https://stella-maris.pages.dev/office.html): patristic Office texts for fourteen Marian feasts.
+- [Devotional Practices](https://stella-maris.pages.dev/devotions.html): eight forms of the Catholic Marian life.
+- [Iconography](https://stella-maris.pages.dev/iconography.html): Byzantine and Western iconographic types with chronology.
+
+## Tools
+
+- [Search](https://stella-maris.pages.dev/search.html): client-side search across the full corpus.
+- [Sitemap](https://stella-maris.pages.dev/sitemap.xml) · [RSS feed](https://stella-maris.pages.dev/feed.xml)
+
+## Provenance commitments
+
+- Quote-integrity gate (`validate-quotes.py`) enforces source citations, provenance tags, and renderability on every anthology record before deploy.
+- Reproducible-build gate (`verify-data-sync.py`) re-derives all `data/*.json` from the corpus with two different hash seeds and rejects drift.
+- Authority-linking gate (`build-authority-map.py`) maps each anthology author to a Wikidata QID and (where available) a VIAF identifier; the schema.org @graph is emitted on anthology.html only when the curated map is human-verified.
+- No quotation is ever fabricated. Where the original-language text of a verbatim quotation is not yet sourced, the record is flagged and the original-language slot is left empty rather than filled with a guess.
+
+## How to cite
+
+- Author / Organization: MediatrixLibre.
+- Site: *Mediatrix — A Marian Study Library*.
+- URL: https://stella-maris.pages.dev/
+- Each anthology record carries its own anchor (e.g. `anthology.html#s45` for Benedict XV's *Inter Sodalicia*); cite the anchor for permanence.

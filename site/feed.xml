@@ -6,8 +6,15 @@
     <atom:link href="https://stella-maris.pages.dev/feed.xml" rel="self" type="application/rss+xml" />
     <description>Revisions to the Mediatrix study library: sixteen hand-designed pages on Mary as Mediatrix and Co-Redemptrix, drawn from patristic, medieval, and magisterial witness.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 29 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 00:00:00 +0000</lastBuildDate>
     <generator>tools/gen-feed.py</generator>
+    <item>
+      <title>Mater Populi Fidelis: the 2025 doctrinal note, read whole</title>
+      <link>https://stella-maris.pages.dev/mater-populi-fidelis.html</link>
+      <guid isPermaLink="true">https://stella-maris.pages.dev/mater-populi-fidelis.html</guid>
+      <description>What the November 2025 DDF note on Marian titles actually teaches: the Co-redemptrix ruling, the prudence on Mediatrix, what it does not say, and how a study library reads in its light.</description>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Rosary Companion: the twenty mysteries</title>
       <link>https://stella-maris.pages.dev/rosary.html</link>
@@ -100,10 +107,10 @@
       <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Anthology: forty-nine saints, in their own words</title>
+      <title>Anthology: fifty-seven voices, in their own words</title>
       <link>https://stella-maris.pages.dev/anthology.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/anthology.html</guid>
-      <description>Forty-nine patristic, medieval, and magisterial voices on Mary, each with provenance and translation notes.</description>
+      <description>Fifty-seven patristic, medieval, and magisterial voices on Mary, from Justin Martyr to St. Bartolo Longo, each with provenance and translation notes.</description>
       <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
