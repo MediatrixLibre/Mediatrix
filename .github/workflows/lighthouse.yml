@@ -31,6 +31,9 @@ jobs:
             https://stella-maris.pages.dev/anthology.html
             https://stella-maris.pages.dev/litany.html
             https://stella-maris.pages.dev/search.html
+            https://stella-maris.pages.dev/mater-populi-fidelis.html
+            https://stella-maris.pages.dev/defense.html
+            https://stella-maris.pages.dev/about.html
           uploadArtifacts: true
           temporaryPublicStorage: true
           runs: 1
