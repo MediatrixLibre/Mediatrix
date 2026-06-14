@@ -1,49 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 540 540" width="540" height="540">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="45%" r="72%">
-      <stop offset="0%" stop-color="#1E3A6E"/>
-      <stop offset="100%" stop-color="#0C2340"/>
+    <radialGradient id="bg" cx="50%" cy="42%" r="68%">
+      <stop offset="0%"   stop-color="#1B3568"/>
+      <stop offset="70%"  stop-color="#112048"/>
+      <stop offset="100%" stop-color="#091B2F"/>
     </radialGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="38%">
-      <stop offset="0%" stop-color="#C99700" stop-opacity="0.12"/>
+    <radialGradient id="aura" cx="50%" cy="50%" r="40%">
+      <stop offset="0%"   stop-color="#C99700" stop-opacity="0.20"/>
       <stop offset="100%" stop-color="#C99700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nimbus" cx="50%" cy="52%" r="50%">
+      <stop offset="0%"   stop-color="#0C1E3A" stop-opacity="0.70"/>
+      <stop offset="100%" stop-color="#0C1E3A" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <!-- Marian blue background -->
-  <rect width="180" height="180" fill="url(#bg)"/>
+  <!-- Background -->
+  <rect width="540" height="540" rx="120" ry="120" fill="url(#bg)"/>
 
-  <!-- Subtle gold halo behind the star -->
-  <circle cx="90" cy="90" r="72" fill="url(#glow)"/>
+  <!-- Outer double ring -->
+  <circle cx="270" cy="270" r="237"
+          fill="none" stroke="#C99700" stroke-width="5.4" opacity="0.55"/>
+  <circle cx="270" cy="270" r="222.0"
+          fill="none" stroke="#C99700" stroke-width="1.8" opacity="0.25"/>
 
-  <!-- Outer ring: 12 stars of Rev 12:1, rendered as tiny gold dots -->
-  <g fill="#C99700" opacity="0.35">
-    <circle cx="90" cy="24" r="2.2"/>
-    <circle cx="123" cy="33" r="2.2"/>
-    <circle cx="147" cy="57" r="2.2"/>
-    <circle cx="156" cy="90" r="2.2"/>
-    <circle cx="147" cy="123" r="2.2"/>
-    <circle cx="123" cy="147" r="2.2"/>
-    <circle cx="90" cy="156" r="2.2"/>
-    <circle cx="57" cy="147" r="2.2"/>
-    <circle cx="33" cy="123" r="2.2"/>
-    <circle cx="24" cy="90" r="2.2"/>
-    <circle cx="33" cy="57" r="2.2"/>
-    <circle cx="57" cy="33" r="2.2"/>
+  <!-- 12 stars of Rev 12:1 -->
+  <g fill="#C99700" opacity="0.92">
+    <polygon points="270.00,54.60 272.65,62.36 280.84,62.48 274.28,67.39 276.70,75.22 270.00,70.50 263.30,75.22 265.72,67.39 259.16,62.48 267.35,62.36"/>
+    <polygon points="372.00,81.93 374.65,89.69 382.84,89.81 376.28,94.72 378.70,102.55 372.00,97.83 365.30,102.55 367.72,94.72 361.16,89.81 369.35,89.69"/>
+    <polygon points="446.67,156.60 449.31,164.36 457.51,164.48 450.95,169.39 453.37,177.22 446.67,172.50 439.97,177.22 442.39,169.39 435.83,164.48 444.02,164.36"/>
+    <polygon points="474.00,258.60 476.65,266.36 484.84,266.48 478.28,271.39 480.70,279.22 474.00,274.50 467.30,279.22 469.72,271.39 463.16,266.48 471.35,266.36"/>
+    <polygon points="446.67,360.60 449.31,368.36 457.51,368.48 450.95,373.39 453.37,381.22 446.67,376.50 439.97,381.22 442.39,373.39 435.83,368.48 444.02,368.36"/>
+    <polygon points="372.00,435.27 374.65,443.03 382.84,443.15 376.28,448.06 378.70,455.89 372.00,451.17 365.30,455.89 367.72,448.06 361.16,443.15 369.35,443.03"/>
+    <polygon points="270.00,462.60 272.65,470.36 280.84,470.48 274.28,475.39 276.70,483.22 270.00,478.50 263.30,483.22 265.72,475.39 259.16,470.48 267.35,470.36"/>
+    <polygon points="168.00,435.27 170.65,443.03 178.84,443.15 172.28,448.06 174.70,455.89 168.00,451.17 161.30,455.89 163.72,448.06 157.16,443.15 165.35,443.03"/>
+    <polygon points="93.33,360.60 95.98,368.36 104.17,368.48 97.61,373.39 100.03,381.22 93.33,376.50 86.63,381.22 89.05,373.39 82.49,368.48 90.69,368.36"/>
+    <polygon points="66.00,258.60 68.65,266.36 76.84,266.48 70.28,271.39 72.70,279.22 66.00,274.50 59.30,279.22 61.72,271.39 55.16,266.48 63.35,266.36"/>
+    <polygon points="93.33,156.60 95.98,164.36 104.17,164.48 97.61,169.39 100.03,177.22 93.33,172.50 86.63,177.22 89.05,169.39 82.49,164.48 90.69,164.36"/>
+    <polygon points="168.00,81.93 170.65,89.69 178.84,89.81 172.28,94.72 174.70,102.55 168.00,97.83 161.30,102.55 163.72,94.72 157.16,89.81 165.35,89.69"/>
   </g>
 
-  <!-- Stella Maris: 8-pointed star, gold on deep navy -->
-  <g fill="#C99700" transform="translate(90,90)">
-    <!-- Cardinal long points (N/S/E/W) -->
-    <polygon points="0,-58 8,0 0,58 -8,0"/>
-    <polygon points="-58,0 0,-8 58,0 0,8"/>
-    <!-- Diagonal short points (NE/SE/SW/NW) -->
-    <polygon points="-38,-38 -6,0 38,-38 0,-6" opacity="0.82"/>
-    <polygon points="38,38 0,-6 38,-38 6,0" opacity="0.82"/>
-    <polygon points="-38,38 6,0 -38,-38 0,6" opacity="0.82"/>
-    <polygon points="38,38 0,6 -38,38 -6,0" opacity="0.82"/>
-    <!-- Center jewel -->
-    <circle cx="0" cy="0" r="5.5" fill="#C99700"/>
-    <circle cx="0" cy="0" r="3" fill="#1E3A6E" opacity="0.4"/>
+  <!-- Gold aura behind star -->
+  <circle cx="270" cy="270" r="180" fill="url(#aura)"/>
+
+  <!-- Stella Maris 8-pointed star -->
+  <polygon points="270.00,141.00 290.66,220.11 361.22,178.78 319.89,249.34 399.00,270.00 319.89,290.66 361.22,361.22 290.66,319.89 270.00,399.00 249.34,319.89 178.78,361.22 220.11,290.66 141.00,270.00 220.11,249.34 178.78,178.78 249.34,220.11" fill="#C99700"/>
+
+  <!-- Cross at star apex (stella maris tradition) -->
+  <line x1="270" y1="123" x2="270" y2="156"
+        stroke="#091B2F" stroke-width="10.5" opacity="0.80" stroke-linecap="square"/>
+  <line x1="256.5" y1="135"
+        x2="283.5" y2="135"
+        stroke="#091B2F" stroke-width="10.5" opacity="0.80" stroke-linecap="square"/>
+
+  <!-- Inner nimbus: darkens center so crown/M read cleanly -->
+  <circle cx="270" cy="270" r="87" fill="url(#nimbus)"/>
+
+  <!-- Thin inner ring -->
+  <circle cx="270" cy="270" r="78.0"
+          fill="none" stroke="#C99700" stroke-width="3.0" opacity="0.40"/>
+
+  <!-- Crown (filled gold) -->
+  <path d="M 222,264 L 222,243 L 240,219 L 255,240 L 264,225 L 270,198 L 276,225 L 285,240 L 300,219 L 318,243 L 318,264 Z" fill="#C99700"/>
+  <!-- Crown base band -->
+  <path d="M 219,264 L 321,264 L 321,273 L 219,273 Z" fill="#C99700"/>
+  <!-- Pearl dots at peak tips (solid gold) -->
+  <circle cx="240" cy="219" r="6.6000000000000005" fill="#D4A830"/>
+  <circle cx="270" cy="198" r="7.5" fill="#D4A830"/>
+  <circle cx="300" cy="219" r="6.6000000000000005" fill="#D4A830"/>
+
+  <!-- M monogram -->
+  <g fill="none" stroke="#C99700" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M 231,363 L 231,273 M 231,273 L 270,327 M 270,327 L 309,273 M 309,273 L 309,363" stroke-width="22.5"/>
+    <path d="M 213,273 L 249,273 M 291,273 L 327,273 M 213,363 L 249,363 M 291,363 L 327,363"   stroke-width="9.0"/>
   </g>
+
+  <!-- Subtle vignette -->
+  <rect width="540" height="540" rx="120" ry="120"
+        fill="none" stroke="#091B2F" stroke-width="36" opacity="0.22"/>
 </svg>
