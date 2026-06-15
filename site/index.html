@@ -489,13 +489,48 @@
     if (!el) return;
     var now = new Date();
     var key = String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
+
+    // Safe DOM construction: textContent only, no HTML interpolation.
+    function fillBanner(kicker, name, rank) {
+      el.textContent = "";
+      [["todays-feast__kicker", kicker],
+       ["todays-feast__name", name],
+       ["todays-feast__rank", rank]].forEach(function (pair) {
+        var s = document.createElement("span");
+        s.className = pair[0];
+        s.textContent = pair[1];
+        el.appendChild(s);
+      });
+      el.hidden = false;
+    }
+
+    // If today is itself a Marian feast, surface it.
     var match = MARIAN_FEASTS.find(function (f) { return f.date === key; });
-    if (!match) return;  // no feast today — banner stays hidden
-    el.innerHTML =
-      '<span class="todays-feast__kicker">Today &middot; ' + key.replace("-", " / ") + '</span>' +
-      '<span class="todays-feast__name">' + match.name + '</span>' +
-      '<span class="todays-feast__rank">' + match.rank + '</span>';
-    el.hidden = false;
+    if (match) {
+      fillBanner("Today · " + key.replace("-", " / "), match.name, match.rank);
+      return;
+    }
+
+    // Otherwise, surface the next upcoming feast (wrapping into next year if needed).
+    var year = now.getFullYear();
+    var todayMs = new Date(year, now.getMonth(), now.getDate()).getTime();
+    var upcoming = MARIAN_FEASTS.map(function (f) {
+      var parts = f.date.split("-");
+      var m = parseInt(parts[0], 10) - 1;
+      var d = parseInt(parts[1], 10);
+      var when = new Date(year, m, d);
+      if (when.getTime() < todayMs) when = new Date(year + 1, m, d);
+      return { feast: f, when: when };
+    }).sort(function (a, b) { return a.when - b.when; })[0];
+    if (!upcoming) return;
+
+    var days = Math.round((upcoming.when.getTime() - todayMs) / 86400000);
+    var until = days === 1 ? "tomorrow" : "in " + days + " days";
+    fillBanner(
+      "Next · " + upcoming.feast.date.replace("-", " / ") + " · " + until,
+      upcoming.feast.name,
+      upcoming.feast.rank
+    );
   })();
 
   // Render recently-visited; surface a quiet empty state on first visit
