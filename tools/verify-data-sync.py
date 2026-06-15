@@ -43,6 +43,10 @@ REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "site" / "data"
 BUILD = REPO / "tools" / "build-mediatrix.py"
 IGNORE_KEYS = {"generated_at", "source_mtime"}
+# Data sidecars NOT generated from the markdown corpus (they derive from the
+# committed HTML + already-built data), so they are out of scope for this
+# corpus-reproducibility gate. Their own builders own their integrity.
+NON_CORPUS_DATA = {"scripture-index.json"}
 
 
 def _strip_ts(obj):
@@ -56,6 +60,8 @@ def _strip_ts(obj):
 def _load_dir(d: Path) -> dict[str, object]:
     out = {}
     for f in sorted(d.glob("*.json")):
+        if f.name in NON_CORPUS_DATA:
+            continue
         out[f.name] = _strip_ts(json.loads(f.read_text(encoding="utf-8")))
     return out
 

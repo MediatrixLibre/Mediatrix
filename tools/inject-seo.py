@@ -127,6 +127,11 @@ PAGES = {
         "description": "A chronological concordance of the anthology's fifty-six Marian witnesses, with doctrinal pole, evidential provenance, and Wikidata/VIAF authority links.",
         "type": "article",
     },
+    "scripture.html": {
+        "title": "Index of Holy Scripture",
+        "description": "Every biblical passage the library expounds or cites, gathered in the order of the Catholic canon: the Old Testament types and the load-bearing New Testament texts as primary treatments, with every page that comments on each verse.",
+        "type": "article",
+    },
     "mater-populi-fidelis.html": {
         "title": "Mater Populi Fidelis: the 2025 doctrinal note, read whole",
         "description": "What the November 2025 DDF note on Marian titles actually teaches: the Co-redemptrix ruling, the prudence on Mediatrix, what it does not say, and how a study library reads in its light.",
@@ -155,6 +160,7 @@ BREADCRUMB_NAMES = {
     "devotions.html": "Devotions",
     "catena.html": "Threads of Witness",
     "concordance.html": "Concordance",
+    "scripture.html": "Scripture Index",
     "mater-populi-fidelis.html": "Mater Populi Fidelis (2025)",
 }
 

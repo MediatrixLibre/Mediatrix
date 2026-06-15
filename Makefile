@@ -48,6 +48,10 @@ clean: ## remove tmp/ + pyc + .DS_Store
 build-data: ## regenerate site/data/*.json from the markdown corpus
 	@python3 tools/build-mediatrix.py
 
+apparatus: ## regenerate derived pages (catena, concordance, scripture index)
+	@python3 tools/build-apparatus.py
+	@python3 tools/build-scripture-index.py
+
 verify-data: ## verify all site/data/*.json exist with sensible record counts
 	@python3 tools/build-mediatrix.py --verify
 
