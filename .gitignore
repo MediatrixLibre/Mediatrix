@@ -64,3 +64,6 @@ playwright-report/
 
 # Generated screenshots from local Playwright runs (kept in the user's home, not in repo)
 mediatrix-*.png
+
+# Claude Code local project config (auth architecture — keep out of public repo)
+.claude/
