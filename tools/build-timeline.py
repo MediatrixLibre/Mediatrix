@@ -147,8 +147,13 @@ def build() -> str:
 
     centuries_sorted = sorted(by_century.keys())
 
-    saint_years = [s["_sort"] for s in saints if s["_sort"] < 9999]
-    year_min, year_max = (min(saint_years), max(saint_years)) if saint_years else (0, 0)
+    # year range for the summary: earliest year ANY witness references → latest year ANY
+    # witness references (so Leo XIV b. 1955 + elected 2025 contributes 2025, not 1955)
+    all_years: list[int] = []
+    for s in saints:
+        all_years.extend(_years_in(s.get("dates", "")))
+        all_years.extend(_years_in(s.get("name", "")))
+    year_min, year_max = (min(all_years), max(all_years)) if all_years else (0, 0)
 
     out: list[str] = []
     out.append("<!-- APPARATUS:timeline -->")
