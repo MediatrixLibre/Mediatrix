@@ -107,9 +107,9 @@ def build_catena(saints: list[dict]) -> str:
     out.append('<header class="page-head">')
     out.append('<p class="kicker"><span class="dot"></span>Apparatus</p>')
     out.append('<h1>The Threads of Witness</h1>')
-    out.append('<p class="lede">The same fifty-six voices of the <a href="anthology.html">Anthology</a>, '
+    out.append('<p class="lede">The same %d voices of the <a href="anthology.html">Anthology</a>, '
                're-gathered by doctrinal pole and followed in order down the centuries. Each name links to its '
-               'place in the Anthology.</p>')
+               'place in the Anthology.</p>' % len(saints))
     out.append('</header>')
 
     for pole in POLE_ORDER:

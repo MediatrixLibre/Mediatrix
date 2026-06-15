@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-15T12:50:52",
-  "entry_count": 225,
+  "generated_at": "2026-06-14T23:33:37",
+  "entry_count": 233,
   "entries": [
     {
       "slug": "anthology.html#s1",
@@ -394,6 +394,62 @@
       "title": "Bl. John Henry Newman",
       "subtitle": "1801 – 1890 · English, Cardinal, \"Doctor of Marian Theology\" (informal)",
       "body": "(Letter to Pusey on Occasion of His Eirenicon, 1866; the famous Marian passage): \"Mary is the daughter of Sion exalted, the lady to whom all the prophets minister, who is, after the Eternal Word, the most exalted of beings.  Letter to Dr. Pusey on Occasion of His Eirenicon"
+    },
+    {
+      "slug": "anthology.html#s57",
+      "kind": "saint",
+      "title": "St. Proclus of Constantinople",
+      "subtitle": "c. 390 – 446 · Greek",
+      "body": "(Homily 1: On the Holy Virgin Theotokos, preached in Constantinople in the presence of Nestorius, c. 428–429): \"Go in thought through the whole of creation, and see whether there exists anything equal to, or greater than, the Holy Virgin, Mother of God.  Oratio I de laudibus sanctae Mariae (Homily 1 on the"
+    },
+    {
+      "slug": "anthology.html#s58",
+      "kind": "saint",
+      "title": "St. Romanos the Melodist",
+      "subtitle": "c. 490 – 556 · Greek",
+      "body": "Today the Virgin gives birth to the Transcendent One, and the earth offers a cave to the Unapproachable One. Ἡ Παρθένος σήμερον τὸν ὑπερούσιον τίκτει, καὶ ἡ γῆ τὸ σπήλαιον τῷ ἀπροσίτῳ προσάγει. Kontakion on the Nativity I, prooimion. The great"
+    },
+    {
+      "slug": "anthology.html#s59",
+      "kind": "saint",
+      "title": "St. Jacob of Serugh",
+      "subtitle": "c. 451 – 521 · Syriac",
+      "body": "(Homily on the Mother of God III, trans. Mary Hansbury): \"That maiden was the Ark of the Godhead.\" Mary carried the hidden God as the Ark of old once carried the glory.  Homilies on the Mother of God, Homily III (the Syriac"
+    },
+    {
+      "slug": "anthology.html#s60",
+      "kind": "saint",
+      "title": "St. Ildephonsus of Toledo",
+      "subtitle": "c. 607 – 667 · Latin",
+      "body": "(De virginitate perpetua sanctae Mariae, PL 96): \"I am Thy servant, O Mary, because Thy Son is my Lord. Thou art my Lady, because Thou art the Handmaid of my Lord.  *De virginitate perpetua sanctae Mariae adversus tres"
+    },
+    {
+      "slug": "anthology.html#s61",
+      "kind": "saint",
+      "title": "Francisco Suárez, S.J.",
+      "subtitle": "1548 – 1617 · Latin",
+      "body": "(De mysteriis vitae Christi, in IIIam partem D. Thomae, 1592): the divine maternity belongs \"to the order of the hypostatic union,\" and from it Mary draws \"a certain quasi-infinite dignity\" by her relation to God, the infinite Good.  *Commentarii ac disputationes in tertiam partem D. Thomae: De"
+    },
+    {
+      "slug": "anthology.html#s62",
+      "kind": "saint",
+      "title": "Matthias Joseph Scheeben",
+      "subtitle": "1835 – 1888 · German",
+      "body": "(Mariology, \"The Bridal Motherhood\", trans. T. Geukers): \"The Bridegroom gives Himself to the bride as her Son, and dwells in her in virtue of this gift.  Mariologie (within the Handbuch der katholischen Dogmatik;"
+    },
+    {
+      "slug": "anthology.html#s63",
+      "kind": "saint",
+      "title": "Pope Benedict XVI",
+      "subtitle": "1927 – 2022 · Latin (encyclical)",
+      "body": "(Deus Caritas Est §42, 25 December 2005): \"Mary, Virgin and Mother, shows us what love is and whence it draws its origin and its constantly renewed power.  Deus Caritas Est §42 (AAS 98 [2006] 217–252), the closing"
+    },
+    {
+      "slug": "anthology.html#s64",
+      "kind": "saint",
+      "title": "Pope Leo XIV",
+      "subtitle": "b. 1955; elected 2025 · Italian (homily)",
+      "body": "(first homily as Pope, Sistine Chapel, 9 May 2025): \"May God grant me this grace, today and always, through the loving intercession of Mary, Mother of the Church.  Homily at the Mass with the College of Cardinals, Sistine"
     },
     {
       "slug": "ot-types.html#t1",

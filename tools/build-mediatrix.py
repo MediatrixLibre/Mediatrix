@@ -316,7 +316,7 @@ def _infer_lang(lang_field: str) -> str:
     if not lang_field:
         return ""
     f = lang_field.lower()
-    for code in ("greek", "latin", "hebrew", "syriac", "french", "italian", "polish", "occitan", "spanish", "aramaic", "english"):
+    for code in ("greek", "latin", "hebrew", "syriac", "french", "italian", "german", "polish", "occitan", "spanish", "aramaic", "english"):
         if code in f:
             return code
     return ""

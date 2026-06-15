@@ -15,8 +15,8 @@
 
 ## Primary study pages
 
-- [The Library](https://stella-maris.pages.dev/library.html): chronological compendium of the doctrine across ten eras and 1865 years.
-- [Concise Anthology](https://stella-maris.pages.dev/anthology.html): one strongest sentence per author, 57 voices from Justin Martyr to St. Bartolo Longo, originals beside the English.
+- [The Library](https://stella-maris.pages.dev/library.html): chronological compendium of the doctrine across eleven eras and nineteen centuries.
+- [Concise Anthology](https://stella-maris.pages.dev/anthology.html): one strongest sentence per author, 64 voices from Justin Martyr to Pope Leo XIV, originals beside the English.
 - [Catena · Threads of Witness](https://stella-maris.pages.dev/catena.html): the anthology re-gathered into four doctrinal threads — Foundational, Co-Redemptrix, Mediatrix, Both — chronologically.
 - [Concordance of Witnesses](https://stella-maris.pages.dev/concordance.html): chronological index with doctrinal pole, provenance, and authority links.
 - [Index of Holy Scripture](https://stella-maris.pages.dev/scripture.html): every biblical passage the library treats, in Catholic-canon order, with primary treatments and every page that cites each verse.

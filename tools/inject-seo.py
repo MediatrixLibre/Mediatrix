@@ -48,8 +48,8 @@ PAGES = {
         "type": "article",
     },
     "anthology.html": {
-        "title": "Anthology: fifty-seven voices, in their own words",
-        "description": "Fifty-seven patristic, medieval, and magisterial voices on Mary, from Justin Martyr to St. Bartolo Longo, each with provenance and translation notes.",
+        "title": "Anthology: sixty-four voices, in their own words",
+        "description": "Sixty-four patristic, medieval, and magisterial voices on Mary, from Justin Martyr to Pope Leo XIV, each with provenance and translation notes.",
         "type": "article",
     },
     "rosary.html": {

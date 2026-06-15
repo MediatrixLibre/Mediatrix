@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "source_file": "Marian-Concise-Anthology.md",
-  "source_mtime": "2026-05-15T12:50:43",
-  "generated_at": "2026-05-29T04:01:14",
+  "source_mtime": "2026-06-14T23:32:27",
+  "generated_at": "2026-06-14T23:33:37",
   "title": "The Marian Concise Anthology, One Quote per Saint, with Greek and Latin",
   "saints": [
     {
@@ -788,7 +788,119 @@
       "source": "Letter to Dr. Pusey on Occasion of His Eirenicon",
       "provenance": "verbatim",
       "pole": "B"
+    },
+    {
+      "num": 57,
+      "name": "St. Proclus of Constantinople",
+      "dates": "c. 390 – 446",
+      "language": "Greek",
+      "era_title": "Part XII — Supplementary Voices (added 2026-06-14)",
+      "era_slug": null,
+      "original_language": "greek",
+      "original": "",
+      "english": "(Homily 1: On the Holy Virgin Theotokos, preached in Constantinople in the presence of Nestorius, c. 428–429): \"Go in thought through the whole of creation, and see whether there exists anything equal to, or greater than, the Holy Virgin, Mother of God.",
+      "source": "Oratio I de laudibus sanctae Mariae (Homily 1 on the",
+      "provenance": "traditional",
+      "pole": "F"
+    },
+    {
+      "num": 58,
+      "name": "St. Romanos the Melodist",
+      "dates": "c. 490 – 556",
+      "language": "Greek",
+      "era_title": "Part XII — Supplementary Voices (added 2026-06-14)",
+      "era_slug": null,
+      "original_language": "greek",
+      "original": "Ἡ Παρθένος σήμερον τὸν ὑπερούσιον τίκτει, καὶ ἡ γῆ τὸ σπήλαιον τῷ ἀπροσίτῳ προσάγει.",
+      "english": "Today the Virgin gives birth to the Transcendent One, and the earth offers a cave to the Unapproachable One.",
+      "source": "Kontakion on the Nativity I, prooimion. The great",
+      "provenance": "liturgical",
+      "pole": "F"
+    },
+    {
+      "num": 59,
+      "name": "St. Jacob of Serugh",
+      "dates": "c. 451 – 521",
+      "language": "Syriac",
+      "era_title": "Part XII — Supplementary Voices (added 2026-06-14)",
+      "era_slug": null,
+      "original_language": "syriac",
+      "original": "",
+      "english": "(Homily on the Mother of God III, trans. Mary Hansbury): \"That maiden was the Ark of the Godhead.\" Mary carried the hidden God as the Ark of old once carried the glory.",
+      "source": "Homilies on the Mother of God, Homily III (the Syriac",
+      "provenance": "traditional",
+      "pole": "F"
+    },
+    {
+      "num": 60,
+      "name": "St. Ildephonsus of Toledo",
+      "dates": "c. 607 – 667",
+      "language": "Latin",
+      "era_title": "Part XII — Supplementary Voices (added 2026-06-14)",
+      "era_slug": null,
+      "original_language": "latin",
+      "original": "",
+      "english": "(De virginitate perpetua sanctae Mariae, PL 96): \"I am Thy servant, O Mary, because Thy Son is my Lord. Thou art my Lady, because Thou art the Handmaid of my Lord.",
+      "source": "*De virginitate perpetua sanctae Mariae adversus tres",
+      "provenance": "traditional",
+      "pole": "M"
+    },
+    {
+      "num": 61,
+      "name": "Francisco Suárez, S.J.",
+      "dates": "1548 – 1617",
+      "language": "Latin",
+      "era_title": "Part XII — Supplementary Voices (added 2026-06-14)",
+      "era_slug": null,
+      "original_language": "latin",
+      "original": "",
+      "english": "(De mysteriis vitae Christi, in IIIam partem D. Thomae, 1592): the divine maternity belongs \"to the order of the hypostatic union,\" and from it Mary draws \"a certain quasi-infinite dignity\" by her relation to God, the infinite Good.",
+      "source": "*Commentarii ac disputationes in tertiam partem D. Thomae: De",
+      "provenance": "traditional",
+      "pole": "F"
+    },
+    {
+      "num": 62,
+      "name": "Matthias Joseph Scheeben",
+      "dates": "1835 – 1888",
+      "language": "German",
+      "era_title": "Part XII — Supplementary Voices (added 2026-06-14)",
+      "era_slug": null,
+      "original_language": "german",
+      "original": "",
+      "english": "(Mariology, \"The Bridal Motherhood\", trans. T. Geukers): \"The Bridegroom gives Himself to the bride as her Son, and dwells in her in virtue of this gift.",
+      "source": "Mariologie (within the Handbuch der katholischen Dogmatik;",
+      "provenance": "traditional",
+      "pole": "M"
+    },
+    {
+      "num": 63,
+      "name": "Pope Benedict XVI",
+      "dates": "1927 – 2022",
+      "language": "Latin (encyclical)",
+      "era_title": "Part XII — Supplementary Voices (added 2026-06-14)",
+      "era_slug": null,
+      "original_language": "latin",
+      "original": "",
+      "english": "(Deus Caritas Est §42, 25 December 2005): \"Mary, Virgin and Mother, shows us what love is and whence it draws its origin and its constantly renewed power.",
+      "source": "Deus Caritas Est §42 (AAS 98 [2006] 217–252), the closing",
+      "provenance": "magisterial",
+      "pole": "M"
+    },
+    {
+      "num": 64,
+      "name": "Pope Leo XIV",
+      "dates": "b. 1955; elected 2025",
+      "language": "Italian (homily)",
+      "era_title": "Part XII — Supplementary Voices (added 2026-06-14)",
+      "era_slug": null,
+      "original_language": "italian",
+      "original": "",
+      "english": "(first homily as Pope, Sistine Chapel, 9 May 2025): \"May God grant me this grace, today and always, through the loving intercession of Mary, Mother of the Church.",
+      "source": "Homily at the Mass with the College of Cardinals, Sistine",
+      "provenance": "magisterial",
+      "pole": "M"
     }
   ],
-  "saint_count": 56
+  "saint_count": 64
 }
