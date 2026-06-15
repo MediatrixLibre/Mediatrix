@@ -1,25 +1,32 @@
 #!/usr/bin/env python3
 """
-gen-icons.py: generate raster icons referenced by the SEO meta tags.
+gen-icons.py: generate raster icons referenced by the SEO meta tags + manifest.
+
+Two-tier branding (deliberate):
+  - favicon (browser tab, 16/32 px): the simple Stella Maris star (favicon.svg).
+    A detailed device would be mud at favicon size.
+  - app icon (home-screen / PWA, 180/512 px): the crowned Marian "M" device
+    (apple-touch-icon-source.svg). The home-screen icon is what the user reads.
 
 Outputs (all into ./site/):
-  - favicon-16.png        16x16 raster of the Stella Maris
-  - favicon-32.png        32x32 raster of the Stella Maris
-  - apple-touch-icon-180.png  180x180 raster of the Stella Maris on cream
-  - og.png                1200x630 social-preview card (Stella Maris + wordmark)
+  - favicon-16.png            16x16  star  (from favicon.svg)
+  - favicon-32.png            32x32  star  (from favicon.svg)
+  - apple-touch-icon-180.png  180x180 crowned-M (from apple-touch-icon-source.svg)
+  - icon-512.png              512x512 crowned-M (from apple-touch-icon-source.svg)
+  - og.png                    1200x630 social-preview card (star + wordmark)
 
 Strategy:
-  - For the favicon variants: rasterize site/favicon.svg via macOS qlmanage,
-    then resize via Pillow.
-  - For og.png: draw natively in Pillow. The star is reconstructed from the
-    same polygon coordinates used in favicon.svg, scaled to fit. Text is set
-    in Georgia (or Times New Roman fallback), a system serif that ships with
-    macOS, since the project's Cinzel woff2 cannot be loaded by Pillow.
+  - Rasterize the relevant SVG via macOS qlmanage at 512 px, resize via Pillow.
+  - App icons are composited onto a full-bleed navy square (matches the source
+    SVG's outer gradient stop) so iOS/Android home-screen masks never reveal
+    transparent corners.
+  - For og.png: draw natively in Pillow (star reconstructed from polygon coords;
+    text in Georgia / Times New Roman, a macOS system serif, since Cinzel woff2
+    cannot be loaded by Pillow).
 
-Re-run any time the favicon or branding changes. Idempotent (overwrites).
+Re-run any time the favicon OR the app icon changes. Idempotent (overwrites).
 
-Requires: Pillow (already in stdlib of most macOS Python installs), qlmanage
-(part of macOS). No network access.
+Requires: Pillow, qlmanage (part of macOS). No network access.
 """
 from __future__ import annotations
 
@@ -36,6 +43,7 @@ TMP = Path("/tmp/mediatrix-icons")
 
 CREAM = (249, 246, 239)
 NAVY = (12, 35, 64)
+NAVY_EDGE = (5, 12, 30)   # = #050C1E, outer stop of the app-icon bg gradient
 GOLD = (201, 151, 0)
 GOLD_DARK = (140, 107, 0)
 
@@ -98,30 +106,44 @@ def _draw_stella_maris(img: Image.Image, cx: int, cy: int, radius: int, gold=GOL
     draw.ellipse((cx - cr, cy - cr, cx + cr, cy + cr), fill=gold)
 
 
-def gen_favicons() -> None:
+def _rasterize(svg_name: str) -> Image.Image:
+    """qlmanage-rasterize a site SVG at 512 px, return an RGBA Image."""
     TMP.mkdir(parents=True, exist_ok=True)
     for f in TMP.glob("*.png"):
         f.unlink()
     subprocess.run(
-        ["qlmanage", "-t", "-s", "512", "-o", str(TMP), str(SITE / "favicon.svg")],
+        ["qlmanage", "-t", "-s", "512", "-o", str(TMP), str(SITE / svg_name)],
         check=True, capture_output=True,
     )
-    src = TMP / "favicon.svg.png"
+    src = TMP / f"{svg_name}.png"
     if not src.exists():
-        print("  fail: qlmanage did not produce a thumbnail")
+        print(f"  fail: qlmanage did not produce a thumbnail for {svg_name}")
         sys.exit(1)
-    big = Image.open(src).convert("RGBA")
+    return Image.open(src).convert("RGBA")
 
-    for size, name in [(16, "favicon-16.png"), (32, "favicon-32.png"),
-                       (180, "apple-touch-icon-180.png")]:
+
+def gen_favicons() -> None:
+    """Star favicons (browser tab) from favicon.svg — transparent background."""
+    big = _rasterize("favicon.svg")
+    for size, name in [(16, "favicon-16.png"), (32, "favicon-32.png")]:
         out = SITE / name
-        if name.startswith("apple-touch"):
-            canvas = Image.new("RGBA", (size, size), CREAM + (255,))
-            star = big.resize((size, size), Image.LANCZOS)
-            canvas.alpha_composite(star)
-            canvas.convert("RGB").save(out, "PNG", optimize=True)
-        else:
-            big.resize((size, size), Image.LANCZOS).save(out, "PNG", optimize=True)
+        big.resize((size, size), Image.LANCZOS).save(out, "PNG", optimize=True)
+        print(f"  wrote   {out.relative_to(REPO)}")
+
+
+def gen_app_icons() -> None:
+    """Crowned-M app icons (home screen / PWA) from apple-touch-icon-source.svg.
+
+    Composited onto a full-bleed navy square so iOS/Android home-screen masks
+    never reveal transparent corners.
+    """
+    big = _rasterize("apple-touch-icon-source.svg")
+    for size, name in [(180, "apple-touch-icon-180.png"), (512, "icon-512.png")]:
+        out = SITE / name
+        canvas = Image.new("RGBA", (size, size), NAVY_EDGE + (255,))
+        device = big.resize((size, size), Image.LANCZOS)
+        canvas.alpha_composite(device)
+        canvas.convert("RGB").save(out, "PNG", optimize=True)
         print(f"  wrote   {out.relative_to(REPO)}")
 
 
@@ -160,8 +182,10 @@ def gen_og() -> None:
 
 
 def main() -> int:
-    print("=== favicon variants ===")
+    print("=== favicon variants (star) ===")
     gen_favicons()
+    print("=== app icons (crowned M) ===")
+    gen_app_icons()
     print("=== og.png ===")
     gen_og()
     print("done.")
