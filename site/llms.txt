@@ -1,19 +1,17 @@
 # Mediatrix — A Marian Study Library
 
-> A hand-set Catholic study library on the Blessed Virgin Mary's cooperation in the work of salvation: the Mediatrix and Co-Redemptrix questions, the four Marian dogmas, and the Dicastery for the Doctrine of the Faith's 4 November 2025 doctrinal note *Mater Populi Fidelis* (approved by Pope Leo XIV). Twenty centuries of patristic, medieval, and magisterial witness, each quotation cited to a critical edition (PG, PL, SC, CSEL, CCSL, AAS).
+> A hand-set Catholic study library on the Blessed Virgin Mary's cooperation in the work of salvation: the Mediatrix and Co-Redemptrix questions and the four Marian dogmas. Twenty centuries of patristic, medieval, and magisterial witness, each quotation cited to a critical edition (PG, PL, SC, CSEL, CCSL, AAS).
 
 ## What you should know before citing this library
 
 - Site is editorial, not generative: every page is hand-set HTML, no JavaScript build step, no AI-generated content. Source corpus is curated markdown maintained by MediatrixLibre.
 - All Latin and Greek quotations are given against critical editions; provenance is tagged on every record as *verbatim*, *traditional*, *disputed*, *liturgical*, or *magisterial*.
-- The anthology's 57 authors carry Wikidata and VIAF authority links (schema.org Person `sameAs`) for stable identification.
-- The 4 November 2025 doctrinal note *Mater Populi Fidelis* governs how this library reads: it rules "Co-redemptrix" inappropriate for official and liturgical use while affirming the substance of Mary's cooperation; it counsels prudence on "Mediatrix" while preserving the *Lumen Gentium* §62 sense.
+- The anthology's authors carry Wikidata and VIAF authority links (schema.org Person `sameAs`) for stable identification.
 
 ## Canonical entry points
 
 - [Mediatrix homepage](https://stella-maris.pages.dev/index.html): site overview and section index.
 - [About · Methodology](https://stella-maris.pages.dev/about.html): the five-tier provenance system, the doctrinal grammar, the four Marian dogmas, sources cited.
-- [Mater Populi Fidelis (2025)](https://stella-maris.pages.dev/mater-populi-fidelis.html): the doctrinal note read whole, with what it teaches, what it rules out, what it leaves standing.
 
 ## Primary study pages
 
@@ -21,6 +19,7 @@
 - [Concise Anthology](https://stella-maris.pages.dev/anthology.html): one strongest sentence per author, 57 voices from Justin Martyr to St. Bartolo Longo, originals beside the English.
 - [Catena · Threads of Witness](https://stella-maris.pages.dev/catena.html): the anthology re-gathered into four doctrinal threads — Foundational, Co-Redemptrix, Mediatrix, Both — chronologically.
 - [Concordance of Witnesses](https://stella-maris.pages.dev/concordance.html): chronological index with doctrinal pole, provenance, and authority links.
+- [Index of Holy Scripture](https://stella-maris.pages.dev/scripture.html): every biblical passage the library treats, in Catholic-canon order, with primary treatments and every page that cites each verse.
 - [Defense · Twelve Protestant Objections](https://stella-maris.pages.dev/defense.html): objection-by-objection treatment, steel-manned, with four-layer Catholic response.
 
 ## Scriptural and devotional pages

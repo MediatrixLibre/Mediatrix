@@ -39,7 +39,7 @@ DATE_PUBLISHED = "2026-05-15"
 PAGES = {
     "index.html": {
         "title": "Mediatrix: a Marian study library",
-        "description": "A hand-set Marian study library: Mary's cooperation in the work of salvation, the Mediatrix and Co-Redemptrix questions, and the 2025 doctrinal note Mater Populi Fidelis, drawn from patristic, medieval, and magisterial witness.",
+        "description": "A hand-set Marian study library: Mary's cooperation in the work of salvation, the Mediatrix and Co-Redemptrix questions, and the four Marian dogmas, drawn from patristic, medieval, and magisterial witness.",
         "type": "website",
     },
     "library.html": {
@@ -132,11 +132,6 @@ PAGES = {
         "description": "Every biblical passage the library expounds or cites, gathered in the order of the Catholic canon: the Old Testament types and the load-bearing New Testament texts as primary treatments, with every page that comments on each verse.",
         "type": "article",
     },
-    "mater-populi-fidelis.html": {
-        "title": "Mater Populi Fidelis: the 2025 doctrinal note, read whole",
-        "description": "What the November 2025 DDF note on Marian titles actually teaches: the Co-redemptrix ruling, the prudence on Mediatrix, what it does not say, and how a study library reads in its light.",
-        "type": "article",
-    },
 }
 
 # Short, navigable names for the BreadcrumbList trail (the full SEO titles
@@ -161,7 +156,6 @@ BREADCRUMB_NAMES = {
     "catena.html": "Threads of Witness",
     "concordance.html": "Concordance",
     "scripture.html": "Scripture Index",
-    "mater-populi-fidelis.html": "Mater Populi Fidelis (2025)",
 }
 
 # Critical fonts to preload. Picked the two faces that render first-fold

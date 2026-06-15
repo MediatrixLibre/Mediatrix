@@ -232,7 +232,6 @@ PAGE_TITLES = {
     "iconography.html": "Iconography",
     "about.html": "About",
     "devotions.html": "Devotions",
-    "mater-populi-fidelis.html": "Mater Populi Fidelis",
 }
 
 
