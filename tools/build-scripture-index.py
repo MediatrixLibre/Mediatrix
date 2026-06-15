@@ -423,6 +423,7 @@ def render(index: dict) -> str:
     out.append('<nav class="apparatus-nav" aria-label="Apparatus">'
                '<a href="catena.html">Threads of Witness</a> &middot; '
                '<a href="concordance.html">Concordance</a> &middot; '
+               '<a href="timeline.html">Witness Timeline</a> &middot; '
                '<a href="anthology.html">Anthology</a></nav>')
     out.append("<!-- /APPARATUS:scripture -->")
     return "\n".join(out)

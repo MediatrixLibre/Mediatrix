@@ -132,7 +132,9 @@ def build_catena(saints: list[dict]) -> str:
         out.append('</section>')
 
     out.append('<nav class="apparatus-nav" aria-label="Apparatus">'
-               '<a href="concordance.html">Concordance &rarr;</a> &middot; '
+               '<a href="concordance.html">Concordance</a> &middot; '
+               '<a href="timeline.html">Witness Timeline</a> &middot; '
+               '<a href="scripture.html">Scripture Index</a> &middot; '
                '<a href="anthology.html">Anthology</a></nav>')
     out.append('<!-- /APPARATUS:catena -->')
     return "\n".join(out)
@@ -202,7 +204,9 @@ def build_concordance(saints: list[dict], amap: dict) -> str:
             )
     out.append('</dl>')
     out.append('<nav class="apparatus-nav" aria-label="Apparatus">'
-               '<a href="catena.html">&larr; Threads of Witness</a> &middot; '
+               '<a href="catena.html">Threads of Witness</a> &middot; '
+               '<a href="timeline.html">Witness Timeline</a> &middot; '
+               '<a href="scripture.html">Scripture Index</a> &middot; '
                '<a href="anthology.html">Anthology</a></nav>')
     out.append('<!-- /APPARATUS:concordance -->')
     return "\n".join(out)

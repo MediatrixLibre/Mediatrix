@@ -13,7 +13,7 @@
  * Bump CACHE_NAME when CSS/JS/fonts change to invalidate.
  */
 
-const CACHE_NAME = "mediatrix-v40";
+const CACHE_NAME = "mediatrix-v41";
 
 const PRECACHE_HTML = [
   "index.html",
@@ -35,6 +35,7 @@ const PRECACHE_HTML = [
   "catena.html",
   "concordance.html",
   "scripture.html",
+  "timeline.html",
   "404.html",
 ];
 

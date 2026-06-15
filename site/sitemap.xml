@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemaps-image/1.1">
   <url>
     <loc>https://stella-maris.pages.dev/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>
@@ -156,6 +156,14 @@
   <url>
     <loc>https://stella-maris.pages.dev/search.html</loc>
     <lastmod>2026-06-14</lastmod>
+    <image:image>
+      <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
+      <image:title>Mediatrix: a Marian study library</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://stella-maris.pages.dev/timeline.html</loc>
+    <lastmod>2026-06-15</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>

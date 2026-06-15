@@ -132,6 +132,11 @@ PAGES = {
         "description": "Every biblical passage the library expounds or cites, gathered in the order of the Catholic canon: the Old Testament types and the load-bearing New Testament texts as primary treatments, with every page that comments on each verse.",
         "type": "article",
     },
+    "timeline.html": {
+        "title": "Chronological Witness Timeline",
+        "description": "Sixty-four Marian witnesses arrayed across the centuries, with the dogmatic landmarks — Ephesus, Chalcedon, the Lateran, Ineffabilis Deus, Munificentissimus Deus — interleaved at their actual years to frame the doctrinal arc.",
+        "type": "article",
+    },
 }
 
 # Short, navigable names for the BreadcrumbList trail (the full SEO titles
@@ -156,6 +161,7 @@ BREADCRUMB_NAMES = {
     "catena.html": "Threads of Witness",
     "concordance.html": "Concordance",
     "scripture.html": "Scripture Index",
+    "timeline.html": "Witness Timeline",
 }
 
 # Critical fonts to preload. Picked the two faces that render first-fold

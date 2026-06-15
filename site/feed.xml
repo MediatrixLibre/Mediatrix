@@ -6,8 +6,15 @@
     <atom:link href="https://stella-maris.pages.dev/feed.xml" rel="self" type="application/rss+xml" />
     <description>Revisions to the Mediatrix study library: sixteen hand-designed pages on Mary as Mediatrix and Co-Redemptrix, drawn from patristic, medieval, and magisterial witness.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 14 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 00:00:00 +0000</lastBuildDate>
     <generator>tools/gen-feed.py</generator>
+    <item>
+      <title>Chronological Witness Timeline</title>
+      <link>https://stella-maris.pages.dev/timeline.html</link>
+      <guid isPermaLink="true">https://stella-maris.pages.dev/timeline.html</guid>
+      <description>Sixty-four Marian witnesses arrayed across the centuries, with the dogmatic landmarks — Ephesus, Chalcedon, the Lateran, Ineffabilis Deus, Munificentissimus Deus — interleaved at their actual years to frame the doctrinal arc.</description>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Index of Holy Scripture</title>
       <link>https://stella-maris.pages.dev/scripture.html</link>

@@ -20,6 +20,7 @@
 - [Catena · Threads of Witness](https://stella-maris.pages.dev/catena.html): the anthology re-gathered into four doctrinal threads — Foundational, Co-Redemptrix, Mediatrix, Both — chronologically.
 - [Concordance of Witnesses](https://stella-maris.pages.dev/concordance.html): chronological index with doctrinal pole, provenance, and authority links.
 - [Index of Holy Scripture](https://stella-maris.pages.dev/scripture.html): every biblical passage the library treats, in Catholic-canon order, with primary treatments and every page that cites each verse.
+- [Chronological Witness Timeline](https://stella-maris.pages.dev/timeline.html): the sixty-four witnesses arrayed across the centuries, with the Marian dogmatic and conciliar definitions interleaved at their actual years as landmarks.
 - [Defense · Twelve Protestant Objections](https://stella-maris.pages.dev/defense.html): objection-by-objection treatment, steel-manned, with four-layer Catholic response.
 
 ## Scriptural and devotional pages
