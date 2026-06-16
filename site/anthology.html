@@ -594,8 +594,8 @@
 
   <div role="group" aria-label="Filter by doctrinal pole" class="filter-bar">
     <button class="filter-btn active" data-filter="all">All <span class="filter-count">65</span></button>
-    <button class="filter-btn" data-filter="F">Foundational <span class="filter-count">12</span></button>
-    <button class="filter-btn" data-filter="CR">Co-Redemptrix <span class="filter-count">19</span></button>
+    <button class="filter-btn" data-filter="F">Foundational <span class="filter-count">11</span></button>
+    <button class="filter-btn" data-filter="CR">Co-Redemptrix <span class="filter-count">20</span></button>
     <button class="filter-btn" data-filter="M">Mediatrix <span class="filter-count">29</span></button>
     <button class="filter-btn" data-filter="B">Both <span class="filter-count">5</span></button>
   </div>
@@ -1119,7 +1119,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s51" data-pole="F">
+    <article class="saint-card" id="s51" data-pole="CR">
       <div class="saint-meta"><strong>51. Bede the Venerable</strong>672&ndash;735<br/>Latin<time>Hom. Evang. I.4</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Beata Maria... non solum credendo intra Patris arcanum sacramenta cognovit, sed in carne suscepit Verbum, et cum carne plenitudinem deitatis.</span>
@@ -1304,7 +1304,7 @@
     var shown = 0;
     cards.forEach(function (c) {
       var match = pole === 'all' || c.dataset.pole === pole;
-      c.hidden = !match;
+      c.style.display = match ? '' : 'none';
       if (match) shown++;
     });
     btns.forEach(function (b) {
