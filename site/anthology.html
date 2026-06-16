@@ -524,7 +524,7 @@
         <!-- /SEO -->
 
 <link rel="stylesheet" href="styles/fonts.css" />
-<link rel="stylesheet" href="styles/mediatrix.css?v=37" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=42" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="manifest" href="manifest.json" />
 <meta name="mobile-web-app-capable" content="yes" />
@@ -592,13 +592,22 @@
     <a href="scripture.html">Scripture Index</a> (every passage, in canonical order)
   </nav>
 
+  <div role="group" aria-label="Filter by doctrinal pole" class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All <span class="filter-count">65</span></button>
+    <button class="filter-btn" data-filter="F">Foundational <span class="filter-count">12</span></button>
+    <button class="filter-btn" data-filter="CR">Co-Redemptrix <span class="filter-count">19</span></button>
+    <button class="filter-btn" data-filter="M">Mediatrix <span class="filter-count">29</span></button>
+    <button class="filter-btn" data-filter="B">Both <span class="filter-count">5</span></button>
+  </div>
+  <p class="filter-status" id="filter-status" aria-live="polite">Showing all 65 witnesses</p>
+
   <!-- ===== Era I — Apostolic & Sub-Apostolic ===== -->
   <section class="era">
     <p class="kicker"><span class="dot"></span>I</p>
     <h2 class="era__head">Apostolic and Sub-Apostolic</h2>
     <p class="era__sub">100 &ndash; 250 AD</p>
 
-    <article class="saint-card" id="s1">
+    <article class="saint-card" id="s1" data-pole="CR">
       <div class="saint-meta"><strong>1. Justin Martyr</strong>c. 100&ndash;165<br/>Greek<time>Dial. Tryph. 100</time></div>
       <blockquote class="saint-quote">
         <span class="greek" lang="el">&pi;&#943;&sigma;&tau;&iota;&nu; &delta;&#8050; &kappa;&alpha;&#8054; &chi;&alpha;&rho;&#8048;&nu; &lambda;&alpha;&beta;&omicron;&#8166;&sigma;&alpha; &Mu;&alpha;&rho;&#943;&alpha; &#7969; &pi;&alpha;&rho;&theta;&#941;&nu;&omicron;&sigmaf;... &gamma;&#941;&nu;&omicron;&iota;&tau;&#972; &mu;&omicron;&iota; &kappa;&alpha;&tau;&#8048; &tau;&#8056; &#8165;&#8134;&mu;&#940; &sigma;&omicron;&upsilon;.</span>
@@ -607,7 +616,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s2">
+    <article class="saint-card" id="s2" data-pole="B">
       <div class="saint-meta"><strong>2. Irenaeus of Lyons</strong>c. 130&ndash;202<br/>Greek (in Old Latin)<time>Adv. Haer. V.19.1</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Sicut illa per angeli sermonem seducta est ut effugeret Deum, ita et haec per angelicum sermonem evangelizata est ut portaret Deum... uti virginis Evae virgo Maria fieret <strong>advocata</strong>.</span>
@@ -616,7 +625,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s3">
+    <article class="saint-card" id="s3" data-pole="CR">
       <div class="saint-meta"><strong>3. Tertullian of Carthage</strong>c. 155&ndash;220<br/>Latin<time>De Carne Christi 17</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Eva crediderat serpenti, Maria credidit Gabrieli; quod illa credendo deliquit, ista credendo delevit.</span>
@@ -625,7 +634,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s4">
+    <article class="saint-card" id="s4" data-pole="M">
       <div class="saint-meta"><strong>4. <em>Sub Tuum Praesidium</em></strong>c. 250<br/>Greek (P. Ryl. III 470)<time>oldest known Marian prayer</time></div>
       <blockquote class="saint-quote">
         <span class="greek" lang="el">&#8025;&pi;&#8056; &tau;&#8052;&nu; &sigma;&#8052;&nu; &epsilon;&#8016;&sigma;&pi;&lambda;&alpha;&gamma;&chi;&nu;&#943;&alpha;&nu; &kappa;&alpha;&tau;&alpha;&phi;&epsilon;&#973;&gamma;&omicron;&mu;&epsilon;&nu;, &Theta;&epsilon;&omicron;&tau;&#972;&kappa;&epsilon;.</span>
@@ -641,7 +650,7 @@
     <h2 class="era__head">Greek Fathers</h2>
     <p class="era__sub">3rd &ndash; 7th century</p>
 
-    <article class="saint-card" id="s5">
+    <article class="saint-card" id="s5" data-pole="M">
       <div class="saint-meta"><strong>5. Origen of Alexandria</strong>c. 185&ndash;254<br/>Greek<time>Comm. in Ioh. I.6</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;No one can grasp the meaning of the Gospel of John except he who has reclined upon the breast of Jesus and has received from Jesus Mary to be his own mother.&rdquo;</span>
@@ -649,7 +658,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s6">
+    <article class="saint-card" id="s6" data-pole="B">
       <div class="saint-meta"><strong>6. Ephrem the Syrian</strong>c. 306&ndash;373<br/>Syriac<time>Hymns on the Nativity 16.10</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;After the Mediator, thou art the <em>Mediatress</em> of the whole world. O only woman whose praise is great in heaven and on earth: through thee the world has been raised; through thee the angels rejoice.&rdquo;</span>
@@ -657,7 +666,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s7">
+    <article class="saint-card" id="s7" data-pole="F">
       <div class="saint-meta"><strong>7. Athanasius (school)</strong>c. 296&ndash;373<br/>Greek<time>Hom. Pap. Tur.</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;O noble Virgin, truly thou art greater than any other greatness. Who is thy equal in greatness, O <em>dwelling place of God the Word</em>?&rdquo;</span>
@@ -665,7 +674,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s8">
+    <article class="saint-card" id="s8" data-pole="M">
       <div class="saint-meta"><strong>8. Cyril of Jerusalem</strong>c. 313&ndash;386<br/>Greek<time>Cat. Lect. 12.15</time></div>
       <blockquote class="saint-quote">
         <span class="greek" lang="el">&Delta;&iota;&#8048; &tau;&#8134;&sigmaf; &#7937;&gamma;&#943;&alpha;&sigmaf; &Pi;&alpha;&rho;&theta;&#941;&nu;&omicron;&upsilon; &Mu;&alpha;&rho;&#943;&alpha;&sigmaf; &pi;&#940;&nu;&tau;&alpha; &tau;&#8048; &#7936;&gamma;&alpha;&theta;&#8048; &#7969;&mu;&#8150;&nu; &pi;&rho;&omicron;&sigma;&#8134;&lambda;&theta;&epsilon;&nu;.</span>
@@ -674,7 +683,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s9">
+    <article class="saint-card" id="s9" data-pole="F">
       <div class="saint-meta"><strong>9. Gregory of Nazianzus</strong>c. 329&ndash;390<br/>Greek<time>Ep. 101 to Cledonius</time></div>
       <blockquote class="saint-quote">
         <span class="greek" lang="el">&Epsilon;&#7988; &tau;&iota;&sigmaf; &omicron;&#8016; &Theta;&epsilon;&omicron;&tau;&#972;&kappa;&omicron;&nu; &tau;&#8052;&nu; &#7937;&gamma;&#943;&alpha;&nu; &Mu;&alpha;&rho;&#943;&alpha;&nu; &#8017;&pi;&omicron;&lambda;&alpha;&mu;&beta;&#940;&nu;&epsilon;&iota;, &chi;&omega;&rho;&#943;&sigmaf; &#7952;&sigma;&tau;&iota; &tau;&#8134;&sigmaf; &theta;&epsilon;&#972;&tau;&eta;&tau;&omicron;&sigmaf;.</span>
@@ -683,7 +692,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s10">
+    <article class="saint-card" id="s10" data-pole="CR">
       <div class="saint-meta"><strong>10. John Chrysostom</strong>c. 347&ndash;407<br/>Greek<time>Hom. on the Annunciation</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;Adam, formed of virgin earth, becomes the beginning of the human race; Mary, the <em>virgin earth</em>, becomes the beginning of human salvation.&rdquo;</span>
@@ -691,7 +700,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s11">
+    <article class="saint-card" id="s11" data-pole="M">
       <div class="saint-meta"><strong>11. Cyril of Alexandria</strong>c. 376&ndash;444<br/>Greek<time>Hom. 4 at Ephesus, 431</time></div>
       <blockquote class="saint-quote">
         <span class="greek" lang="el">&Chi;&alpha;&#8150;&rho;&epsilon; &Mu;&alpha;&rho;&#943;&alpha; &Theta;&epsilon;&omicron;&tau;&#972;&kappa;&epsilon;... &delta;&iota;&#8125; &#7969;&sigmaf; &Tau;&rho;&iota;&#8048;&sigmaf; &delta;&omicron;&xi;&#940;&zeta;&epsilon;&tau;&alpha;&iota;... &delta;&iota;&#8125; &#7969;&sigmaf; &psi;&upsilon;&chi;&alpha;&#8054; &sigma;&#974;&zeta;&omicron;&nu;&tau;&alpha;&iota;.</span>
@@ -700,7 +709,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s12">
+    <article class="saint-card" id="s12" data-pole="CR">
       <div class="saint-meta"><strong>12. Peter Chrysologus</strong>c. 380&ndash;450<br/>Latin<time>Sermo 140 (attrib.)</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Virgo concepit, virgo peperit, virgo permansit. Salus venit per feminam, sicut mors venit per feminam.</span>
@@ -716,7 +725,7 @@
     <h2 class="era__head">Latin Fathers</h2>
     <p class="era__sub">4th &ndash; 5th century</p>
 
-    <article class="saint-card" id="s13">
+    <article class="saint-card" id="s13" data-pole="F">
       <div class="saint-meta"><strong>13. Ambrose of Milan</strong>339&ndash;397<br/>Latin<time>De Inst. Virg. 49</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Maria templum Dei, non Deus templi. Et ideo illa sola adoranda, qui in suo templo operabatur.</span>
@@ -725,7 +734,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s14">
+    <article class="saint-card" id="s14" data-pole="CR">
       <div class="saint-meta"><strong>14. Jerome</strong>c. 347&ndash;420<br/>Latin<time>Ep. 22.21 to Eustochium</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Mors per Hevam, vita per Mariam.</span>
@@ -734,7 +743,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s15">
+    <article class="saint-card" id="s15" data-pole="CR">
       <div class="saint-meta"><strong>15. Augustine of Hippo</strong>354&ndash;430<br/>Latin<time>De Sancta Virg. 6</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">...quia cooperata est caritate, ut fideles in Ecclesia nascerentur, quae illius capitis membra sunt.</span>
@@ -750,7 +759,7 @@
     <h2 class="era__head">Byzantine Fathers</h2>
     <p class="era__sub">6th &ndash; 8th century</p>
 
-    <article class="saint-card" id="s16">
+    <article class="saint-card" id="s16" data-pole="B">
       <div class="saint-meta"><strong>16. The Akathist Hymn</strong>c. 6th c.<br/>Greek<time>Stanza 2, Chairetismoi</time></div>
       <blockquote class="saint-quote">
         <span class="greek" lang="el">&Chi;&alpha;&#8150;&rho;&epsilon;, &kappa;&lambda;&#943;&mu;&alpha;&xi; &#7952;&pi;&omicron;&upsilon;&rho;&#940;&nu;&iota;&epsilon;, &delta;&iota;&#8125; &#7969;&sigmaf; &kappa;&alpha;&tau;&#941;&beta;&eta; &#8001; &Theta;&epsilon;&#972;&sigmaf;&middot; &chi;&alpha;&#8150;&rho;&epsilon;, &gamma;&#941;&phi;&upsilon;&rho;&alpha; &mu;&epsilon;&tau;&#940;&gamma;&omicron;&upsilon;&sigma;&alpha; &tau;&omicron;&#8058;&sigmaf; &#7952;&kappa; &gamma;&#8134;&sigmaf; &pi;&rho;&#8056;&sigmaf; &omicron;&#8016;&rho;&alpha;&nu;&#972;&nu;.</span>
@@ -759,7 +768,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s17">
+    <article class="saint-card" id="s17" data-pole="M">
       <div class="saint-meta"><strong>17. Sophronius of Jerusalem</strong>c. 560&ndash;638<br/>Greek<time>Sermo in Annunt.</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;No one is filled with the knowledge of God except through thee; no one is saved except through thee; no one is ransomed from danger except through thee, O Virgin Mother.&rdquo;</span>
@@ -767,7 +776,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s18">
+    <article class="saint-card" id="s18" data-pole="M">
       <div class="saint-meta"><strong>18. Germanus of Constantinople</strong>c. 634&ndash;733<br/>Greek<time>Hom. on the Sash</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;No one obtains the gift of mercy save through thee, O most pure; no one is saved save through thee, O most holy; no one is delivered from evils save through thee, O most chaste; no one obtains a gift of grace save through thee, O all-immaculate.&rdquo;</span>
@@ -775,7 +784,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s19">
+    <article class="saint-card" id="s19" data-pole="M">
       <div class="saint-meta"><strong>19. Andrew of Crete</strong>c. 650&ndash;740<br/>Greek<time>Hom. on the Dormition II</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;Hail, full of grace; hail, by whom mourning Eve is restored; hail, <em>Mediatress</em> (<span class="greek" lang="el">&Mu;&epsilon;&sigma;&#943;&tau;&rho;&iota;&alpha;</span>) of the world.&rdquo;</span>
@@ -783,7 +792,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s20">
+    <article class="saint-card" id="s20" data-pole="M">
       <div class="saint-meta"><strong>20. John of Damascus</strong>c. 675&ndash;749<br/>Greek<time>Hom. on the Dormition II</time></div>
       <blockquote class="saint-quote">
         <span class="greek" lang="el">&Sigma;&#8058; &theta;&alpha;&#8166;&mu;&alpha; &tau;&#8182;&nu; &theta;&alpha;&upsilon;&mu;&#940;&tau;&omega;&nu;, &#7969; &sigma;&#974;&zeta;&omicron;&upsilon;&sigma;&alpha; &tau;&#8056;&nu; &kappa;&#972;&sigma;&mu;&omicron;&nu; &mu;&epsilon;&sigma;&#8150;&tau;&iota;&sigmaf;.</span>
@@ -799,7 +808,7 @@
     <h2 class="era__head">Medieval Doctors</h2>
     <p class="era__sub">11th &ndash; 13th century</p>
 
-    <article class="saint-card" id="s21">
+    <article class="saint-card" id="s21" data-pole="M">
       <div class="saint-meta"><strong>21. Peter Damian</strong>1007&ndash;1072<br/>Latin<time>Sermo 44</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Tibi nihil impossibile, cui possibile est etiam desperatos in spem salutis revocare.</span>
@@ -808,7 +817,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s22">
+    <article class="saint-card" id="s22" data-pole="F">
       <div class="saint-meta"><strong>22. Anselm of Canterbury</strong>1033&ndash;1109<br/>Latin<time>Oratio 52</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Nihil Mariae aequale, nihil nisi Deus maius Maria.</span>
@@ -817,7 +826,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s23">
+    <article class="saint-card" id="s23" data-pole="M">
       <div class="saint-meta"><strong>23. Bernard of Clairvaux</strong>1090&ndash;1153<br/>Latin &middot; <em>Marian Doctor</em><time>De Aquaeductu &sect;7</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Totum nos habere voluit per Mariam.</span>
@@ -826,7 +835,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s24">
+    <article class="saint-card" id="s24" data-pole="CR">
       <div class="saint-meta"><strong>24. Albert the Great</strong>c. 1206&ndash;1280<br/>Latin<time>Mariale q. 42</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Beata Virgo electa est a Deo non in ministram alicuius particularis, sed in cooperatricem et adiutricem totius eius negotii.</span>
@@ -835,7 +844,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s25">
+    <article class="saint-card" id="s25" data-pole="M">
       <div class="saint-meta"><strong>25. Bonaventure</strong>1221&ndash;1274<br/>Latin &middot; <em>Seraphic Doctor</em><time>Speculum B.V.M. ch. 6</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Sicut luna inter solem et terram interposita, quod a sole accipit, terrae communicat, sic Maria inter Christum et nos posita, gratias quas a Christo accipit, nobis effundit.</span>
@@ -844,7 +853,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s26">
+    <article class="saint-card" id="s26" data-pole="CR">
       <div class="saint-meta"><strong>26. Thomas Aquinas</strong>1225&ndash;1274<br/>Latin &middot; <em>Angelic Doctor</em><time>ST III, q.30, a.1</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">...expectabatur consensus Virginis loco totius humanae naturae.</span>
@@ -853,7 +862,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s27">
+    <article class="saint-card" id="s27" data-pole="CR">
       <div class="saint-meta"><strong>27. Bridget of Sweden</strong>1303&ndash;1373<br/>Latin (from Swedish)<time>Rev. Cael. I.35</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Mater mea et ego salvavimus hominem quasi uno corde tantum, ego patiendo in corde et carne, illa dolore et amore cordis sui.</span>
@@ -869,7 +878,7 @@
     <h2 class="era__head">Late Medieval and Renaissance</h2>
     <p class="era__sub">14th &ndash; 16th century</p>
 
-    <article class="saint-card" id="s28">
+    <article class="saint-card" id="s28" data-pole="CR">
       <div class="saint-meta"><strong>28. Jean Gerson</strong>1363&ndash;1429<br/>Latin<time>Marian writings</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Maria coredemptrix nostra.</span>
@@ -878,7 +887,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s29">
+    <article class="saint-card" id="s29" data-pole="M">
       <div class="saint-meta"><strong>29. Bernardine of Siena</strong>1380&ndash;1444<br/>Latin<time>Sermo 51, Quaracchi II</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Omnis gratia quae communicatur huic mundo triplicem habet processum: ordinatissime a Deo in Christum, a Christo in Virginem, a Virgine in nos dispensatur.</span>
@@ -894,7 +903,7 @@
     <h2 class="era__head">Counter-Reformation and Early Modern</h2>
     <p class="era__sub">16th &ndash; 18th century</p>
 
-    <article class="saint-card" id="s30">
+    <article class="saint-card" id="s30" data-pole="CR">
       <div class="saint-meta"><strong>30. Peter Canisius</strong>1521&ndash;1597<br/>Latin<time>De Maria Virg. Incomp. IV.27</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Beatissima Virgo cum Christo Redemptore nostro adeo coniuncta est, ut in opere redemptionis verissime cooperatrix sit dicenda.</span>
@@ -903,7 +912,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s31">
+    <article class="saint-card" id="s31" data-pole="CR">
       <div class="saint-meta"><strong>31. Robert Bellarmine</strong>1542&ndash;1621<br/>Latin<time>De Septem Verbis I.12</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Maria... Filium suum in sacrificium obtulit, tantis doloribus cum eo afflicta, quantis nulla unquam creatura.</span>
@@ -912,7 +921,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s32">
+    <article class="saint-card" id="s32" data-pole="M">
       <div class="saint-meta"><strong>32. Francis de Sales</strong>1567&ndash;1622<br/>French<time>Traité III.8 &middot; Lettres</time></div>
       <blockquote class="saint-quote">
         <span class="romance">Marie est M&eacute;diatrice d&rsquo;intercession entre nous et J&eacute;sus-Christ, comme J&eacute;sus-Christ est M&eacute;diateur de r&eacute;demption entre nous et Dieu son P&egrave;re.</span>
@@ -921,7 +930,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s33">
+    <article class="saint-card" id="s33" data-pole="CR">
       <div class="saint-meta"><strong>33. John Eudes</strong>1601&ndash;1680<br/>French<time>Cœur Admirable III</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;The Heart of Mary is so completely united to the Heart of Jesus, and so transformed into it, that they are no longer two hearts but <em>one single Heart</em>.&rdquo;</span>
@@ -929,7 +938,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s34">
+    <article class="saint-card" id="s34" data-pole="M">
       <div class="saint-meta"><strong>34. Louis Marie de Montfort</strong>1673&ndash;1716<br/>French<time>Traité Vraie D&eacute;votion &sect;23</time></div>
       <blockquote class="saint-quote">
         <span class="romance">Dieu le P&egrave;re a fait un amas de toutes les eaux qu&rsquo;il a appel&eacute; la mer (<em>maria</em>); il a fait un amas de toutes ses gr&acirc;ces qu&rsquo;il a appel&eacute; <em>Marie</em>.</span>
@@ -938,7 +947,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s35">
+    <article class="saint-card" id="s35" data-pole="M">
       <div class="saint-meta"><strong>35. Alphonsus Liguori</strong>1696&ndash;1787<br/>Italian<time>Glorie di Maria I.5</time></div>
       <blockquote class="saint-quote">
         <span class="romance">Tutte le grazie ci vengono dispensate per mezzo di Maria, e tutti quelli che si salvano si salvano solo per mezzo di questa divina Madre.</span>
@@ -954,7 +963,7 @@
     <h2 class="era__head">Modern Saints</h2>
     <p class="era__sub">19th &ndash; 20th century</p>
 
-    <article class="saint-card" id="s36">
+    <article class="saint-card" id="s36" data-pole="M">
       <div class="saint-meta"><strong>36. Catherine Labour&eacute;</strong>1806&ndash;1876<br/>French<time>Miraculous Medal, 1830</time></div>
       <blockquote class="saint-quote">
         <span class="romance">&Ocirc; Marie, con&ccedil;ue sans p&eacute;ch&eacute;, priez pour nous qui avons recours &agrave; vous.</span>
@@ -963,7 +972,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s37">
+    <article class="saint-card" id="s37" data-pole="F">
       <div class="saint-meta"><strong>37. Bernadette Soubirous</strong>1844&ndash;1879<br/>Occitan / Gascon<time>Lourdes, 25 Mar 1858</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Que soy era Immaculada Councepciou.</span>
@@ -972,7 +981,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s38">
+    <article class="saint-card" id="s38" data-pole="M">
       <div class="saint-meta"><strong>38. Maximilian Maria Kolbe</strong>1894&ndash;1941<br/>Polish<time>Pisma, Militia Immaculatae</time></div>
       <blockquote class="saint-quote">
         <span class="romance">Niepokalana jest Po&#347;redniczk&#261; wszelkich &#322;ask.</span>
@@ -981,7 +990,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s39">
+    <article class="saint-card" id="s39" data-pole="M">
       <div class="saint-meta"><strong>39. Pio of Pietrelcina</strong>1887&ndash;1968<br/>Italian<time>Epistolario, passim</time></div>
       <blockquote class="saint-quote">
         <span class="romance">Amate la Madonna e fatela amare. Recitate sempre il Rosario.</span>
@@ -990,7 +999,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s40">
+    <article class="saint-card" id="s40" data-pole="CR">
       <div class="saint-meta"><strong>40. Fulton J. Sheen</strong>1895&ndash;1979<br/>English<time>The World&rsquo;s First Love</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;Mary in giving birth at Bethlehem had no pain; she had her pain at Calvary, when the Mystical Body of her Son was born.&rdquo;</span>
@@ -998,7 +1007,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s41">
+    <article class="saint-card" id="s41" data-pole="M">
       <div class="saint-meta"><strong>41. Teresa of Calcutta</strong>1910&ndash;1997<br/>English<time>In My Own Words</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;Mary, Mother of Jesus, please be a mother to me now.&rdquo;</span>
@@ -1006,7 +1015,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s-longo">
+    <article class="saint-card" id="s-longo" data-pole="M">
       <div class="saint-meta"><strong>St.&nbsp;Bartolo Longo</strong>1841&ndash;1926<br/>Italian &middot; <em>Apostle of the Rosary</em><time>Quindici Sabati &middot; Supplica, 1883</time></div>
       <blockquote class="saint-quote">
         <span class="romance">Maria &egrave; la Mediatrice di tutte le grazie; e il Rosario &egrave; il canale ordinario per cui ella le distribuisce.</span>
@@ -1022,7 +1031,7 @@
     <h2 class="era__head">Modern Magisterium</h2>
     <p class="era__sub">1854 &ndash; 1987</p>
 
-    <article class="saint-card" id="s42">
+    <article class="saint-card" id="s42" data-pole="CR">
       <div class="saint-meta"><strong>42. Pius IX</strong>1792&ndash;1878<br/>Latin<time>Ineffabilis Deus, 1854</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Ipsa enim eximio prorsus modo venenosi serpentis caput contrivit, et salutem mundo attulit.</span>
@@ -1031,7 +1040,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s43">
+    <article class="saint-card" id="s43" data-pole="M">
       <div class="saint-meta"><strong>43. Leo XIII</strong>1810&ndash;1903<br/>Latin<time>Fidentem Piumque, 1896</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">...Maria... omnis gratiae et doni canalis.</span>
@@ -1040,7 +1049,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s44">
+    <article class="saint-card" id="s44" data-pole="B">
       <div class="saint-meta"><strong>44. Pius X</strong>1835&ndash;1914<br/>Latin<time>Ad Diem Illum, 1904</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">...merito ipsam reparatricem perditi orbis et dispensatricem omnium munerum... appellare possumus.</span>
@@ -1049,7 +1058,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s45">
+    <article class="saint-card" id="s45" data-pole="CR">
       <div class="saint-meta"><strong>45. Benedict XV</strong>1854&ndash;1922<br/>Latin<time>Inter Sodalicia, 1918</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Ita cum Filio patiente et moriente passa est et paene commortua... ut merito dici queat eam <strong>cum Christo humanum genus redemisse</strong>.</span>
@@ -1058,7 +1067,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s46">
+    <article class="saint-card" id="s46" data-pole="CR">
       <div class="saint-meta"><strong>46. Pius XI</strong>1857&ndash;1939<br/>Italian<time>Radio msg. Lourdes, 28 Apr 1935</time></div>
       <blockquote class="saint-quote">
         <span class="romance">O Madre di amore e di misericordia, che... sei stata a Lui vicina, soffrendo con Lui come <em>Corredentrice</em>...</span>
@@ -1067,7 +1076,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s47">
+    <article class="saint-card" id="s47" data-pole="CR">
       <div class="saint-meta"><strong>47. Pius XII</strong>1876&ndash;1958<br/>Latin<time>Mystici Corporis, 1943</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">...eumdem in Golgotha, una cum maternorum iurium maternique amoris holocausto, nova veluti Eva, pro omnibus Adae filiis... aeterno Patri obtulit.</span>
@@ -1076,7 +1085,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s48">
+    <article class="saint-card" id="s48" data-pole="M">
       <div class="saint-meta"><strong>48. Vatican II</strong>1964<br/>Latin<time>Lumen Gentium &sect;62</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Quapropter Beata Virgo in Ecclesia titulis Advocatae, Auxiliatricis, Adiutricis, <strong>Mediatricis</strong> invocatur. Quod tamen ita intelligitur, ut dignitati et efficacitati Christi unius Mediatoris nihil deroget, nihil superaddat.</span>
@@ -1085,7 +1094,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s49">
+    <article class="saint-card" id="s49" data-pole="CR">
       <div class="saint-meta"><strong>49. John Paul II</strong>1920&ndash;2005<br/>Italian<time>Gen. Audience, 8 Sep 1982</time></div>
       <blockquote class="saint-quote">
         <span class="romance">Maria... ha partecipato in maniera mirabile alle sofferenze del suo Figlio divino, per essere <em>Corredentrice</em> dell&rsquo;umanit&agrave;.</span>
@@ -1101,7 +1110,7 @@
     <h2 class="era__head">Supplementary Voices</h2>
     <p class="era__sub">Doctors and Fathers cited elsewhere in the library; chronological order within the section</p>
 
-    <article class="saint-card" id="s50">
+    <article class="saint-card" id="s50" data-pole="F">
       <div class="saint-meta"><strong>50. Epiphanius of Salamis</strong>c. 310&ndash;403<br/>Greek<time>Panarion 79</time></div>
       <blockquote class="saint-quote">
         <span class="greek" lang="el">&#7952;&nu; &tau;&iota;&mu;&#8135; &Mu;&alpha;&rho;&#943;&alpha;, &#8001; &Kappa;&#973;&rho;&iota;&omicron;&sigmaf; &pi;&rho;&omicron;&sigma;&kappa;&upsilon;&nu;&epsilon;&#943;&sigma;&theta;&omega;.</span>
@@ -1110,7 +1119,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s51">
+    <article class="saint-card" id="s51" data-pole="F">
       <div class="saint-meta"><strong>51. Bede the Venerable</strong>672&ndash;735<br/>Latin<time>Hom. Evang. I.4</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Beata Maria... non solum credendo intra Patris arcanum sacramenta cognovit, sed in carne suscepit Verbum, et cum carne plenitudinem deitatis.</span>
@@ -1119,7 +1128,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s52">
+    <article class="saint-card" id="s52" data-pole="M">
       <div class="saint-meta"><strong>52. Amadeus of Lausanne</strong>1110&ndash;1159<br/>Latin<time>Octo Hom. de Laud. B. Mariae IV</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Aurora consurgens, electa ut sol, pulchra ut luna, terribilis ut castrorum acies ordinata.</span>
@@ -1128,7 +1137,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s53">
+    <article class="saint-card" id="s53" data-pole="F">
       <div class="saint-meta"><strong>53. John Duns Scotus</strong>c. 1266&ndash;1308<br/>Latin &middot; <em>Subtle Doctor</em><time>Ordinatio III, d.3, q.1</time></div>
       <blockquote class="saint-quote">
         <span class="latin" lang="la">Potuit, decuit, ergo fecit.</span>
@@ -1137,7 +1146,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s54">
+    <article class="saint-card" id="s54" data-pole="M">
       <div class="saint-meta"><strong>54. Lawrence Justinian</strong>1381&ndash;1456<br/>Latin<time>Sermo de Annuntiatione</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;The Holy Spirit, like a great river, flowed into the Heart of Mary, and from the Heart of Mary flows back into us. She is the channel by which graces are dispensed, the maternal aqueduct of the divine mercy.&rdquo;</span>
@@ -1145,7 +1154,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s55">
+    <article class="saint-card" id="s55" data-pole="M">
       <div class="saint-meta"><strong>55. Teresa of &Aacute;vila</strong>1515&ndash;1582<br/>Spanish &middot; Doctor of the Church<time>Vida I.7</time></div>
       <blockquote class="saint-quote">
         <span class="romance">Tom&eacute; por mi se&ntilde;ora y abogada a la gloriosa Virgen, y me encomend&eacute; a ella muy de veras.</span>
@@ -1154,7 +1163,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s56">
+    <article class="saint-card" id="s56" data-pole="B">
       <div class="saint-meta"><strong>56. John Henry Newman</strong>1801&ndash;1890<br/>English &middot; Cardinal<time>Letter to Pusey, 1866</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;Mary is the daughter of Sion exalted, the lady to whom all the prophets minister, who is, after the Eternal Word, the most exalted of beings.&rdquo;</span>
@@ -1162,7 +1171,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s57">
+    <article class="saint-card" id="s57" data-pole="F">
       <div class="saint-meta"><strong>57. Proclus of Constantinople</strong>c. 390&ndash;446<br/>Greek<time>Homily 1 on the Theotokos</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;Go in thought through the whole of creation, and see whether there exists anything equal to, or greater than, the Holy Virgin, Mother of God.&rdquo;</span>
@@ -1170,7 +1179,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s58">
+    <article class="saint-card" id="s58" data-pole="F">
       <div class="saint-meta"><strong>58. Romanos the Melodist</strong>c. 490&ndash;556<br/>Greek<time>Kontakion on the Nativity</time></div>
       <blockquote class="saint-quote">
         <span class="greek" lang="el">Ἡ Παρθένος σήμερον τὸν ὑπερούσιον τίκτει, καὶ ἡ γῆ τὸ σπήλαιον τῷ ἀπροσίτῳ προσάγει.</span>
@@ -1179,7 +1188,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s59">
+    <article class="saint-card" id="s59" data-pole="F">
       <div class="saint-meta"><strong>59. Jacob of Serugh</strong>c. 451&ndash;521<br/>Syriac<time>Homily III on the Mother of God</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;That maiden was the Ark of the Godhead.&rdquo; Mary carried the hidden God as the Ark of old once carried the glory.</span>
@@ -1187,7 +1196,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s60">
+    <article class="saint-card" id="s60" data-pole="M">
       <div class="saint-meta"><strong>60. Ildephonsus of Toledo</strong>c. 607&ndash;667<br/>Latin<time>De virginitate perpetua</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;I am Thy servant, O Mary, because Thy Son is my Lord. Thou art my Lady, because Thou art the Handmaid of my Lord.&rdquo;</span>
@@ -1195,7 +1204,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s61">
+    <article class="saint-card" id="s61" data-pole="F">
       <div class="saint-meta"><strong>61. Francisco Su&aacute;rez</strong>1548&ndash;1617<br/>Latin &middot; <em>Doctor Eximius</em><time>De mysteriis vitae Christi</time></div>
       <blockquote class="saint-quote">
         <span class="en">The divine maternity belongs &ldquo;to the order of the hypostatic union,&rdquo; whence Mary draws a certain quasi-infinite dignity by her relation to God, the infinite Good.</span>
@@ -1203,7 +1212,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s62">
+    <article class="saint-card" id="s62" data-pole="M">
       <div class="saint-meta"><strong>62. Matthias Scheeben</strong>1835&ndash;1888<br/>German<time>Mariology</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;The Bridegroom gives Himself to the bride as her Son, and dwells in her in virtue of this gift.&rdquo;</span>
@@ -1211,7 +1220,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s63">
+    <article class="saint-card" id="s63" data-pole="M">
       <div class="saint-meta"><strong>63. Benedict XVI</strong>1927&ndash;2022<br/>Latin &middot; encyclical<time>Deus Caritas Est &sect;42</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;Mary, Virgin and Mother, shows us what love is and whence it draws its origin and its constantly renewed power.&rdquo;</span>
@@ -1219,7 +1228,7 @@
       </blockquote>
     </article>
 
-    <article class="saint-card" id="s64">
+    <article class="saint-card" id="s64" data-pole="M">
       <div class="saint-meta"><strong>64. Leo XIV</strong>b. 1955<br/>Italian &middot; homily<time>First homily, 9 May 2025</time></div>
       <blockquote class="saint-quote">
         <span class="en">&ldquo;May God grant me this grace, today and always, through the loving intercession of Mary, Mother of the Church.&rdquo;</span>
@@ -1283,6 +1292,35 @@
   });
 </script>
 
+<script>
+(function () {
+  var btns = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.saint-card');
+  var status = document.getElementById('filter-status');
+  var total = cards.length;
+
+  function applyFilter(pole) {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var match = pole === 'all' || c.dataset.pole === pole;
+      c.hidden = !match;
+      if (match) shown++;
+    });
+    btns.forEach(function (b) {
+      b.classList.toggle('active', b.dataset.filter === pole);
+    });
+    if (status) {
+      status.textContent = pole === 'all'
+        ? 'Showing all ' + total + ' witnesses'
+        : 'Showing ' + shown + ' of ' + total + ' witnesses';
+    }
+  }
+
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () { applyFilter(b.dataset.filter); });
+  });
+}());
+</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fa27757de7d8437ba61ffcffa20620fe"}'></script>
 </body>
 </html>

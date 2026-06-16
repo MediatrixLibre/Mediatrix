@@ -198,6 +198,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--m-navy); text-wr
 /* Typographic humility: Cinzel display reads as carved Roman stone at 400, billboard at 600.
    See catholic-editorial-design skill, "Typographic humility note". */
 h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); font-weight: 400; line-height: 1.04; margin: 0 0 var(--rhythm); letter-spacing: 0.04em; }
+/* Prose column (~68ch ≈ 600px) is too narrow for 4.5rem Cinzel multi-word titles.
+   Scale down so text-wrap: balance can put 2 words per line instead of 1. */
+main.prose h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); }
 h2 { font-size: 1.65rem; font-weight: 400; line-height: 1.18; margin: var(--rhythm-x2) 0 var(--rhythm); letter-spacing: 0.03em; }
 h3 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 600; line-height: 1.3; margin: var(--rhythm) 0 var(--rhythm-half); }
 h4 { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm-grey-4); margin: var(--rhythm) 0 var(--rhythm-half); }
@@ -450,6 +453,19 @@ main.reader { max-width: var(--measure-reader); margin: 0 auto; padding: 0 var(-
   margin: var(--rhythm-x2) 0 var(--rhythm-x3);
 }
 
+.section-group-label {
+  grid-column: 1 / -1;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--m-gold-text);
+  margin: var(--rhythm) 0 calc(var(--rhythm) * -0.25);
+  padding-top: var(--rhythm);
+  border-top: 1px solid var(--warm-grey-2);
+}
+.section-group-label:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+
 .section-card {
   border: 1px solid var(--warm-grey-2);
   background: var(--cream);
@@ -591,6 +607,41 @@ main.reader { max-width: var(--measure-reader); margin: 0 auto; padding: 0 var(-
   line-height: 0.92;
   padding: 0.2rem 0.6rem 0 0;
   color: var(--m-gold-text);
+}
+
+/* ========================== Anthology filter bar =========== */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: var(--rhythm) 0 var(--rhythm-half);
+}
+.filter-btn {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.07em;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--warm-grey-2);
+  background: var(--cream);
+  color: var(--warm-grey-4);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  line-height: 1.6;
+}
+.filter-btn:hover { border-color: var(--m-gold); color: var(--m-navy); }
+.filter-btn.active { border-color: var(--m-gold); background: var(--m-gold); color: var(--ink); }
+.filter-btn .filter-count {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  margin-left: 0.3em;
+  opacity: 0.75;
+}
+.filter-status {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--warm-grey-4);
+  margin: 0 0 var(--rhythm);
 }
 
 /* ========================== Saint card (anthology) ======== */
