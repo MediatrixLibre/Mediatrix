@@ -405,6 +405,15 @@ dl.glossed dd {
   color: var(--m-gold-text);
   margin-bottom: var(--rhythm-half);
 }
+a.colophon__contact {
+  display: block;
+  margin-top: var(--rhythm);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  font-style: normal;
+  text-transform: lowercase;
+}
 
 /* ========================== Stella Maris (8-pt star) ====== */
 
