@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-14T23:33:37",
-  "entry_count": 233,
+  "generated_at": "2026-07-02T21:14:41",
+  "entry_count": 234,
   "entries": [
     {
       "slug": "anthology.html#s1",
@@ -450,6 +450,13 @@
       "title": "Pope Leo XIV",
       "subtitle": "b. 1955; elected 2025 · Italian (homily)",
       "body": "(first homily as Pope, Sistine Chapel, 9 May 2025): \"May God grant me this grace, today and always, through the loving intercession of Mary, Mother of the Church.  Homily at the Mass with the College of Cardinals, Sistine"
+    },
+    {
+      "slug": "anthology.html#s65",
+      "kind": "saint",
+      "title": "St. Bartolo Longo",
+      "subtitle": "1841 – 1926 · Italian",
+      "body": "Mary is the Mediatrix of all graces; and the Rosary is the ordinary channel through which she distributes them. Maria è la Mediatrice di tutte le grazie; e il Rosario è il canale ordinario per cui ella le distribuisce. I Quindici Sabati del Santissimo Rosario (Pompeii, 1879)."
     },
     {
       "slug": "ot-types.html#t1",

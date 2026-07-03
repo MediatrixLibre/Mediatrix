@@ -48,8 +48,8 @@ PAGES = {
         "type": "article",
     },
     "anthology.html": {
-        "title": "Anthology: sixty-four voices, in their own words",
-        "description": "Sixty-four patristic, medieval, and magisterial voices on Mary, from Justin Martyr to Pope Leo XIV, each with provenance and translation notes.",
+        "title": "Anthology: sixty-five voices, in their own words",
+        "description": "Sixty-five patristic, medieval, and magisterial voices on Mary, from Justin Martyr to Pope Leo XIV, each with provenance and translation notes.",
         "type": "article",
     },
     "rosary.html": {
@@ -119,12 +119,12 @@ PAGES = {
     },
     "catena.html": {
         "title": "The Threads of Witness",
-        "description": "The fifty-six anthology witnesses re-gathered by doctrinal pole — Foundational, Co-Redemptrix, Mediatrix — and followed chronologically down the centuries.",
+        "description": "The sixty-five anthology witnesses re-gathered by doctrinal pole — Foundational, Co-Redemptrix, Mediatrix — and followed chronologically down the centuries.",
         "type": "article",
     },
     "concordance.html": {
         "title": "Concordance of Witnesses",
-        "description": "A chronological concordance of the anthology's fifty-six Marian witnesses, with doctrinal pole, evidential provenance, and Wikidata/VIAF authority links.",
+        "description": "A chronological concordance of the anthology's sixty-five Marian witnesses, with doctrinal pole, evidential provenance, and Wikidata/VIAF authority links.",
         "type": "article",
     },
     "scripture.html": {
@@ -134,7 +134,7 @@ PAGES = {
     },
     "timeline.html": {
         "title": "Chronological Witness Timeline",
-        "description": "Sixty-four Marian witnesses arrayed across the centuries, with the dogmatic landmarks — Ephesus, Chalcedon, the Lateran, Ineffabilis Deus, Munificentissimus Deus — interleaved at their actual years to frame the doctrinal arc.",
+        "description": "Sixty-five Marian witnesses arrayed across the centuries, with the dogmatic landmarks — Ephesus, Chalcedon, the Lateran, Ineffabilis Deus, Munificentissimus Deus — interleaved at their actual years to frame the doctrinal arc.",
         "type": "article",
     },
 }

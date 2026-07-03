@@ -160,9 +160,10 @@ def build() -> str:
     out.append('<header class="page-head">')
     out.append('<p class="kicker"><span class="dot"></span>Apparatus</p>')
     out.append("<h1>Chronological Witness Timeline</h1>")
-    out.append('<p class="lede">The sixty-four voices of the <a href="anthology.html">Anthology</a> '
+    out.append('<p class="lede">The %d voices of the <a href="anthology.html">Anthology</a> '
                'arrayed across the centuries, with the Marian dogmas and the conciliar definitions as '
-               'landmarks. Names link into the Anthology; landmarks frame the dogmatic arc.</p>')
+               'landmarks. Names link into the Anthology; landmarks frame the dogmatic arc.</p>'
+               % len(saints))
     out.append('<p class="concordance-summary">%d witnesses &middot; %d landmarks &middot; '
                '%d centuries &middot; c. %d &ndash; %d</p>'
                % (len(saints), len(LANDMARKS), len(centuries_sorted), year_min, year_max))

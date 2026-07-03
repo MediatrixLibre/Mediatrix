@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "source_file": "Marian-Concise-Anthology.md",
-  "source_mtime": "2026-06-14T23:32:27",
-  "generated_at": "2026-06-14T23:33:37",
+  "source_mtime": "2026-07-02T21:14:33",
+  "generated_at": "2026-07-02T21:14:41",
   "title": "The Marian Concise Anthology, One Quote per Saint, with Greek and Latin",
   "saints": [
     {
@@ -900,7 +900,21 @@
       "source": "Homily at the Mass with the College of Cardinals, Sistine",
       "provenance": "magisterial",
       "pole": "M"
+    },
+    {
+      "num": 65,
+      "name": "St. Bartolo Longo",
+      "dates": "1841 – 1926",
+      "language": "Italian",
+      "era_title": "Part XIII — Supplementary Voices (added 2026-07-02)",
+      "era_slug": null,
+      "original_language": "italian",
+      "original": "Maria è la Mediatrice di tutte le grazie; e il Rosario è il canale ordinario per cui ella le distribuisce.",
+      "english": "Mary is the Mediatrix of all graces; and the Rosary is the ordinary channel through which she distributes them.",
+      "source": "I Quindici Sabati del Santissimo Rosario (Pompeii, 1879).",
+      "provenance": "verbatim",
+      "pole": "M"
     }
   ],
-  "saint_count": 64
+  "saint_count": 65
 }

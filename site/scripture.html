@@ -360,7 +360,7 @@
 
 
 <footer class="colophon">
-  <span class="small-caps">64 voices &middot; 11 eras</span>
+  <span class="small-caps">65 voices &middot; 10 eras</span>
   <span class="colophon__nav">
     <a href="index.html">Home</a><span>&middot;</span>
     <a href="library.html">Library</a><span>&middot;</span>
@@ -392,6 +392,35 @@
   });
 </script>
 
+<script>
+(function () {
+  var btns = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.saint-card');
+  var status = document.getElementById('filter-status');
+  var total = cards.length;
+
+  function applyFilter(pole) {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var match = pole === 'all' || c.dataset.pole === pole;
+      c.style.display = match ? '' : 'none';
+      if (match) shown++;
+    });
+    btns.forEach(function (b) {
+      b.classList.toggle('active', b.dataset.filter === pole);
+    });
+    if (status) {
+      status.textContent = pole === 'all'
+        ? 'Showing all ' + total + ' witnesses'
+        : 'Showing ' + shown + ' of ' + total + ' witnesses';
+    }
+  }
+
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () { applyFilter(b.dataset.filter); });
+  });
+}());
+</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fa27757de7d8437ba61ffcffa20620fe"}'></script>
 </body>
 </html>

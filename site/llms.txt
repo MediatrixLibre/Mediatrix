@@ -16,11 +16,11 @@
 ## Primary study pages
 
 - [The Library](https://stella-maris.pages.dev/library): chronological compendium of the doctrine across eleven eras and nineteen centuries.
-- [Concise Anthology](https://stella-maris.pages.dev/anthology): one strongest sentence per author, 64 voices from Justin Martyr to Pope Leo XIV, originals beside the English.
+- [Concise Anthology](https://stella-maris.pages.dev/anthology): one strongest sentence per author, 65 voices from Justin Martyr to Pope Leo XIV, originals beside the English.
 - [Catena · Threads of Witness](https://stella-maris.pages.dev/catena): the anthology re-gathered into four doctrinal threads — Foundational, Co-Redemptrix, Mediatrix, Both — chronologically.
 - [Concordance of Witnesses](https://stella-maris.pages.dev/concordance): chronological index with doctrinal pole, provenance, and authority links.
 - [Index of Holy Scripture](https://stella-maris.pages.dev/scripture): every biblical passage the library treats, in Catholic-canon order, with primary treatments and every page that cites each verse.
-- [Chronological Witness Timeline](https://stella-maris.pages.dev/timeline): the sixty-four witnesses arrayed across the centuries, with the Marian dogmatic and conciliar definitions interleaved at their actual years as landmarks.
+- [Chronological Witness Timeline](https://stella-maris.pages.dev/timeline): the sixty-five witnesses arrayed across the centuries, with the Marian dogmatic and conciliar definitions interleaved at their actual years as landmarks.
 - [Defense · Twelve Protestant Objections](https://stella-maris.pages.dev/defense): objection-by-objection treatment, steel-manned, with four-layer Catholic response.
 
 ## Scriptural and devotional pages
