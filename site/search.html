@@ -12,6 +12,8 @@
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+<meta name="theme-color" content="#1E3A6E" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0A1628" media="(prefers-color-scheme: dark)" />
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Search the library" />
@@ -70,13 +72,13 @@
         <!-- /SEO -->
 
 <link rel="stylesheet" href="styles/fonts.css" />
-<link rel="stylesheet" href="styles/mediatrix.css?v=44" />
+<link rel="stylesheet" href="styles/mediatrix.css?v=45" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="manifest" href="manifest.json" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=37"></script>
+<script src="scripts/mediatrix.js?v=38"></script>
 <style>
   .search-box {
     max-width: 32rem; margin: var(--rhythm-x2) auto;
@@ -90,6 +92,7 @@
     color: var(--m-navy); font-size: 1.1rem; padding: 0;
   }
   .search-box input::placeholder { color: var(--warm-grey-3); font-style: italic; }
+  .search-box:focus-within { box-shadow: var(--focus-ring); }
   .search-box .kbd {
     font-family: var(--font-mono); font-size: 0.74rem;
     border: 1px solid var(--warm-grey-2); padding: 2px 6px;
@@ -101,7 +104,7 @@
   .result__page { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m-gold-text); margin: 0 0 var(--rhythm-half); }
   .result__title { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; letter-spacing: 0.02em; color: var(--m-navy); margin: 0 0 var(--rhythm-half); }
   .result__snippet { font-family: var(--font-serif); font-size: 0.98rem; line-height: 1.55; color: var(--warm-grey-4); margin: 0; }
-  .result__snippet mark { background: rgba(201,151,0,0.18); color: var(--m-navy); padding: 0 2px; }
+  .result__snippet mark { background: var(--m-gold-wash); color: var(--m-navy); padding: 0 2px; }
   .empty { text-align: center; font-family: var(--font-serif); font-style: italic; color: var(--warm-grey-4); padding: var(--rhythm-x2) 0; }
   .hints { max-width: var(--measure-prose); margin: var(--rhythm-x2) auto; padding: var(--rhythm) var(--rhythm-x2); background: var(--cream); border-left: 2px solid var(--m-gold); }
   .hints h2 { margin-top: 0; }
@@ -112,6 +115,7 @@
     cursor: pointer; background: transparent;
   }
   .hints .tag:hover { background: var(--m-gold); color: var(--cream); }
+  .hints .tag:focus-visible { outline: none; box-shadow: var(--focus-ring); }
 </style>
 </head>
 <body data-vestment="blue" data-screen-label="Search">
@@ -144,32 +148,33 @@
   <div class="hints" id="hints">
     <h2>Suggested searches</h2>
     <p style="margin-bottom: var(--rhythm-half);">Quick jumps:</p>
-    <span class="tag" data-q="Mediatrix">Mediatrix</span>
-    <span class="tag" data-q="Co-Redemptrix">Co-Redemptrix</span>
-    <span class="tag" data-q="Theotokos">Theotokos</span>
-    <span class="tag" data-q="Immaculate">Immaculate Conception</span>
-    <span class="tag" data-q="Assumption">Assumption</span>
-    <span class="tag" data-q="Cana">Cana</span>
-    <span class="tag" data-q="Calvary">Calvary</span>
-    <span class="tag" data-q="Ark">Ark of the Covenant</span>
-    <span class="tag" data-q="Gebirah">Gebirah</span>
-    <span class="tag" data-q="Rosary">Rosary</span>
-    <span class="tag" data-q="Litany">Litany of Loreto</span>
-    <span class="tag" data-q="Fatima">Fatima</span>
-    <span class="tag" data-q="Guadalupe">Guadalupe</span>
-    <span class="tag" data-q="Akathist">Akathist</span>
-    <span class="tag" data-q="kecharitomene">kecharitomene</span>
-    <span class="tag" data-q="cooperata">cooperata est</span>
-    <span class="tag" data-q="Lumen Gentium">Lumen Gentium 62</span>
-    <span class="tag" data-q="Inter Sodalicia">Inter Sodalicia</span>
-    <span class="tag" data-q="Bernard">Bernard of Clairvaux</span>
-    <span class="tag" data-q="Aquinas">Aquinas</span>
-    <span class="tag" data-q="Augustine">Augustine</span>
-    <span class="tag" data-q="Ephrem">Ephrem</span>
-    <span class="tag" data-q="Stella Maris">Stella Maris</span>
-    <span class="tag" data-q="Sub tuum">Sub tuum praesidium</span>
+    <button type="button" class="tag" data-q="Mediatrix">Mediatrix</button>
+    <button type="button" class="tag" data-q="Co-Redemptrix">Co-Redemptrix</button>
+    <button type="button" class="tag" data-q="Theotokos">Theotokos</button>
+    <button type="button" class="tag" data-q="Immaculate">Immaculate Conception</button>
+    <button type="button" class="tag" data-q="Assumption">Assumption</button>
+    <button type="button" class="tag" data-q="Cana">Cana</button>
+    <button type="button" class="tag" data-q="Calvary">Calvary</button>
+    <button type="button" class="tag" data-q="Ark">Ark of the Covenant</button>
+    <button type="button" class="tag" data-q="Gebirah">Gebirah</button>
+    <button type="button" class="tag" data-q="Rosary">Rosary</button>
+    <button type="button" class="tag" data-q="Litany">Litany of Loreto</button>
+    <button type="button" class="tag" data-q="Fatima">Fatima</button>
+    <button type="button" class="tag" data-q="Guadalupe">Guadalupe</button>
+    <button type="button" class="tag" data-q="Akathist">Akathist</button>
+    <button type="button" class="tag" data-q="kecharitomene">kecharitomene</button>
+    <button type="button" class="tag" data-q="cooperata">cooperata est</button>
+    <button type="button" class="tag" data-q="Lumen Gentium">Lumen Gentium 62</button>
+    <button type="button" class="tag" data-q="Inter Sodalicia">Inter Sodalicia</button>
+    <button type="button" class="tag" data-q="Bernard">Bernard of Clairvaux</button>
+    <button type="button" class="tag" data-q="Aquinas">Aquinas</button>
+    <button type="button" class="tag" data-q="Augustine">Augustine</button>
+    <button type="button" class="tag" data-q="Ephrem">Ephrem</button>
+    <button type="button" class="tag" data-q="Stella Maris">Stella Maris</button>
+    <button type="button" class="tag" data-q="Sub tuum">Sub tuum praesidium</button>
   </div>
 
+  <p class="sr-only" id="search-status" role="status"></p>
   <div class="results" id="results"></div>
 
 </main>
@@ -368,15 +373,20 @@
       + '</div>';
   }
 
+  var statusEl = document.getElementById("search-status");
+  function announce(msg) { if (statusEl) statusEl.textContent = msg; }
+
   function render(q) {
     if (!q || q.trim().length < 2) {
       resultsEl.innerHTML = "";
       hintsEl.style.display = "block";
+      announce("");
       return;
     }
     hintsEl.style.display = "none";
     if (!INDEX_READY) {
       resultsEl.innerHTML = '<p class="empty">Loading index...</p>';
+      announce("Loading index");
       return;
     }
     var ranked = INDEX
@@ -386,6 +396,7 @@
       .slice(0, 60);
     if (ranked.length === 0) {
       resultsEl.innerHTML = renderNoResults(q);
+      announce("No matches for " + q);
       return;
     }
     var html = '<p style="font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--warm-grey-4); margin: 0 0 var(--rhythm);">' + ranked.length + ' result' + (ranked.length === 1 ? '' : 's') + ' for &ldquo;' + esc(q) + '&rdquo;</p>';
@@ -400,12 +411,17 @@
         + '</a>';
     }
     resultsEl.innerHTML = html;
+    announce(ranked.length + (ranked.length === 1 ? " result" : " results") + " for " + q);
   }
 
   var _debounce;
   input.addEventListener("input", function () {
     clearTimeout(_debounce);
-    _debounce = setTimeout(function () { render(input.value); }, 120);
+    _debounce = setTimeout(function () {
+      render(input.value);
+      var q = input.value.trim();
+      history.replaceState(null, "", q.length >= 2 ? "?q=" + encodeURIComponent(q) : location.pathname);
+    }, 120);
   });
   input.addEventListener("keydown", function (e) {
     if (e.key === "Escape") { input.value = ""; render(""); }
@@ -416,8 +432,16 @@
       input.value = tag.dataset.q;
       input.focus();
       render(input.value);
+      history.replaceState(null, "", "?q=" + encodeURIComponent(tag.dataset.q));
     });
   });
+
+  // Honour shared / sitelinks-searchbox deep links: /search?q=Cana
+  var initialQ = new URLSearchParams(location.search).get("q");
+  if (initialQ) {
+    input.value = initialQ;
+    render(initialQ);  // index still loading -> re-rendered by the fetch handler
+  }
 
   // Mode toggle
   var btn = document.getElementById("mode-toggle");

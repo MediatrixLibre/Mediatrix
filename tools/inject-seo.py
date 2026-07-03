@@ -324,6 +324,8 @@ def build_block(page: str, meta: dict) -> str:
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+        <meta name="theme-color" content="#1E3A6E" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0A1628" media="(prefers-color-scheme: dark)" />
     """).strip()
 
     return dedent(f"""

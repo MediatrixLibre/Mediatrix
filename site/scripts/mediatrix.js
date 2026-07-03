@@ -35,8 +35,17 @@
     try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) { /* private mode */ }
   }
 
+  // Browser-chrome color per mode. Mirrors --m-blue (day) and the vigil
+  // page background from mediatrix.css :root; manifest.json carries the
+  // same day value. Keep the three in step if the palette ever moves.
+  var THEME_COLOR = { day: "#1E3A6E", vigil: "#0A1628" };
+
   function applyMode(m) {
     document.documentElement.setAttribute("data-mode", m);
+    var metas = document.querySelectorAll('meta[name="theme-color"]');
+    for (var i = 0; i < metas.length; i++) {
+      metas[i].setAttribute("content", THEME_COLOR[m] || THEME_COLOR.day);
+    }
   }
 
   function setMode(m) {

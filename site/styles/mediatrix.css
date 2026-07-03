@@ -72,7 +72,8 @@
   --measure-reader: 84ch;
 
   --rule-hairline: 1px solid rgba(12, 35, 64, 0.2);
-  --focus-ring:    0 0 0 2px var(--m-gold-text), 0 0 0 4px rgba(201,151,0,0.18);
+  --m-gold-wash:   rgba(201, 151, 0, 0.18);  /* translucent gold for highlights (search <mark>, focus halo) */
+  --focus-ring:    0 0 0 2px var(--m-gold-text), 0 0 0 4px var(--m-gold-wash);
 }
 
 /* --- Vigil mode (the night register, analogous to Compline).
@@ -95,7 +96,8 @@ html[data-mode="vigil"] {
      holds. In day mode the ring sits in luminous text-gold (--m-gold-text);
      in vigil that same token is the bright tracked-cap gold and reads
      fluorescent. Anchor the night ring to the decorative rule-gold instead. */
-  --focus-ring:    0 0 0 2px var(--gold-night-rule), 0 0 0 4px rgba(166, 128, 61, 0.22);
+  --m-gold-wash:   rgba(166, 128, 61, 0.22);
+  --focus-ring:    0 0 0 2px var(--gold-night-rule), 0 0 0 4px var(--m-gold-wash);
   /* Zero out the day-mode 5%-blue wash; the page bg already carries the
      liturgical cast and the wash would add a sheen that breaks the
      candlelight register. */
@@ -663,6 +665,10 @@ main.reader { max-width: var(--measure-reader); margin: 0 auto; padding: 0 var(-
   gap: var(--rhythm) var(--rhythm-x2);
 }
 @media (max-width: 720px) { .saint-card { grid-template-columns: 1fr; gap: var(--rhythm-half); } }
+/* 65 cards on one page: let the engine skip layout/paint of off-screen
+   cards. Anchor jumps (#sN) force-render their target, so deep links from
+   the catena/concordance/scripture/timeline apparatus are unaffected. */
+.saint-card { content-visibility: auto; contain-intrinsic-size: auto 300px; }
 .saint-meta { font-family: var(--font-sans); font-size: 0.78rem; letter-spacing: 0.04em; color: var(--warm-grey-4); }
 .saint-meta strong { display: block; font-family: var(--font-display); font-style: normal; font-weight: 500; font-size: 1.05rem; letter-spacing: 0.02em; color: var(--m-navy); margin-bottom: 0.2em; }
 .saint-meta time { display: block; font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 0.74rem; color: var(--m-gold-text); margin-top: 0.4em; }
@@ -1238,4 +1244,13 @@ table.ref tr:hover td { background: var(--wash, transparent); }
   a[href^="#"]::after,
   a[href$=".html"]::after,
   a[href*=".html#"]::after { content: ""; }
+}
+
+/* --- Forced colors (Windows High Contrast). The UA strips box-shadow,
+   which carries every focus ring on this site; restore true outlines so
+   keyboard focus stays visible. System color keywords keep the user's
+   chosen palette. --- */
+@media (forced-colors: active) {
+  :focus-visible { outline: 2px solid CanvasText !important; outline-offset: 2px; }
+  .search-box:focus-within { outline: 2px solid CanvasText; }
 }
