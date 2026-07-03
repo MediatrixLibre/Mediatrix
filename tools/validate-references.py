@@ -243,6 +243,10 @@ SOURCE_DIR = Path(
 def _read_markdown(name: str) -> str:
     p = SOURCE_DIR / name
     if not p.exists():
+        # Loud, not silent: an empty scan resolves everything vacuously,
+        # which read as "0 orphans, all good" for weeks before anyone
+        # noticed the corpus was never being found.
+        print(f"  warn: {p} not found — prose scan for this source is EMPTY (vacuous pass)", file=sys.stderr)
         return ""
     # Collapse whitespace so multi-line names ("John\nHenry Newman") parse as one token.
     raw = p.read_text(encoding="utf-8")
@@ -397,6 +401,13 @@ def main() -> int:
     if "anthology" not in data:
         print("  anthology.json missing. Run `make build-data`.", file=sys.stderr)
         return 2
+
+    if not SOURCE_DIR.exists():
+        print(
+            f"  warn: corpus not found at {SOURCE_DIR} — ALL prose scans are empty and every"
+            " source will pass vacuously. Set MARIOLOGY_CORPUS to run the real check.",
+            file=sys.stderr,
+        )
 
     report = build_report(data)
 
