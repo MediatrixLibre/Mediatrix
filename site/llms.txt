@@ -40,6 +40,7 @@
 
 - [Search](https://stella-maris.pages.dev/search): client-side search across the full corpus.
 - [Sitemap](https://stella-maris.pages.dev/sitemap.xml) · [RSS feed](https://stella-maris.pages.dev/feed.xml)
+- [llms-full.txt](https://stella-maris.pages.dev/llms-full.txt): the complete extracted text of every content page in one file, for AI ingestion.
 
 ## Provenance commitments
 

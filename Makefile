@@ -21,10 +21,11 @@ export
 help: ## list available targets
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-seo: ## regenerate SEO blocks, sitemap, and RSS feed (run after editing pages)
+seo: ## regenerate SEO blocks, sitemap, RSS feed, and llms-full.txt (run after editing pages)
 	@python3 tools/inject-seo.py
 	@python3 tools/regen-sitemap.py
 	@python3 tools/gen-feed.py
+	@python3 tools/gen-llms-full.py
 
 serve: ## start local site at http://localhost:$(PORT)
 	@lsof -ti tcp:$(PORT) >/dev/null 2>&1 && echo "Already serving on :$(PORT)" || \
