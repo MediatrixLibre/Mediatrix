@@ -1,4 +1,6 @@
-SHELL := /bin/zsh
+# bash, not zsh: the CI runner (ubuntu-latest) has no /bin/zsh, and every
+# recipe is POSIX-compatible anyway. bash exists on both macOS and Linux.
+SHELL := /bin/bash
 PORT := 8000
 ROOT := site
 
