@@ -6,133 +6,133 @@
     <atom:link href="https://stella-maris.pages.dev/feed.xml" rel="self" type="application/rss+xml" />
     <description>Revisions to the Mediatrix study library: sixteen hand-designed pages on Mary as Mediatrix and Co-Redemptrix, drawn from patristic, medieval, and magisterial witness.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 00:00:00 +0000</lastBuildDate>
     <generator>tools/gen-feed.py</generator>
     <item>
       <title>Chronological Witness Timeline</title>
       <link>https://stella-maris.pages.dev/timeline.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/timeline.html</guid>
       <description>Sixty-four Marian witnesses arrayed across the centuries, with the dogmatic landmarks — Ephesus, Chalcedon, the Lateran, Ineffabilis Deus, Munificentissimus Deus — interleaved at their actual years to frame the doctrinal arc.</description>
-      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Index of Holy Scripture</title>
       <link>https://stella-maris.pages.dev/scripture.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/scripture.html</guid>
       <description>Every biblical passage the library expounds or cites, gathered in the order of the Catholic canon: the Old Testament types and the load-bearing New Testament texts as primary treatments, with every page that comments on each verse.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Rosary Companion: the twenty mysteries</title>
       <link>https://stella-maris.pages.dev/rosary.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/rosary.html</guid>
       <description>Twenty rosary mysteries with scriptural and patristic gloss for each.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Twenty-eight Old Testament types of Our Lady</title>
       <link>https://stella-maris.pages.dev/ot-types.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/ot-types.html</guid>
       <description>The Burning Bush, the Ark, the Gate, the Tower: Marian types exegeted from the Old Testament.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Office of Readings: a Marian sourcebook</title>
       <link>https://stella-maris.pages.dev/office.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/office.html</guid>
       <description>Fifteen second-readings drawn from the patristic and magisterial canon for the Marian feasts.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Three load-bearing New Testament Marian passages</title>
       <link>https://stella-maris.pages.dev/nt-texts.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/nt-texts.html</guid>
       <description>Luke 1, John 2, and John 19, read with patristic care.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>The Litany of Loreto: fifty-four titles, annotated</title>
       <link>https://stella-maris.pages.dev/litany.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/litany.html</guid>
       <description>Each Marian invocation traced to its scriptural and patristic root.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>The Library: twelve eras of Marian witness</title>
       <link>https://stella-maris.pages.dev/library.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/library.html</guid>
       <description>From the early Fathers to Vatican II, Marian witness traced era by era.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Four canonical Marian icon-types with provenance</title>
       <link>https://stella-maris.pages.dev/iconography.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/iconography.html</guid>
       <description>Hodegetria, Eleousa, Orans, and Theotokos enthroned: the four canonical Marian icon-types.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Eighteen Marian feasts of the liturgical year</title>
       <link>https://stella-maris.pages.dev/feasts.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/feasts.html</guid>
       <description>Date, rank, history, and the proper of the day for the eighteen Marian feasts.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Marian devotional practices, in liturgical order</title>
       <link>https://stella-maris.pages.dev/devotions.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/devotions.html</guid>
       <description>Consecration, scapular, medal, First Saturdays, Rosary, Angelus: eight Marian devotions with origin, form, and conditions.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Twelve Protestant objections, twelve patristic replies</title>
       <link>https://stella-maris.pages.dev/defense.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/defense.html</guid>
       <description>Marian doctrinal defense drawn from the Fathers, structured objection by objection.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Concordance of Witnesses</title>
       <link>https://stella-maris.pages.dev/concordance.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/concordance.html</guid>
       <description>A chronological concordance of the anthology's fifty-six Marian witnesses, with doctrinal pole, evidential provenance, and Wikidata/VIAF authority links.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>The Threads of Witness</title>
       <link>https://stella-maris.pages.dev/catena.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/catena.html</guid>
       <description>The fifty-six anthology witnesses re-gathered by doctrinal pole — Foundational, Co-Redemptrix, Mediatrix — and followed chronologically down the centuries.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Seven principal Church-approved apparitions</title>
       <link>https://stella-maris.pages.dev/apparitions.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/apparitions.html</guid>
       <description>From Guadalupe to Akita: locus, message, and ecclesial recognition for the seven principal apparitions.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Anthology: sixty-four voices, in their own words</title>
       <link>https://stella-maris.pages.dev/anthology.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/anthology.html</guid>
       <description>Sixty-four patristic, medieval, and magisterial voices on Mary, from Justin Martyr to Pope Leo XIV, each with provenance and translation notes.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>The Akathist Hymn: Greek and English facing</title>
       <link>https://stella-maris.pages.dev/akathist.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/akathist.html</guid>
       <description>Twenty-four stanzas with the prooemion, in parallel Greek and English translation.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>About: methodology and provenance</title>
       <link>https://stella-maris.pages.dev/about.html</link>
       <guid isPermaLink="true">https://stella-maris.pages.dev/about.html</guid>
       <description>How quotations are tagged, sourced, and translated in the Mediatrix study library.</description>
-      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
