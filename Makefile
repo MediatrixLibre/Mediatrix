@@ -5,6 +5,11 @@ ROOT := site
 # Source .env.local if present (gitignored, per-machine overrides).
 # Use it to set MARIOLOGY_CORPUS or PORT without editing the Makefile.
 -include .env.local
+
+# Fallback when .env.local is absent or unreadable (sandboxed sessions deny
+# reads of .env.* files): the canonical corpus location on this machine.
+# .env.local or the environment still wins when it sets the variable.
+MARIOLOGY_CORPUS ?= $(HOME)/Inquiry Vault/Domains/Theology/Mariology
 export
 
 .DEFAULT_GOAL := help
