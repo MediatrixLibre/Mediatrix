@@ -194,6 +194,16 @@ MARK_START = "<!-- SEO -->"
 MARK_END = "<!-- /SEO -->"
 
 
+def page_url(page: str) -> str:
+    """Canonical URL for a page: extensionless, matching the URL form CF Pages
+    actually serves (it 308-redirects /page.html -> /page, so .html canonicals
+    point at redirecting URLs and Google discards the signal). index.html is
+    the origin root."""
+    if page == "index.html":
+        return f"{ORIGIN}/"
+    return f"{ORIGIN}/{page.removesuffix('.html')}"
+
+
 def build_authority_graph() -> str:
     """Emit a schema.org @graph of the anthology's authors with their Wikidata +
     VIAF `sameAs` links, from the curated tools/authority-map.json.
@@ -235,7 +245,7 @@ def build_block(page: str, meta: dict) -> str:
     title = meta["title"].replace('"', "&quot;")
     desc = meta["description"].replace('"', "&quot;")
     og_type = meta["type"]
-    canonical = f"{ORIGIN}/{page}"
+    canonical = page_url(page)
 
     preload_links = "\n".join(
         f'<link rel="preload" as="font" type="font/woff2" crossorigin href="{f}" />'
@@ -259,7 +269,7 @@ def build_block(page: str, meta: dict) -> str:
           }},
           "potentialAction": {{
             "@type": "SearchAction",
-            "target": "{ORIGIN}/search.html?q={{search_term_string}}",
+            "target": "{ORIGIN}/search?q={{search_term_string}}",
             "query-input": "required name=search_term_string"
           }}
         }}

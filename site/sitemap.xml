@@ -10,7 +10,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/about.html</loc>
+    <loc>https://stella-maris.pages.dev/about</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -18,7 +18,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/akathist.html</loc>
+    <loc>https://stella-maris.pages.dev/akathist</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -26,7 +26,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/anthology.html</loc>
+    <loc>https://stella-maris.pages.dev/anthology</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -34,7 +34,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/apparitions.html</loc>
+    <loc>https://stella-maris.pages.dev/apparitions</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -42,7 +42,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/catena.html</loc>
+    <loc>https://stella-maris.pages.dev/catena</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -50,7 +50,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/concordance.html</loc>
+    <loc>https://stella-maris.pages.dev/concordance</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -58,7 +58,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/defense.html</loc>
+    <loc>https://stella-maris.pages.dev/defense</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -66,7 +66,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/devotions.html</loc>
+    <loc>https://stella-maris.pages.dev/devotions</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -74,7 +74,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/feasts.html</loc>
+    <loc>https://stella-maris.pages.dev/feasts</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -82,15 +82,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/googleb165be8284f6de2d.html</loc>
-    <lastmod>2026-05-15</lastmod>
-    <image:image>
-      <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
-      <image:title>Mediatrix: a Marian study library</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://stella-maris.pages.dev/iconography.html</loc>
+    <loc>https://stella-maris.pages.dev/iconography</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -98,7 +90,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/library.html</loc>
+    <loc>https://stella-maris.pages.dev/library</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -106,7 +98,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/litany.html</loc>
+    <loc>https://stella-maris.pages.dev/litany</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -114,7 +106,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/nt-texts.html</loc>
+    <loc>https://stella-maris.pages.dev/nt-texts</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -122,7 +114,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/office.html</loc>
+    <loc>https://stella-maris.pages.dev/office</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -130,7 +122,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/ot-types.html</loc>
+    <loc>https://stella-maris.pages.dev/ot-types</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -138,7 +130,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/rosary.html</loc>
+    <loc>https://stella-maris.pages.dev/rosary</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -146,7 +138,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/scripture.html</loc>
+    <loc>https://stella-maris.pages.dev/scripture</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -154,7 +146,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/search.html</loc>
+    <loc>https://stella-maris.pages.dev/search</loc>
     <lastmod>2026-06-16</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
@@ -162,8 +154,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://stella-maris.pages.dev/timeline.html</loc>
-    <lastmod>2026-06-16</lastmod>
+    <loc>https://stella-maris.pages.dev/timeline</loc>
+    <lastmod>2026-07-02</lastmod>
     <image:image>
       <image:loc>https://stella-maris.pages.dev/og.png</image:loc>
       <image:title>Mediatrix: a Marian study library</image:title>

@@ -35,12 +35,14 @@ FEED_DESC = (
 EXCLUDE = {"index.html", "search.html", "404.html"}
 
 
-def load_pages() -> dict:
-    """Import the PAGES table from inject-seo.py despite the hyphen in its name."""
+def load_inject_seo():
+    """Import inject-seo.py (hyphenated filename) for its PAGES table and
+    page_url rule, so feed links match the canonicals exactly."""
     spec = importlib.util.spec_from_file_location("inject_seo", REPO / "tools" / "inject-seo.py")
+    assert spec is not None and spec.loader is not None
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    return mod.PAGES
+    return mod
 
 
 def git_lastmod_date(rel_path: str) -> dt.date:
@@ -63,7 +65,8 @@ def rfc822(d: dt.date) -> str:
 
 
 def main() -> int:
-    pages = load_pages()
+    inject_seo = load_inject_seo()
+    pages = inject_seo.PAGES
 
     items = []
     for page, meta in pages.items():
@@ -95,7 +98,7 @@ def main() -> int:
     ]
 
     for d, page, meta in items:
-        loc = f"{ORIGIN}/{page}"
+        loc = inject_seo.page_url(page)
         out += [
             "    <item>",
             f"      <title>{escape(meta['title'])}</title>",

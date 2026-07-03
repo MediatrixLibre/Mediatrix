@@ -10,35 +10,35 @@
 
 ## Canonical entry points
 
-- [Mediatrix homepage](https://stella-maris.pages.dev/index.html): site overview and section index.
-- [About · Methodology](https://stella-maris.pages.dev/about.html): the five-tier provenance system, the doctrinal grammar, the four Marian dogmas, sources cited.
+- [Mediatrix homepage](https://stella-maris.pages.dev/): site overview and section index.
+- [About · Methodology](https://stella-maris.pages.dev/about): the five-tier provenance system, the doctrinal grammar, the four Marian dogmas, sources cited.
 
 ## Primary study pages
 
-- [The Library](https://stella-maris.pages.dev/library.html): chronological compendium of the doctrine across eleven eras and nineteen centuries.
-- [Concise Anthology](https://stella-maris.pages.dev/anthology.html): one strongest sentence per author, 64 voices from Justin Martyr to Pope Leo XIV, originals beside the English.
-- [Catena · Threads of Witness](https://stella-maris.pages.dev/catena.html): the anthology re-gathered into four doctrinal threads — Foundational, Co-Redemptrix, Mediatrix, Both — chronologically.
-- [Concordance of Witnesses](https://stella-maris.pages.dev/concordance.html): chronological index with doctrinal pole, provenance, and authority links.
-- [Index of Holy Scripture](https://stella-maris.pages.dev/scripture.html): every biblical passage the library treats, in Catholic-canon order, with primary treatments and every page that cites each verse.
-- [Chronological Witness Timeline](https://stella-maris.pages.dev/timeline.html): the sixty-four witnesses arrayed across the centuries, with the Marian dogmatic and conciliar definitions interleaved at their actual years as landmarks.
-- [Defense · Twelve Protestant Objections](https://stella-maris.pages.dev/defense.html): objection-by-objection treatment, steel-manned, with four-layer Catholic response.
+- [The Library](https://stella-maris.pages.dev/library): chronological compendium of the doctrine across eleven eras and nineteen centuries.
+- [Concise Anthology](https://stella-maris.pages.dev/anthology): one strongest sentence per author, 64 voices from Justin Martyr to Pope Leo XIV, originals beside the English.
+- [Catena · Threads of Witness](https://stella-maris.pages.dev/catena): the anthology re-gathered into four doctrinal threads — Foundational, Co-Redemptrix, Mediatrix, Both — chronologically.
+- [Concordance of Witnesses](https://stella-maris.pages.dev/concordance): chronological index with doctrinal pole, provenance, and authority links.
+- [Index of Holy Scripture](https://stella-maris.pages.dev/scripture): every biblical passage the library treats, in Catholic-canon order, with primary treatments and every page that cites each verse.
+- [Chronological Witness Timeline](https://stella-maris.pages.dev/timeline): the sixty-four witnesses arrayed across the centuries, with the Marian dogmatic and conciliar definitions interleaved at their actual years as landmarks.
+- [Defense · Twelve Protestant Objections](https://stella-maris.pages.dev/defense): objection-by-objection treatment, steel-manned, with four-layer Catholic response.
 
 ## Scriptural and devotional pages
 
-- [Old Testament Types](https://stella-maris.pages.dev/ot-types.html): twenty-eight figures the Church has read Marianly.
-- [New Testament Texts](https://stella-maris.pages.dev/nt-texts.html): the three load-bearing passages — Cana, Calvary, Revelation 12 — in Nestle-Aland Greek.
-- [Daily Rosary Companion](https://stella-maris.pages.dev/rosary.html): twenty mysteries with scriptural and patristic gloss.
-- [Litany of Loreto](https://stella-maris.pages.dev/litany.html): fifty-four titles in six structural groups, Latin and English, with papal history.
-- [Marian Feasts](https://stella-maris.pages.dev/feasts.html): eighteen feasts of the liturgical year with collect, rank, readings.
-- [Approved Apparitions](https://stella-maris.pages.dev/apparitions.html): seven primary canonical apparitions with the 1978 CDF norms of discernment.
-- [The Akathist Hymn](https://stella-maris.pages.dev/akathist.html): the sixth-century Byzantine Marian hymn, twenty-four oikoi, in Greek.
-- [Office of Readings](https://stella-maris.pages.dev/office.html): patristic Office texts for fourteen Marian feasts.
-- [Devotional Practices](https://stella-maris.pages.dev/devotions.html): eight forms of the Catholic Marian life.
-- [Iconography](https://stella-maris.pages.dev/iconography.html): Byzantine and Western iconographic types with chronology.
+- [Old Testament Types](https://stella-maris.pages.dev/ot-types): twenty-eight figures the Church has read Marianly.
+- [New Testament Texts](https://stella-maris.pages.dev/nt-texts): the three load-bearing passages — Cana, Calvary, Revelation 12 — in Nestle-Aland Greek.
+- [Daily Rosary Companion](https://stella-maris.pages.dev/rosary): twenty mysteries with scriptural and patristic gloss.
+- [Litany of Loreto](https://stella-maris.pages.dev/litany): fifty-four titles in six structural groups, Latin and English, with papal history.
+- [Marian Feasts](https://stella-maris.pages.dev/feasts): eighteen feasts of the liturgical year with collect, rank, readings.
+- [Approved Apparitions](https://stella-maris.pages.dev/apparitions): seven primary canonical apparitions with the 1978 CDF norms of discernment.
+- [The Akathist Hymn](https://stella-maris.pages.dev/akathist): the sixth-century Byzantine Marian hymn, twenty-four oikoi, in Greek.
+- [Office of Readings](https://stella-maris.pages.dev/office): patristic Office texts for fourteen Marian feasts.
+- [Devotional Practices](https://stella-maris.pages.dev/devotions): eight forms of the Catholic Marian life.
+- [Iconography](https://stella-maris.pages.dev/iconography): Byzantine and Western iconographic types with chronology.
 
 ## Tools
 
-- [Search](https://stella-maris.pages.dev/search.html): client-side search across the full corpus.
+- [Search](https://stella-maris.pages.dev/search): client-side search across the full corpus.
 - [Sitemap](https://stella-maris.pages.dev/sitemap.xml) · [RSS feed](https://stella-maris.pages.dev/feed.xml)
 
 ## Provenance commitments
@@ -53,4 +53,4 @@
 - Author / Organization: MediatrixLibre.
 - Site: *Mediatrix — A Marian Study Library*.
 - URL: https://stella-maris.pages.dev/
-- Each anthology record carries its own anchor (e.g. `anthology.html#s45` for Benedict XV's *Inter Sodalicia*); cite the anchor for permanence.
+- Each anthology record carries its own anchor (e.g. `/anthology#s45` for Benedict XV's *Inter Sodalicia*); cite the anchor for permanence.
