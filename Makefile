@@ -9,7 +9,7 @@ export
 
 .DEFAULT_GOAL := help
 
-.PHONY: help serve stop check seo clean build-data verify-data clean-data validate-refs validate-quotes verify-data-sync
+.PHONY: help serve stop check seo clean build-data verify-data clean-data validate-refs validate-quotes verify-data-sync verify-apparatus-sync
 
 help: ## list available targets
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -48,10 +48,11 @@ clean: ## remove tmp/ + pyc + .DS_Store
 build-data: ## regenerate site/data/*.json from the markdown corpus
 	@python3 tools/build-mediatrix.py
 
-apparatus: ## regenerate derived pages (catena, concordance, scripture index, timeline)
+apparatus: ## regenerate derived pages (catena, concordance, scripture index, timeline) + SEO
 	@python3 tools/build-apparatus.py
 	@python3 tools/build-scripture-index.py
 	@python3 tools/build-timeline.py
+	@$(MAKE) seo
 
 verify-data: ## verify all site/data/*.json exist with sensible record counts
 	@python3 tools/build-mediatrix.py --verify
@@ -67,3 +68,6 @@ validate-quotes: ## quote integrity gate: source + provenance + renderability (s
 
 verify-data-sync: ## reproducible-build + committed-data-in-sync gate (needs MARIOLOGY_CORPUS)
 	@python3 tools/verify-data-sync.py
+
+verify-apparatus-sync: ## derived pages (catena/concordance/scripture/timeline) + card-count sync gate
+	@python3 tools/verify-apparatus-sync.py

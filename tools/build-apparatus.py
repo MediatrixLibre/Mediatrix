@@ -26,11 +26,16 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 SITE = REPO / "site"
+# Output dir. Overridable via MEDIATRIX_APPARATUS_OUT so the apparatus-sync
+# gate can rebuild into a temp dir without touching site/. Inputs (template
+# chrome, data JSON) always read from site/.
+OUT = Path(os.environ.get("MEDIATRIX_APPARATUS_OUT") or SITE).expanduser()
 ANTHOLOGY_JSON = SITE / "data" / "anthology.json"
 AUTHORITY_MAP = REPO / "tools" / "authority-map.json"
 TEMPLATE = SITE / "anthology.html"
@@ -214,11 +219,12 @@ def build_concordance(saints: list[dict], amap: dict) -> str:
 
 def main() -> int:
     saints, amap = load()
-    (SITE / "catena.html").write_text(
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "catena.html").write_text(
         page("catena", "The Threads of Witness · Mediatrix", build_catena(saints)),
         encoding="utf-8",
     )
-    (SITE / "concordance.html").write_text(
+    (OUT / "concordance.html").write_text(
         page("concordance", "Concordance of Witnesses · Mediatrix", build_concordance(saints, amap)),
         encoding="utf-8",
     )

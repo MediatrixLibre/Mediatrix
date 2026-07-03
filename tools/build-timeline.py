@@ -37,11 +37,16 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 SITE = REPO / "site"
+# Output dir. Overridable via MEDIATRIX_APPARATUS_OUT so the apparatus-sync
+# gate can rebuild into a temp dir without touching site/. Inputs (template
+# chrome, data JSON) always read from site/.
+OUT = Path(os.environ.get("MEDIATRIX_APPARATUS_OUT") or SITE).expanduser()
 ANTHOLOGY_JSON = SITE / "data" / "anthology.json"
 TEMPLATE = SITE / "anthology.html"
 
@@ -216,7 +221,8 @@ def main() -> int:
     body = build()
     top, tail = chrome("timeline", "Chronological Witness Timeline")
     page = f'{top}<main id="main" class="prose">\n{body}\n</main>\n{tail[len("</main>"):]}'
-    (SITE / "timeline.html").write_text(page, encoding="utf-8")
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "timeline.html").write_text(page, encoding="utf-8")
 
     # Stats for the run line
     saints = json.loads(ANTHOLOGY_JSON.read_text(encoding="utf-8"))["saints"]

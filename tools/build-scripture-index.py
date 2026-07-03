@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 from collections import OrderedDict
 from html.parser import HTMLParser
@@ -36,6 +37,11 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 SITE = REPO / "site"
 DATA = SITE / "data"
+# Output dir. Overridable via MEDIATRIX_APPARATUS_OUT so the apparatus-sync
+# gate can rebuild into a temp dir without touching site/. Inputs (template
+# chrome, data JSON, page prose scans) always read from site/.
+OUT = Path(os.environ.get("MEDIATRIX_APPARATUS_OUT") or SITE).expanduser()
+OUT_DATA = OUT / "data"
 TEMPLATE = SITE / "anthology.html"
 
 # ── Canonical Catholic canon (73 books): order, display name, abbreviations ──
@@ -434,7 +440,8 @@ def main() -> int:
     body = render(index)
     top, tail = chrome("scripture", "Index of Holy Scripture")
     page = f'{top}<main id="main" class="prose">\n{body}\n</main>\n{tail[len("</main>"):]}'
-    (SITE / "scripture.html").write_text(page, encoding="utf-8")
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "scripture.html").write_text(page, encoding="utf-8")
 
     # machine-readable sidecar
     serial = [
@@ -445,7 +452,8 @@ def main() -> int:
         }
         for e in sorted(index.values(), key=lambda e: e["_sort"])
     ]
-    (DATA / "scripture-index.json").write_text(
+    OUT_DATA.mkdir(parents=True, exist_ok=True)
+    (OUT_DATA / "scripture-index.json").write_text(
         json.dumps({"schema_version": 1, "count": len(serial), "references": serial},
                    ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
