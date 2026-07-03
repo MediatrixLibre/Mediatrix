@@ -79,7 +79,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=38"></script>
+<script src="scripts/mediatrix.js?v=39"></script>
 <style>
   .search-box {
     max-width: 32rem; margin: var(--rhythm-x2) auto;
@@ -443,12 +443,6 @@
     input.value = initialQ;
     render(initialQ);  // index still loading -> re-rendered by the fetch handler
   }
-
-  // Mode toggle
-  var btn = document.getElementById("mode-toggle");
-  function syncLabel() { btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil"; }
-  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
-  syncLabel();
 
   Mediatrix.pushRecent({
     slug: "search.html",

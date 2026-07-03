@@ -76,7 +76,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=38"></script>
+<script src="scripts/mediatrix.js?v=39"></script>
 <style>
   /* index-only flourishes */
   body { --wash: transparent; }
@@ -457,13 +457,6 @@
 </footer>
 
 <script>
-  // Vigil toggle
-  var btn = document.getElementById("mode-toggle");
-  function syncLabel() {
-    btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil";
-  }
-  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
-  syncLabel();
 
   /* --- Liturgical calendar binding ---
      Today's Marian feast surfaced in the hero: the 18 fixed dates from
@@ -579,22 +572,33 @@
     );
   })();
 
-  // Render recently-visited; surface a quiet empty state on first visit
+  // Render recently-visited; surface a quiet empty state on first visit.
+  // Built with createElement/textContent (never innerHTML): the entries
+  // come back out of localStorage, so the feast banner's defensive
+  // posture applies here too. Slugs are shape-checked so only
+  // same-directory pages can ever become an href.
   var list = document.getElementById("recents-list");
-  var recents = Mediatrix.getRecents();
+  var recents = Mediatrix.getRecents().filter(function (r) {
+    return /^[a-z0-9-]+\.html$/.test(r.slug);
+  });
   if (recents.length === 0) {
-    list.outerHTML = '<p class="recents__empty">' +
-      'Open any section below; what you read returns here.</p>';
+    var empty = document.createElement("p");
+    empty.className = "recents__empty";
+    empty.textContent = "Open any section below; what you read returns here.";
+    list.replaceWith(empty);
   } else {
-    var html = "";
-    for (var i = 0; i < recents.length; i++) {
-      var r = recents[i];
-      html += '<a class="recents__item" href="' + r.slug + '">'
-        + '<small>' + (r.subtitle || "") + '</small>'
-        + '<strong>' + (r.title || r.slug) + '</strong>'
-        + '</a>';
-    }
-    list.innerHTML = html;
+    recents.forEach(function (r) {
+      var a = document.createElement("a");
+      a.className = "recents__item";
+      a.href = r.slug;
+      var small = document.createElement("small");
+      small.textContent = r.subtitle || "";
+      var strong = document.createElement("strong");
+      strong.textContent = r.title || r.slug;
+      a.appendChild(small);
+      a.appendChild(strong);
+      list.appendChild(a);
+    });
   }
   // index intentionally does NOT push itself into recents
 </script>

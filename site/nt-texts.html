@@ -79,7 +79,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=38"></script>
+<script src="scripts/mediatrix.js?v=39"></script>
 <style>
   .passage { margin: var(--rhythm-x3) 0; padding-top: var(--rhythm); border-top: 2px solid var(--m-gold); }
   .passage__head { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: var(--rhythm); margin-bottom: var(--rhythm); }
@@ -303,7 +303,6 @@
         On Calvary &middot; <em>Stabat Mater</em>
       </button>
     </p>
-
 
     <div class="greek-block">
       <span class="en" style="margin-top: 0;">
@@ -1034,10 +1033,6 @@
 </footer>
 
 <script>
-  var btn = document.getElementById("mode-toggle");
-  function syncLabel() { btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil"; }
-  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
-  syncLabel();
 
   Mediatrix.pushRecent({
     slug: "nt-texts.html",

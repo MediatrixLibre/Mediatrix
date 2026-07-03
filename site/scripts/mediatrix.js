@@ -46,6 +46,10 @@
     for (var i = 0; i < metas.length; i++) {
       metas[i].setAttribute("content", THEME_COLOR[m] || THEME_COLOR.day);
     }
+    // The mast toggle's label names the mode you would switch TO. Kept
+    // here so cross-tab storage sync re-labels the button as well.
+    var btn = document.getElementById("mode-toggle");
+    if (btn) btn.textContent = m === "vigil" ? "Day" : "Vigil";
   }
 
   function setMode(m) {
@@ -105,6 +109,21 @@
 
   /* --- initial mode application (early, before paint where possible) --- */
   applyMode(getMode());
+
+  /* --- mast toggle wiring (shared by every page; replaces the per-page
+         inline copies). The script loads in <head>, so the button does
+         not exist yet at module time; wire on DOMContentLoaded. --- */
+  function initToggle() {
+    var btn = document.getElementById("mode-toggle");
+    if (!btn) return;
+    btn.addEventListener("click", toggleMode);
+    btn.textContent = getMode() === "vigil" ? "Day" : "Vigil";
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initToggle);
+  } else {
+    initToggle();
+  }
 
   /* --- service worker registration (PWA install + offline) --- */
   if ("serviceWorker" in navigator) {

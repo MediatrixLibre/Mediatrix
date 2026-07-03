@@ -79,7 +79,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=38"></script>
+<script src="scripts/mediatrix.js?v=39"></script>
 <style>
   .era { margin: var(--rhythm-x3) 0 var(--rhythm); padding-top: var(--rhythm); border-top: 2px solid var(--m-gold); }
   .era__head { font-family: var(--font-display); font-weight: 500; font-size: 1.6rem; letter-spacing: 0.03em; color: var(--m-navy); margin: 0 0 var(--rhythm-half); }
@@ -381,10 +381,6 @@
 </footer>
 
 <script>
-  var btn = document.getElementById("mode-toggle");
-  function syncLabel() { btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil"; }
-  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
-  syncLabel();
 
   Mediatrix.pushRecent({
     slug: "anthology.html",

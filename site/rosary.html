@@ -79,7 +79,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=38"></script>
+<script src="scripts/mediatrix.js?v=39"></script>
 <style>
   .day-table { margin: var(--rhythm) auto var(--rhythm-x2); max-width: 36rem; }
   .day-table td:first-child { font-family: var(--font-sans); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m-gold-text); white-space: nowrap; padding-right: var(--rhythm); }
@@ -1672,12 +1672,6 @@
 </footer>
 
 <script>
-  var btn = document.getElementById("mode-toggle");
-  function syncLabel() {
-    btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil";
-  }
-  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
-  syncLabel();
 
   /* Auto-open the Luminous accordion when the user lands on
      rosary.html#luminous (or clicks an in-page anchor that resolves

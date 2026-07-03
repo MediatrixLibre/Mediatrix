@@ -79,7 +79,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=38"></script>
+<script src="scripts/mediatrix.js?v=39"></script>
 <style>
   .norms { margin: var(--rhythm) auto var(--rhythm-x2); max-width: 56rem; padding: var(--rhythm) var(--rhythm-x2); background: var(--cream); border-left: 2px solid var(--m-gold); }
   .norms strong { font-family: var(--font-display); font-weight: 500; }
@@ -476,10 +476,6 @@
 </footer>
 
 <script>
-  var btn = document.getElementById("mode-toggle");
-  function syncLabel() { btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil"; }
-  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
-  syncLabel();
 
   Mediatrix.pushRecent({
     slug: "apparitions.html",

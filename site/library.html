@@ -79,7 +79,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=38"></script>
+<script src="scripts/mediatrix.js?v=39"></script>
 <style>
   /* Library is the central page; the hero is the entire site's
      compendium statement, set wider than the standard prose column. */
@@ -617,14 +617,6 @@
         el.innerHTML = '<p class="lib-error">Library data not yet built. Run <code>make build-data</code> to populate this page from the canonical markdown.</p>';
       });
     });
-
-  /* Mode toggle */
-  var btn = document.getElementById("mode-toggle");
-  function syncLabel() {
-    btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil";
-  }
-  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
-  syncLabel();
 
   Mediatrix.pushRecent({
     slug: "library.html",

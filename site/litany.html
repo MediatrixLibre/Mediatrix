@@ -79,7 +79,7 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Mediatrix" />
-<script src="scripts/mediatrix.js?v=38"></script>
+<script src="scripts/mediatrix.js?v=39"></script>
 <style>
   .preamble { max-width: var(--measure-prose); margin: var(--rhythm-x2) auto var(--rhythm-x3); }
   .preamble p { font-family: var(--font-serif); font-size: 1.0625rem; line-height: 1.62; color: var(--m-navy); }
@@ -922,12 +922,6 @@
      sung aloud by the reader; a synthetic voice is the wrong instrument. -->
 
 <script>
-  var btn = document.getElementById("mode-toggle");
-  function syncLabel() {
-    btn.textContent = document.documentElement.dataset.mode === "vigil" ? "Day" : "Vigil";
-  }
-  btn.addEventListener("click", function () { Mediatrix.toggleMode(); syncLabel(); });
-  syncLabel();
 
   Mediatrix.pushRecent({
     slug: "litany.html",
