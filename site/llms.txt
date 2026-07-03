@@ -29,7 +29,7 @@
 - [New Testament Texts](https://stella-maris.pages.dev/nt-texts): the three load-bearing passages — Cana, Calvary, Revelation 12 — in Nestle-Aland Greek.
 - [Daily Rosary Companion](https://stella-maris.pages.dev/rosary): twenty mysteries with scriptural and patristic gloss.
 - [Litany of Loreto](https://stella-maris.pages.dev/litany): fifty-four titles in six structural groups, Latin and English, with papal history.
-- [Marian Feasts](https://stella-maris.pages.dev/feasts): eighteen feasts of the liturgical year with collect, rank, readings.
+- [Marian Feasts](https://stella-maris.pages.dev/feasts): twenty feasts of the liturgical year with collect, rank, readings; subscribable calendar at /marian-feasts.ics.
 - [Approved Apparitions](https://stella-maris.pages.dev/apparitions): seven primary canonical apparitions with the 1978 CDF norms of discernment.
 - [The Akathist Hymn](https://stella-maris.pages.dev/akathist): the sixth-century Byzantine Marian hymn, twenty-four oikoi, in Greek.
 - [Office of Readings](https://stella-maris.pages.dev/office): patristic Office texts for fourteen Marian feasts.

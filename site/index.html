@@ -466,11 +466,10 @@
   syncLabel();
 
   /* --- Liturgical calendar binding ---
-     Today's Marian feast surfaced in the hero, drawn from the 18-feast
-     fixed-date subset of the Marian-Feasts-Liturgical-Calendar corpus.
-     The moveable feasts (Mother of the Church, Immaculate Heart) are
-     omitted because they require Easter date math; the fixed dates carry
-     the principal Solemnities and Memorials. */
+     Today's Marian feast surfaced in the hero: the 18 fixed dates from
+     the Marian-Feasts-Liturgical-Calendar corpus plus the two moveable
+     memorials (Mother of the Church, Immaculate Heart), placed each year
+     by Easter reckoning (Butcher's algorithm, Gregorian). */
   var MARIAN_FEASTS = [
     { date: "01-01", name: "Solemnity of Mary, Mother of God",       rank: "Solemnity · Holy Day of Obligation" },
     { date: "02-02", name: "Presentation of the Lord",               rank: "Feast · Candlemas" },
@@ -492,11 +491,42 @@
     { date: "12-12", name: "Our Lady of Guadalupe",                  rank: "Feast (Americas) · Patroness of the Americas" }
   ];
 
+  // Butcher's algorithm: Gregorian Easter for a given year.
+  function easterDate(year) {
+    var a = year % 19, b = Math.floor(year / 100), c = year % 100;
+    var d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25);
+    var g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30;
+    var i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7;
+    var m = Math.floor((a + 11 * h + 22 * l) / 451);
+    var month = Math.floor((h + l - 7 * m + 114) / 31);
+    var day = ((h + l - 7 * m + 114) % 31) + 1;
+    return new Date(year, month - 1, day);
+  }
+
+  // The two moveable Marian memorials, as MM-DD keys for one given year.
+  // Mother of the Church = Monday after Pentecost = Easter + 50;
+  // Immaculate Heart = Saturday after the Sacred Heart = Easter + 69.
+  function moveableFeasts(year) {
+    var e = easterDate(year);
+    function entry(offset, name, rank) {
+      var w = new Date(year, e.getMonth(), e.getDate() + offset);
+      return {
+        date: String(w.getMonth() + 1).padStart(2, "0") + "-" + String(w.getDate()).padStart(2, "0"),
+        name: name, rank: rank
+      };
+    }
+    return [
+      entry(50, "Mary, Mother of the Church", "Memorial \u00b7 Monday after Pentecost"),
+      entry(69, "Immaculate Heart of Mary",   "Memorial \u00b7 Saturday after the Sacred Heart")
+    ];
+  }
+
   (function surfaceTodaysFeast() {
     var el = document.getElementById("todays-feast");
     if (!el) return;
     var now = new Date();
     var key = String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
+    var thisYearFeasts = MARIAN_FEASTS.concat(moveableFeasts(now.getFullYear()));
 
     // Safe DOM construction: textContent only, no HTML interpolation.
     function fillBanner(kicker, name, rank) {
@@ -513,7 +543,7 @@
     }
 
     // If today is itself a Marian feast, surface it.
-    var match = MARIAN_FEASTS.find(function (f) { return f.date === key; });
+    var match = thisYearFeasts.find(function (f) { return f.date === key; });
     if (match) {
       fillBanner("Today · " + key.replace("-", " / "), match.name, match.rank);
       return;
@@ -522,14 +552,22 @@
     // Otherwise, surface the next upcoming feast (wrapping into next year if needed).
     var year = now.getFullYear();
     var todayMs = new Date(year, now.getMonth(), now.getDate()).getTime();
-    var upcoming = MARIAN_FEASTS.map(function (f) {
+    // Fixed feasts recur on the same date; a moveable feast that has
+    // already passed must be re-reckoned from NEXT year's Easter.
+    function toWhen(f, y) {
       var parts = f.date.split("-");
-      var m = parseInt(parts[0], 10) - 1;
-      var d = parseInt(parts[1], 10);
-      var when = new Date(year, m, d);
-      if (when.getTime() < todayMs) when = new Date(year + 1, m, d);
-      return { feast: f, when: when };
-    }).sort(function (a, b) { return a.when - b.when; })[0];
+      return { feast: f, when: new Date(y, parseInt(parts[0], 10) - 1, parseInt(parts[1], 10)) };
+    }
+    var candidates = MARIAN_FEASTS.map(function (f) {
+      var c = toWhen(f, year);
+      return c.when.getTime() < todayMs ? toWhen(f, year + 1) : c;
+    });
+    thisYearFeasts.slice(MARIAN_FEASTS.length).forEach(function (f) {
+      var c = toWhen(f, year);
+      if (c.when.getTime() >= todayMs) candidates.push(c);
+    });
+    moveableFeasts(year + 1).forEach(function (f) { candidates.push(toWhen(f, year + 1)); });
+    var upcoming = candidates.sort(function (a, b) { return a.when - b.when; })[0];
     if (!upcoming) return;
 
     var days = Math.round((upcoming.when.getTime() - todayMs) / 86400000);

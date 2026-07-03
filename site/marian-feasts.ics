@@ -1,0 +1,332 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mediatrix//Marian Feasts//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Marian Feasts · Mediatrix
+X-WR-CALDESC:The twenty Marian feasts of the liturgical year\, from https://stella-maris.pages.dev/feasts
+REFRESH-INTERVAL;VALUE=DURATION:P1W
+X-PUBLISHED-TTL:P1W
+BEGIN:VEVENT
+UID:solemnity-of-mary--mother-of-god@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260101
+RRULE:FREQ=YEARLY
+SUMMARY:Solemnity of Mary\, Mother of God
+DESCRIPTION:Solemnity · Holy Day of Obligation\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:presentation-of-the-lord@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260202
+RRULE:FREQ=YEARLY
+SUMMARY:Presentation of the Lord
+DESCRIPTION:Feast · Candlemas\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:our-lady-of-lourdes@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260211
+RRULE:FREQ=YEARLY
+SUMMARY:Our Lady of Lourdes
+DESCRIPTION:Optional Memorial · World Day of the Sick\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:annunciation-of-the-lord@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260325
+RRULE:FREQ=YEARLY
+SUMMARY:Annunciation of the Lord
+DESCRIPTION:Solemnity\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:our-lady-of-fatima@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260513
+RRULE:FREQ=YEARLY
+SUMMARY:Our Lady of Fatima
+DESCRIPTION:https://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:our-lady--help-of-christians@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260524
+RRULE:FREQ=YEARLY
+SUMMARY:Our Lady\, Help of Christians
+DESCRIPTION:Optional Memorial\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:visitation-of-the-blessed-virgin-mary@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260531
+RRULE:FREQ=YEARLY
+SUMMARY:Visitation of the Blessed Virgin Mary
+DESCRIPTION:Feast\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mary--mother-of-the-church-2026@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260525
+SUMMARY:Mary\, Mother of the Church
+DESCRIPTION:Memorial · Monday after Pentecost\nhttps://stella-maris.pages.dev/feasts\nMoveable: Monday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mary--mother-of-the-church-2027@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270517
+SUMMARY:Mary\, Mother of the Church
+DESCRIPTION:Memorial · Monday after Pentecost\nhttps://stella-maris.pages.dev/feasts\nMoveable: Monday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mary--mother-of-the-church-2028@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20280605
+SUMMARY:Mary\, Mother of the Church
+DESCRIPTION:Memorial · Monday after Pentecost\nhttps://stella-maris.pages.dev/feasts\nMoveable: Monday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mary--mother-of-the-church-2029@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20290521
+SUMMARY:Mary\, Mother of the Church
+DESCRIPTION:Memorial · Monday after Pentecost\nhttps://stella-maris.pages.dev/feasts\nMoveable: Monday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mary--mother-of-the-church-2030@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20300610
+SUMMARY:Mary\, Mother of the Church
+DESCRIPTION:Memorial · Monday after Pentecost\nhttps://stella-maris.pages.dev/feasts\nMoveable: Monday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mary--mother-of-the-church-2031@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20310602
+SUMMARY:Mary\, Mother of the Church
+DESCRIPTION:Memorial · Monday after Pentecost\nhttps://stella-maris.pages.dev/feasts\nMoveable: Monday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mary--mother-of-the-church-2032@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20320517
+SUMMARY:Mary\, Mother of the Church
+DESCRIPTION:Memorial · Monday after Pentecost\nhttps://stella-maris.pages.dev/feasts\nMoveable: Monday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mary--mother-of-the-church-2033@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20330606
+SUMMARY:Mary\, Mother of the Church
+DESCRIPTION:Memorial · Monday after Pentecost\nhttps://stella-maris.pages.dev/feasts\nMoveable: Monday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mary--mother-of-the-church-2034@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20340529
+SUMMARY:Mary\, Mother of the Church
+DESCRIPTION:Memorial · Monday after Pentecost\nhttps://stella-maris.pages.dev/feasts\nMoveable: Monday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mary--mother-of-the-church-2035@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20350514
+SUMMARY:Mary\, Mother of the Church
+DESCRIPTION:Memorial · Monday after Pentecost\nhttps://stella-maris.pages.dev/feasts\nMoveable: Monday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-heart-of-mary-2026@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260613
+SUMMARY:Immaculate Heart of Mary
+DESCRIPTION:Memorial · Saturday after the Sacred Heart\nhttps://stella-maris.pages.dev/feasts\nMoveable: Saturday after the Second Sunday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-heart-of-mary-2027@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270605
+SUMMARY:Immaculate Heart of Mary
+DESCRIPTION:Memorial · Saturday after the Sacred Heart\nhttps://stella-maris.pages.dev/feasts\nMoveable: Saturday after the Second Sunday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-heart-of-mary-2028@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20280624
+SUMMARY:Immaculate Heart of Mary
+DESCRIPTION:Memorial · Saturday after the Sacred Heart\nhttps://stella-maris.pages.dev/feasts\nMoveable: Saturday after the Second Sunday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-heart-of-mary-2029@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20290609
+SUMMARY:Immaculate Heart of Mary
+DESCRIPTION:Memorial · Saturday after the Sacred Heart\nhttps://stella-maris.pages.dev/feasts\nMoveable: Saturday after the Second Sunday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-heart-of-mary-2030@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20300629
+SUMMARY:Immaculate Heart of Mary
+DESCRIPTION:Memorial · Saturday after the Sacred Heart\nhttps://stella-maris.pages.dev/feasts\nMoveable: Saturday after the Second Sunday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-heart-of-mary-2031@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20310621
+SUMMARY:Immaculate Heart of Mary
+DESCRIPTION:Memorial · Saturday after the Sacred Heart\nhttps://stella-maris.pages.dev/feasts\nMoveable: Saturday after the Second Sunday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-heart-of-mary-2032@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20320605
+SUMMARY:Immaculate Heart of Mary
+DESCRIPTION:Memorial · Saturday after the Sacred Heart\nhttps://stella-maris.pages.dev/feasts\nMoveable: Saturday after the Second Sunday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-heart-of-mary-2033@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20330625
+SUMMARY:Immaculate Heart of Mary
+DESCRIPTION:Memorial · Saturday after the Sacred Heart\nhttps://stella-maris.pages.dev/feasts\nMoveable: Saturday after the Second Sunday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-heart-of-mary-2034@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20340617
+SUMMARY:Immaculate Heart of Mary
+DESCRIPTION:Memorial · Saturday after the Sacred Heart\nhttps://stella-maris.pages.dev/feasts\nMoveable: Saturday after the Second Sunday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-heart-of-mary-2035@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20350602
+SUMMARY:Immaculate Heart of Mary
+DESCRIPTION:Memorial · Saturday after the Sacred Heart\nhttps://stella-maris.pages.dev/feasts\nMoveable: Saturday after the Second Sunday after Pentecost (Easter reckoning)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:our-lady-of-mount-carmel@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260716
+RRULE:FREQ=YEARLY
+SUMMARY:Our Lady of Mount Carmel
+DESCRIPTION:Optional Memorial\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:dedication-of-saint-mary-major@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260805
+RRULE:FREQ=YEARLY
+SUMMARY:Dedication of Saint Mary Major
+DESCRIPTION:Optional Memorial\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:assumption-of-the-blessed-virgin-mary@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260815
+RRULE:FREQ=YEARLY
+SUMMARY:Assumption of the Blessed Virgin Mary
+DESCRIPTION:Solemnity · Holy Day · dogma 1950\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:queenship-of-the-blessed-virgin-mary@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260822
+RRULE:FREQ=YEARLY
+SUMMARY:Queenship of the Blessed Virgin Mary
+DESCRIPTION:Memorial\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:nativity-of-the-blessed-virgin-mary@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260908
+RRULE:FREQ=YEARLY
+SUMMARY:Nativity of the Blessed Virgin Mary
+DESCRIPTION:Feast\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:most-holy-name-of-mary@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260912
+RRULE:FREQ=YEARLY
+SUMMARY:Most Holy Name of Mary
+DESCRIPTION:Optional Memorial\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:our-lady-of-sorrows@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260915
+RRULE:FREQ=YEARLY
+SUMMARY:Our Lady of Sorrows
+DESCRIPTION:Memorial\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:our-lady-of-the-rosary@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261007
+RRULE:FREQ=YEARLY
+SUMMARY:Our Lady of the Rosary
+DESCRIPTION:Memorial\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:presentation-of-the-blessed-virgin-mary@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261121
+RRULE:FREQ=YEARLY
+SUMMARY:Presentation of the Blessed Virgin Mary
+DESCRIPTION:Memorial\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:immaculate-conception@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261208
+RRULE:FREQ=YEARLY
+SUMMARY:Immaculate Conception
+DESCRIPTION:Solemnity · Holy Day · dogma 1854\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:our-lady-of-guadalupe@stella-maris.pages.dev
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261212
+RRULE:FREQ=YEARLY
+SUMMARY:Our Lady of Guadalupe
+DESCRIPTION:Feast (Americas) · Patroness of the Americas\nhttps://stella-maris.pages.dev/feasts
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

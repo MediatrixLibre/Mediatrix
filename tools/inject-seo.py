@@ -88,8 +88,8 @@ PAGES = {
         "type": "article",
     },
     "feasts.html": {
-        "title": "Eighteen Marian feasts of the liturgical year",
-        "description": "Date, rank, history, and the proper of the day for the eighteen Marian feasts.",
+        "title": "Twenty Marian feasts of the liturgical year",
+        "description": "Date, rank, history, and the proper of the day for the twenty Marian feasts, the two moveable reckoned from Easter.",
         "type": "article",
     },
     "apparitions.html": {

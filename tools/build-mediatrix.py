@@ -509,10 +509,13 @@ def extract_feasts() -> dict:
         re.IGNORECASE,
     )
     for h2 in root.find_all(2):
-        if not DATE_HDR.match(h2.title.strip()):
+        # Strip any `{#anchor}` tail before parsing (the Immaculate Heart
+        # heading carries one and leaked it into the feast name).
+        title = re.sub(r"\s*\{#[^}]+\}\s*$", "", h2.title.strip()).strip()
+        if not DATE_HDR.match(title):
             continue
         # Format: "DATE — TITLE" or "DATE — TITLE (subtitle)"
-        parts = re.split(r"\s+[—–-]\s+", h2.title.strip(), maxsplit=1)
+        parts = re.split(r"\s+[—–-]\s+", title, maxsplit=1)
         date_str = parts[0].strip()
         name = parts[1].strip() if len(parts) > 1 else ""
         # subtitle in parens?

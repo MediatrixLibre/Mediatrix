@@ -14,7 +14,7 @@ export
 
 .DEFAULT_GOAL := help
 
-.PHONY: help serve stop check seo clean build-data verify-data clean-data validate-refs validate-quotes verify-data-sync verify-apparatus-sync
+.PHONY: help serve stop check seo clean build-data ics verify-data clean-data validate-refs validate-quotes verify-data-sync verify-apparatus-sync
 
 help: ## list available targets
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -52,6 +52,9 @@ clean: ## remove tmp/ + pyc + .DS_Store
 
 build-data: ## regenerate site/data/*.json from the markdown corpus
 	@python3 tools/build-mediatrix.py
+
+ics: ## regenerate the subscribable Marian feast calendar (site/marian-feasts.ics)
+	@python3 tools/gen-ics.py
 
 apparatus: ## regenerate derived pages (catena, concordance, scripture index, timeline) + SEO
 	@python3 tools/build-apparatus.py

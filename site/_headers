@@ -59,3 +59,9 @@
 /robots.txt
   Cache-Control: public, max-age=86400
   CDN-Cache-Control: public, max-age=86400
+
+/marian-feasts.ics
+  Content-Type: text/calendar; charset=utf-8
+  Content-Disposition: inline; filename="marian-feasts.ics"
+  Cache-Control: public, max-age=86400
+  CDN-Cache-Control: public, max-age=604800
