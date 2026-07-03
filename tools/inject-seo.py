@@ -241,6 +241,56 @@ def build_authority_graph() -> str:
     )
 
 
+TAG_RE = re.compile(r"<[^>]+>")
+
+
+def _plain_text(fragment: str) -> str:
+    """Collapse an HTML fragment to clean plain text for JSON-LD."""
+    import html as html_mod
+
+    text = TAG_RE.sub("", fragment)
+    text = html_mod.unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def build_faq_graph() -> str:
+    """FAQPage JSON-LD for defense.html. Each objection's title is the
+    Question; its 'IV · Synthesis' layer is the distilled acceptedAnswer.
+    Parsed from the committed body at inject time, so the markup and the
+    structured data cannot disagree. Idempotent: the SEO block is stripped
+    before parsing, so re-runs never re-parse their own emission."""
+    path = SITE / "defense.html"
+    if not path.exists():
+        return ""
+    src = EXISTING_BLOCK_RE.sub("", path.read_text(encoding="utf-8"))
+    entities = []
+    for section in src.split('<section class="obj">')[1:]:
+        title_m = re.search(r'<h2 class="obj__title">(.*?)</h2>', section, re.S)
+        # Long-form objections end in a Synthesis layer (the distilled reply);
+        # short-form ones answer directly in the first paragraph of an
+        # unnumbered layer. Prefer the synthesis, fall back to the direct reply.
+        synth_m = re.search(r"&middot; Synthesis</p>\s*<p>(.*?)</p>", section, re.S) or re.search(
+            r'<div class="layer">\s*<p>(.*?)</p>', section, re.S
+        )
+        if not (title_m and synth_m):
+            continue
+        entities.append(
+            {
+                "@type": "Question",
+                "name": _plain_text(title_m.group(1)),
+                "acceptedAnswer": {"@type": "Answer", "text": _plain_text(synth_m.group(1))},
+            }
+        )
+    if not entities:
+        return ""
+    faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": entities}
+    return (
+        '<script type="application/ld+json">\n'
+        + json.dumps(faq, ensure_ascii=False, indent=2)
+        + "\n</script>"
+    )
+
+
 def build_block(page: str, meta: dict) -> str:
     title = meta["title"].replace('"', "&quot;")
     desc = meta["description"].replace('"', "&quot;")
@@ -286,7 +336,7 @@ def build_block(page: str, meta: dict) -> str:
           "datePublished": "{DATE_PUBLISHED}",
           "inLanguage": "en",
           "author": {{ "@type": "Organization", "name": "{PUBLISHER}" }},
-          "publisher": {{ "@type": "Organization", "name": "{PUBLISHER}" }},
+          "publisher": {{ "@type": "Organization", "name": "{PUBLISHER}", "url": "{ORIGIN}/", "logo": {{ "@type": "ImageObject", "url": "{ORIGIN}/icon-512.png" }} }},
           "image": "{OG_IMAGE}",
           "mainEntityOfPage": "{canonical}"
         }}
@@ -314,11 +364,17 @@ def build_block(page: str, meta: dict) -> str:
         """).strip()
         json_ld = json_ld + "\n" + breadcrumb_json
 
-    # Authority @graph: only on the anthology, where the 56 authors live.
+    # Authority @graph: only on the anthology, where the witnesses live.
     if page == "anthology.html":
         authority_graph = build_authority_graph()
         if authority_graph:
             json_ld = json_ld + "\n" + authority_graph
+
+    # FAQPage: only on the defense, whose objections are a Q&A set.
+    if page == "defense.html":
+        faq_graph = build_faq_graph()
+        if faq_graph:
+            json_ld = json_ld + "\n" + faq_graph
 
     apple_icons = dedent("""
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180.png" />
@@ -351,6 +407,7 @@ def build_block(page: str, meta: dict) -> str:
         <meta name="twitter:title" content="{title}" />
         <meta name="twitter:description" content="{desc}" />
         <meta name="twitter:image" content="{OG_IMAGE}" />
+        <meta name="twitter:image:alt" content="Mediatrix: a Marian study library. Stella Maris in gold on cream paper." />
 
         {preload_links}
 
