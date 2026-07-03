@@ -43,6 +43,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Corpus-independent publish gates (proper exit codes). The
+      # corpus-dependent verify-data-sync runs in the local pre-push hook
+      # instead, since the corpus lives outside the repo. A drifted
+      # derived page or a broken quote record refuses the deploy.
+      - name: Publish gates (quotes, references, derived-page sync)
+        run: |
+          make validate-quotes
+          make validate-refs
+          make verify-apparatus-sync
+
       - name: Deploy via wrangler
         uses: cloudflare/wrangler-action@v3
         with:
