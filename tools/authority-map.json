@@ -1,9 +1,9 @@
 {
   "generated_by": "tools/build-authority-map.py",
   "source": "wikidata + viaf(P214)",
-  "record_count": 56,
+  "record_count": 65,
   "confidence_summary": {
-    "high": 50,
+    "high": 59,
     "medium": 6,
     "low": 0,
     "none": 0
@@ -2558,7 +2558,223 @@
           "score": -18
         }
       ]
+    },
+    {
+      "num": 57,
+      "name": "St. Proclus of Constantinople",
+      "query": "Proclus of Constantinople",
+      "qid": "Q172926",
+      "viaf": "102329138",
+      "wd_label": "Proclus of Constantinople",
+      "wd_description": "Roman Catholic archbishop of Constantinople between 434 and 446",
+      "wd_birth": 390,
+      "wd_death": 446,
+      "anthology_dates": "c. 390 – 446",
+      "is_human": true,
+      "is_work": false,
+      "score": null,
+      "margin": null,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "dates match the anthology record",
+        "has VIAF id",
+        "hand-verified 2026-07-02 (manual wbsearchentities + wbgetentities, date-checked)"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 58,
+      "name": "St. Romanos the Melodist",
+      "query": "Romanos the Melodist",
+      "qid": "Q221059",
+      "viaf": "198679898",
+      "wd_label": "Romanos the Melodist",
+      "wd_description": "Greek hymnographer",
+      "wd_birth": 490,
+      "wd_death": 556,
+      "anthology_dates": "c. 490 – 556",
+      "is_human": true,
+      "is_work": false,
+      "score": null,
+      "margin": null,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "dates match the anthology record",
+        "has VIAF id",
+        "hand-verified 2026-07-02 (manual wbsearchentities + wbgetentities, date-checked)"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 59,
+      "name": "St. Jacob of Serugh",
+      "query": "Jacob of Serugh",
+      "qid": "Q947711",
+      "viaf": "51661489",
+      "wd_label": "Jacob of Serugh",
+      "wd_description": "Syriac writer and bishop",
+      "wd_birth": 451,
+      "wd_death": 521,
+      "anthology_dates": "c. 451 – 521",
+      "is_human": true,
+      "is_work": false,
+      "score": null,
+      "margin": null,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "dates match the anthology record",
+        "has VIAF id",
+        "hand-verified 2026-07-02 (manual wbsearchentities + wbgetentities, date-checked)"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 60,
+      "name": "St. Ildephonsus of Toledo",
+      "query": "Ildephonsus of Toledo",
+      "qid": "Q456069",
+      "viaf": "265672823",
+      "wd_label": "Ildephonsus of Toledo",
+      "wd_description": "scholar and theologian",
+      "wd_birth": 607,
+      "wd_death": 667,
+      "anthology_dates": "c. 607 – 667",
+      "is_human": true,
+      "is_work": false,
+      "score": null,
+      "margin": null,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "dates match the anthology record",
+        "has VIAF id",
+        "hand-verified 2026-07-02 (manual wbsearchentities + wbgetentities, date-checked)"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 61,
+      "name": "Francisco Suárez, S.J.",
+      "query": "Francisco Suárez",
+      "qid": "Q316339",
+      "viaf": "39385631",
+      "wd_label": "Francisco Suárez",
+      "wd_description": "Spanish Jesuit priest, philosopher and theologian (1548-1617)",
+      "wd_birth": 1548,
+      "wd_death": 1617,
+      "anthology_dates": "1548 – 1617",
+      "is_human": true,
+      "is_work": false,
+      "score": null,
+      "margin": null,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "dates match the anthology record",
+        "has VIAF id",
+        "hand-verified 2026-07-02 (manual wbsearchentities + wbgetentities, date-checked)"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 62,
+      "name": "Matthias Joseph Scheeben",
+      "query": "Matthias Joseph Scheeben",
+      "qid": "Q86328",
+      "viaf": "4938570",
+      "wd_label": "Matthias Joseph Scheeben",
+      "wd_description": "German theologian (1835–1888)",
+      "wd_birth": 1835,
+      "wd_death": 1888,
+      "anthology_dates": "1835 – 1888",
+      "is_human": true,
+      "is_work": false,
+      "score": null,
+      "margin": null,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "dates match the anthology record",
+        "has VIAF id",
+        "hand-verified 2026-07-02 (manual wbsearchentities + wbgetentities, date-checked)"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 63,
+      "name": "Pope Benedict XVI",
+      "query": "Benedict XVI",
+      "qid": "Q2494",
+      "viaf": "102167198",
+      "wd_label": "Benedict XVI",
+      "wd_description": "265th pope of the Catholic Church (2005–2013)",
+      "wd_birth": 1927,
+      "wd_death": 2022,
+      "anthology_dates": "1927 – 2022",
+      "is_human": true,
+      "is_work": false,
+      "score": null,
+      "margin": null,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "dates match the anthology record",
+        "has VIAF id",
+        "hand-verified 2026-07-02 (manual wbsearchentities + wbgetentities, date-checked)"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 64,
+      "name": "Pope Leo XIV",
+      "query": "Leo XIV",
+      "qid": "Q6109517",
+      "viaf": "89050933",
+      "wd_label": "Leo XIV",
+      "wd_description": "267th Pope of the Catholic Church (2025–)",
+      "wd_birth": 1955,
+      "wd_death": null,
+      "anthology_dates": "b. 1955; elected 2025",
+      "is_human": true,
+      "is_work": false,
+      "score": null,
+      "margin": null,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "dates match the anthology record",
+        "has VIAF id",
+        "hand-verified 2026-07-02 (manual wbsearchentities + wbgetentities, date-checked)"
+      ],
+      "alternatives": []
+    },
+    {
+      "num": 65,
+      "name": "St. Bartolo Longo",
+      "query": "Bartolo Longo",
+      "qid": "Q809485",
+      "viaf": "61555919",
+      "wd_label": "Bartolo Longo",
+      "wd_description": "beatified Italian Catholic (1841-1926)",
+      "wd_birth": 1841,
+      "wd_death": 1926,
+      "anthology_dates": "1841 – 1926",
+      "is_human": true,
+      "is_work": false,
+      "score": null,
+      "margin": null,
+      "confidence": "high",
+      "reasons": [
+        "is a human",
+        "dates match the anthology record",
+        "has VIAF id",
+        "hand-verified 2026-07-02 (manual wbsearchentities + wbgetentities, date-checked)"
+      ],
+      "alternatives": []
     }
   ],
-  "verification_note": "All 56 reviewed against anthology dates 2026-05-29; #16 and #34 manually corrected."
+  "verification_note": "All 56 reviewed against anthology dates 2026-05-29; #16 and #34 manually corrected. #57-65 added and hand-verified against Wikidata dates/descriptions 2026-07-02 (exact date matches, all with VIAF)."
 }
